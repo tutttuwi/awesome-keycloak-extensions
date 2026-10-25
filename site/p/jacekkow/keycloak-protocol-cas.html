@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-protocol-cas — Awesome Keycloak Extensions</title>
+<meta name="description" content="CAS protocol support for Keycloak.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">SPI</span><span class="b">Protocol (CAS / WS-Fed)</span><span class="b Active">Active</span></p>
+    <h1 id="name">keycloak-protocol-cas</h1>
+    <p class="repo"><a href="https://github.com/jacekkow/keycloak-protocol-cas" rel="noopener">jacekkow/keycloak-protocol-cas ↗</a></p>
+    <p class="lead"><span class="l-en">CAS protocol support for Keycloak.</span><span class="l-ja">KeycloakにCASプロトコルを追加</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>131</dd></div><div><dt>Forks</dt><dd>39</dd></div><div><dt>Contributors</dt><dd>41</dd></div><div><dt>Updated</dt><dd>2026-10-13</dd></div><div><dt>KC</dt><dd>—</dd></div><div><dt>License</dt><dd>Apache-2.0</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">4</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Add CAS as a client protocol, so CAS applications can log in through Keycloak.</span><span class="l-ja">クライアントプロトコルとしてCASを追加し、CAS対応アプリがKeycloakでログインできる</span></li><li class="c"><span class="l-en">CAS 1.0/2.0/3.0 compliant login, logout and service-ticket validation, including Single Logout.</span><span class="l-ja">CAS 1.0/2.0/3.0準拠のログイン・ログアウト・サービスチケット検証。シングルログアウトにも対応</span></li><li class="c"><span class="l-en">Check the <code>service</code> parameter against the client&#x27;s redirect URIs; respond in JSON or XML.</span><span class="l-ja"><code>service</code> パラメータをクライアントのリダイレクトURIと照合。応答形式はJSONとXML</span></li><li class="c"><span class="l-en">Map custom user attributes to CAS assertion attributes.</span><span class="l-ja">任意のユーザー属性をCASのアサーション属性にマッピング</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">4</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">SAML request/response (an optional part of CAS 3.0) is not implemented.</span><span class="l-ja">SAMLのリクエスト/レスポンス（CAS 3.0のオプション機能）は未実装</span></li><li class="x"><span class="l-en">Long-term tickets / remember-me are out of scope.</span><span class="l-ja">長期チケット（Remember-Me）は対象外</span></li><li class="x"><span class="l-en">CAS carries no client ID, so clients are identified only by their redirect URIs.</span><span class="l-ja">CASにはクライアントIDがないため、クライアントはリダイレクトURIだけで識別される</span></li><li class="x"><span class="l-en">Some SPs need separate login/validate URLs (<code>/login</code>, <code>/serviceValidate</code>) instead of the CAS base URL.</span><span class="l-ja">SPによってはCASのベースURLではなく、ログインURL（<code>/login</code>）と検証URL（<code>/serviceValidate</code>）を個別に指定する必要がある</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">Use the plugin version that matches your Keycloak version and update it with every Keycloak upgrade.</span><span class="l-ja">Keycloakと同じバージョンのプラグインを使い、Keycloakを更新するたびに入れ替える</span></li><li class="r"><span class="l-en">Copy the JAR into <code>providers/</code> and run <code>kc.sh build</code>.</span><span class="l-ja">JARを <code>providers/</code> に置いて <code>kc.sh build</code> を実行</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/jacekkow/keycloak-protocol-cas#readme" rel="noopener">https://github.com/jacekkow/keycloak-protocol-cas#readme</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

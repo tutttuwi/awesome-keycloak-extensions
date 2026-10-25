@@ -614,7 +614,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/jacekkow/keycloak-protocol-cas",
    "activity": "Active",
-   "detail": null
+   "detail": "p/jacekkow/keycloak-protocol-cas.html"
   },
   {
    "name": "keycloak-provider",
@@ -642,7 +642,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/privacyidea/keycloak-provider",
    "activity": "Active",
-   "detail": null
+   "detail": "p/privacyidea/keycloak-provider.html"
   },
   {
    "name": "keycloak-webhook",
@@ -670,7 +670,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/vymalo/keycloak-webhook",
    "activity": "Active",
-   "detail": null
+   "detail": "p/vymalo/keycloak-webhook.html"
   },
   {
    "name": "Keycloak-FranceConnect",
@@ -698,7 +698,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/InseeFr/Keycloak-FranceConnect",
    "activity": "Active",
-   "detail": null
+   "detail": "p/InseeFr/Keycloak-FranceConnect.html"
   },
   {
    "name": "keycloak-adaptive-authn",
@@ -726,7 +726,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/mabartos/keycloak-adaptive-authn",
    "activity": "Active",
-   "detail": null
+   "detail": "p/mabartos/keycloak-adaptive-authn.html"
   },
   {
    "name": "keycloak-passport",
@@ -754,7 +754,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/exlinc/keycloak-passport",
    "activity": "Inactive",
-   "detail": null
+   "detail": "p/exlinc/keycloak-passport.html"
   },
   {
    "name": "edp-keycloak-operator",
@@ -782,7 +782,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/epam/edp-keycloak-operator",
    "activity": "Active",
-   "detail": null
+   "detail": "p/epam/edp-keycloak-operator.html"
   },
   {
    "name": "keycloak-scim-server",
@@ -810,7 +810,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/Metatavu/keycloak-scim-server",
    "activity": "Active",
-   "detail": null
+   "detail": "p/Metatavu/keycloak-scim-server.html"
   },
   {
    "name": "provider-keycloak",
@@ -838,7 +838,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/crossplane-contrib/provider-keycloak",
    "activity": "Active",
-   "detail": null
+   "detail": "p/crossplane-contrib/provider-keycloak.html"
   },
   {
    "name": "keycloak-user-spi-demo",
@@ -866,7 +866,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/dasniko/keycloak-user-spi-demo",
    "activity": "Inactive",
-   "detail": null
+   "detail": "p/dasniko/keycloak-user-spi-demo.html"
   },
   {
    "name": "keycloak-openfga-event-publisher",

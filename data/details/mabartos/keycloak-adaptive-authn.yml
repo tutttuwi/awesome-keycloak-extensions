@@ -1,0 +1,32 @@
+repo: mabartos/keycloak-adaptive-authn
+researched_at: '2026-10-25'
+sources:
+- https://github.com/mabartos/keycloak-adaptive-authn#readme
+- https://github.com/mabartos/keycloak-adaptive-authn/blob/main/EVALUATORS.md
+can:
+- en: Change authentication requirements in real time from a risk score — ask for more factors when a login looks suspicious, fewer when risk is low.
+  ja: リスクスコアに応じて認証要件をリアルタイムに変える。怪しいログインでは要素を増やし、低リスクなら減らす
+- en: "Score risk before authentication: browser, operating system, client sensitivity and GeoIP location."
+  ja: 認証前の評価：ブラウザ、OS、クライアントの機密度、GeoIPによる位置
+- en: "Score risk once the user is known: known IPs and locations, unusual login times, failed-login patterns and privileged roles."
+  ja: ユーザー特定後の評価：既知のIP・位置、普段と違うログイン時刻、ログイン失敗のパターン、特権ロール
+- en: Evaluate continuously during the session (concurrent sessions across IPs, bursts of sensitive account changes).
+  ja: セッション中も継続評価（複数IPからの同時セッション、機密性の高いアカウント変更の集中）
+- en: Use AI engines (OpenAI, Anthropic Claude, Google Gemini, OpenRouter) for complex account-takeover analysis, with user data anonymised first.
+  ja: 複雑なアカウント乗っ取り分析にAI（OpenAI、Anthropic Claude、Google Gemini、OpenRouter）を使える。ユーザーデータは送信前に匿名化
+cannot:
+- en: AI evaluation depends on external services (API keys, data leaves your network, even if anonymised).
+  ja: AIでの評価は外部サービスに依存する（APIキーが必要で、匿名化されるとはいえデータは外部に出る）
+- en: Supports only Keycloak 26.6.x, 26.7.x and nightly (26.5.x testing ended).
+  ja: 対応はKeycloak 26.6.x・26.7.x・nightlyのみ（26.5.xはテスト終了）
+- en: "Needs Keycloak's `declarative-ui` feature enabled."
+  ja: "Keycloakの `declarative-ui` 機能を有効にする必要がある"
+- en: Authentication policies were moved to a separate repository (mabartos/keycloak-authn-policies).
+  ja: 認証ポリシー機能は別リポジトリ（mabartos/keycloak-authn-policies）に移った
+- en: The IBM Granite engine is deprecated.
+  ja: IBM Graniteエンジンは非推奨
+requires:
+- en: "Add the core JAR (plus any extension JARs) to `providers`; follow the Start Guide for configuration."
+  ja: "コアJAR（と必要な拡張JAR）を `providers` に追加。設定はStart Guideに従う"
+- en: An API key for the chosen AI engine if AI evaluators are used.
+  ja: AI評価器を使う場合は、選んだAIエンジンのAPIキー

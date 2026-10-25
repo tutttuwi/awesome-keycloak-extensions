@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-webhook — Awesome Keycloak Extensions</title>
+<meta name="description" content="Send Keycloak events to webhooks (HTTP, AMQP, Syslog).">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b">Community</span><span class="b">SPI</span><span class="b">Event / Webhook / Messaging</span><span class="b Active">Active</span></p>
+    <h1 id="name">keycloak-webhook</h1>
+    <p class="repo"><a href="https://github.com/vymalo/keycloak-webhook" rel="noopener">vymalo/keycloak-webhook ↗</a></p>
+    <p class="lead"><span class="l-en">Send Keycloak events to webhooks (HTTP, AMQP, Syslog).</span><span class="l-ja">KeycloakイベントをWebhook等へ送信</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>114</dd></div><div><dt>Forks</dt><dd>37</dd></div><div><dt>Contributors</dt><dd>11</dd></div><div><dt>Updated</dt><dd>2026-07-26</dd></div><div><dt>KC</dt><dd>—</dd></div><div><dt>License</dt><dd>MIT</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">5</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Send Keycloak events (login, registration, logout, …) as webhooks over HTTP, AMQP (RabbitMQ) or Syslog — deploy only the transports you need.</span><span class="l-ja">Keycloakのイベント（ログイン・登録・ログアウトなど）を、HTTP・AMQP（RabbitMQ）・Syslogで通知できる。必要な送信方式のモジュールだけ導入すればよい</span></li><li class="c"><span class="l-en">Send HTTP webhooks to several endpoints at once, with optional basic auth.</span><span class="l-ja">HTTPでは複数のエンドポイントへ同時送信でき、Basic認証も任意で使える</span></li><li class="c"><span class="l-en">Use Syslog over TCP/UDP in RFC 3164 or RFC 5424 format.</span><span class="l-ja">SyslogはTCP/UDP、RFC 3164/5424形式に対応</span></li><li class="c"><span class="l-en">Limit which events trigger webhooks (<code>WEBHOOK_EVENTS_TAKEN</code>); all settings come from environment variables.</span><span class="l-ja">通知するイベントを <code>WEBHOOK_EVENTS_TAKEN</code> で絞り込める。設定はすべて環境変数</span></li><li class="c"><span class="l-en">Supports Keycloak 21 through 26, with Docker and Kubernetes (init container) examples.</span><span class="l-ja">Keycloak 21〜26に対応し、DockerとKubernetes（initコンテナ）の導入例がある</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">3</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">The current release for every listed Keycloak version is a release candidate (0.10.0-rc.1).</span><span class="l-ja">対応表の全バージョンで、現行リリースはRC版（0.10.0-rc.1）</span></li><li class="x"><span class="l-en">The README documents no retry, signing (HMAC) or per-realm webhook management — targets are global environment variables.</span><span class="l-ja">再送、署名（HMAC）、realmごとのWebhook管理についてはREADMEに記載がない。送信先はグローバルな環境変数で指定する</span></li><li class="x"><span class="l-en">JAR files must be renamed (no version or <code>-all</code> suffix) before deployment.</span><span class="l-ja">配置前にJARのファイル名を変更する必要がある（バージョンと <code>-all</code> を外す）</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">The core JAR plus at least one transport JAR in <code>/opt/keycloak/providers</code>, and the <code>webhook-http</code> (or other) event listener enabled per realm.</span><span class="l-ja">コアJARと、少なくとも1つの送信方式のJARを <code>/opt/keycloak/providers</code> に置き、realmごとに <code>webhook-http</code> などのリスナーを有効化</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/vymalo/keycloak-webhook#readme" rel="noopener">https://github.com/vymalo/keycloak-webhook#readme</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

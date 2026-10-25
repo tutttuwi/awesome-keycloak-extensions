@@ -1,0 +1,27 @@
+repo: jacekkow/keycloak-protocol-cas
+researched_at: '2026-10-25'
+sources:
+- https://github.com/jacekkow/keycloak-protocol-cas#readme
+can:
+- en: Add CAS as a client protocol, so CAS applications can log in through Keycloak.
+  ja: クライアントプロトコルとしてCASを追加し、CAS対応アプリがKeycloakでログインできる
+- en: CAS 1.0/2.0/3.0 compliant login, logout and service-ticket validation, including Single Logout.
+  ja: CAS 1.0/2.0/3.0準拠のログイン・ログアウト・サービスチケット検証。シングルログアウトにも対応
+- en: "Check the `service` parameter against the client's redirect URIs; respond in JSON or XML."
+  ja: "`service` パラメータをクライアントのリダイレクトURIと照合。応答形式はJSONとXML"
+- en: Map custom user attributes to CAS assertion attributes.
+  ja: 任意のユーザー属性をCASのアサーション属性にマッピング
+cannot:
+- en: SAML request/response (an optional part of CAS 3.0) is not implemented.
+  ja: SAMLのリクエスト/レスポンス（CAS 3.0のオプション機能）は未実装
+- en: Long-term tickets / remember-me are out of scope.
+  ja: 長期チケット（Remember-Me）は対象外
+- en: CAS carries no client ID, so clients are identified only by their redirect URIs.
+  ja: CASにはクライアントIDがないため、クライアントはリダイレクトURIだけで識別される
+- en: "Some SPs need separate login/validate URLs (`/login`, `/serviceValidate`) instead of the CAS base URL."
+  ja: "SPによってはCASのベースURLではなく、ログインURL（`/login`）と検証URL（`/serviceValidate`）を個別に指定する必要がある"
+requires:
+- en: Use the plugin version that matches your Keycloak version and update it with every Keycloak upgrade.
+  ja: Keycloakと同じバージョンのプラグインを使い、Keycloakを更新するたびに入れ替える
+- en: "Copy the JAR into `providers/` and run `kc.sh build`."
+  ja: "JARを `providers/` に置いて `kc.sh build` を実行"

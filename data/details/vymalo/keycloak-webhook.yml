@@ -1,0 +1,25 @@
+repo: vymalo/keycloak-webhook
+researched_at: '2026-10-25'
+sources:
+- https://github.com/vymalo/keycloak-webhook#readme
+can:
+- en: Send Keycloak events (login, registration, logout, …) as webhooks over HTTP, AMQP (RabbitMQ) or Syslog — deploy only the transports you need.
+  ja: Keycloakのイベント（ログイン・登録・ログアウトなど）を、HTTP・AMQP（RabbitMQ）・Syslogで通知できる。必要な送信方式のモジュールだけ導入すればよい
+- en: Send HTTP webhooks to several endpoints at once, with optional basic auth.
+  ja: HTTPでは複数のエンドポイントへ同時送信でき、Basic認証も任意で使える
+- en: Use Syslog over TCP/UDP in RFC 3164 or RFC 5424 format.
+  ja: SyslogはTCP/UDP、RFC 3164/5424形式に対応
+- en: Limit which events trigger webhooks (`WEBHOOK_EVENTS_TAKEN`); all settings come from environment variables.
+  ja: "通知するイベントを `WEBHOOK_EVENTS_TAKEN` で絞り込める。設定はすべて環境変数"
+- en: Supports Keycloak 21 through 26, with Docker and Kubernetes (init container) examples.
+  ja: Keycloak 21〜26に対応し、DockerとKubernetes（initコンテナ）の導入例がある
+cannot:
+- en: The current release for every listed Keycloak version is a release candidate (0.10.0-rc.1).
+  ja: 対応表の全バージョンで、現行リリースはRC版（0.10.0-rc.1）
+- en: The README documents no retry, signing (HMAC) or per-realm webhook management — targets are global environment variables.
+  ja: 再送、署名（HMAC）、realmごとのWebhook管理についてはREADMEに記載がない。送信先はグローバルな環境変数で指定する
+- en: JAR files must be renamed (no version or `-all` suffix) before deployment.
+  ja: 配置前にJARのファイル名を変更する必要がある（バージョンと `-all` を外す）
+requires:
+- en: "The core JAR plus at least one transport JAR in `/opt/keycloak/providers`, and the `webhook-http` (or other) event listener enabled per realm."
+  ja: "コアJARと、少なくとも1つの送信方式のJARを `/opt/keycloak/providers` に置き、realmごとに `webhook-http` などのリスナーを有効化"

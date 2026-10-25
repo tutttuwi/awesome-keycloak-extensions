@@ -1,0 +1,14 @@
+repo: dasniko/keycloak-user-spi-demo
+researched_at: '2026-10-25'
+sources:
+- https://github.com/dasniko/keycloak-user-spi-demo#readme
+- https://github.com/dasniko/keycloak-extensions-demo/tree/main/flintstones-userprovider
+can:
+- en: Serve as a minimal in-memory User Storage SPI example.
+  ja: インメモリで動く、最小限のUser Storage SPI実装例
+cannot:
+- en: Outdated — the author points to the Flintstones user provider in keycloak-extensions-demo instead.
+  ja: 古くなっており、作者はkeycloak-extensions-demo内のFlintstones User Providerを参照するよう案内している
+- en: Demo purposes only; the repository is archived.
+  ja: デモ用途のみで、リポジトリはアーカイブ済み
+requires: []

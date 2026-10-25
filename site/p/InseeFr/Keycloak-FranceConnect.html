@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keycloak-FranceConnect — Awesome Keycloak Extensions</title>
+<meta name="description" content="FranceConnect / ProConnect identity providers.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">SPI</span><span class="b">Identity Provider</span><span class="b Active">Active</span></p>
+    <h1 id="name">Keycloak-FranceConnect</h1>
+    <p class="repo"><a href="https://github.com/InseeFr/Keycloak-FranceConnect" rel="noopener">InseeFr/Keycloak-FranceConnect ↗</a></p>
+    <p class="lead"><span class="l-en">FranceConnect / ProConnect identity providers.</span><span class="l-ja">FranceConnect/ProConnect用Identity Provider</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>107</dd></div><div><dt>Forks</dt><dd>40</dd></div><div><dt>Contributors</dt><dd>16</dd></div><div><dt>Updated</dt><dd>2026-09-10</dd></div><div><dt>KC</dt><dd>26.7.2</dd></div><div><dt>License</dt><dd>MIT</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">5</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Add FranceConnect (French citizen login) as an identity provider, including FranceConnect+ (eIDAS substantial/high) and integration or production environments.</span><span class="l-ja">フランスの公的個人認証FranceConnectをIdPとして追加できる。FranceConnect+（eIDAS 2/3レベル）、統合環境・本番環境の切り替えにも対応</span></li><li class="c"><span class="l-en">Add ProConnect (formerly AgentConnect) for public-sector and professional accounts, with an optional 2FA mode.</span><span class="l-ja">公務員・事業者向けのProConnect（旧AgentConnect）も追加でき、2FAモードも選べる</span></li><li class="c"><span class="l-en">Request an eIDAS level, verify signatures, and handle logout better than the stock broker.</span><span class="l-ja">eIDASレベルの指定、署名検証、標準ブローカーより改善されたログアウトに対応</span></li><li class="c"><span class="l-en">Create the main attribute mappers automatically and reconcile with existing accounts using the &quot;pivot identity&quot;.</span><span class="l-ja">主要な属性マッパーを自動作成し、「ピボットID」で既存アカウントと自動照合できる</span></li><li class="c"><span class="l-en">Show FranceConnect / ProConnect buttons via the bundled login theme (<code>fc-ac-theme</code>).</span><span class="l-ja">同梱のログインテーマ（<code>fc-ac-theme</code>）でFranceConnect/ProConnectのボタンを表示</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">5</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">Only useful for French government identity services — you need a partner account and client credentials from FranceConnect/ProConnect.</span><span class="l-ja">フランス政府の認証サービス専用。FranceConnect/ProConnectのパートナー登録とクライアント情報が必要</span></li><li class="x"><span class="l-en">The legacy FranceConnect standard V1 offer was scheduled to end in 2025 and is not carried into the new environment names.</span><span class="l-ja">旧FranceConnect標準V1は2025年に終了予定で、新しい環境名には引き継がれていない</span></li><li class="x"><span class="l-en">ProConnect 2FA is not compatible with every ProConnect identity provider.</span><span class="l-ja">ProConnectの2FAは、すべてのProConnect IdPで使えるわけではない</span></li><li class="x"><span class="l-en">Older versions (4.x–6.1) cannot be configured from the admin UI on some Keycloak versions; upgrading from old versions is best done by deleting the IdP config.</span><span class="l-ja">旧バージョン（4.x〜6.1）は、Keycloakのバージョンによって管理UIから設定できない。旧版からの移行はIdP設定をいったん削除するのが推奨</span></li><li class="x"><span class="l-en">The main README is in French (an English version exists).</span><span class="l-ja">メインのREADMEはフランス語（英語版もある）</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">Version 7.x for Keycloak 25+; copy the JAR into <code>providers</code> (hot deploy should work).</span><span class="l-ja">Keycloak 25以上はバージョン7.x。JARを <code>providers</code> に置く（ホットデプロイも可能）</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/InseeFr/Keycloak-FranceConnect#readme" rel="noopener">https://github.com/InseeFr/Keycloak-FranceConnect#readme</a></li><li><a href="https://github.com/InseeFr/Keycloak-FranceConnect/blob/main/README.en.md" rel="noopener">https://github.com/InseeFr/Keycloak-FranceConnect/blob/main/README.en.md</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

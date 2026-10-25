@@ -1,0 +1,26 @@
+repo: crossplane-contrib/provider-keycloak
+researched_at: '2026-10-25'
+sources:
+- https://github.com/crossplane-contrib/provider-keycloak#readme
+- https://crossplane-contrib.github.io/provider-keycloak/docs/
+can:
+- en: Configure Keycloak declaratively from a Crossplane control plane — CRDs for realms, clients, roles, protocol mappers and more, reconciled against drift.
+  ja: Crossplaneのコントロールプレーンから、Keycloakを宣言的に設定できる。realm・クライアント・ロール・プロトコルマッパーなどのCRDがあり、ずれは自動で修正される
+- en: Cover the same resources as the Keycloak Terraform provider (generated with Upjet).
+  ja: KeycloakのTerraformプロバイダーと同じリソースを扱える（Upjetで生成）
+- en: Connect to several Keycloak instances with one ProviderConfig each; credentials come from Kubernetes secrets.
+  ja: ProviderConfigを分ければ複数のKeycloakに接続できる。認証情報はKubernetesのSecretから取得
+- en: Tune concurrency (`--max-concurrent-reconciles`, `--keycloak-client-pool-size`).
+  ja: "並列度を調整できる（`--max-concurrent-reconciles`、`--keycloak-client-pool-size`）"
+- en: Import Keycloak's built-in objects (default clients, roles) through a companion Crossplane function.
+  ja: 付属のCrossplane Functionで、Keycloakの組み込みオブジェクト（デフォルトのクライアントやロール）を取り込める
+cannot:
+- en: Not a Keycloak extension — needs a Kubernetes cluster with Crossplane.
+  ja: Keycloak拡張ではなく、Crossplaneを入れたKubernetesクラスタが必要
+- en: Does not install Keycloak; it only configures an existing instance.
+  ja: Keycloak自体はインストールしない。既存インスタンスを設定するだけ
+- en: Features and limits follow the underlying Terraform provider it is generated from.
+  ja: 機能と制約は、生成元のTerraformプロバイダーに準じる
+requires:
+- en: Crossplane installed in the cluster and a `ProviderConfig` with the Keycloak URL and admin credentials.
+  ja: クラスタにCrossplaneを導入し、KeycloakのURLと管理者認証情報を持つ `ProviderConfig` を用意
