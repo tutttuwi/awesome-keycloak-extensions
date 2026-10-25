@@ -1,0 +1,24 @@
+name: keycloak-custom-event-listener
+repo: cevheri/keycloak-custom-event-listener
+url: https://github.com/cevheri/keycloak-custom-event-listener
+summary: Example event listener that forwards user create/register events to an API.
+summary_ja: ユーザー作成/登録イベントを外部APIへ送るリスナー例
+kind: core
+genre: Event / Webhook / Messaging
+spi_types: []
+language: Java
+license: Apache-2.0
+stars: 55
+stars_approx: false
+forks: 14
+contributors: 2
+last_commit: '2024-11-05'
+archived: false
+kc_versions: null
+official: false
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/cevheri/keycloak-custom-event-listener

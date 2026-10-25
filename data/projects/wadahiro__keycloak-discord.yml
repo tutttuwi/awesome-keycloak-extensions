@@ -7,19 +7,19 @@ kind: core
 genre: Identity Provider
 spi_types:
 - IdentityProvider
-language: null
+language: Java
 license: Apache-2.0
 stars: 158
 stars_approx: false
-forks: 92
-contributors: null
-last_commit: null
-archived: null
-kc_versions: null
+forks: 91
+contributors: 8
+last_commit: '2024-11-02'
+archived: false
+kc_versions: 26.0.5
 official: true
 less_active_in_official: true
 unmaintained: false
 reviewed: true
 note: null
-fetched_at: '2026-10-22'
-source: https://github.com/wadahiro/keycloak-discord (page display value)
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/wadahiro/keycloak-discord

@@ -6,19 +6,19 @@ summary_ja: Keycloakのrealm設定をYAML/JSONでコード管理するCLI
 kind: peripheral
 genre: Config as code / DevOps
 spi_types: []
-language: null
+language: Java
 license: Apache-2.0
-stars: 1200
-stars_approx: true
-forks: 201
-contributors: null
-last_commit: null
-archived: null
-kc_versions: null
+stars: 1213
+stars_approx: false
+forks: 206
+contributors: 85
+last_commit: '2026-10-23'
+archived: false
+kc_versions: 26.6.2
 official: true
 less_active_in_official: false
 unmaintained: false
 reviewed: true
 note: null
-fetched_at: '2026-10-22'
-source: https://github.com/adorsys/keycloak-config-cli (page display value)
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/adorsys/keycloak-config-cli

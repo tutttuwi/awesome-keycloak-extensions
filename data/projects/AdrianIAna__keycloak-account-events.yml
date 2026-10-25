@@ -1,0 +1,24 @@
+name: keycloak-account-events
+repo: AdrianIAna/keycloak-account-events
+url: https://github.com/AdrianIAna/keycloak-account-events
+summary: Let users read their own login history.
+summary_ja: ユーザー自身がログイン履歴を参照できる
+kind: core
+genre: Monitoring / Audit
+spi_types: []
+language: Java
+license: Apache-2.0
+stars: 0
+stars_approx: false
+forks: 0
+contributors: 2
+last_commit: '2026-09-02'
+archived: false
+kc_versions: 26.7.2
+official: true
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/AdrianIAna/keycloak-account-events

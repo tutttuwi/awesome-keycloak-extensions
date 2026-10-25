@@ -6,19 +6,19 @@ summary_ja: KeycloakにSCIMサーバーを追加する拡張
 kind: core
 genre: Provisioning (SCIM)
 spi_types: []
-language: null
+language: Java
 license: Apache-2.0
 stars: 95
 stars_approx: false
-forks: 36
-contributors: null
-last_commit: null
-archived: null
+forks: 37
+contributors: 13
+last_commit: '2026-10-07'
+archived: false
 kc_versions: null
 official: true
 less_active_in_official: false
 unmaintained: false
 reviewed: true
 note: null
-fetched_at: '2026-10-22'
-source: https://github.com/Metatavu/keycloak-scim-server (page display value)
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/Metatavu/keycloak-scim-server

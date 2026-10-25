@@ -1,0 +1,24 @@
+name: keycloak-2fa-email-authenticator
+repo: mesutpiskin/keycloak-2fa-email-authenticator
+url: https://github.com/mesutpiskin/keycloak-2fa-email-authenticator
+summary: Email OTP second-factor authenticator.
+summary_ja: メールOTPによる二要素認証
+kind: core
+genre: MFA / Passwordless
+spi_types: []
+language: Java
+license: Apache-2.0
+stars: 289
+stars_approx: false
+forks: 174
+contributors: 33
+last_commit: '2026-10-23'
+archived: false
+kc_versions: 26.7.3
+official: false
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/mesutpiskin/keycloak-2fa-email-authenticator

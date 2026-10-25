@@ -1,0 +1,24 @@
+name: keycloak-json-remote-claim
+repo: groupe-sii/keycloak-json-remote-claim
+url: https://github.com/groupe-sii/keycloak-json-remote-claim
+summary: Protocol mapper that adds claims fetched from a remote JSON endpoint.
+summary_ja: 外部JSON APIから取得した値をクレームに追加
+kind: core
+genre: Protocol Mapper / Claim
+spi_types: []
+language: Java
+license: Apache-2.0
+stars: 56
+stars_approx: false
+forks: 30
+contributors: 3
+last_commit: '2020-01-08'
+archived: true
+kc_versions: 8.0.1
+official: true
+less_active_in_official: true
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/groupe-sii/keycloak-json-remote-claim

@@ -1,0 +1,24 @@
+name: keycloak-impersonation-policy-enforcer
+repo: LucaFilipozzi/keycloak-impersonation-policy-enforcer
+url: https://github.com/LucaFilipozzi/keycloak-impersonation-policy-enforcer
+summary: Authenticator enforcing an impersonation policy.
+summary_ja: なりすまし(impersonation)ポリシーを強制
+kind: core
+genre: Policy / Authorization
+spi_types: []
+language: Java
+license: Apache-2.0
+stars: 13
+stars_approx: false
+forks: 2
+contributors: 2
+last_commit: '2022-12-23'
+archived: false
+kc_versions: 18.0.2
+official: true
+less_active_in_official: true
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/LucaFilipozzi/keycloak-impersonation-policy-enforcer

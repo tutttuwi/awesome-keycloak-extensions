@@ -1,0 +1,24 @@
+name: keycloak-phone-number
+repo: vymalo/keycloak-phone-number
+url: https://github.com/vymalo/keycloak-phone-number
+summary: Log in with a phone number and SMS OTP.
+summary_ja: 電話番号+SMS OTPでログイン
+kind: core
+genre: Authentication
+spi_types: []
+language: Java
+license: MIT
+stars: 55
+stars_approx: false
+forks: 19
+contributors: 7
+last_commit: '2026-07-24'
+archived: false
+kc_versions: 26.5.2
+official: false
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/vymalo/keycloak-phone-number

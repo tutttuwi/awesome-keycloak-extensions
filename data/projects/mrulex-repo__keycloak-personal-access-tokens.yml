@@ -1,0 +1,24 @@
+name: keycloak-personal-access-tokens
+repo: mrulex-repo/keycloak-personal-access-tokens
+url: https://github.com/mrulex-repo/keycloak-personal-access-tokens
+summary: Scoped personal access tokens usable as Basic Auth passwords.
+summary_ja: Basic認証で使えるスコープ付き個人アクセストークン
+kind: core
+genre: Authentication
+spi_types: []
+language: Java
+license: GPL-3.0
+stars: 4
+stars_approx: false
+forks: 0
+contributors: 1
+last_commit: '2026-05-20'
+archived: false
+kc_versions: null
+official: true
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/mrulex-repo/keycloak-personal-access-tokens

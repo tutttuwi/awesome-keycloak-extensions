@@ -1,0 +1,24 @@
+name: keycloak-restrict-client-auth
+repo: sventorben/keycloak-restrict-client-auth
+url: https://github.com/sventorben/keycloak-restrict-client-auth
+summary: Restrict which users may access which clients (role/policy based).
+summary_ja: クライアント単位でユーザーのアクセスを制限
+kind: core
+genre: Policy / Authorization
+spi_types: []
+language: Java
+license: MIT
+stars: 440
+stars_approx: false
+forks: 35
+contributors: 7
+last_commit: '2026-10-14'
+archived: false
+kc_versions: 26.8.0
+official: true
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/sventorben/keycloak-restrict-client-auth

@@ -1,0 +1,24 @@
+name: provider-keycloak
+repo: crossplane-contrib/provider-keycloak
+url: https://github.com/crossplane-contrib/provider-keycloak
+summary: Crossplane provider to configure Keycloak declaratively.
+summary_ja: Keycloakを宣言的に設定するCrossplane provider
+kind: peripheral
+genre: Config as code / DevOps
+spi_types: []
+language: Go
+license: Apache-2.0
+stars: 73
+stars_approx: false
+forks: 40
+contributors: 39
+last_commit: '2026-10-19'
+archived: false
+kc_versions: null
+official: true
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/crossplane-contrib/provider-keycloak

@@ -6,19 +6,19 @@ summary_ja: マジックリンク(パスワードレス)認証
 kind: core
 genre: Authentication
 spi_types: []
-language: null
-license: null
-stars: 425
+language: Java
+license: Other (see repo)
+stars: 430
 stars_approx: false
-forks: 114
-contributors: null
-last_commit: null
-archived: null
-kc_versions: null
+forks: 121
+contributors: 39
+last_commit: '2026-10-20'
+archived: false
+kc_versions: 26.8.0
 official: true
 less_active_in_official: false
 unmaintained: false
 reviewed: true
 note: A COPYING file exists; license type not confirmed.
-fetched_at: '2026-10-22'
-source: https://github.com/p2-inc/keycloak-magic-link (page display value)
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/p2-inc/keycloak-magic-link

@@ -1,0 +1,24 @@
+name: keycloak-openfga-event-publisher
+repo: embesozzi/keycloak-openfga-event-publisher
+url: https://github.com/embesozzi/keycloak-openfga-event-publisher
+summary: Publish Keycloak role/group changes to OpenFGA for fine-grained authorization.
+summary_ja: ロール/グループ変更をOpenFGAへ連携
+kind: core
+genre: Policy / Authorization
+spi_types: []
+language: Java
+license: Apache-2.0
+stars: 61
+stars_approx: false
+forks: 14
+contributors: 1
+last_commit: '2024-07-02'
+archived: false
+kc_versions: 25.0.1
+official: true
+less_active_in_official: true
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/embesozzi/keycloak-openfga-event-publisher

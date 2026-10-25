@@ -1,0 +1,24 @@
+name: keycloak-push-mfa-extension
+repo: ba-itsys/keycloak-push-mfa-extension
+url: https://github.com/ba-itsys/keycloak-push-mfa-extension
+summary: Push-notification MFA.
+summary_ja: プッシュ通知によるMFA
+kind: core
+genre: MFA / Passwordless
+spi_types: []
+language: Java
+license: Apache-2.0
+stars: 12
+stars_approx: false
+forks: 8
+contributors: 12
+last_commit: '2026-10-19'
+archived: false
+kc_versions: 26.8.1
+official: true
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/ba-itsys/keycloak-push-mfa-extension

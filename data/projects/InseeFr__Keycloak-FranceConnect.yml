@@ -1,0 +1,24 @@
+name: Keycloak-FranceConnect
+repo: InseeFr/Keycloak-FranceConnect
+url: https://github.com/InseeFr/Keycloak-FranceConnect
+summary: FranceConnect / ProConnect identity providers.
+summary_ja: FranceConnect/ProConnect用Identity Provider
+kind: core
+genre: Identity Provider
+spi_types: []
+language: Java
+license: MIT
+stars: 107
+stars_approx: false
+forks: 40
+contributors: 16
+last_commit: '2026-09-10'
+archived: false
+kc_versions: 26.7.2
+official: true
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/InseeFr/Keycloak-FranceConnect

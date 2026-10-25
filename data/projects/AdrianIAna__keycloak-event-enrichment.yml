@@ -1,0 +1,24 @@
+name: keycloak-event-enrichment
+repo: AdrianIAna/keycloak-event-enrichment
+url: https://github.com/AdrianIAna/keycloak-event-enrichment
+summary: Enrich authentication events with GeoIP and User-Agent data.
+summary_ja: 認証イベントにGeoIP/User-Agent情報を付与
+kind: core
+genre: Event / Webhook / Messaging
+spi_types: []
+language: Java
+license: Apache-2.0
+stars: 1
+stars_approx: false
+forks: 0
+contributors: 2
+last_commit: '2026-09-02'
+archived: false
+kc_versions: 26.7.2
+official: true
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/AdrianIAna/keycloak-event-enrichment

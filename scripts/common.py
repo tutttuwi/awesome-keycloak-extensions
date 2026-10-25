@@ -1,4 +1,4 @@
-"""Shared helpers for awesome-keycloak-spi scripts."""
+"""Shared helpers for awesome-keycloak-extensions scripts."""
 from __future__ import annotations
 
 import datetime as dt
@@ -15,6 +15,7 @@ GENRES = [
     "MFA / Passwordless",
     "Event / Webhook / Messaging",
     "Identity Provider",
+    "Protocol (CAS / WS-Fed)",
     "Protocol Mapper / Claim",
     "User Storage / Federation",
     "Provisioning (SCIM)",
@@ -29,6 +30,7 @@ GENRES = [
     "Testing / Examples",
 ]
 UNCATEGORIZED = "Uncategorized"
+KINDS = ("core", "peripheral")
 
 
 def file_for(repo: str) -> pathlib.Path:
@@ -56,7 +58,7 @@ def _months_between(date_str: str, today: dt.date) -> float:
 
 
 def activity(p: dict, today: dt.date | None = None) -> str:
-    """Active / Stale / Inactive / Unknown (rules: RULES.md 1-5)."""
+    """Active / Stale / Inactive / Unknown (thresholds: see README)."""
     today = today or dt.date.today()
     if p.get("archived") or p.get("unmaintained"):
         return "Inactive"

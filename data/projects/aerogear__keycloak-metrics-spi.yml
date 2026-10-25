@@ -6,19 +6,19 @@ summary_ja: KeycloakのメトリクスをPrometheus形式で公開するSPI
 kind: core
 genre: Monitoring / Audit
 spi_types: []
-language: null
+language: Java
 license: Apache-2.0
-stars: 616
+stars: 614
 stars_approx: false
 forks: 163
-contributors: null
-last_commit: null
-archived: null
-kc_versions: null
+contributors: 56
+last_commit: '2024-11-08'
+archived: false
+kc_versions: 26.0.0
 official: true
 less_active_in_official: true
 unmaintained: false
 reviewed: true
 note: null
-fetched_at: '2026-10-22'
-source: https://github.com/aerogear/keycloak-metrics-spi (page display value)
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/aerogear/keycloak-metrics-spi

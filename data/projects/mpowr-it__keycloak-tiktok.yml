@@ -1,0 +1,24 @@
+name: keycloak-tiktok
+repo: mpowr-it/keycloak-tiktok
+url: https://github.com/mpowr-it/keycloak-tiktok
+summary: TikTok social login provider.
+summary_ja: TikTok用Identity Provider
+kind: core
+genre: Identity Provider
+spi_types: []
+language: Java
+license: Apache-2.0
+stars: 6
+stars_approx: false
+forks: 0
+contributors: 1
+last_commit: '2026-07-24'
+archived: false
+kc_versions: null
+official: true
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/mpowr-it/keycloak-tiktok

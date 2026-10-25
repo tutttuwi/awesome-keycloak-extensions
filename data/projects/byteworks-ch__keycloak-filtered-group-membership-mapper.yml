@@ -1,0 +1,24 @@
+name: keycloak-filtered-group-membership-mapper
+repo: byteworks-ch/keycloak-filtered-group-membership-mapper
+url: https://github.com/byteworks-ch/keycloak-filtered-group-membership-mapper
+summary: Group membership mapper with filtering.
+summary_ja: フィルタ付きグループメンバーシップマッパー
+kind: core
+genre: Protocol Mapper / Claim
+spi_types: []
+language: Java
+license: Other (see repo)
+stars: 2
+stars_approx: false
+forks: 1
+contributors: 1
+last_commit: '2026-04-21'
+archived: false
+kc_versions: 26.6.0
+official: true
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/byteworks-ch/keycloak-filtered-group-membership-mapper

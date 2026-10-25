@@ -1,0 +1,24 @@
+name: keycloak-2fa-sms-authenticator
+repo: dasniko/keycloak-2fa-sms-authenticator
+url: https://github.com/dasniko/keycloak-2fa-sms-authenticator
+summary: SMS OTP second-factor authenticator via AWS SNS (demo).
+summary_ja: AWS SNS経由のSMS OTP二要素認証(デモ)
+kind: core
+genre: MFA / Passwordless
+spi_types: []
+language: Java
+license: MIT
+stars: 377
+stars_approx: false
+forks: 177
+contributors: 1
+last_commit: '2025-05-07'
+archived: true
+kc_versions: 24.0.0
+official: false
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/dasniko/keycloak-2fa-sms-authenticator

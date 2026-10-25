@@ -1,0 +1,26 @@
+name: keycloak-github-ssh-key-attribute-mapper
+repo: softwarefactory-project/keycloak-github-ssh-key-attribute-mapper
+url: https://github.com/softwarefactory-project/keycloak-github-ssh-key-attribute-mapper
+summary: Mapper that fetches a user's SSH keys from GitHub into an attribute.
+summary_ja: GitHubのSSH公開鍵をユーザー属性に取り込む
+kind: core
+genre: Protocol Mapper / Claim
+spi_types: []
+language: Java
+license: Apache-2.0
+stars: 20
+stars_approx: false
+forks: 3
+contributors: 2
+last_commit: '2024-02-12'
+archived: false
+kc_versions: 22.0.0
+official: true
+less_active_in_official: true
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/mhuin/keycloak-github-ssh-key-attribute-mapper
+aliases:
+- mhuin/keycloak-github-ssh-key-attribute-mapper

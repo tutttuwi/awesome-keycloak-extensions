@@ -1,0 +1,24 @@
+name: keycloak-rest-claim-mapper
+repo: jowe112/keycloak-rest-claim-mapper
+url: https://github.com/jowe112/keycloak-rest-claim-mapper
+summary: OIDC/SAML mapper that enriches tokens from a REST API.
+summary_ja: REST APIの値でトークンを拡充するマッパー
+kind: core
+genre: Protocol Mapper / Claim
+spi_types: []
+language: Java
+license: Apache-2.0
+stars: 2
+stars_approx: false
+forks: 0
+contributors: 2
+last_commit: '2026-08-19'
+archived: false
+kc_versions: 26.7.1
+official: true
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/jowe112/keycloak-rest-claim-mapper

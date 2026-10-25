@@ -1,0 +1,24 @@
+name: Extended-SAML-IDP
+repo: First8/Extended-SAML-IDP
+url: https://github.com/First8/Extended-SAML-IDP
+summary: SAML identity provider supporting direct (synchronous) SAML responses.
+summary_ja: 同期SAMLレスポンス対応のSAML Identity Provider
+kind: core
+genre: Identity Provider
+spi_types: []
+language: Java
+license: Apache-2.0
+stars: 16
+stars_approx: false
+forks: 3
+contributors: 5
+last_commit: '2026-10-13'
+archived: false
+kc_versions: 26.6.4
+official: true
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/First8/Extended-SAML-IDP

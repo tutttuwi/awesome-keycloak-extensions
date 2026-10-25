@@ -1,0 +1,24 @@
+name: keycloak-regex-mapper
+repo: LucaFilipozzi/keycloak-regex-mapper
+url: https://github.com/LucaFilipozzi/keycloak-regex-mapper
+summary: Broker mapper that maps multi-valued claims/attributes by regex.
+summary_ja: 正規表現で多値クレーム/属性をマッピング
+kind: core
+genre: Protocol Mapper / Claim
+spi_types: []
+language: Java
+license: Apache-2.0
+stars: 21
+stars_approx: false
+forks: 5
+contributors: 1
+last_commit: '2021-08-23'
+archived: false
+kc_versions: 15.0.2
+official: true
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/LucaFilipozzi/keycloak-regex-mapper

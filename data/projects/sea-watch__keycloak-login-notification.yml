@@ -1,0 +1,24 @@
+name: keycloak-login-notification
+repo: sea-watch/keycloak-login-notification
+url: https://github.com/sea-watch/keycloak-login-notification
+summary: Email users when a new login session is created.
+summary_ja: 新規ログイン時にセキュリティ通知メールを送信
+kind: core
+genre: Email / Notification
+spi_types: []
+language: Shell
+license: Other (see repo)
+stars: 1
+stars_approx: false
+forks: 0
+contributors: 1
+last_commit: '2026-07-21'
+archived: false
+kc_versions: 26.7.0
+official: true
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/sea-watch/keycloak-login-notification

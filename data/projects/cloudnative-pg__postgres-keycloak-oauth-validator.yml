@@ -1,0 +1,24 @@
+name: postgres-keycloak-oauth-validator
+repo: cloudnative-pg/postgres-keycloak-oauth-validator
+url: https://github.com/cloudnative-pg/postgres-keycloak-oauth-validator
+summary: PostgreSQL module that validates Keycloak-issued OAuth2 tokens.
+summary_ja: Keycloak発行のOAuth2トークンを検証するPostgreSQLモジュール
+kind: peripheral
+genre: Authentication
+spi_types: []
+language: C
+license: Apache-2.0
+stars: 30
+stars_approx: false
+forks: 5
+contributors: 3
+last_commit: '2026-09-15'
+archived: false
+kc_versions: null
+official: true
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/cloudnative-pg/postgres-keycloak-oauth-validator

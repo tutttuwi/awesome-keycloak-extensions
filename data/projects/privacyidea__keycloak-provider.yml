@@ -1,0 +1,24 @@
+name: keycloak-provider
+repo: privacyidea/keycloak-provider
+url: https://github.com/privacyidea/keycloak-provider
+summary: OTP / 2FA via a privacyIDEA server.
+summary_ja: privacyIDEA連携のOTP二要素認証
+kind: core
+genre: MFA / Passwordless
+spi_types: []
+language: Java
+license: Apache-2.0
+stars: 131
+stars_approx: false
+forks: 24
+contributors: 15
+last_commit: '2026-07-01'
+archived: false
+kc_versions: 26.5.6
+official: true
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/privacyidea/keycloak-provider

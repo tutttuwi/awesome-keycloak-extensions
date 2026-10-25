@@ -1,0 +1,24 @@
+name: keycloak-configurable-theme
+repo: dockndevai/keycloak-configurable-theme
+url: https://github.com/dockndevai/keycloak-configurable-theme
+summary: One configurable login theme for all realms.
+summary_ja: 全realm共通の設定可能なログインテーマ
+kind: core
+genre: Theme / UI
+spi_types: []
+language: Java
+license: Apache-2.0
+stars: 1
+stars_approx: false
+forks: 0
+contributors: 2
+last_commit: '2026-10-08'
+archived: false
+kc_versions: 26.8.0
+official: true
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/dockndevai/keycloak-configurable-theme

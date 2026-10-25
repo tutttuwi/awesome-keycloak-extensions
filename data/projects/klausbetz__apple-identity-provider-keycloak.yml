@@ -7,20 +7,19 @@ kind: core
 genre: Identity Provider
 spi_types:
 - IdentityProvider
-language: null
+language: Java
 license: Apache-2.0
-stars: 295
+stars: 297
 stars_approx: false
-forks: 55
-contributors: null
-last_commit: null
-archived: null
+forks: 59
+contributors: 11
+last_commit: '2026-01-18'
+archived: false
 kc_versions: null
 official: true
 less_active_in_official: false
 unmaintained: false
 reviewed: true
 note: null
-fetched_at: '2026-10-22'
-source: https://github.com/klausbetz/apple-identity-provider-keycloak (page display
-  value)
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/klausbetz/apple-identity-provider-keycloak

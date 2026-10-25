@@ -1,0 +1,24 @@
+name: keycloak-extension-qr-code-execution
+repo: HadleySo/keycloak-extension-qr-code-execution
+url: https://github.com/HadleySo/keycloak-extension-qr-code-execution
+summary: Sign in from another device by scanning a QR code.
+summary_ja: QRコードで別端末からサインイン
+kind: core
+genre: MFA / Passwordless
+spi_types: []
+language: Java
+license: AGPL-3.0
+stars: 14
+stars_approx: false
+forks: 4
+contributors: 2
+last_commit: '2026-06-13'
+archived: false
+kc_versions: null
+official: true
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/HadleySo/keycloak-extension-qr-code-execution

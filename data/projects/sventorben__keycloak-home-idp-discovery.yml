@@ -6,19 +6,19 @@ summary_ja: メールドメインからホームIdPを自動判定
 kind: core
 genre: Authentication
 spi_types: []
-language: null
+language: Java
 license: MIT
 stars: 341
 stars_approx: false
-forks: 63
-contributors: null
-last_commit: null
-archived: null
-kc_versions: null
+forks: 64
+contributors: 5
+last_commit: '2026-10-02'
+archived: false
+kc_versions: 26.8.0
 official: true
 less_active_in_official: false
 unmaintained: false
 reviewed: true
 note: null
-fetched_at: '2026-10-22'
-source: https://github.com/sventorben/keycloak-home-idp-discovery (page display value)
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/sventorben/keycloak-home-idp-discovery

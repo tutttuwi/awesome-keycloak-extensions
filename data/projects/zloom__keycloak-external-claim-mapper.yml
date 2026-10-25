@@ -1,0 +1,24 @@
+name: keycloak-external-claim-mapper
+repo: zloom/keycloak-external-claim-mapper
+url: https://github.com/zloom/keycloak-external-claim-mapper
+summary: Protocol mapper that adds data from a remote service to the JWT.
+summary_ja: 外部サービスのデータをJWTに追加
+kind: core
+genre: Protocol Mapper / Claim
+spi_types: []
+language: Java
+license: Apache-2.0
+stars: 15
+stars_approx: false
+forks: 4
+contributors: 3
+last_commit: '2025-07-03'
+archived: false
+kc_versions: 25.0.0
+official: true
+less_active_in_official: true
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/zloom/keycloak-external-claim-mapper

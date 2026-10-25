@@ -1,0 +1,26 @@
+name: keycloak-cassandra-extension
+repo: ba-itsys/keycloak-cassandra-extension
+url: https://github.com/ba-itsys/keycloak-cassandra-extension
+summary: Store Keycloak data in Apache Cassandra.
+summary_ja: KeycloakのデータをApache Cassandraに保存
+kind: core
+genre: Storage / Datastore
+spi_types: []
+language: Java
+license: Apache-2.0
+stars: 28
+stars_approx: false
+forks: 11
+contributors: 10
+last_commit: '2026-10-19'
+archived: false
+kc_versions: 26.8.1
+official: true
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/opdt/keycloak-cassandra-extension
+aliases:
+- opdt/keycloak-cassandra-extension

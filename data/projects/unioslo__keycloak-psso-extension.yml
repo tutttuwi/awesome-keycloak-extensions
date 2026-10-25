@@ -1,0 +1,24 @@
+name: keycloak-psso-extension
+repo: unioslo/keycloak-psso-extension
+url: https://github.com/unioslo/keycloak-psso-extension
+summary: macOS Platform Single Sign-On (PSSO) support.
+summary_ja: macOS Platform SSO対応
+kind: core
+genre: Authentication
+spi_types: []
+language: Java
+license: GPL-2.0
+stars: 50
+stars_approx: false
+forks: 8
+contributors: 5
+last_commit: '2026-10-16'
+archived: false
+kc_versions: null
+official: true
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/unioslo/keycloak-psso-extension

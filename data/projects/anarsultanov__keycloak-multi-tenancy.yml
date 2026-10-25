@@ -6,19 +6,19 @@ summary_ja: Keycloakのマルチテナント対応
 kind: core
 genre: Multi-tenancy / Organization
 spi_types: []
-language: null
+language: Java
 license: Apache-2.0
 stars: 171
 stars_approx: false
 forks: 27
-contributors: null
-last_commit: null
-archived: null
-kc_versions: null
+contributors: 6
+last_commit: '2025-12-12'
+archived: false
+kc_versions: 26.3.1
 official: true
 less_active_in_official: false
 unmaintained: false
 reviewed: true
 note: null
-fetched_at: '2026-10-22'
-source: https://github.com/anarsultanov/keycloak-multi-tenancy (page display value)
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/anarsultanov/keycloak-multi-tenancy

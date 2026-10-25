@@ -1,0 +1,24 @@
+name: keycloak-orcid
+repo: eosc-kc/keycloak-orcid
+url: https://github.com/eosc-kc/keycloak-orcid
+summary: ORCID social identity provider.
+summary_ja: ORCID用Identity Provider
+kind: core
+genre: Identity Provider
+spi_types: []
+language: Java
+license: Other (see repo)
+stars: 17
+stars_approx: false
+forks: 7
+contributors: 2
+last_commit: '2026-07-01'
+archived: false
+kc_versions: 26.5.0
+official: true
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/eosc-kc/keycloak-orcid
