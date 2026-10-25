@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-config-cli — Awesome Keycloak Extensions</title>
+<meta name="description" content="CLI to manage Keycloak realm configuration as code (YAML/JSON).">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">Tool</span><span class="b">Config as code / DevOps</span><span class="b Active">Active</span></p>
+    <h1 id="name">keycloak-config-cli</h1>
+    <p class="repo"><a href="https://github.com/adorsys/keycloak-config-cli" rel="noopener">adorsys/keycloak-config-cli ↗</a></p>
+    <p class="lead"><span class="l-en">CLI to manage Keycloak realm configuration as code (YAML/JSON).</span><span class="l-ja">Keycloakのrealm設定をYAML/JSONでコード管理するCLI</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>1,213</dd></div><div><dt>Forks</dt><dd>206</dd></div><div><dt>Contributors</dt><dd>85</dd></div><div><dt>Updated</dt><dd>2026-10-23</dd></div><div><dt>KC</dt><dd>26.6.2</dd></div><div><dt>License</dt><dd>Apache-2.0</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">6</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Apply realm configuration declaratively and idempotently from JSON/YAML files (realm-export format) through the Admin API, without restarting Keycloak.</span><span class="l-ja">realmエクスポート形式のJSON/YAMLから、Admin API経由で宣言的・冪等に設定を反映（Keycloakの再起動は不要）</span></li><li class="c"><span class="l-en">Create, update and delete clients (with protocol mappers and fine-grained authorization), roles and composites, groups and subgroups, users with roles and groups, client scopes and scope mappings.</span><span class="l-ja">クライアント（プロトコルマッパー、細粒度認可を含む）、ロールとコンポジット、グループとサブグループ、ロール・グループ付きユーザー、クライアントスコープ、スコープマッピングを作成・更新・削除</span></li><li class="c"><span class="l-en">Manage authentication flows (including built-in ones), executions, authenticator configs, required actions, identity providers and their mappers, and components.</span><span class="l-ja">認証フロー（組み込みフローを含む）、Execution、Authenticator設定、Required Action、IdPとそのマッパー、コンポーネントを管理</span></li><li class="c"><span class="l-en">Remove resources that are no longer in the file (&quot;full managed&quot; types such as groups, clients and roles), or keep them via <code>import.managed.*=no-delete</code>.</span><span class="l-ja">ファイルから消えたリソースを削除できる（groups・clients・rolesなど「完全管理」の型）。<code>import.managed.*=no-delete</code> で削除しない設定も可能</span></li><li class="c"><span class="l-en">Substitute variables from env vars, system properties and files (<code>$(env:...)</code>, <code>$(file:...)</code>), with opt-in sandboxed JavaScript evaluation.</span><span class="l-ja">環境変数・システムプロパティ・ファイルから変数を埋め込める（<code>$(env:...)</code>、<code>$(file:...)</code>）。サンドボックス化されたJavaScript評価も任意で有効化できる</span></li><li class="c"><span class="l-en">Run as a Docker image (Docker Hub / quay.io), a JAR or via Helm, with JSON logging.</span><span class="l-ja">Dockerイメージ（Docker Hub / quay.io）、JAR、Helmで実行でき、JSONログにも対応</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">5</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">Not a Keycloak extension — it runs outside Keycloak as a separate CLI or container.</span><span class="l-ja">Keycloak拡張ではなく、Keycloakの外で動くCLI・コンテナ</span></li><li class="x"><span class="l-en">For full-managed types, defining some items deletes all others of that type, and an empty array deletes everything; Keycloak defaults (components, required actions, flows) must be copied into your file.</span><span class="l-ja">完全管理型は、一部を定義するとそれ以外が削除され、空配列なら全削除される。Keycloakのデフォルト（コンポーネント、Required Action、フロー）は自分のファイルにコピーが必要</span></li><li class="x"><span class="l-en">Recreating a user federation (LDAP/AD) deletes all users it created, including their offline tokens.</span><span class="l-ja">ユーザーフェデレーション（LDAP/AD）を再作成すると、それが作ったユーザーもオフライントークンごと削除される</span></li><li class="x"><span class="l-en">Supports only the latest 4 Keycloak releases (from 4.0), and support is cut when Keycloak introduces breaking changes.</span><span class="l-ja">サポートは最新4つのKeycloakリリースのみ（4.0以降）。Keycloak側に破壊的変更があるとサポートを打ち切る</span></li><li class="x"><span class="l-en">Variable substitution is disabled by default, and with <code>${...}</code> syntax Keycloak&#x27;s own placeholders must be escaped as <code>$${...}</code>.</span><span class="l-ja">変数置換はデフォルト無効。<code>${...}</code> 構文にした場合はKeycloak自身のプレースホルダを <code>$${...}</code> とエスケープする必要がある</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">Network access to the Keycloak Admin API with an admin account.</span><span class="l-ja">管理者アカウントでKeycloak Admin APIにアクセスできること</span></li><li class="r"><span class="l-en">Pick the image tag for your Keycloak version (<code>a.b.c-x.y.z</code>), or the <code>maven</code> tag to build against an unsupported version.</span><span class="l-ja">Keycloakのバージョンに合うイメージタグ（<code>a.b.c-x.y.z</code>）を選ぶ。非対応バージョンには <code>maven</code> タグで実行時ビルド</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/adorsys/keycloak-config-cli#readme" rel="noopener">https://github.com/adorsys/keycloak-config-cli#readme</a></li><li><a href="https://github.com/adorsys/keycloak-config-cli/blob/main/docs/FEATURES.md" rel="noopener">https://github.com/adorsys/keycloak-config-cli/blob/main/docs/FEATURES.md</a></li><li><a href="https://github.com/adorsys/keycloak-config-cli/blob/main/docs/MANAGED.md" rel="noopener">https://github.com/adorsys/keycloak-config-cli/blob/main/docs/MANAGED.md</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

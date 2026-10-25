@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>terraform-provider-keycloak — Awesome Keycloak Extensions</title>
+<meta name="description" content="Terraform provider for managing Keycloak resources.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">Tool</span><span class="b">Config as code / DevOps</span><span class="b Active">Active</span></p>
+    <h1 id="name">terraform-provider-keycloak</h1>
+    <p class="repo"><a href="https://github.com/keycloak/terraform-provider-keycloak" rel="noopener">keycloak/terraform-provider-keycloak ↗</a></p>
+    <p class="lead"><span class="l-en">Terraform provider for managing Keycloak resources.</span><span class="l-ja">Keycloakリソースを管理するTerraform provider</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>955</dd></div><div><dt>Forks</dt><dd>452</dd></div><div><dt>Contributors</dt><dd>238</dd></div><div><dt>Updated</dt><dd>2026-10-13</dd></div><div><dt>KC</dt><dd>—</dd></div><div><dt>License</dt><dd>Apache-2.0</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">6</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Manage Keycloak as Terraform resources — realms (keystores, events, localization, user profile, client policies), OIDC and SAML clients, client scopes and protocol mappers.</span><span class="l-ja">KeycloakをTerraformリソースとして管理。realm（キーストア、イベント、ローカライズ、ユーザープロファイル、クライアントポリシー）、OIDC/SAMLクライアント、クライアントスコープ、プロトコルマッパー</span></li><li class="c"><span class="l-en">Manage users, groups, roles and memberships, organizations, required actions and default roles/groups.</span><span class="l-ja">ユーザー、グループ、ロールと所属、Organization、Required Action、デフォルトロール/グループを管理</span></li><li class="c"><span class="l-en">Manage authentication flows, subflows, executions and their configs, plus flow bindings.</span><span class="l-ja">認証フロー、サブフロー、Executionと設定、フローのバインドを管理</span></li><li class="c"><span class="l-en">Manage identity providers (generic OIDC/SAML, Google, GitHub, Microsoft, Facebook, OpenShift, Kubernetes, SPIFFE) and their mappers.</span><span class="l-ja">IdP（汎用OIDC/SAML、Google、GitHub、Microsoft、Facebook、OpenShift、Kubernetes、SPIFFE）とマッパーを管理</span></li><li class="c"><span class="l-en">Manage LDAP user federation and its mappers, custom user federation, client authorization resources/policies/permissions and fine-grained admin permissions.</span><span class="l-ja">LDAPユーザーフェデレーションとマッパー、カスタムフェデレーション、クライアント認可（リソース/ポリシー/パーミッション）、細粒度の管理者権限を管理</span></li><li class="c"><span class="l-en">Authenticate with client credentials (secret or signed JWT), password grant, a provided access token, and optionally an mTLS client certificate.</span><span class="l-ja">クライアントクレデンシャル（シークレット/署名JWT）、パスワードグラント、事前発行のアクセストークンで認証でき、mTLSクライアント証明書も使える</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">4</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">Not a Keycloak extension — it runs from Terraform against the Admin API.</span><span class="l-ja">Keycloak拡張ではなく、TerraformからAdmin APIを操作するツール</span></li><li class="x"><span class="l-en">Officially supports only the latest three minor Keycloak versions (older ones may still work).</span><span class="l-ja">公式サポートは最新3つのマイナーバージョンのみ（それ以前も動く可能性はある）</span></li><li class="x"><span class="l-en">The legacy WildFly distribution needs <code>base_path = &quot;/auth&quot;</code>.</span><span class="l-ja">旧WildFlyディストリビューションでは <code>base_path = &quot;/auth&quot;</code> の設定が必要</span></li><li class="x"><span class="l-en">No statically linked Alpine build since v2.0.0 (use the linux_amd64 build with <code>libc6-compat</code>).</span><span class="l-ja">v2.0.0以降、Alpine向けの静的リンクビルドは提供されない（<code>libc6-compat</code> を入れてlinux_amd64版を使う）</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">Terraform 0.13+ for automatic installation from the registry.</span><span class="l-ja">Registryから自動インストールするにはTerraform 0.13以上</span></li><li class="r"><span class="l-en">A Keycloak client or user with suitable admin roles (e.g. <code>realm-admin</code>, or <code>admin</code> in the master realm).</span><span class="l-ja">適切な管理ロール（<code>realm-admin</code>、またはmaster realmの <code>admin</code> など）を持つクライアントかユーザー</span></li><li class="r"><span class="l-en">Migrating from <code>mrparkers/keycloak</code> needs <code>terraform state replace-provider</code>.</span><span class="l-ja"><code>mrparkers/keycloak</code> からの移行は <code>terraform state replace-provider</code> で行う</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/keycloak/terraform-provider-keycloak#readme" rel="noopener">https://github.com/keycloak/terraform-provider-keycloak#readme</a></li><li><a href="https://registry.terraform.io/providers/keycloak/keycloak/latest/docs" rel="noopener">https://registry.terraform.io/providers/keycloak/keycloak/latest/docs</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

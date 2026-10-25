@@ -69,12 +69,46 @@ def check_duplicates(projects: list[dict]) -> list[str]:
     return errs
 
 
+def _check_items(d: dict, key: str, min_items: int) -> list[str]:
+    items = d.get(key)
+    if not isinstance(items, list):
+        return [f"'{key}' must be a list"]
+    errs = [f"'{key}' needs at least {min_items} item(s)"] if len(items) < min_items else []
+    for i, it in enumerate(items):
+        for lang in ("en", "ja"):
+            if not isinstance(it, dict) or not str(it.get(lang) or "").strip():
+                errs.append(f"{key}[{i}] needs a non-empty '{lang}' text")
+    return errs
+
+
+def check_details(d: dict, filename: str, repos: set[str]) -> list[str]:
+    repo = str(d.get("repo") or "")
+    errs = []
+    if repo.lower() not in {r.lower() for r in repos}:
+        errs.append(f"no project file for repo '{repo}'")
+    if filename != f"{repo}.yml":
+        errs.append(f"file name must be data/details/{repo}.yml")
+    if not _is_iso_date(d.get("researched_at") or "x"):
+        errs.append("'researched_at' must be an ISO date")
+    sources = d.get("sources")
+    if not isinstance(sources, list) or not sources or not all(str(s).startswith("https://") for s in sources):
+        errs.append("'sources' must be a non-empty list of https:// URLs")
+    errs += _check_items(d, "can", 1)
+    errs += _check_items(d, "cannot", 0)
+    errs += _check_items(d, "requires", 0)
+    return errs
+
+
 def main() -> int:
     projects = common.load_all()
     errs = []
     for p in projects:
         errs += [f"{p['_path'].name}: {e}" for e in check_project(p, p["_path"].name)]
     errs += check_duplicates(projects)
+    repos = {p["repo"] for p in projects}
+    for d in common.load_details().values():
+        rel = d["_path"].relative_to(common.DETAILS).as_posix()
+        errs += [f"details/{rel}: {e}" for e in check_details(d, rel, repos)]
     for e in errs:
         print(f"::error::{e}")
     print(f"validated {len(projects)} file(s): {len(errs)} error(s)")

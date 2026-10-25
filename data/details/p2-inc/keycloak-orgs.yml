@@ -1,0 +1,35 @@
+repo: p2-inc/keycloak-orgs
+researched_at: '2026-10-25'
+sources:
+- https://github.com/p2-inc/keycloak-orgs#readme
+- https://github.com/p2-inc/keycloak-orgs/blob/main/docs/note-keycloak-organizations-feature.md
+- https://phasetwo.io/docs/introduction
+can:
+- en: Model tenants as first-class Organizations inside a single realm, with memberships (a user can join several), organization-specific roles, invitations and email domains.
+  ja: 1つのrealm内でテナントをOrganizationとして扱える。メンバーシップ（複数所属可）、組織固有ロール、招待、メールドメインを持つ
+- en: Manage organizations, memberships, roles (including bulk) and organization IdPs through custom REST APIs (OpenAPI documented) and an Admin UI theme.
+  ja: 組織・メンバーシップ・ロール（一括操作含む）・組織IdPを独自REST API（OpenAPIあり）と管理UIテーマで管理
+- en: Let organization admins manage their own IdP; users are routed to it by email domain (Home IdP Discovery), and domain ownership can be verified via DNS.
+  ja: 組織管理者が自組織のIdPを管理でき、メールドメインでそのIdPへ振り分け（Home IdP Discovery）。ドメイン所有はDNSで検証可能
+- en: Invite users (existing or not) with an emailed link; a required action / authenticator lets them accept or reject at login.
+  ja: 既存・未登録のユーザーをメールで招待でき、ログイン時にRequired Action/Authenticatorで承諾・拒否させる
+- en: Add organization attributes or memberships and roles to tokens via OIDC mappers; emit organization events; import/export organizations; experimental SCIM.
+  ja: OIDCマッパーで組織属性や所属・ロールをトークンに追加。組織イベントの発行、組織のインポート/エクスポート、実験的なSCIMにも対応
+cannot:
+- en: "Licensed under the Elastic License v2 (changed from AGPL v3) — not an OSI open-source license; check the terms before commercial use."
+  ja: ライセンスはElastic License v2（AGPL v3から変更）で、OSI準拠のOSSライセンスではない。商用利用前に条件を確認
+- en: Does not work with the stock Keycloak image as-is — it needs extra libraries and `keycloak-admin-client` at Keycloak build time, so the Phase Two image is recommended.
+  ja: 標準のKeycloakイメージにそのまま入れても動かない。追加ライブラリと、Keycloakビルド時の `keycloak-admin-client` が必要（Phase Two版イメージ推奨）
+- en: Only guaranteed with the Keycloak version packaged in the Phase Two image.
+  ja: 動作保証はPhase Twoイメージに同梱のKeycloakバージョンのみ
+- en: Officially supports CockroachDB, PostgreSQL and MySQL; other databases may fail.
+  ja: 公式サポートDBはCockroachDB、PostgreSQL、MySQL。それ以外は失敗する可能性がある
+- en: Separate from Keycloak's built-in Organizations feature (the Phase Two image turns the native one off).
+  ja: Keycloak標準のOrganizations機能とは別物（Phase Twoのイメージでは標準機能を無効化）
+- en: "Creating an invitation sends no email unless `send=true`; the `Set user in context` default of IdP discovery leaks account existence when followed by a Username Password Form."
+  ja: "招待は `send=true` を付けないとメールが送られない。IdP Discoveryの `Set user in context` はデフォルトのままUsername Password Formと組み合わせると、アカウントの存在が漏れる"
+requires:
+- en: "Run the DB migrations on first start (new tables plus `view-organizations` / `manage-organizations` roles in every realm)."
+  ja: "初回起動時にDBマイグレーションが走る（新規テーブルと、全realmへの `view-organizations`/`manage-organizations` ロールの追加）"
+- en: "Select the `phasetwo.v2` admin theme to show the Organizations UI (set it on the realm you log in to, e.g. master)."
+  ja: "組織UIを出すには管理テーマ `phasetwo.v2` を選択（ログインするrealm、たとえばmaster側に設定）"

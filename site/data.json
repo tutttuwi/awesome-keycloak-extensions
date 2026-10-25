@@ -47,7 +47,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/adorsys/keycloak-config-cli",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": "p/adorsys/keycloak-config-cli.html"
   },
   {
    "name": "terraform-provider-keycloak",
@@ -74,7 +75,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/keycloak/terraform-provider-keycloak",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": "p/keycloak/terraform-provider-keycloak.html"
   },
   {
    "name": "keycloak-metrics-spi",
@@ -101,7 +103,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/aerogear/keycloak-metrics-spi",
-   "activity": "Stale"
+   "activity": "Stale",
+   "detail": "p/aerogear/keycloak-metrics-spi.html"
   },
   {
    "name": "keycloak-orgs",
@@ -128,7 +131,8 @@
    "note": "License changed from AGPL-3.0 to Elastic License v2 (check before adopting).",
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/p2-inc/keycloak-orgs",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": "p/p2-inc/keycloak-orgs.html"
   },
   {
    "name": "testcontainers-keycloak",
@@ -155,7 +159,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/dasniko/testcontainers-keycloak",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": "p/dasniko/testcontainers-keycloak.html"
   },
   {
    "name": "keycloak-restrict-client-auth",
@@ -182,7 +187,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/sventorben/keycloak-restrict-client-auth",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": "p/sventorben/keycloak-restrict-client-auth.html"
   },
   {
    "name": "keycloak-extensions-demo",
@@ -209,7 +215,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/dasniko/keycloak-extensions-demo",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": "p/dasniko/keycloak-extensions-demo.html"
   },
   {
    "name": "keycloak-magic-link",
@@ -236,7 +243,8 @@
    "note": "A COPYING file exists; license type not confirmed.",
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/p2-inc/keycloak-magic-link",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": "p/p2-inc/keycloak-magic-link.html"
   },
   {
    "name": "keycloak-2fa-sms-authenticator",
@@ -263,7 +271,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/dasniko/keycloak-2fa-sms-authenticator",
-   "activity": "Inactive"
+   "activity": "Inactive",
+   "detail": "p/dasniko/keycloak-2fa-sms-authenticator.html"
   },
   {
    "name": "keycloak-home-idp-discovery",
@@ -290,7 +299,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/sventorben/keycloak-home-idp-discovery",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": "p/sventorben/keycloak-home-idp-discovery.html"
   },
   {
    "name": "keycloak-events",
@@ -317,7 +327,8 @@
    "note": "A COPYING file exists; license type not confirmed.",
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/p2-inc/keycloak-events",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "keycloak-mfa-plugins",
@@ -344,7 +355,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/netzbegruenung/keycloak-mfa-plugins",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "apple-identity-provider-keycloak",
@@ -373,7 +385,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/klausbetz/apple-identity-provider-keycloak",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "keycloak-2fa-email-authenticator",
@@ -400,7 +413,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/mesutpiskin/keycloak-2fa-email-authenticator",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "keycloak-extensions",
@@ -427,7 +441,8 @@
    "note": "README says no longer maintained.",
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/zonaut/keycloak-extensions",
-   "activity": "Inactive"
+   "activity": "Inactive",
+   "detail": null
   },
   {
    "name": "keycloak-multi-tenancy",
@@ -454,7 +469,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/anarsultanov/keycloak-multi-tenancy",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "keycloak-event-listener-rabbitmq",
@@ -483,7 +499,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/aznamier/keycloak-event-listener-rabbitmq",
-   "activity": "Inactive"
+   "activity": "Inactive",
+   "detail": null
   },
   {
    "name": "keycloak-discord",
@@ -512,7 +529,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/wadahiro/keycloak-discord",
-   "activity": "Stale"
+   "activity": "Stale",
+   "detail": null
   },
   {
    "name": "keycloak",
@@ -539,7 +557,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/ansible-middleware/keycloak",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "kcwarden",
@@ -566,7 +585,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/iteratec/kcwarden",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "keycloak-protocol-cas",
@@ -593,7 +613,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/jacekkow/keycloak-protocol-cas",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "keycloak-provider",
@@ -620,7 +641,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/privacyidea/keycloak-provider",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "keycloak-webhook",
@@ -647,7 +669,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/vymalo/keycloak-webhook",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "Keycloak-FranceConnect",
@@ -674,7 +697,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/InseeFr/Keycloak-FranceConnect",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "keycloak-adaptive-authn",
@@ -701,7 +725,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/mabartos/keycloak-adaptive-authn",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "keycloak-passport",
@@ -728,7 +753,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/exlinc/keycloak-passport",
-   "activity": "Inactive"
+   "activity": "Inactive",
+   "detail": null
   },
   {
    "name": "edp-keycloak-operator",
@@ -755,7 +781,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/epam/edp-keycloak-operator",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "keycloak-scim-server",
@@ -782,7 +809,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/Metatavu/keycloak-scim-server",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "provider-keycloak",
@@ -809,7 +837,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/crossplane-contrib/provider-keycloak",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "keycloak-user-spi-demo",
@@ -836,7 +865,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/dasniko/keycloak-user-spi-demo",
-   "activity": "Inactive"
+   "activity": "Inactive",
+   "detail": null
   },
   {
    "name": "keycloak-openfga-event-publisher",
@@ -863,7 +893,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/embesozzi/keycloak-openfga-event-publisher",
-   "activity": "Inactive"
+   "activity": "Inactive",
+   "detail": null
   },
   {
    "name": "keycloak-client",
@@ -890,7 +921,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/keycloak-client/keycloak-client",
-   "activity": "Stale"
+   "activity": "Stale",
+   "detail": null
   },
   {
    "name": "keycloak-json-remote-claim",
@@ -917,7 +949,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/groupe-sii/keycloak-json-remote-claim",
-   "activity": "Inactive"
+   "activity": "Inactive",
+   "detail": null
   },
   {
    "name": "keycloak-phone-number",
@@ -944,7 +977,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/vymalo/keycloak-phone-number",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "keycloak-custom-event-listener",
@@ -971,7 +1005,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/cevheri/keycloak-custom-event-listener",
-   "activity": "Stale"
+   "activity": "Stale",
+   "detail": null
   },
   {
    "name": "Keycloak-Federation-ExistingDB",
@@ -998,7 +1033,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/rsatrio/Keycloak-Federation-ExistingDB",
-   "activity": "Inactive"
+   "activity": "Inactive",
+   "detail": null
   },
   {
    "name": "keycloak-psso-extension",
@@ -1025,7 +1061,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/unioslo/keycloak-psso-extension",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "keycloak-event-listener-mqtt",
@@ -1057,7 +1094,8 @@
    "aliases": [
     "mhuin/keycloak-event-listener-mqtt"
    ],
-   "activity": "Inactive"
+   "activity": "Inactive",
+   "detail": null
   },
   {
    "name": "keycloak-extension-bundid",
@@ -1087,7 +1125,8 @@
    "aliases": [
     "opdt/keycloak-extension-bundid"
    ],
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "Keycloak-PII-Data-Encryption-Provider",
@@ -1114,7 +1153,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/MLukman/Keycloak-PII-Data-Encryption-Provider",
-   "activity": "Stale"
+   "activity": "Stale",
+   "detail": null
   },
   {
    "name": "keycloak-wsfed",
@@ -1141,7 +1181,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/cloudtrust/keycloak-wsfed",
-   "activity": "Inactive"
+   "activity": "Inactive",
+   "detail": null
   },
   {
    "name": "verify-keycloak-integration",
@@ -1168,7 +1209,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/IBM-Security/verify-keycloak-integration",
-   "activity": "Inactive"
+   "activity": "Inactive",
+   "detail": null
   },
   {
    "name": "postgres-keycloak-oauth-validator",
@@ -1195,7 +1237,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/cloudnative-pg/postgres-keycloak-oauth-validator",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "keycloak-cassandra-extension",
@@ -1225,7 +1268,8 @@
    "aliases": [
     "opdt/keycloak-cassandra-extension"
    ],
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "keycloak-app-passwords",
@@ -1252,7 +1296,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/radicallyopensecurity/keycloak-app-passwords",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "Keycloak-GeoAware",
@@ -1279,7 +1324,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/B2-Code/Keycloak-GeoAware",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "keycloak-quarkus-extensions",
@@ -1306,7 +1352,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/mabartos/keycloak-quarkus-extensions",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "keycloak-regex-mapper",
@@ -1333,7 +1380,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/LucaFilipozzi/keycloak-regex-mapper",
-   "activity": "Inactive"
+   "activity": "Inactive",
+   "detail": null
   },
   {
    "name": "keycloak-github-ssh-key-attribute-mapper",
@@ -1363,7 +1411,8 @@
    "aliases": [
     "mhuin/keycloak-github-ssh-key-attribute-mapper"
    ],
-   "activity": "Inactive"
+   "activity": "Inactive",
+   "detail": null
   },
   {
    "name": "keycloak-shadcn",
@@ -1390,7 +1439,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/emirhannaneli/keycloak-shadcn",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "keycloak-orcid",
@@ -1417,7 +1467,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/eosc-kc/keycloak-orcid",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "Extended-SAML-IDP",
@@ -1444,7 +1495,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/First8/Extended-SAML-IDP",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "keycloak-external-claim-mapper",
@@ -1471,7 +1523,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/zloom/keycloak-external-claim-mapper",
-   "activity": "Stale"
+   "activity": "Stale",
+   "detail": null
   },
   {
    "name": "keycloak-extension-qr-code-execution",
@@ -1498,7 +1551,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/HadleySo/keycloak-extension-qr-code-execution",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "keycloak-impersonation-policy-enforcer",
@@ -1525,7 +1579,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/LucaFilipozzi/keycloak-impersonation-policy-enforcer",
-   "activity": "Inactive"
+   "activity": "Inactive",
+   "detail": null
   },
   {
    "name": "keycloak-secrets-vault-provider",
@@ -1552,7 +1607,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/Nordix/keycloak-secrets-vault-provider",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "keycloak-push-mfa-extension",
@@ -1579,7 +1635,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/ba-itsys/keycloak-push-mfa-extension",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "keycloak-block-disposable-email",
@@ -1606,7 +1663,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/chintanbuch/keycloak-block-disposable-email",
-   "activity": "Stale"
+   "activity": "Stale",
+   "detail": null
   },
   {
    "name": "keycloak-client-cert-lookup-for-envoy",
@@ -1633,7 +1691,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/Nordix/keycloak-client-cert-lookup-for-envoy",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "keycloak-tiktok",
@@ -1660,7 +1719,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/mpowr-it/keycloak-tiktok",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "keycloak-alias-guard",
@@ -1687,7 +1747,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/it-perspectives/keycloak-alias-guard",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "keycloak-atomic-auth-flows",
@@ -1714,7 +1775,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/p2-inc/keycloak-atomic-auth-flows",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "cap-captcha-keycloak",
@@ -1741,7 +1803,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/schwebke/cap-captcha-keycloak",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "keycloak-personal-access-tokens",
@@ -1768,7 +1831,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/mrulex-repo/keycloak-personal-access-tokens",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "keycloak-minecraft-idp",
@@ -1795,7 +1859,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/groundsgg/keycloak-minecraft-idp",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "Keycloak-WS-Federation",
@@ -1822,7 +1887,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/ChosoMeister/Keycloak-WS-Federation",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "keycloak-rest-claim-mapper",
@@ -1849,7 +1915,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/jowe112/keycloak-rest-claim-mapper",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "keycloak-filtered-group-membership-mapper",
@@ -1876,7 +1943,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/byteworks-ch/keycloak-filtered-group-membership-mapper",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "keycloak-configurable-theme",
@@ -1903,7 +1971,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/dockndevai/keycloak-configurable-theme",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "keycloak-event-enrichment",
@@ -1930,7 +1999,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/AdrianIAna/keycloak-event-enrichment",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "keycloak-login-notification",
@@ -1957,7 +2027,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/sea-watch/keycloak-login-notification",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "keycloak-token-auth",
@@ -1984,7 +2055,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/mkunz-it/keycloak-token-auth",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   },
   {
    "name": "keycloak-account-events",
@@ -2011,7 +2083,8 @@
    "note": null,
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/AdrianIAna/keycloak-account-events",
-   "activity": "Active"
+   "activity": "Active",
+   "detail": null
   }
  ]
 }

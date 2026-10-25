@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-2fa-sms-authenticator — Awesome Keycloak Extensions</title>
+<meta name="description" content="SMS OTP second-factor authenticator via AWS SNS (demo).">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b">Community</span><span class="b">SPI</span><span class="b">MFA / Passwordless</span><span class="b Inactive">Inactive</span></p>
+    <h1 id="name">keycloak-2fa-sms-authenticator</h1>
+    <p class="repo"><a href="https://github.com/dasniko/keycloak-2fa-sms-authenticator" rel="noopener">dasniko/keycloak-2fa-sms-authenticator ↗</a></p>
+    <p class="lead"><span class="l-en">SMS OTP second-factor authenticator via AWS SNS (demo).</span><span class="l-ja">AWS SNS経由のSMS OTP二要素認証(デモ)</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>377</dd></div><div><dt>Forks</dt><dd>177</dd></div><div><dt>Contributors</dt><dd>1</dd></div><div><dt>Updated</dt><dd>2025-05-07</dd></div><div><dt>KC</dt><dd>24.0.0</dd></div><div><dt>License</dt><dd>MIT</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">2</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Send a one-time code by SMS (through AWS SNS) as a second login factor.</span><span class="l-ja">AWS SNS経由でSMSのワンタイムコードを送り、二要素目として使える</span></li><li class="c"><span class="l-en">Serve as a reference implementation of a custom authenticator (explained in a blog post and videos).</span><span class="l-ja">カスタムAuthenticator実装の参考になる（ブログと動画で解説あり）</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">5</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">Not meant for production — the author says demo purposes only.</span><span class="l-ja">本番利用は想定外（作者いわく「デモ用途のみ」）</span></li><li class="x"><span class="l-en">No longer maintained, and the repository is archived.</span><span class="l-ja">保守終了済みで、リポジトリはアーカイブされている</span></li><li class="x"><span class="l-en">The author advises against SMS as a security factor (&quot;convenience, no security&quot;).</span><span class="l-ja">作者自身がSMSはセキュリティ要素として使うべきでないとしている（「利便性であってセキュリティではない」）</span></li><li class="x"><span class="l-en">AWS SNS is the only SMS gateway.</span><span class="l-ja">SMS送信手段はAWS SNSのみ</span></li><li class="x"><span class="l-en">There is no real README; documentation is limited to the blog post and videos.</span><span class="l-ja">まともなREADMEはなく、ドキュメントはブログと動画だけ</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">An AWS account with SNS.</span><span class="l-ja">AWS SNSを利用できるAWSアカウント</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/dasniko/keycloak-2fa-sms-authenticator#readme" rel="noopener">https://github.com/dasniko/keycloak-2fa-sms-authenticator#readme</a></li><li><a href="https://www.n-k.de/2020/12/keycloak-2fa-sms-authentication.html" rel="noopener">https://www.n-k.de/2020/12/keycloak-2fa-sms-authentication.html</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

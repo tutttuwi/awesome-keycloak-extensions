@@ -13,12 +13,12 @@ Activity: **Active** ≤12 months · **Stale** 12–24 months · **Inactive** >2
 
 | # | Name | Summary | ★ | Last commit | Activity | KC | License | Src |
 |--:|------|---------|--:|-------------|----------|----|---------|-----|
-| 1 | [keycloak-metrics-spi](https://github.com/aerogear/keycloak-metrics-spi) | Exposes Keycloak metrics (Prometheus format) via an SPI.<br>KeycloakのメトリクスをPrometheus形式で公開するSPI | 614 | 2024-11-08 | Stale | 26.0.0 | Apache-2.0 | Official |
-| 2 | [keycloak-orgs](https://github.com/p2-inc/keycloak-orgs) | Organizations / multi-tenancy for Keycloak realms.<br>Keycloakの組織・マルチテナント機能 | 544 | 2026-10-14 | Active | 26.8.0 | Elastic-2.0 | Official |
-| 3 | [keycloak-restrict-client-auth](https://github.com/sventorben/keycloak-restrict-client-auth) | Restrict which users may access which clients (role/policy based).<br>クライアント単位でユーザーのアクセスを制限 | 440 | 2026-10-14 | Active | 26.8.0 | MIT | Official |
-| 4 | [keycloak-extensions-demo](https://github.com/dasniko/keycloak-extensions-demo) | Demo of many SPI types: action token, authenticators, event listener, token mapper, required action, etc.<br>多数のSPI実装例(actiontoken/authenticator/event-listener/tokenmapper/requiredaction等) | 434 | 2026-10-14 | Active | nightly | Apache-2.0 | Official |
-| 5 | [keycloak-magic-link](https://github.com/p2-inc/keycloak-magic-link) | Passwordless magic-link login.<br>マジックリンク(パスワードレス)認証 | 430 | 2026-10-20 | Active | 26.8.0 | Other (see repo) | Official |
-| 6 | [keycloak-home-idp-discovery](https://github.com/sventorben/keycloak-home-idp-discovery) | Discover the home IdP from the user's email domain.<br>メールドメインからホームIdPを自動判定 | 341 | 2026-10-02 | Active | 26.8.0 | MIT | Official |
+| 1 | [keycloak-metrics-spi](https://github.com/aerogear/keycloak-metrics-spi)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/aerogear/keycloak-metrics-spi.html) | Exposes Keycloak metrics (Prometheus format) via an SPI.<br>KeycloakのメトリクスをPrometheus形式で公開するSPI | 614 | 2024-11-08 | Stale | 26.0.0 | Apache-2.0 | Official |
+| 2 | [keycloak-orgs](https://github.com/p2-inc/keycloak-orgs)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/p2-inc/keycloak-orgs.html) | Organizations / multi-tenancy for Keycloak realms.<br>Keycloakの組織・マルチテナント機能 | 544 | 2026-10-14 | Active | 26.8.0 | Elastic-2.0 | Official |
+| 3 | [keycloak-restrict-client-auth](https://github.com/sventorben/keycloak-restrict-client-auth)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/sventorben/keycloak-restrict-client-auth.html) | Restrict which users may access which clients (role/policy based).<br>クライアント単位でユーザーのアクセスを制限 | 440 | 2026-10-14 | Active | 26.8.0 | MIT | Official |
+| 4 | [keycloak-extensions-demo](https://github.com/dasniko/keycloak-extensions-demo)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/dasniko/keycloak-extensions-demo.html) | Demo of many SPI types: action token, authenticators, event listener, token mapper, required action, etc.<br>多数のSPI実装例(actiontoken/authenticator/event-listener/tokenmapper/requiredaction等) | 434 | 2026-10-14 | Active | nightly | Apache-2.0 | Official |
+| 5 | [keycloak-magic-link](https://github.com/p2-inc/keycloak-magic-link)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/p2-inc/keycloak-magic-link.html) | Passwordless magic-link login.<br>マジックリンク(パスワードレス)認証 | 430 | 2026-10-20 | Active | 26.8.0 | Other (see repo) | Official |
+| 6 | [keycloak-home-idp-discovery](https://github.com/sventorben/keycloak-home-idp-discovery)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/sventorben/keycloak-home-idp-discovery.html) | Discover the home IdP from the user's email domain.<br>メールドメインからホームIdPを自動判定 | 341 | 2026-10-02 | Active | 26.8.0 | MIT | Official |
 | 7 | [keycloak-events](https://github.com/p2-inc/keycloak-events) | Event listeners and webhooks for Keycloak events.<br>Keycloakイベント用のリスナー/Webhook | 317 | 2026-10-15 | Active | 26.8.0 | Other (see repo) | Official |
 | 8 | [keycloak-mfa-plugins](https://github.com/netzbegruenung/keycloak-mfa-plugins) | MFA plugins: SMS, enforced MFA, native-app MFA.<br>MFAプラグイン集(SMS/強制MFA/ネイティブアプリMFA) | 300 | 2026-10-13 | Active | 26.8.0 | Apache-2.0 | Official |
 | 9 | [apple-identity-provider-keycloak](https://github.com/klausbetz/apple-identity-provider-keycloak) | Sign in with Apple identity provider.<br>Sign in with Apple用Identity Provider | 297 | 2026-01-18 | Active | unknown | Apache-2.0 | Official |
@@ -40,8 +40,8 @@ Activity: **Active** ≤12 months · **Stale** 12–24 months · **Inactive** >2
 
 | # | Name | Summary | ★ | Last commit | Activity | KC | License | Src |
 |--:|------|---------|--:|-------------|----------|----|---------|-----|
-| 1 | [keycloak-magic-link](https://github.com/p2-inc/keycloak-magic-link) | Passwordless magic-link login.<br>マジックリンク(パスワードレス)認証 | 430 | 2026-10-20 | Active | 26.8.0 | Other (see repo) | Official |
-| 2 | [keycloak-home-idp-discovery](https://github.com/sventorben/keycloak-home-idp-discovery) | Discover the home IdP from the user's email domain.<br>メールドメインからホームIdPを自動判定 | 341 | 2026-10-02 | Active | 26.8.0 | MIT | Official |
+| 1 | [keycloak-magic-link](https://github.com/p2-inc/keycloak-magic-link)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/p2-inc/keycloak-magic-link.html) | Passwordless magic-link login.<br>マジックリンク(パスワードレス)認証 | 430 | 2026-10-20 | Active | 26.8.0 | Other (see repo) | Official |
+| 2 | [keycloak-home-idp-discovery](https://github.com/sventorben/keycloak-home-idp-discovery)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/sventorben/keycloak-home-idp-discovery.html) | Discover the home IdP from the user's email domain.<br>メールドメインからホームIdPを自動判定 | 341 | 2026-10-02 | Active | 26.8.0 | MIT | Official |
 | 3 | [keycloak-adaptive-authn](https://github.com/mabartos/keycloak-adaptive-authn) | Risk-based / adaptive authentication.<br>リスクベース(アダプティブ)認証 | 105 | 2026-07-28 | Active | nightly | Apache-2.0 | Official |
 | 4 | [keycloak-phone-number](https://github.com/vymalo/keycloak-phone-number) | Log in with a phone number and SMS OTP.<br>電話番号+SMS OTPでログイン | 55 | 2026-07-24 | Active | 26.5.2 | MIT | Community |
 | 5 | [keycloak-psso-extension](https://github.com/unioslo/keycloak-psso-extension) | macOS Platform Single Sign-On (PSSO) support.<br>macOS Platform SSO対応 | 50 | 2026-10-16 | Active | unknown | GPL-2.0 | Official |
@@ -113,14 +113,14 @@ Activity: **Active** ≤12 months · **Stale** 12–24 months · **Inactive** >2
 
 | # | Name | Summary | ★ | Last commit | Activity | KC | License | Src |
 |--:|------|---------|--:|-------------|----------|----|---------|-----|
-| 1 | [keycloak-orgs](https://github.com/p2-inc/keycloak-orgs) | Organizations / multi-tenancy for Keycloak realms.<br>Keycloakの組織・マルチテナント機能 | 544 | 2026-10-14 | Active | 26.8.0 | Elastic-2.0 | Official |
+| 1 | [keycloak-orgs](https://github.com/p2-inc/keycloak-orgs)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/p2-inc/keycloak-orgs.html) | Organizations / multi-tenancy for Keycloak realms.<br>Keycloakの組織・マルチテナント機能 | 544 | 2026-10-14 | Active | 26.8.0 | Elastic-2.0 | Official |
 | 2 | [keycloak-multi-tenancy](https://github.com/anarsultanov/keycloak-multi-tenancy) | Multi-tenancy support for Keycloak.<br>Keycloakのマルチテナント対応 | 171 | 2025-12-12 | Active | 26.3.1 | Apache-2.0 | Official |
 
 ### Policy / Authorization
 
 | # | Name | Summary | ★ | Last commit | Activity | KC | License | Src |
 |--:|------|---------|--:|-------------|----------|----|---------|-----|
-| 1 | [keycloak-restrict-client-auth](https://github.com/sventorben/keycloak-restrict-client-auth) | Restrict which users may access which clients (role/policy based).<br>クライアント単位でユーザーのアクセスを制限 | 440 | 2026-10-14 | Active | 26.8.0 | MIT | Official |
+| 1 | [keycloak-restrict-client-auth](https://github.com/sventorben/keycloak-restrict-client-auth)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/sventorben/keycloak-restrict-client-auth.html) | Restrict which users may access which clients (role/policy based).<br>クライアント単位でユーザーのアクセスを制限 | 440 | 2026-10-14 | Active | 26.8.0 | MIT | Official |
 
 ### Email / Notification
 
@@ -139,7 +139,7 @@ Activity: **Active** ≤12 months · **Stale** 12–24 months · **Inactive** >2
 
 | # | Name | Summary | ★ | Last commit | Activity | KC | License | Src |
 |--:|------|---------|--:|-------------|----------|----|---------|-----|
-| 1 | [keycloak-metrics-spi](https://github.com/aerogear/keycloak-metrics-spi) | Exposes Keycloak metrics (Prometheus format) via an SPI.<br>KeycloakのメトリクスをPrometheus形式で公開するSPI | 614 | 2024-11-08 | Stale | 26.0.0 | Apache-2.0 | Official |
+| 1 | [keycloak-metrics-spi](https://github.com/aerogear/keycloak-metrics-spi)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/aerogear/keycloak-metrics-spi.html) | Exposes Keycloak metrics (Prometheus format) via an SPI.<br>KeycloakのメトリクスをPrometheus形式で公開するSPI | 614 | 2024-11-08 | Stale | 26.0.0 | Apache-2.0 | Official |
 | 2 | [keycloak-account-events](https://github.com/AdrianIAna/keycloak-account-events) | Let users read their own login history.<br>ユーザー自身がログイン履歴を参照できる | 0 | 2026-09-02 | Active | 26.7.2 | Apache-2.0 | Official |
 
 ### Storage / Datastore
@@ -168,15 +168,15 @@ Activity: **Active** ≤12 months · **Stale** 12–24 months · **Inactive** >2
 
 | # | Name | Summary | ★ | Last commit | Activity | KC | License | Src |
 |--:|------|---------|--:|-------------|----------|----|---------|-----|
-| 1 | [keycloak-extensions-demo](https://github.com/dasniko/keycloak-extensions-demo) | Demo of many SPI types: action token, authenticators, event listener, token mapper, required action, etc.<br>多数のSPI実装例(actiontoken/authenticator/event-listener/tokenmapper/requiredaction等) | 434 | 2026-10-14 | Active | nightly | Apache-2.0 | Official |
+| 1 | [keycloak-extensions-demo](https://github.com/dasniko/keycloak-extensions-demo)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/dasniko/keycloak-extensions-demo.html) | Demo of many SPI types: action token, authenticators, event listener, token mapper, required action, etc.<br>多数のSPI実装例(actiontoken/authenticator/event-listener/tokenmapper/requiredaction等) | 434 | 2026-10-14 | Active | nightly | Apache-2.0 | Official |
 
 ## Companion tools (Terraform, CLI, testing, …)
 
 | # | Name | Summary | ★ | Last commit | Activity | KC | License | Src |
 |--:|------|---------|--:|-------------|----------|----|---------|-----|
-| 1 | [keycloak-config-cli](https://github.com/adorsys/keycloak-config-cli) | CLI to manage Keycloak realm configuration as code (YAML/JSON).<br>Keycloakのrealm設定をYAML/JSONでコード管理するCLI | 1,213 | 2026-10-23 | Active | 26.6.2 | Apache-2.0 | Official |
-| 2 | [terraform-provider-keycloak](https://github.com/keycloak/terraform-provider-keycloak) | Terraform provider for managing Keycloak resources.<br>Keycloakリソースを管理するTerraform provider | 955 | 2026-10-13 | Active | unknown | Apache-2.0 | Official |
-| 3 | [testcontainers-keycloak](https://github.com/dasniko/testcontainers-keycloak) | Testcontainers module to run Keycloak in integration tests.<br>Keycloakを統合テストで起動するTestcontainersモジュール | 464 | 2026-10-11 | Active | nightly | Apache-2.0 | Official |
+| 1 | [keycloak-config-cli](https://github.com/adorsys/keycloak-config-cli)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/adorsys/keycloak-config-cli.html) | CLI to manage Keycloak realm configuration as code (YAML/JSON).<br>Keycloakのrealm設定をYAML/JSONでコード管理するCLI | 1,213 | 2026-10-23 | Active | 26.6.2 | Apache-2.0 | Official |
+| 2 | [terraform-provider-keycloak](https://github.com/keycloak/terraform-provider-keycloak)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/keycloak/terraform-provider-keycloak.html) | Terraform provider for managing Keycloak resources.<br>Keycloakリソースを管理するTerraform provider | 955 | 2026-10-13 | Active | unknown | Apache-2.0 | Official |
+| 3 | [testcontainers-keycloak](https://github.com/dasniko/testcontainers-keycloak)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/dasniko/testcontainers-keycloak.html) | Testcontainers module to run Keycloak in integration tests.<br>Keycloakを統合テストで起動するTestcontainersモジュール | 464 | 2026-10-11 | Active | nightly | Apache-2.0 | Official |
 | 4 | [keycloak](https://github.com/ansible-middleware/keycloak) | Ansible collection to install and configure Keycloak / Red Hat build of Keycloak.<br>Keycloakを導入・設定するAnsibleコレクション | 139 | 2026-10-16 | Active | unknown | Apache-2.0 | Official |
 | 5 | [kcwarden](https://github.com/iteratec/kcwarden) | Security audit tool for Keycloak configuration.<br>Keycloak設定のセキュリティ監査ツール | 135 | 2026-10-16 | Active | unknown | Apache-2.0 | Official |
 | 6 | [edp-keycloak-operator](https://github.com/epam/edp-keycloak-operator) | Kubernetes operator that manages Keycloak realms, clients and users as CRs.<br>Keycloakのrealm/client等をCRで管理するKubernetes Operator | 95 | 2026-10-25 | Active | unknown | Apache-2.0 | Official |
@@ -191,7 +191,7 @@ Kept for reference; not part of the rankings above.
 
 | # | Name | Summary | ★ | Last commit | Activity | KC | License | Src |
 |--:|------|---------|--:|-------------|----------|----|---------|-----|
-| 1 | [keycloak-2fa-sms-authenticator](https://github.com/dasniko/keycloak-2fa-sms-authenticator) | SMS OTP second-factor authenticator via AWS SNS (demo).<br>AWS SNS経由のSMS OTP二要素認証(デモ) | 377 | 2025-05-07 | Inactive | 24.0.0 | MIT | Community |
+| 1 | [keycloak-2fa-sms-authenticator](https://github.com/dasniko/keycloak-2fa-sms-authenticator)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/dasniko/keycloak-2fa-sms-authenticator.html) | SMS OTP second-factor authenticator via AWS SNS (demo).<br>AWS SNS経由のSMS OTP二要素認証(デモ) | 377 | 2025-05-07 | Inactive | 24.0.0 | MIT | Community |
 | 2 | [keycloak-extensions](https://github.com/zonaut/keycloak-extensions) | Collection of example extensions.<br>拡張のサンプル集 | 230 | 2022-09-19 | Inactive | unknown | Other (see repo) | Official |
 | 3 | [keycloak-event-listener-rabbitmq](https://github.com/aznamier/keycloak-event-listener-rabbitmq) | Publish Keycloak events to RabbitMQ.<br>KeycloakイベントをRabbitMQへ送信 | 170 | 2024-03-20 | Inactive | 21.1.2 | Apache-2.0 | Official |
 | 4 | [keycloak-passport](https://github.com/exlinc/keycloak-passport) | Passport.js strategy for multi-realm Keycloak login (Node.js).<br>Node.js(Passport.js)用のKeycloak認証ストラテジー | 104 | 2018-09-07 | Inactive | unknown | Apache-2.0 | Official |

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>testcontainers-keycloak — Awesome Keycloak Extensions</title>
+<meta name="description" content="Testcontainers module to run Keycloak in integration tests.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">Tool</span><span class="b">Testing / Examples</span><span class="b Active">Active</span></p>
+    <h1 id="name">testcontainers-keycloak</h1>
+    <p class="repo"><a href="https://github.com/dasniko/testcontainers-keycloak" rel="noopener">dasniko/testcontainers-keycloak ↗</a></p>
+    <p class="lead"><span class="l-en">Testcontainers module to run Keycloak in integration tests.</span><span class="l-ja">Keycloakを統合テストで起動するTestcontainersモジュール</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>464</dd></div><div><dt>Forks</dt><dd>63</dd></div><div><dt>Contributors</dt><dd>19</dd></div><div><dt>Updated</dt><dd>2026-10-11</dd></div><div><dt>KC</dt><dd>nightly</dd></div><div><dt>License</dt><dd>Apache-2.0</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">6</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Start a real Keycloak in Docker from Java integration tests (JUnit 5), with any Keycloak image or version.</span><span class="l-ja">Javaの統合テスト（JUnit 5）から本物のKeycloakをDockerで起動でき、イメージ・バージョンも指定できる</span></li><li class="c"><span class="l-en">Import realm JSON files, set admin credentials, enable feature flags, set the context path or management port, and pass custom CLI arguments.</span><span class="l-ja">realm JSONのインポート、管理者認証情報の指定、フィーチャーフラグ、コンテキストパス、管理ポート、任意のCLI引数を設定できる</span></li><li class="c"><span class="l-en">Hand you a ready-made Admin Client, OIDC endpoint URL helpers and token helpers (password and client-credentials grants).</span><span class="l-ja">設定済みのAdminクライアント、OIDCエンドポイントURLのヘルパー、トークン取得ヘルパー（パスワード/クライアントクレデンシャル）を提供</span></li><li class="c"><span class="l-en">Run with TLS (built-in keystore, or your own cert/key or keystore), in production mode, or from a pre-built <code>--optimized</code> image.</span><span class="l-ja">TLS（同梱キーストア、独自の証明書/鍵やキーストア）、本番モード、ビルド済みの <code>--optimized</code> イメージでも起動できる</span></li><li class="c"><span class="l-en">Test your own extensions straight from <code>target/classes</code> (packaged on the fly) with third-party libraries and a remote debugger.</span><span class="l-ja">自作拡張を <code>target/classes</code> から直接テストできる（その場でJAR化）。サードパーティライブラリの追加やリモートデバッグも可能</span></li><li class="c"><span class="l-en">Has integration guides for Spring Boot (<code>@DynamicPropertySource</code>) and Quarkus.</span><span class="l-ja">Spring Boot（<code>@DynamicPropertySource</code>）とQuarkus向けの統合ガイドがある</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">5</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">Not a Keycloak extension — a Java test library that needs Docker.</span><span class="l-ja">Keycloak拡張ではなく、Dockerが必要なJava向けテストライブラリ</span></li><li class="x"><span class="l-en">Forward-only development — no LTS and no backports.</span><span class="l-ja">前方開発のみで、LTSやバックポートはない</span></li><li class="x"><span class="l-en">The default constructor is deprecated (since 4.2) — always pass an image name.</span><span class="l-ja">デフォルトコンストラクタは4.2から非推奨。必ずイメージ名を指定する</span></li><li class="x"><span class="l-en">An <code>--optimized</code> image without the health endpoint never becomes healthy unless you supply your own wait strategy.</span><span class="l-ja"><code>--optimized</code> イメージでhealthエンドポイントを有効にしていないと、待機戦略を自分で用意しない限りhealthyにならない</span></li><li class="x"><span class="l-en">Custom CLI arguments are your own responsibility (the library logs a warning).</span><span class="l-ja">独自のCLI引数を使った場合の動作は自己責任（ライブラリが警告を出す）</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">A Docker environment and Java with JUnit 5 / Testcontainers; pick the library version that matches your Keycloak (see the version overview).</span><span class="l-ja">Docker環境と、JUnit 5/Testcontainersが使えるJava環境。Keycloakに合うライブラリバージョンを選ぶ（バージョン対応表を参照）</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/dasniko/testcontainers-keycloak#readme" rel="noopener">https://github.com/dasniko/testcontainers-keycloak#readme</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>
