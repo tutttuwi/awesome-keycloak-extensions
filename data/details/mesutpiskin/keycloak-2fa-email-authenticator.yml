@@ -1,0 +1,24 @@
+repo: mesutpiskin/keycloak-2fa-email-authenticator
+researched_at: '2026-10-25'
+sources:
+- https://github.com/mesutpiskin/keycloak-2fa-email-authenticator#readme
+- https://mesutpiskin.github.io/keycloak-2fa-email-authenticator/
+can:
+- en: Add an email one-time code as a second factor in browser flows.
+  ja: ブラウザフローに、メールのワンタイムコードによる二要素認証を追加
+- en: Configure code length, validity (TTL), resend cooldown and maximum attempts.
+  ja: コード桁数・有効期間（TTL）・再送の待ち時間・最大試行回数を設定できる
+- en: Send through Keycloak's SMTP, SendGrid, AWS SES or Mailgun.
+  ja: 送信手段はKeycloakのSMTP、SendGrid、AWS SES、Mailgunから選べる
+- en: Optionally show a masked email address on the OTP form; templates can be customised.
+  ja: OTP入力画面でマスクしたメールアドレスを表示できる。テンプレートもカスタマイズ可能
+cannot:
+- en: Email only — SMS, Telegram, WhatsApp and Signal are covered by a separate sibling project.
+  ja: メール専用。SMS・Telegram・WhatsApp・SignalはSibling project（別リポジトリ）の担当
+- en: Each release targets specific Keycloak versions — pick the `-KC` version that matches yours.
+  ja: リリースごとに対応Keycloakが決まっている。自分のバージョンに合う `-KC` 付きのバージョンを選ぶ
+requires:
+- en: A working mail backend (realm SMTP or one of the supported APIs).
+  ja: 動作するメール送信手段（realmのSMTPか対応API）
+- en: The JAR from Maven Central matching your Keycloak version (see COMPATIBILITY.md).
+  ja: Keycloakのバージョンに合うMaven CentralのJAR（COMPATIBILITY.mdを参照）

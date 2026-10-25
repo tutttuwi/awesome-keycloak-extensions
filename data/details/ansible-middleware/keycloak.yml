@@ -1,0 +1,23 @@
+repo: ansible-middleware/keycloak
+researched_at: '2026-10-25'
+sources:
+- https://github.com/ansible-middleware/keycloak#readme
+can:
+- en: Install Keycloak (Quarkus-based, 19+) on hosts with an Ansible role, including clustered setups; the legacy role covers older WildFly-based versions and RH-SSO.
+  ja: Ansibleのロールで、Keycloak（Quarkus版、19以降）をホストにインストールできる（クラスタ構成にも対応）。旧ロールでWildFly版やRH-SSOにも対応
+- en: Install offline from the controller node or from alternate sources (Nexus, Artifactory, proxy).
+  ja: コントローラノードからのオフラインインストールや、社内リポジトリ（Nexus、Artifactory、プロキシ）からの取得が可能
+- en: Configure realms, user federation, clients, client roles and users through a role.
+  ja: ロールで、realm・ユーザーフェデレーション・クライアント・クライアントロール・ユーザーを設定
+- en: Manage a running Keycloak with modules (e.g. client scopes with protocol mappers, authentication flows); migrate from `community.general` modules by renaming the prefix.
+  ja: 稼働中のKeycloakをモジュールで管理（プロトコルマッパー付きクライアントスコープ、認証フローなど）。`community.general` からはプレフィックス変更で移行可能
+cannot:
+- en: Not a Keycloak extension — an Ansible collection run from a controller.
+  ja: Keycloak拡張ではなく、コントローラから実行するAnsibleコレクション
+- en: Red Hat customers should use the certified `redhat.rhbk` / `redhat.sso` collections instead.
+  ja: Red Hatの顧客は、認定版の `redhat.rhbk`/`redhat.sso` コレクションを使うべきとされている
+- en: For clusters, all hosts must be targeted by the same playbook run.
+  ja: クラスタ構成では、全ホストを同じplaybook実行の対象にする必要がある
+requires:
+- en: "Ansible 2.16+ and the Python packages `netaddr` and `lxml` on the controller."
+  ja: "Ansible 2.16以上と、コントローラ上のPythonパッケージ `netaddr`・`lxml`"

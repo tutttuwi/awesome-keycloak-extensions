@@ -1,0 +1,31 @@
+repo: netzbegruenung/keycloak-mfa-plugins
+researched_at: '2026-10-25'
+sources:
+- https://github.com/netzbegruenung/keycloak-mfa-plugins#readme
+- https://github.com/netzbegruenung/keycloak-mfa-plugins/tree/main/sms-authenticator
+- https://github.com/netzbegruenung/keycloak-mfa-plugins/tree/main/enforce-mfa
+- https://github.com/netzbegruenung/keycloak-mfa-plugins/tree/main/app-authenticator
+- https://github.com/netzbegruenung/keycloak-mfa-plugins/tree/main/trusted-device-authenticator
+can:
+- en: SMS one-time code as a second factor, sent through any configurable HTTP(S) SMS API (production ready), with phone-number validation and update required actions.
+  ja: SMSのワンタイムコードによる二要素認証。設定可能なHTTP(S)のSMS APIで送信でき（production ready）、電話番号の確認・更新用Required Actionもある
+- en: Email one-time code via the realm's SMTP (production ready), with configurable code length and TTL and optional forced 2FA.
+  ja: realmのSMTPを使うメールのワンタイムコード（production ready）。桁数とTTLを設定でき、2FAの強制も可能
+- en: '"Enforce MFA": make users without a second factor choose and set one up after login (beta); a conditional variant decides based on enrolled credentials.'
+  ja: 「Enforce MFA」で、二要素未設定のユーザーにログイン後の設定を強制（ベータ）。登録済みクレデンシャルで分岐する条件付き版もある
+- en: '"Trusted device": skip the second factor on a remembered browser for a configurable number of days (7 by default).'
+  ja: 「Trusted Device」で、信頼したブラウザでは指定日数（既定7日）二要素を省略
+- en: Approve or deny logins from a mobile app (push or polling, device key pair) — a Flutter client package exists.
+  ja: モバイルアプリからログインを承認・拒否できる（プッシュかポーリング、端末の鍵ペアで署名）。Flutterのクライアントパッケージあり
+cannot:
+- en: The native-app MFA is still a work in progress, and Enforce MFA is beta.
+  ja: ネイティブアプリMFAは開発中、Enforce MFAはベータ
+- en: "The SMS step must use the alias `sms-2fa` (a known hack); payloads are always HTTP POST, and you need your own SMS provider account."
+  ja: "SMSのステップはエイリアスを `sms-2fa` にする必要がある（既知の暫定対応）。送信は常にHTTP POSTで、SMS事業者の契約は自前で用意"
+- en: Enforce MFA only works with a specific flow layout (the MFA-alternatives subflow must be the first subflow).
+  ja: Enforce MFAは特定のフロー構成でしか動かない（MFAの選択肢を持つサブフローが最初のサブフローである必要がある）
+- en: Each release is built for one Keycloak version (`<keycloak>-<n>` versioning).
+  ja: 各リリースは特定のKeycloakバージョン向けにビルドされる（`<keycloak>-<n>` 形式）
+requires:
+- en: "Copy the JAR(s) into `providers`, run `kc.sh build` and restart; then duplicate the browser flow and add the steps."
+  ja: "JARを `providers` に置き、`kc.sh build` 後に再起動。ブラウザフローを複製してステップを追加"

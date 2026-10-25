@@ -328,7 +328,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/p2-inc/keycloak-events",
    "activity": "Active",
-   "detail": null
+   "detail": "p/p2-inc/keycloak-events.html"
   },
   {
    "name": "keycloak-mfa-plugins",
@@ -356,7 +356,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/netzbegruenung/keycloak-mfa-plugins",
    "activity": "Active",
-   "detail": null
+   "detail": "p/netzbegruenung/keycloak-mfa-plugins.html"
   },
   {
    "name": "apple-identity-provider-keycloak",
@@ -386,7 +386,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/klausbetz/apple-identity-provider-keycloak",
    "activity": "Active",
-   "detail": null
+   "detail": "p/klausbetz/apple-identity-provider-keycloak.html"
   },
   {
    "name": "keycloak-2fa-email-authenticator",
@@ -414,7 +414,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/mesutpiskin/keycloak-2fa-email-authenticator",
    "activity": "Active",
-   "detail": null
+   "detail": "p/mesutpiskin/keycloak-2fa-email-authenticator.html"
   },
   {
    "name": "keycloak-extensions",
@@ -442,7 +442,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/zonaut/keycloak-extensions",
    "activity": "Inactive",
-   "detail": null
+   "detail": "p/zonaut/keycloak-extensions.html"
   },
   {
    "name": "keycloak-multi-tenancy",
@@ -470,7 +470,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/anarsultanov/keycloak-multi-tenancy",
    "activity": "Active",
-   "detail": null
+   "detail": "p/anarsultanov/keycloak-multi-tenancy.html"
   },
   {
    "name": "keycloak-event-listener-rabbitmq",
@@ -500,7 +500,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/aznamier/keycloak-event-listener-rabbitmq",
    "activity": "Inactive",
-   "detail": null
+   "detail": "p/aznamier/keycloak-event-listener-rabbitmq.html"
   },
   {
    "name": "keycloak-discord",
@@ -530,7 +530,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/wadahiro/keycloak-discord",
    "activity": "Stale",
-   "detail": null
+   "detail": "p/wadahiro/keycloak-discord.html"
   },
   {
    "name": "keycloak",
@@ -558,7 +558,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/ansible-middleware/keycloak",
    "activity": "Active",
-   "detail": null
+   "detail": "p/ansible-middleware/keycloak.html"
   },
   {
    "name": "kcwarden",
@@ -586,7 +586,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/iteratec/kcwarden",
    "activity": "Active",
-   "detail": null
+   "detail": "p/iteratec/kcwarden.html"
   },
   {
    "name": "keycloak-protocol-cas",

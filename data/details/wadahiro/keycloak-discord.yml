@@ -1,0 +1,21 @@
+repo: wadahiro/keycloak-discord
+researched_at: '2026-10-25'
+sources:
+- https://github.com/wadahiro/keycloak-discord#readme
+can:
+- en: Add "Log in with Discord" as a social identity provider.
+  ja: Discordログインをソーシャル Identity Provider として追加できる
+- en: Optionally allow federation only for members of specific Discord guilds (servers) by guild ID.
+  ja: ギルドIDを指定して、特定のDiscordサーバー（ギルド）のメンバーだけに連携を許可できる
+- en: No theme setup in the master realm is needed (since v0.3.0).
+  ja: v0.3.0以降、master realmでのテーマ設定は不要
+cannot:
+- en: Only covers login/federation — the README documents no other Discord features (e.g. role or guild data mapping).
+  ja: 機能はログイン/連携のみ。ロールやギルド情報のマッピングなど、それ以外のDiscord機能はREADMEに記載がない
+- en: Low activity — listed as "less active" on the official extensions page, with the last commit in 2024.
+  ja: 活動は低調。公式拡張ページでは "less active" 扱いで、最終コミットは2024年
+requires:
+- en: A Discord application (client ID and secret) from the Discord Developer Portal.
+  ja: Discord Developer Portalで作成したアプリケーション（Client ID / Secret）
+- en: "Deploy the JAR into `$KEYCLOAK_HOME/providers`."
+  ja: "JARを `$KEYCLOAK_HOME/providers` に配置"

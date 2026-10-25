@@ -1,0 +1,28 @@
+repo: klausbetz/apple-identity-provider-keycloak
+researched_at: '2026-10-25'
+sources:
+- https://github.com/klausbetz/apple-identity-provider-keycloak#readme
+- https://github.com/klausbetz/apple-identity-provider-keycloak/wiki
+can:
+- en: Add "Sign in with Apple" as an identity provider, handling Apple's non-standard OIDC behaviour (POSTed token response, no userinfo endpoint, JWT client secret signed with a .p8 key).
+  ja: 「Sign in with Apple」をIdPとして追加。AppleのOIDC非準拠な挙動（トークン応答のPOST、userinfoなし、.p8鍵で署名したJWTのクライアントシークレット）に対応
+- en: Support native apps (e.g. iOS) via token exchange — swap an Apple ID token or authorization code for Keycloak tokens.
+  ja: トークン交換でネイティブアプリ（iOSなど）に対応。AppleのIDトークンや認可コードをKeycloakのトークンに交換できる
+- en: Optionally link token-exchange logins to existing Keycloak accounts automatically.
+  ja: トークン交換でのログインを、既存のKeycloakアカウントに自動でリンクできる
+- en: Pass the user's name on first login during token exchange (`user_profile`).
+  ja: トークン交換の初回ログイン時に、ユーザー名を `user_profile` で渡して保存できる
+cannot:
+- en: Apple sends email and name only on the very first sign-in, and has no userinfo endpoint to fetch them later.
+  ja: Appleはメールと氏名を初回サインイン時しか送らず、後から取得するuserinfoエンドポイントもない
+- en: Users with a private-relay address receive no Keycloak emails unless the realm's sender address is whitelisted in your Apple Developer account.
+  ja: プライベートリレーのアドレスを使うユーザーには、realmの送信元アドレスをApple Developer側で許可しない限りKeycloakのメールが届かない
+- en: Uses internal Keycloak SPIs, so it may break on a new Keycloak major — use the extension version from the compatibility table.
+  ja: Keycloakの内部SPIを使っているため、メジャーアップデートで壊れる可能性がある。互換表にあるバージョンを使う
+- en: Not usable from the Admin UI on Keycloak 21 (config fields hidden), and v19/v20 need the old Admin UI.
+  ja: Keycloak 21では管理UIで設定項目が表示されず使えない（Terraform等なら可）。v19/v20は旧管理UIが必要
+requires:
+- en: An Apple Developer account (Service ID, Team ID, Key ID, .p8 key) with the Keycloak broker URL registered as a redirect URL.
+  ja: Apple Developerアカウント（Service ID、Team ID、Key ID、.p8鍵）。KeycloakのブローカーURLをリダイレクトURLとして登録
+- en: Token exchange must be enabled and configured in Keycloak for native-app logins.
+  ja: ネイティブアプリでのログインには、Keycloak側でトークン交換の有効化と設定が必要

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-event-listener-rabbitmq — Awesome Keycloak Extensions</title>
+<meta name="description" content="Publish Keycloak events to RabbitMQ.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">SPI</span><span class="b">Event / Webhook / Messaging</span><span class="b Inactive">Inactive</span></p>
+    <h1 id="name">keycloak-event-listener-rabbitmq</h1>
+    <p class="repo"><a href="https://github.com/aznamier/keycloak-event-listener-rabbitmq" rel="noopener">aznamier/keycloak-event-listener-rabbitmq ↗</a></p>
+    <p class="lead"><span class="l-en">Publish Keycloak events to RabbitMQ.</span><span class="l-ja">KeycloakイベントをRabbitMQへ送信</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>170</dd></div><div><dt>Forks</dt><dd>63</dd></div><div><dt>Contributors</dt><dd>11</dd></div><div><dt>Updated</dt><dd>2024-03-20</dd></div><div><dt>KC</dt><dd>21.1.2</dd></div><div><dt>License</dt><dd>Apache-2.0</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">3</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Publish Keycloak user (client) and admin events as JSON to RabbitMQ (default exchange <code>amq.topic</code>).</span><span class="l-ja">KeycloakのユーザーイベントとAdminイベントをJSONでRabbitMQへ送信（既定のexchangeは <code>amq.topic</code>）</span></li><li class="c"><span class="l-en">Use structured routing keys (<code>KK.EVENT.&lt;type&gt;.&lt;realm&gt;.&lt;result&gt;...</code>) so consumers can subscribe by realm, client, result or event type with topic wildcards.</span><span class="l-ja">構造化されたルーティングキー（<code>KK.EVENT.&lt;種別&gt;.&lt;realm&gt;.&lt;結果&gt;...</code>）で、realm・クライアント・成否・イベント種別ごとにトピックのワイルドカードで購読できる</span></li><li class="c"><span class="l-en">Configure host, port, vhost, exchange, credentials and TLS (key/trust stores) through environment variables.</span><span class="l-ja">ホスト・ポート・vhost・exchange・認証情報・TLS（キーストア/トラストストア）を環境変数で設定</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">4</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">RabbitMQ only — no other brokers.</span><span class="l-ja">RabbitMQ専用で、他のブローカーには送れない</span></li><li class="x"><span class="l-en">Default credentials are <code>admin</code>/<code>admin</code> and TLS is off by default — set them explicitly.</span><span class="l-ja">認証情報の既定は <code>admin</code>/<code>admin</code>、TLSは既定でオフ。明示的に設定が必要</span></li><li class="x"><span class="l-en">The WildFly configuration options are deprecated (Keycloak 16 and older).</span><span class="l-ja">WildFly向けの設定方法は非推奨（Keycloak 16以前）</span></li><li class="x"><span class="l-en">No commits since March 2024 — inactive.</span><span class="l-ja">2024年3月以降コミットがなく、活動停止状態</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">Plugin 3.x needs Keycloak 16+; copy the JAR to <code>/opt/keycloak/providers</code> and enable the <code>keycloak-to-rabbitmq</code> event listener.</span><span class="l-ja">プラグイン3.xはKeycloak 16以上が必要。JARを <code>/opt/keycloak/providers</code> に置き、イベントリスナー <code>keycloak-to-rabbitmq</code> を有効化</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/aznamier/keycloak-event-listener-rabbitmq#readme" rel="noopener">https://github.com/aznamier/keycloak-event-listener-rabbitmq#readme</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

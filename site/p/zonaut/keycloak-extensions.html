@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-extensions — Awesome Keycloak Extensions</title>
+<meta name="description" content="Collection of example extensions.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">SPI</span><span class="b">Testing / Examples</span><span class="b Inactive">Inactive</span></p>
+    <h1 id="name">keycloak-extensions</h1>
+    <p class="repo"><a href="https://github.com/zonaut/keycloak-extensions" rel="noopener">zonaut/keycloak-extensions ↗</a></p>
+    <p class="lead"><span class="l-en">Collection of example extensions.</span><span class="l-ja">拡張のサンプル集</span></p>
+    <p class="note">README says no longer maintained.</p>
+    <dl class="stats"><div><dt>★</dt><dd>230</dd></div><div><dt>Forks</dt><dd>52</dd></div><div><dt>Contributors</dt><dd>2</dd></div><div><dt>Updated</dt><dd>2022-09-19</dd></div><div><dt>KC</dt><dd>—</dd></div><div><dt>License</dt><dd>Other (see repo)</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">3</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Show examples of adding custom domain entities, a custom event listener, a custom REST resource and a minimal custom theme.</span><span class="l-ja">独自ドメインエンティティの追加、カスタムイベントリスナー、カスタムRESTリソース、最小限のカスタムテーマの実装例がある</span></li><li class="c"><span class="l-en">Show how to override mail templates (with extra variables) and how to drop first/last-name validation on registration.</span><span class="l-ja">メールテンプレートの上書き（変数追加）や、登録画面の姓名バリデーションを外す例もある</span></li><li class="c"><span class="l-en">Ship a docker-compose demo with a sample realm, users and Mailhog.</span><span class="l-ja">サンプルrealm・ユーザー・Mailhog付きのdocker-composeデモ環境がある</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">3</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">No longer maintained (stated in the README; last commit 2022).</span><span class="l-ja">保守終了（READMEに明記、最終コミットは2022年）</span></li><li class="x"><span class="l-en">Built for the old WildFly-based Keycloak (<code>/auth</code> context path, <code>keycloak.migration</code> export) — not ready for current Quarkus versions without changes.</span><span class="l-ja">旧WildFly版Keycloak向け（<code>/auth</code> パス、<code>keycloak.migration</code> によるエクスポート）。現行のQuarkus版では修正なしには動かない</span></li><li class="x"><span class="l-en">Examples only, not production extensions.</span><span class="l-ja">あくまで実装例で、本番用の拡張ではない</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">Maven and Docker Compose to build and run the examples.</span><span class="l-ja">ビルドと実行にはMavenとDocker Composeが必要</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/zonaut/keycloak-extensions#readme" rel="noopener">https://github.com/zonaut/keycloak-extensions#readme</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

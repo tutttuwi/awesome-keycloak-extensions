@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-multi-tenancy — Awesome Keycloak Extensions</title>
+<meta name="description" content="Multi-tenancy support for Keycloak.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">SPI</span><span class="b">Multi-tenancy / Organization</span><span class="b Active">Active</span></p>
+    <h1 id="name">keycloak-multi-tenancy</h1>
+    <p class="repo"><a href="https://github.com/anarsultanov/keycloak-multi-tenancy" rel="noopener">anarsultanov/keycloak-multi-tenancy ↗</a></p>
+    <p class="lead"><span class="l-en">Multi-tenancy support for Keycloak.</span><span class="l-ja">Keycloakのマルチテナント対応</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>171</dd></div><div><dt>Forks</dt><dd>27</dd></div><div><dt>Contributors</dt><dd>6</dd></div><div><dt>Updated</dt><dd>2025-12-12</dd></div><div><dt>KC</dt><dd>26.3.1</dd></div><div><dt>License</dt><dd>Apache-2.0</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">5</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Build B2B multi-tenant IAM in one realm — users create a tenant at registration, review invitations and pick an active tenant at login (required actions).</span><span class="l-ja">1つのrealmでB2B向けマルチテナントIAMを構築できる。登録時のテナント作成、招待の確認、ログイン時のアクティブテナント選択をRequired Actionで行う</span></li><li class="c"><span class="l-en">Switch the active tenant without re-login via Application-Initiated Actions (with cancel support).</span><span class="l-ja">Application-Initiated Actionで、再ログインせずにアクティブテナントを切り替えられる（キャンセルも可）</span></li><li class="c"><span class="l-en">Manage tenants, multi-valued searchable attributes and invitations through a REST API (tenant creator becomes <code>tenant-admin</code>; optional realm-wide <code>manage-tenants</code>).</span><span class="l-ja">テナント、検索可能な多値属性、招待をREST APIで管理（作成者は <code>tenant-admin</code>。realm全体の管理用に <code>manage-tenants</code> ロールも設定可能）</span></li><li class="c"><span class="l-en">Put the active tenant, all tenants or specific tenant attributes into tokens via mappers.</span><span class="l-ja">マッパーで、アクティブテナント・全所属テナント・特定のテナント属性をトークンに追加</span></li><li class="c"><span class="l-en">Bind IdPs to specific tenants, auto-create memberships on IdP login, and offer a &quot;Login with SSO&quot; option where users type an IdP alias.</span><span class="l-ja">IdPを特定テナントに紐づけ、IdPログイン時に所属を自動作成できる。IdPエイリアスを入力する「Login with SSO」も提供</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">4</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">Tenant-specific IdPs are configured through the Keycloak REST API (<code>multi-tenancy.tenants</code> attribute), not a dedicated UI.</span><span class="l-ja">テナント専用IdPの設定はKeycloakのREST API（<code>multi-tenancy.tenants</code> 属性）で行う必要があり、専用のUIはない</span></li><li class="x"><span class="l-en">Users logging in through a tenant-specific IdP who are not members of its tenants get an error unless automatic membership is set up.</span><span class="l-ja">テナント専用IdPでログインしたユーザーがそのテナントのメンバーでない場合、所属の自動作成を設定していないとエラーになる</span></li><li class="x"><span class="l-en">Invitations are only visible to users with a verified email.</span><span class="l-ja">招待はメール確認済みのユーザーにしか表示されない</span></li><li class="x"><span class="l-en">Only the most recent Keycloak is targeted (the extension&#x27;s major version matches Keycloak&#x27;s).</span><span class="l-ja">対象は最新のKeycloakのみ（拡張のメジャーバージョンがKeycloakと対応）</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">Copy the JAR to <code>providers/</code>, run <code>kc.sh build</code>, enable the three required actions in this exact order and turn on <code>Verify email</code>.</span><span class="l-ja">JARを <code>providers/</code> に置いて <code>kc.sh build</code>。3つのRequired Actionをこの順で有効化し、<code>Verify email</code> をオンにする</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/anarsultanov/keycloak-multi-tenancy#readme" rel="noopener">https://github.com/anarsultanov/keycloak-multi-tenancy#readme</a></li><li><a href="#" rel="noopener">http://sultanov.dev/keycloak-multi-tenancy/</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

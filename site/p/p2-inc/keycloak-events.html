@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-events — Awesome Keycloak Extensions</title>
+<meta name="description" content="Event listeners and webhooks for Keycloak events.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">SPI</span><span class="b">Event / Webhook / Messaging</span><span class="b Active">Active</span></p>
+    <h1 id="name">keycloak-events</h1>
+    <p class="repo"><a href="https://github.com/p2-inc/keycloak-events" rel="noopener">p2-inc/keycloak-events ↗</a></p>
+    <p class="lead"><span class="l-en">Event listeners and webhooks for Keycloak events.</span><span class="l-ja">Keycloakイベント用のリスナー/Webhook</span></p>
+    <p class="note">A COPYING file exists; license type not confirmed.</p>
+    <dl class="stats"><div><dt>★</dt><dd>317</dd></div><div><dt>Forks</dt><dd>53</dd></div><div><dt>Contributors</dt><dd>13</dd></div><div><dt>Updated</dt><dd>2026-10-15</dd></div><div><dt>KC</dt><dd>26.8.0</dd></div><div><dt>License</dt><dd>Other (see repo)</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">6</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Subscribe to events with webhooks managed through a REST API — select event types, retry with exponential backoff, and send after the transaction commits.</span><span class="l-ja">REST APIで管理するWebhookでイベントを購読できる。イベント種別の指定、指数バックオフでの再送、トランザクションのコミット後の送信に対応</span></li><li class="c"><span class="l-en">Authenticate webhook payloads with an HMAC signature or a bearer JWT signed by the realm key (no shared secret needed).</span><span class="l-ja">Webhookのペイロードを、HMAC署名か、realmの鍵で署名したBearer JWT（共有シークレット不要）で認証できる</span></li><li class="c"><span class="l-en">Send events to an HTTP endpoint with optional HMAC signing and retries.</span><span class="l-ja">イベントをHTTPエンドポイントへ送信できる（HMAC署名と再送は任意）</span></li><li class="c"><span class="l-en">Run JavaScript event listeners (like the script authenticator) configured per realm.</span><span class="l-ja">realmごとに設定したJavaScriptのイベントリスナーを実行できる（スクリプトAuthenticatorと同じ方式）</span></li><li class="c"><span class="l-en">Run several instances of the same listener type with different configs, configured at runtime through realm attributes (REST endpoint included).</span><span class="l-ja">同じ種類のリスナーを設定違いで複数動かせる。設定はrealm属性で実行時に変更でき、REST APIもある</span></li><li class="c"><span class="l-en">Emit every event as a structured log with MDC fields for Loki/Elasticsearch/CloudWatch; base classes for &quot;user added / removed&quot; listeners are included.</span><span class="l-ja">全イベントをMDC付きの構造化ログとして出力（Loki/Elasticsearch/CloudWatch向け）。「ユーザー追加/削除」リスナーの基底クラスもある</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">6</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">Licensed under the Elastic License 2.0 — not an OSI open-source license; check the terms before commercial use.</span><span class="l-ja">ライセンスはElastic License 2.0で、OSI準拠のOSSライセンスではない。商用利用前に条件を確認</span></li><li class="x"><span class="l-en">Only the most recent Keycloak version in <code>pom.xml</code> is supported.</span><span class="l-ja">サポートは <code>pom.xml</code> に記載の最新Keycloakバージョンのみ</span></li><li class="x"><span class="l-en">The stock Admin UI cannot edit the realm attributes used for configuration — use the API, the database or the Phase Two admin theme.</span><span class="l-ja">設定に使うrealm属性は標準の管理UIでは編集できない（API、DB直接、またはPhase Twoの管理テーマを使う）</span></li><li class="x"><span class="l-en">Configuration values support only single-depth JSON objects.</span><span class="l-ja">設定値のJSONは1階層のオブジェクトのみ対応</span></li><li class="x"><span class="l-en">The user-change listener is untested with users added via identity providers or federation.</span><span class="l-ja">ユーザー変更リスナーは、IdPやフェデレーション経由で追加されたユーザーでは未検証</span></li><li class="x"><span class="l-en">For bearer-JWT webhooks, set the realm frontend URL or <code>KC_HOSTNAME</code>, otherwise the issuer may not match production tokens.</span><span class="l-ja">Bearer JWTのWebhookでは、realmのフロントエンドURLか <code>KC_HOSTNAME</code> を設定しないと、issuerが本番のトークンと一致しない場合がある</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">Put the fat JAR in <code>providers</code> and rebuild, then enable listeners such as <code>ext-event-webhook</code> in Realm Settings &gt; Events.</span><span class="l-ja">fat JARを <code>providers</code> に置いて再ビルドし、Realm設定 &gt; Eventsで <code>ext-event-webhook</code> などのリスナーを有効化</span></li><li class="r"><span class="l-en">Managing webhooks needs the <code>view-events</code> and <code>manage-events</code> permissions.</span><span class="l-ja">Webhookの管理には <code>view-events</code> と <code>manage-events</code> の権限が必要</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/p2-inc/keycloak-events#readme" rel="noopener">https://github.com/p2-inc/keycloak-events#readme</a></li><li><a href="https://github.com/p2-inc/keycloak-events/blob/main/COPYING" rel="noopener">https://github.com/p2-inc/keycloak-events/blob/main/COPYING</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>
