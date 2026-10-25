@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-rest-claim-mapper — Awesome Keycloak Extensions</title>
+<meta name="description" content="OIDC/SAML mapper that enriches tokens from a REST API.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">SPI</span><span class="b">Protocol Mapper / Claim</span><span class="b Active">Active</span></p>
+    <h1 id="name">keycloak-rest-claim-mapper</h1>
+    <p class="repo"><a href="https://github.com/jowe112/keycloak-rest-claim-mapper" rel="noopener">jowe112/keycloak-rest-claim-mapper ↗</a></p>
+    <p class="lead"><span class="l-en">OIDC/SAML mapper that enriches tokens from a REST API.</span><span class="l-ja">REST APIの値でトークンを拡充するマッパー</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>2</dd></div><div><dt>Forks</dt><dd>0</dd></div><div><dt>Contributors</dt><dd>2</dd></div><div><dt>Updated</dt><dd>2026-08-19</dd></div><div><dt>KC</dt><dd>26.7.1</dd></div><div><dt>License</dt><dd>Apache-2.0</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">5</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Enrich OIDC tokens and SAML assertions with attributes fetched from external REST APIs at token issuance — works with any federation (LDAP, AD, User Storage SPI).</span><span class="l-ja">トークン発行時に外部REST APIから属性を取得し、OIDCトークンやSAMLアサーションに追加できる。フェデレーションの種類（LDAP、AD、User Storage SPI）は問わない</span></li><li class="c"><span class="l-en">Call up to 3 endpoints in parallel, authenticating with an API key, basic auth or OAuth2 client credentials.</span><span class="l-ja">最大3つのエンドポイントを並列で呼び出せる。認証はAPIキー・Basic認証・OAuth2クライアントクレデンシャルに対応</span></li><li class="c"><span class="l-en">Cache attributes with a TTL for imported users and fetch live for non-imported ones.</span><span class="l-ja">インポート済みユーザーは属性をTTL付きでキャッシュし、非インポートのユーザーは毎回取得する</span></li><li class="c"><span class="l-en">Map with JSONPath, build query strings with JavaScript (GraalVM), and put structured JSON arrays into one claim (<code>json:</code> prefix).</span><span class="l-ja">JSONPathでのマッピング、JavaScript（GraalVM）でのクエリ文字列生成、構造化JSON配列の1クレームへの格納（<code>json:</code> 接頭辞）ができる</span></li><li class="c"><span class="l-en">Test endpoints from an admin panel without a real user login.</span><span class="l-ja">実際のユーザーでログインしなくても、管理画面からエンドポイントをテストできる</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">2</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">Limited to 3 REST endpoints per mapper.</span><span class="l-ja">1つのマッパーで扱えるRESTエンドポイントは3つまで</span></li><li class="x"><span class="l-en">Targets Keycloak 26.x on the Quarkus distribution with a GraalVM JDK (for the JavaScript feature).</span><span class="l-ja">対象はQuarkus版のKeycloak 26.xで、GraalVM JDKが前提（JavaScript機能のため）</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">Java 21 and Maven 3.9+ to build; put the fat JAR in <code>/opt/keycloak/providers/</code>.</span><span class="l-ja">ビルドにJava 21とMaven 3.9以上。fat JARを <code>/opt/keycloak/providers/</code> に置く</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/jowe112/keycloak-rest-claim-mapper#readme" rel="noopener">https://github.com/jowe112/keycloak-rest-claim-mapper#readme</a></li><li><a href="https://github.com/jowe112/keycloak-rest-claim-mapper/blob/main/docs/ADMIN_GUIDE.md" rel="noopener">https://github.com/jowe112/keycloak-rest-claim-mapper/blob/main/docs/ADMIN_GUIDE.md</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

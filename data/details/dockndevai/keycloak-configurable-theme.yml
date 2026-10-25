@@ -1,0 +1,25 @@
+repo: dockndevai/keycloak-configurable-theme
+researched_at: '2026-10-25'
+sources:
+- https://github.com/dockndevai/keycloak-configurable-theme#readme
+can:
+- en: Use one theme for every realm and drive layout, colours, logo, favicon, fonts, texts, banner and footer from configuration instead of separate theme folders.
+  ja: 1つのテーマを全realmで使い、レイアウト・色・ロゴ・ファビコン・フォント・文言・バナー・フッターを、テーマフォルダを分けずに設定だけで切り替えられる
+- en: Brand the login page, account and admin consoles and emails, in light and dark mode.
+  ja: ログイン画面・アカウント/管理コンソール・メールをブランディングでき、ライト/ダークの両モードに対応
+- en: "Layer settings: built-in defaults → `branding.json` (global and per realm) → realm overrides through a REST API or an admin \"Branding\" tab; file changes reload without restart."
+  ja: "設定は、組み込みの既定値 → `branding.json`（全体とrealm別）→ REST APIや管理画面の「Branding」タブでのrealm別上書き、の順に重なる。ファイルの変更は再起動なしで反映"
+- en: Built-in layouts (centered, split-left/right, minimal) plus custom CSS layouts added without a rebuild.
+  ja: 組み込みのレイアウト（中央、左右分割、ミニマル）に加え、独自CSSのレイアウトも再ビルドなしで追加できる
+cannot:
+- en: Uses internal Keycloak SPIs for login, email and REST — re-test on every Keycloak upgrade (a warning is logged).
+  ja: ログイン・メール・RESTにKeycloakの内部SPIを使うため、Keycloakを更新するたびに再テストが必要（起動時に警告が出る）
+- en: The admin-console Branding tab needs the experimental `declarative-ui` feature; without it, use the REST API.
+  ja: "管理コンソールのBrandingタブには実験的な `declarative-ui` 機能が必要。なければREST APIを使う"
+- en: Built and tested against Keycloak 26.8.0 only.
+  ja: ビルド・テストはKeycloak 26.8.0のみ
+- en: Customisation is limited to configuration and layout CSS — not a full template rewrite.
+  ja: カスタマイズは設定とレイアウトCSSの範囲内で、テンプレートを丸ごと書き換えるものではない
+requires:
+- en: "Java 21; put the JAR in `/opt/keycloak/providers/` (or use the Docker image), then `kc.sh build`."
+  ja: "Java 21。JARを `/opt/keycloak/providers/` に置き（またはDockerイメージを使い）、`kc.sh build`"

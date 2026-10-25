@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-login-notification — Awesome Keycloak Extensions</title>
+<meta name="description" content="Email users when a new login session is created.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">SPI</span><span class="b">Email / Notification</span><span class="b Active">Active</span></p>
+    <h1 id="name">keycloak-login-notification</h1>
+    <p class="repo"><a href="https://github.com/sea-watch/keycloak-login-notification" rel="noopener">sea-watch/keycloak-login-notification ↗</a></p>
+    <p class="lead"><span class="l-en">Email users when a new login session is created.</span><span class="l-ja">新規ログイン時にセキュリティ通知メールを送信</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>1</dd></div><div><dt>Forks</dt><dd>0</dd></div><div><dt>Contributors</dt><dd>1</dd></div><div><dt>Updated</dt><dd>2026-07-21</dd></div><div><dt>KC</dt><dd>26.7.0</dd></div><div><dt>License</dt><dd>Other (see repo)</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">4</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Email users when a new Keycloak session is created, with login time, IP address, client ID and User-Agent.</span><span class="l-ja">新しいKeycloakセッションが作られたときに、ログイン時刻・IPアドレス・クライアントID・User-Agentを記載したセキュリティ通知メールを送る</span></li><li class="c"><span class="l-en">Send at most one email per session (deduplicated across SSO clients and token refreshes).</span><span class="l-ja">1セッションにつき1通だけ送る（SSOでの別クライアントやトークン更新では重複しない）</span></li><li class="c"><span class="l-en">Change subject and wording per realm and language in the Admin Console, and optionally add buttons to the sessions or password pages.</span><span class="l-ja">件名や本文は、realmと言語ごとに管理コンソールから変更できる。セッション画面やパスワード変更画面へのボタンも追加できる</span></li><li class="c"><span class="l-en">Includes a guarded deployment for the Univention Keycloak App.</span><span class="l-ja">Univention Keycloak App向けの安全なデプロイ手順が付属</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">4</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">No geographic location is included (no GeoIP).</span><span class="l-ja">位置情報は含まれない（GeoIPは使わない）</span></li><li class="x"><span class="l-en">Users without an email address are skipped; IPs are only accurate with correct reverse-proxy settings.</span><span class="l-ja">メールアドレスのないユーザーには送られない。IPアドレスはリバースプロキシの設定が正しい場合にのみ正確</span></li><li class="x"><span class="l-en">Emails are sent synchronously during the login, so SMTP timeouts must be kept short (failures do not block login).</span><span class="l-ja">メールはログイン処理中に同期で送られるため、SMTPのタイムアウトは短くしておく必要がある（失敗してもログインは止まらない）</span></li><li class="x"><span class="l-en">Built against Keycloak 26.7.0; other versions need a rebuild because provider APIs are version-coupled.</span><span class="l-ja">Keycloak 26.7.0向けにビルドされている。プロバイダーAPIはバージョンに依存するため、他のバージョンでは再ビルドが必要</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">Working realm SMTP, the <code>login-notification</code> email theme, and the <code>login-notification</code> event listener.</span><span class="l-ja">realmのSMTP設定、メールテーマ <code>login-notification</code>、イベントリスナー <code>login-notification</code> の有効化</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/sea-watch/keycloak-login-notification#readme" rel="noopener">https://github.com/sea-watch/keycloak-login-notification#readme</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

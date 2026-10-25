@@ -1,0 +1,21 @@
+repo: it-perspectives/keycloak-alias-guard
+researched_at: '2026-10-25'
+sources:
+- https://github.com/it-perspectives/keycloak-alias-guard#readme
+can:
+- en: Enforce "one mailbox, one account" — reject registration or email changes when the canonical mailbox is already used.
+  ja: 「1つのメールボックスに1アカウント」を強制。正規化したメールアドレスがすでに使われていれば、登録やメール変更を拒否する
+- en: Canonicalise addresses (lowercase, strip `+tags`; for Gmail also remove dots and map googlemail.com to gmail.com).
+  ja: "アドレスを正規化（小文字化、`+タグ` の除去。Gmailはドットも除去し、googlemail.comをgmail.comに統一）"
+- en: Store the canonical form on users via an event listener; error messages are translated into all 40 Keycloak locales.
+  ja: イベントリスナーでユーザーに正規化済みの形を保存。エラーメッセージはKeycloakの全40ロケールに翻訳済み
+cannot:
+- en: Dot-stripping only applies to Gmail; other providers get only `+tag` removal.
+  ja: "ドットの除去はGmailだけ。他のメールサービスは `+タグ` の除去のみ"
+- en: Existing users need a manual backfill of `email_canonical`, and existing duplicates must be resolved by hand (no automatic merge).
+  ja: "既存ユーザーには `email_canonical` を手作業で設定する必要があり、既存の重複も手で解消する（自動マージはしない）"
+- en: Targets Keycloak 26.5.x with the declarative User Profile.
+  ja: 対象は宣言的ユーザープロファイルを使うKeycloak 26.5.x
+requires:
+- en: "Deploy the JAR first, then add the `alias-guard` validator to the email attribute and the `alias-guard-listener` event listener; email as username is recommended."
+  ja: "先にJARを配置してから、email属性に `alias-guard` バリデータを、イベントリスナーに `alias-guard-listener` を追加。メールをユーザー名にする設定を推奨"

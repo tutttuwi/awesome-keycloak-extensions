@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-atomic-auth-flows — Awesome Keycloak Extensions</title>
+<meta name="description" content="Admin REST endpoint to atomically import authentication flows as code.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">SPI</span><span class="b">Config as code / DevOps</span><span class="b Active">Active</span></p>
+    <h1 id="name">keycloak-atomic-auth-flows</h1>
+    <p class="repo"><a href="https://github.com/p2-inc/keycloak-atomic-auth-flows" rel="noopener">p2-inc/keycloak-atomic-auth-flows ↗</a></p>
+    <p class="lead"><span class="l-en">Admin REST endpoint to atomically import authentication flows as code.</span><span class="l-ja">認証フローをアトミックにインポートする管理API</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>5</dd></div><div><dt>Forks</dt><dd>0</dd></div><div><dt>Contributors</dt><dd>5</dd></div><div><dt>Updated</dt><dd>2026-10-01</dd></div><div><dt>KC</dt><dd>26.8.0</dd></div><div><dt>License</dt><dd>Apache-2.0</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">3</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Import a complete set of authenticator configs, authentication flows and their bindings (browser, IdP first/post login, per-client overrides) in one atomic, transactional admin API call.</span><span class="l-ja">Authenticator設定・認証フロー・バインド（ブラウザ、IdPの初回/ログイン後、クライアントごとの上書き）を、1回のアトミックでトランザクションな管理APIで一括インポート</span></li><li class="c"><span class="l-en">Detect re-imports of an identical config by hash and reject them (HTTP 409), so it is safe to run repeatedly from CI/CD; <code>force=true</code> re-applies bindings.</span><span class="l-ja">同じ設定の再インポートをハッシュで検出して拒否（HTTP 409）するので、CI/CDから繰り返し実行しても安全。<code>force=true</code> ならバインドだけ再適用</span></li><li class="c"><span class="l-en">Includes an example config-as-code toolchain (flow builder, validator, update script).</span><span class="l-ja">config-as-codeの例（フロー生成、バリデータ、更新スクリプト）が付属</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">2</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">Only covers authentication flows, configs and bindings — not other realm configuration.</span><span class="l-ja">対象は認証フロー・設定・バインドだけで、それ以外のrealm設定は扱わない</span></li><li class="x"><span class="l-en">Flow aliases get a hash prefix, so imported flow names differ from the names in your payload.</span><span class="l-ja">フローのエイリアスにはハッシュが付くため、インポート後のフロー名はペイロードに書いた名前とは変わる</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">JDK 21 and Maven to build; copy the JAR to <code>providers/</code> and run <code>kc.sh build</code>; callers need <code>manage-realm</code>.</span><span class="l-ja">ビルドにJDK 21とMaven。JARを <code>providers/</code> に置いて <code>kc.sh build</code>。呼び出し側には <code>manage-realm</code> 権限が必要</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/p2-inc/keycloak-atomic-auth-flows#readme" rel="noopener">https://github.com/p2-inc/keycloak-atomic-auth-flows#readme</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

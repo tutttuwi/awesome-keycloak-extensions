@@ -1,0 +1,23 @@
+repo: AdrianIAna/keycloak-account-events
+researched_at: '2026-10-25'
+sources:
+- https://github.com/AdrianIAna/keycloak-account-events#readme
+can:
+- en: "Let users fetch their own login history (login, logout, login errors, …) with their own access token at `/realms/{realm}/account-events/me` — no admin credentials."
+  ja: "ユーザーが自分のアクセストークンで、自分のログイン履歴（ログイン・ログアウト・ログインエラーなど）を `/realms/{realm}/account-events/me` から取得できる。管理者の認証情報は不要"
+- en: Scope results strictly to the token's subject, with the same checks as Keycloak's account API (audience, roles, CORS, no service accounts).
+  ja: 結果はトークンの本人分だけに限定され、Keycloakのアカウント APIと同じチェック（audience、ロール、CORS、サービスアカウントの拒否）を通る
+- en: Pass through custom event details — combined with keycloak-event-enrichment, each event carries location and device info.
+  ja: イベントの独自詳細もそのまま返す。keycloak-event-enrichmentと組み合わせれば、各イベントに位置と端末の情報が付く
+- en: Works even when the account console feature is disabled.
+  ja: アカウントコンソール機能を無効にしていても動く
+cannot:
+- en: Returns an empty list unless user events are saved for the realm (off by default).
+  ja: realmでユーザーイベントの保存を有効にしないと、常に空のリストが返る（既定ではオフ）
+- en: No UI is included — it is an API for your own screens.
+  ja: UIは付属しない。自作画面のためのAPI
+- en: Requires Keycloak 26.6+ and uses an internal SPI (`realm-restapi-extension`), so a warning is logged and future versions may break it.
+  ja: "Keycloak 26.6以上が必要。内部SPI（`realm-restapi-extension`）を使うため警告が出て、将来のバージョンで壊れる可能性もある"
+requires:
+- en: "Copy the JAR to `/opt/keycloak/providers/`, run `kc.sh build`, and enable \"Save events\" for LOGIN, LOGOUT and LOGIN_ERROR."
+  ja: "JARを `/opt/keycloak/providers/` に置いて `kc.sh build` し、LOGIN・LOGOUT・LOGIN_ERRORのイベント保存を有効化"

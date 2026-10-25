@@ -1,0 +1,19 @@
+repo: p2-inc/keycloak-atomic-auth-flows
+researched_at: '2026-10-25'
+sources:
+- https://github.com/p2-inc/keycloak-atomic-auth-flows#readme
+can:
+- en: Import a complete set of authenticator configs, authentication flows and their bindings (browser, IdP first/post login, per-client overrides) in one atomic, transactional admin API call.
+  ja: Authenticator設定・認証フロー・バインド（ブラウザ、IdPの初回/ログイン後、クライアントごとの上書き）を、1回のアトミックでトランザクションな管理APIで一括インポート
+- en: Detect re-imports of an identical config by hash and reject them (HTTP 409), so it is safe to run repeatedly from CI/CD; `force=true` re-applies bindings.
+  ja: 同じ設定の再インポートをハッシュで検出して拒否（HTTP 409）するので、CI/CDから繰り返し実行しても安全。`force=true` ならバインドだけ再適用
+- en: Includes an example config-as-code toolchain (flow builder, validator, update script).
+  ja: config-as-codeの例（フロー生成、バリデータ、更新スクリプト）が付属
+cannot:
+- en: Only covers authentication flows, configs and bindings — not other realm configuration.
+  ja: 対象は認証フロー・設定・バインドだけで、それ以外のrealm設定は扱わない
+- en: Flow aliases get a hash prefix, so imported flow names differ from the names in your payload.
+  ja: フローのエイリアスにはハッシュが付くため、インポート後のフロー名はペイロードに書いた名前とは変わる
+requires:
+- en: "JDK 21 and Maven to build; copy the JAR to `providers/` and run `kc.sh build`; callers need `manage-realm`."
+  ja: "ビルドにJDK 21とMaven。JARを `providers/` に置いて `kc.sh build`。呼び出し側には `manage-realm` 権限が必要"

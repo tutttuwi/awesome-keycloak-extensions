@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-filtered-group-membership-mapper — Awesome Keycloak Extensions</title>
+<meta name="description" content="Group membership mapper with filtering.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">SPI</span><span class="b">Protocol Mapper / Claim</span><span class="b Active">Active</span></p>
+    <h1 id="name">keycloak-filtered-group-membership-mapper</h1>
+    <p class="repo"><a href="https://github.com/byteworks-ch/keycloak-filtered-group-membership-mapper" rel="noopener">byteworks-ch/keycloak-filtered-group-membership-mapper ↗</a></p>
+    <p class="lead"><span class="l-en">Group membership mapper with filtering.</span><span class="l-ja">フィルタ付きグループメンバーシップマッパー</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>2</dd></div><div><dt>Forks</dt><dd>1</dd></div><div><dt>Contributors</dt><dd>1</dd></div><div><dt>Updated</dt><dd>2026-04-21</dd></div><div><dt>KC</dt><dd>26.6.0</dd></div><div><dt>License</dt><dd>Other (see repo)</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">2</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Work like the built-in Group Membership mapper, but drop groups whose path matches a regex before they go into tokens.</span><span class="l-ja">標準のGroup Membershipマッパーと同じ動作で、正規表現に一致するグループをトークンから除外できる</span></li><li class="c"><span class="l-en">Configure it per client scope to hide internal groups from some clients and keep tokens small.</span><span class="l-ja">クライアントスコープ単位で設定でき、内部用のグループを特定のクライアントから隠したり、トークンを小さくしたりできる</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">3</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">Filters group names (paths) only — not roles or attributes.</span><span class="l-ja">絞り込めるのはグループ名（パス）だけで、ロールや属性は対象外</span></li><li class="x"><span class="l-en">Exclusion only (no allow-list); a wrong regex can expose or hide groups unexpectedly.</span><span class="l-ja">除外指定のみ（許可リストは不可）。正規表現を誤ると、意図せずグループが露出したり隠れたりする</span></li><li class="x"><span class="l-en">Only affects token output — group assignments in Keycloak are unchanged.</span><span class="l-ja">影響するのはトークンの出力だけで、Keycloak上のグループ所属は変わらない</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">Build the JAR, copy it to <code>providers</code> and restart Keycloak.</span><span class="l-ja">JARをビルドして <code>providers</code> に置き、Keycloakを再起動</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/byteworks-ch/keycloak-filtered-group-membership-mapper#readme" rel="noopener">https://github.com/byteworks-ch/keycloak-filtered-group-membership-mapper#readme</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

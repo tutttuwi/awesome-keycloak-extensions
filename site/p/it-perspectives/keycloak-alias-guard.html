@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-alias-guard — Awesome Keycloak Extensions</title>
+<meta name="description" content="Block duplicate accounts created via email aliases (+tags, Gmail dots).">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">SPI</span><span class="b">Security / Bot protection</span><span class="b Active">Active</span></p>
+    <h1 id="name">keycloak-alias-guard</h1>
+    <p class="repo"><a href="https://github.com/it-perspectives/keycloak-alias-guard" rel="noopener">it-perspectives/keycloak-alias-guard ↗</a></p>
+    <p class="lead"><span class="l-en">Block duplicate accounts created via email aliases (+tags, Gmail dots).</span><span class="l-ja">メールエイリアスによる重複アカウントを防止</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>6</dd></div><div><dt>Forks</dt><dd>0</dd></div><div><dt>Contributors</dt><dd>1</dd></div><div><dt>Updated</dt><dd>2026-06-19</dd></div><div><dt>KC</dt><dd>26.5.7</dd></div><div><dt>License</dt><dd>MIT</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">3</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Enforce &quot;one mailbox, one account&quot; — reject registration or email changes when the canonical mailbox is already used.</span><span class="l-ja">「1つのメールボックスに1アカウント」を強制。正規化したメールアドレスがすでに使われていれば、登録やメール変更を拒否する</span></li><li class="c"><span class="l-en">Canonicalise addresses (lowercase, strip <code>+tags</code>; for Gmail also remove dots and map googlemail.com to gmail.com).</span><span class="l-ja">アドレスを正規化（小文字化、<code>+タグ</code> の除去。Gmailはドットも除去し、googlemail.comをgmail.comに統一）</span></li><li class="c"><span class="l-en">Store the canonical form on users via an event listener; error messages are translated into all 40 Keycloak locales.</span><span class="l-ja">イベントリスナーでユーザーに正規化済みの形を保存。エラーメッセージはKeycloakの全40ロケールに翻訳済み</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">3</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">Dot-stripping only applies to Gmail; other providers get only <code>+tag</code> removal.</span><span class="l-ja">ドットの除去はGmailだけ。他のメールサービスは <code>+タグ</code> の除去のみ</span></li><li class="x"><span class="l-en">Existing users need a manual backfill of <code>email_canonical</code>, and existing duplicates must be resolved by hand (no automatic merge).</span><span class="l-ja">既存ユーザーには <code>email_canonical</code> を手作業で設定する必要があり、既存の重複も手で解消する（自動マージはしない）</span></li><li class="x"><span class="l-en">Targets Keycloak 26.5.x with the declarative User Profile.</span><span class="l-ja">対象は宣言的ユーザープロファイルを使うKeycloak 26.5.x</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">Deploy the JAR first, then add the <code>alias-guard</code> validator to the email attribute and the <code>alias-guard-listener</code> event listener; email as username is recommended.</span><span class="l-ja">先にJARを配置してから、email属性に <code>alias-guard</code> バリデータを、イベントリスナーに <code>alias-guard-listener</code> を追加。メールをユーザー名にする設定を推奨</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/it-perspectives/keycloak-alias-guard#readme" rel="noopener">https://github.com/it-perspectives/keycloak-alias-guard#readme</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+repo: AdrianIAna/keycloak-event-enrichment
+researched_at: '2026-10-25'
+sources:
+- https://github.com/AdrianIAna/keycloak-event-enrichment#readme
+can:
+- en: "Add GeoIP location (including VPN detection) and parsed User-Agent data (browser, OS, device type) to login/logout/error events before they are stored (`geo_*`, `ua_*` details)."
+  ja: "ログイン・ログアウト・エラーのイベントに、GeoIPの位置情報（VPN判定を含む）と、User-Agentの解析結果（ブラウザ・OS・端末種別）を保存前に付与（`geo_*`、`ua_*`）"
+- en: Every consumer (Account Console, Admin API, your apps) gets the enriched events automatically.
+  ja: アカウントコンソール・Admin API・自作アプリなど、どこから読んでも付与済みのイベントが得られる
+- en: Enrichment failures never block event persistence.
+  ja: 付与に失敗しても、イベントの保存は妨げない
+- en: Pairs with keycloak-account-events to show users their own enriched login history.
+  ja: keycloak-account-eventsと組み合わせると、ユーザー自身に付与済みのログイン履歴を見せられる
+cannot:
+- en: Admin events are not enriched.
+  ja: Adminイベントには付与しない
+- en: Wraps the built-in JPA event store only.
+  ja: ラップするのは標準のJPAイベントストアのみ
+- en: You must download the MaxMind GeoLite2 databases yourself (free account) and keep them updated.
+  ja: MaxMindのGeoLite2データベースは自分でダウンロード（無料のアカウント登録が必要）し、更新し続ける必要がある
+requires:
+- en: "Copy the shaded JAR to `/opt/keycloak/providers/`, place the MMDB files on a persistent path, and run `kc.sh build` with the SPI options."
+  ja: "shaded JARを `/opt/keycloak/providers/` に置き、MMDBファイルを永続的なパスに配置して、SPIオプション付きで `kc.sh build`"

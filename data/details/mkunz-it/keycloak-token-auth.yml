@@ -1,0 +1,21 @@
+repo: mkunz-it/keycloak-token-auth
+researched_at: '2026-10-25'
+sources:
+- https://github.com/mkunz-it/keycloak-token-auth#readme
+can:
+- en: Create a browser SSO session from an existing ID or access token passed via a pushed authorization request (PAR).
+  ja: プッシュ認可リクエスト（PAR）で渡したIDトークン/アクセストークンから、ブラウザのSSOセッションを作成できる
+- en: Fixes SSO for mobile apps that use the password grant or whose browser does not keep the session cookie.
+  ja: パスワードグラントを使っている、またはブラウザがセッションCookieを保持しないモバイルアプリでも、SSOが効くようになる
+- en: Ships a step-by-step secure setup (dedicated confidential proxy client with PKCE and forced PAR) and a test script.
+  ja: 安全に使うための手順（PKCEとPAR必須の専用confidentialプロキシクライアント）とテスト用スクリプトが付属
+cannot:
+- en: It deliberately bypasses one of Keycloak's security mechanisms — misconfiguration is risky, so follow the security considerations.
+  ja: Keycloakのセキュリティ機構の1つを意図的に迂回するため、設定を誤ると危険。セキュリティ上の注意事項に必ず従う
+- en: Needs a dedicated proxy client, custom browser flow and client scope; it is not a drop-in authenticator.
+  ja: 専用のプロキシクライアント、カスタムのブラウザフロー、クライアントスコープが必要で、そのまま差し込むだけのAuthenticatorではない
+- en: Older packages on GitHub Packages may be removed without notice.
+  ja: GitHub Packagesの古いパッケージは予告なく削除されることがある
+requires:
+- en: "Download the release JAR matching your Keycloak version and copy it to `providers`."
+  ja: "Keycloakのバージョンに合うリリースのJARを `providers` に置く"

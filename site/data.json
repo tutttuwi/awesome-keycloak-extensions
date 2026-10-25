@@ -1692,7 +1692,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/Nordix/keycloak-client-cert-lookup-for-envoy",
    "activity": "Active",
-   "detail": null
+   "detail": "p/Nordix/keycloak-client-cert-lookup-for-envoy.html"
   },
   {
    "name": "keycloak-tiktok",
@@ -1748,7 +1748,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/it-perspectives/keycloak-alias-guard",
    "activity": "Active",
-   "detail": null
+   "detail": "p/it-perspectives/keycloak-alias-guard.html"
   },
   {
    "name": "keycloak-atomic-auth-flows",
@@ -1776,7 +1776,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/p2-inc/keycloak-atomic-auth-flows",
    "activity": "Active",
-   "detail": null
+   "detail": "p/p2-inc/keycloak-atomic-auth-flows.html"
   },
   {
    "name": "cap-captcha-keycloak",
@@ -1804,7 +1804,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/schwebke/cap-captcha-keycloak",
    "activity": "Active",
-   "detail": null
+   "detail": "p/schwebke/cap-captcha-keycloak.html"
   },
   {
    "name": "keycloak-personal-access-tokens",
@@ -1832,7 +1832,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/mrulex-repo/keycloak-personal-access-tokens",
    "activity": "Active",
-   "detail": null
+   "detail": "p/mrulex-repo/keycloak-personal-access-tokens.html"
   },
   {
    "name": "keycloak-minecraft-idp",
@@ -1860,7 +1860,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/groundsgg/keycloak-minecraft-idp",
    "activity": "Active",
-   "detail": null
+   "detail": "p/groundsgg/keycloak-minecraft-idp.html"
   },
   {
    "name": "Keycloak-WS-Federation",
@@ -1888,7 +1888,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/ChosoMeister/Keycloak-WS-Federation",
    "activity": "Active",
-   "detail": null
+   "detail": "p/ChosoMeister/Keycloak-WS-Federation.html"
   },
   {
    "name": "keycloak-rest-claim-mapper",
@@ -1916,7 +1916,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/jowe112/keycloak-rest-claim-mapper",
    "activity": "Active",
-   "detail": null
+   "detail": "p/jowe112/keycloak-rest-claim-mapper.html"
   },
   {
    "name": "keycloak-filtered-group-membership-mapper",
@@ -1944,7 +1944,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/byteworks-ch/keycloak-filtered-group-membership-mapper",
    "activity": "Active",
-   "detail": null
+   "detail": "p/byteworks-ch/keycloak-filtered-group-membership-mapper.html"
   },
   {
    "name": "keycloak-configurable-theme",
@@ -1972,7 +1972,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/dockndevai/keycloak-configurable-theme",
    "activity": "Active",
-   "detail": null
+   "detail": "p/dockndevai/keycloak-configurable-theme.html"
   },
   {
    "name": "keycloak-event-enrichment",
@@ -2000,7 +2000,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/AdrianIAna/keycloak-event-enrichment",
    "activity": "Active",
-   "detail": null
+   "detail": "p/AdrianIAna/keycloak-event-enrichment.html"
   },
   {
    "name": "keycloak-login-notification",
@@ -2028,7 +2028,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/sea-watch/keycloak-login-notification",
    "activity": "Active",
-   "detail": null
+   "detail": "p/sea-watch/keycloak-login-notification.html"
   },
   {
    "name": "keycloak-token-auth",
@@ -2056,7 +2056,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/mkunz-it/keycloak-token-auth",
    "activity": "Active",
-   "detail": null
+   "detail": "p/mkunz-it/keycloak-token-auth.html"
   },
   {
    "name": "keycloak-account-events",
@@ -2084,7 +2084,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/AdrianIAna/keycloak-account-events",
    "activity": "Active",
-   "detail": null
+   "detail": "p/AdrianIAna/keycloak-account-events.html"
   }
  ]
 }

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-token-auth — Awesome Keycloak Extensions</title>
+<meta name="description" content="Authenticator that logs in with an ID or access token.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">SPI</span><span class="b">Authentication</span><span class="b Active">Active</span></p>
+    <h1 id="name">keycloak-token-auth</h1>
+    <p class="repo"><a href="https://github.com/mkunz-it/keycloak-token-auth" rel="noopener">mkunz-it/keycloak-token-auth ↗</a></p>
+    <p class="lead"><span class="l-en">Authenticator that logs in with an ID or access token.</span><span class="l-ja">IDトークン/アクセストークンでログイン</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>1</dd></div><div><dt>Forks</dt><dd>1</dd></div><div><dt>Contributors</dt><dd>2</dd></div><div><dt>Updated</dt><dd>2026-06-29</dd></div><div><dt>KC</dt><dd>26.6.1</dd></div><div><dt>License</dt><dd>MIT</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">3</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Create a browser SSO session from an existing ID or access token passed via a pushed authorization request (PAR).</span><span class="l-ja">プッシュ認可リクエスト（PAR）で渡したIDトークン/アクセストークンから、ブラウザのSSOセッションを作成できる</span></li><li class="c"><span class="l-en">Fixes SSO for mobile apps that use the password grant or whose browser does not keep the session cookie.</span><span class="l-ja">パスワードグラントを使っている、またはブラウザがセッションCookieを保持しないモバイルアプリでも、SSOが効くようになる</span></li><li class="c"><span class="l-en">Ships a step-by-step secure setup (dedicated confidential proxy client with PKCE and forced PAR) and a test script.</span><span class="l-ja">安全に使うための手順（PKCEとPAR必須の専用confidentialプロキシクライアント）とテスト用スクリプトが付属</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">3</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">It deliberately bypasses one of Keycloak&#x27;s security mechanisms — misconfiguration is risky, so follow the security considerations.</span><span class="l-ja">Keycloakのセキュリティ機構の1つを意図的に迂回するため、設定を誤ると危険。セキュリティ上の注意事項に必ず従う</span></li><li class="x"><span class="l-en">Needs a dedicated proxy client, custom browser flow and client scope; it is not a drop-in authenticator.</span><span class="l-ja">専用のプロキシクライアント、カスタムのブラウザフロー、クライアントスコープが必要で、そのまま差し込むだけのAuthenticatorではない</span></li><li class="x"><span class="l-en">Older packages on GitHub Packages may be removed without notice.</span><span class="l-ja">GitHub Packagesの古いパッケージは予告なく削除されることがある</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">Download the release JAR matching your Keycloak version and copy it to <code>providers</code>.</span><span class="l-ja">Keycloakのバージョンに合うリリースのJARを <code>providers</code> に置く</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/mkunz-it/keycloak-token-auth#readme" rel="noopener">https://github.com/mkunz-it/keycloak-token-auth#readme</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

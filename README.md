@@ -46,9 +46,9 @@ Activity: **Active** ≤12 months · **Stale** 12–24 months · **Inactive** >2
 | 4 | [keycloak-phone-number](https://github.com/vymalo/keycloak-phone-number)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/vymalo/keycloak-phone-number.html) | Log in with a phone number and SMS OTP.<br>電話番号+SMS OTPでログイン | 55 | 2026-07-24 | Active | 26.5.2 | MIT | Community |
 | 5 | [keycloak-psso-extension](https://github.com/unioslo/keycloak-psso-extension)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/unioslo/keycloak-psso-extension.html) | macOS Platform Single Sign-On (PSSO) support.<br>macOS Platform SSO対応 | 50 | 2026-10-16 | Active | unknown | GPL-2.0 | Official |
 | 6 | [keycloak-app-passwords](https://github.com/radicallyopensecurity/keycloak-app-passwords)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/radicallyopensecurity/keycloak-app-passwords.html) | App-specific passwords.<br>アプリ専用パスワードを発行 | 23 | 2026-09-30 | Active | unknown | GPL-3.0 | Official |
-| 7 | [keycloak-client-cert-lookup-for-envoy](https://github.com/Nordix/keycloak-client-cert-lookup-for-envoy) | X.509 client certificate lookup for Envoy proxies.<br>Envoy経由のX.509クライアント証明書取得 | 9 | 2026-10-19 | Active | 26.8.1 | Apache-2.0 | Official |
-| 8 | [keycloak-personal-access-tokens](https://github.com/mrulex-repo/keycloak-personal-access-tokens) | Scoped personal access tokens usable as Basic Auth passwords.<br>Basic認証で使えるスコープ付き個人アクセストークン | 4 | 2026-05-20 | Active | unknown | GPL-3.0 | Official |
-| 9 | [keycloak-token-auth](https://github.com/mkunz-it/keycloak-token-auth) | Authenticator that logs in with an ID or access token.<br>IDトークン/アクセストークンでログイン | 1 | 2026-06-29 | Active | 26.6.1 | MIT | Official |
+| 7 | [keycloak-client-cert-lookup-for-envoy](https://github.com/Nordix/keycloak-client-cert-lookup-for-envoy)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/Nordix/keycloak-client-cert-lookup-for-envoy.html) | X.509 client certificate lookup for Envoy proxies.<br>Envoy経由のX.509クライアント証明書取得 | 9 | 2026-10-19 | Active | 26.8.1 | Apache-2.0 | Official |
+| 8 | [keycloak-personal-access-tokens](https://github.com/mrulex-repo/keycloak-personal-access-tokens)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/mrulex-repo/keycloak-personal-access-tokens.html) | Scoped personal access tokens usable as Basic Auth passwords.<br>Basic認証で使えるスコープ付き個人アクセストークン | 4 | 2026-05-20 | Active | unknown | GPL-3.0 | Official |
+| 9 | [keycloak-token-auth](https://github.com/mkunz-it/keycloak-token-auth)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/mkunz-it/keycloak-token-auth.html) | Authenticator that logs in with an ID or access token.<br>IDトークン/アクセストークンでログイン | 1 | 2026-06-29 | Active | 26.6.1 | MIT | Official |
 
 ### MFA / Passwordless
 
@@ -67,7 +67,7 @@ Activity: **Active** ≤12 months · **Stale** 12–24 months · **Inactive** >2
 | 1 | [keycloak-events](https://github.com/p2-inc/keycloak-events)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/p2-inc/keycloak-events.html) | Event listeners and webhooks for Keycloak events.<br>Keycloakイベント用のリスナー/Webhook | 317 | 2026-10-15 | Active | 26.8.0 | Other (see repo) | Official |
 | 2 | [keycloak-webhook](https://github.com/vymalo/keycloak-webhook)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/vymalo/keycloak-webhook.html) | Send Keycloak events to webhooks (HTTP, AMQP, Syslog).<br>KeycloakイベントをWebhook等へ送信 | 114 | 2026-07-26 | Active | unknown | MIT | Community |
 | 3 | [keycloak-custom-event-listener](https://github.com/cevheri/keycloak-custom-event-listener)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/cevheri/keycloak-custom-event-listener.html) | Example event listener that forwards user create/register events to an API.<br>ユーザー作成/登録イベントを外部APIへ送るリスナー例 | 55 | 2024-11-05 | Stale | unknown | Apache-2.0 | Community |
-| 4 | [keycloak-event-enrichment](https://github.com/AdrianIAna/keycloak-event-enrichment) | Enrich authentication events with GeoIP and User-Agent data.<br>認証イベントにGeoIP/User-Agent情報を付与 | 1 | 2026-09-02 | Active | 26.7.2 | Apache-2.0 | Official |
+| 4 | [keycloak-event-enrichment](https://github.com/AdrianIAna/keycloak-event-enrichment)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/AdrianIAna/keycloak-event-enrichment.html) | Enrich authentication events with GeoIP and User-Agent data.<br>認証イベントにGeoIP/User-Agent情報を付与 | 1 | 2026-09-02 | Active | 26.7.2 | Apache-2.0 | Official |
 
 ### Identity Provider
 
@@ -80,22 +80,22 @@ Activity: **Active** ≤12 months · **Stale** 12–24 months · **Inactive** >2
 | 5 | [keycloak-orcid](https://github.com/eosc-kc/keycloak-orcid)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/eosc-kc/keycloak-orcid.html) | ORCID social identity provider.<br>ORCID用Identity Provider | 17 | 2026-07-01 | Active | 26.5.0 | Other (see repo) | Official |
 | 6 | [Extended-SAML-IDP](https://github.com/First8/Extended-SAML-IDP)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/First8/Extended-SAML-IDP.html) | SAML identity provider supporting direct (synchronous) SAML responses.<br>同期SAMLレスポンス対応のSAML Identity Provider | 16 | 2026-10-13 | Active | 26.6.4 | Apache-2.0 | Official |
 | 7 | [keycloak-tiktok](https://github.com/mpowr-it/keycloak-tiktok)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/mpowr-it/keycloak-tiktok.html) | TikTok social login provider.<br>TikTok用Identity Provider | 6 | 2026-07-24 | Active | unknown | Apache-2.0 | Official |
-| 8 | [keycloak-minecraft-idp](https://github.com/groundsgg/keycloak-minecraft-idp) | Microsoft / Xbox identity provider that resolves Minecraft profiles.<br>Minecraftプロフィールを解決するMicrosoft/Xbox IdP | 3 | 2026-10-22 | Active | unknown | Other (see repo) | Official |
+| 8 | [keycloak-minecraft-idp](https://github.com/groundsgg/keycloak-minecraft-idp)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/groundsgg/keycloak-minecraft-idp.html) | Microsoft / Xbox identity provider that resolves Minecraft profiles.<br>Minecraftプロフィールを解決するMicrosoft/Xbox IdP | 3 | 2026-10-22 | Active | unknown | Other (see repo) | Official |
 
 ### Protocol (CAS / WS-Fed)
 
 | # | Name | Summary | ★ | Last commit | Activity | KC | License | Src |
 |--:|------|---------|--:|-------------|----------|----|---------|-----|
 | 1 | [keycloak-protocol-cas](https://github.com/jacekkow/keycloak-protocol-cas)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/jacekkow/keycloak-protocol-cas.html) | CAS protocol support for Keycloak.<br>KeycloakにCASプロトコルを追加 | 131 | 2026-10-13 | Active | unknown | Apache-2.0 | Official |
-| 2 | [Keycloak-WS-Federation](https://github.com/ChosoMeister/Keycloak-WS-Federation) | WS-Federation 1.2 protocol and identity broker.<br>WS-Federation 1.2プロトコル/ブローカー | 3 | 2026-10-17 | Active | 26.7.0 | AGPL-3.0 | Official |
+| 2 | [Keycloak-WS-Federation](https://github.com/ChosoMeister/Keycloak-WS-Federation)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/ChosoMeister/Keycloak-WS-Federation.html) | WS-Federation 1.2 protocol and identity broker.<br>WS-Federation 1.2プロトコル/ブローカー | 3 | 2026-10-17 | Active | 26.7.0 | AGPL-3.0 | Official |
 
 ### Protocol Mapper / Claim
 
 | # | Name | Summary | ★ | Last commit | Activity | KC | License | Src |
 |--:|------|---------|--:|-------------|----------|----|---------|-----|
 | 1 | [keycloak-external-claim-mapper](https://github.com/zloom/keycloak-external-claim-mapper)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/zloom/keycloak-external-claim-mapper.html) | Protocol mapper that adds data from a remote service to the JWT.<br>外部サービスのデータをJWTに追加 | 15 | 2025-07-03 | Stale | 25.0.0 | Apache-2.0 | Official |
-| 2 | [keycloak-rest-claim-mapper](https://github.com/jowe112/keycloak-rest-claim-mapper) | OIDC/SAML mapper that enriches tokens from a REST API.<br>REST APIの値でトークンを拡充するマッパー | 2 | 2026-08-19 | Active | 26.7.1 | Apache-2.0 | Official |
-| 3 | [keycloak-filtered-group-membership-mapper](https://github.com/byteworks-ch/keycloak-filtered-group-membership-mapper) | Group membership mapper with filtering.<br>フィルタ付きグループメンバーシップマッパー | 2 | 2026-04-21 | Active | 26.6.0 | Other (see repo) | Official |
+| 2 | [keycloak-rest-claim-mapper](https://github.com/jowe112/keycloak-rest-claim-mapper)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/jowe112/keycloak-rest-claim-mapper.html) | OIDC/SAML mapper that enriches tokens from a REST API.<br>REST APIの値でトークンを拡充するマッパー | 2 | 2026-08-19 | Active | 26.7.1 | Apache-2.0 | Official |
+| 3 | [keycloak-filtered-group-membership-mapper](https://github.com/byteworks-ch/keycloak-filtered-group-membership-mapper)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/byteworks-ch/keycloak-filtered-group-membership-mapper.html) | Group membership mapper with filtering.<br>フィルタ付きグループメンバーシップマッパー | 2 | 2026-04-21 | Active | 26.6.0 | Other (see repo) | Official |
 
 ### User Storage / Federation
 
@@ -126,21 +126,21 @@ Activity: **Active** ≤12 months · **Stale** 12–24 months · **Inactive** >2
 
 | # | Name | Summary | ★ | Last commit | Activity | KC | License | Src |
 |--:|------|---------|--:|-------------|----------|----|---------|-----|
-| 1 | [keycloak-login-notification](https://github.com/sea-watch/keycloak-login-notification) | Email users when a new login session is created.<br>新規ログイン時にセキュリティ通知メールを送信 | 1 | 2026-07-21 | Active | 26.7.0 | Other (see repo) | Official |
+| 1 | [keycloak-login-notification](https://github.com/sea-watch/keycloak-login-notification)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/sea-watch/keycloak-login-notification.html) | Email users when a new login session is created.<br>新規ログイン時にセキュリティ通知メールを送信 | 1 | 2026-07-21 | Active | 26.7.0 | Other (see repo) | Official |
 
 ### Theme / UI
 
 | # | Name | Summary | ★ | Last commit | Activity | KC | License | Src |
 |--:|------|---------|--:|-------------|----------|----|---------|-----|
 | 1 | [keycloak-shadcn](https://github.com/emirhannaneli/keycloak-shadcn)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/emirhannaneli/keycloak-shadcn.html) | Keycloakify + shadcn/ui login theme starter.<br>Keycloakify+shadcn/uiのログインテーマ | 17 | 2026-08-07 | Active | unknown | MIT | Official |
-| 2 | [keycloak-configurable-theme](https://github.com/dockndevai/keycloak-configurable-theme) | One configurable login theme for all realms.<br>全realm共通の設定可能なログインテーマ | 1 | 2026-10-08 | Active | 26.8.0 | Apache-2.0 | Official |
+| 2 | [keycloak-configurable-theme](https://github.com/dockndevai/keycloak-configurable-theme)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/dockndevai/keycloak-configurable-theme.html) | One configurable login theme for all realms.<br>全realm共通の設定可能なログインテーマ | 1 | 2026-10-08 | Active | 26.8.0 | Apache-2.0 | Official |
 
 ### Monitoring / Audit
 
 | # | Name | Summary | ★ | Last commit | Activity | KC | License | Src |
 |--:|------|---------|--:|-------------|----------|----|---------|-----|
 | 1 | [keycloak-metrics-spi](https://github.com/aerogear/keycloak-metrics-spi)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/aerogear/keycloak-metrics-spi.html) | Exposes Keycloak metrics (Prometheus format) via an SPI.<br>KeycloakのメトリクスをPrometheus形式で公開するSPI | 614 | 2024-11-08 | Stale | 26.0.0 | Apache-2.0 | Official |
-| 2 | [keycloak-account-events](https://github.com/AdrianIAna/keycloak-account-events) | Let users read their own login history.<br>ユーザー自身がログイン履歴を参照できる | 0 | 2026-09-02 | Active | 26.7.2 | Apache-2.0 | Official |
+| 2 | [keycloak-account-events](https://github.com/AdrianIAna/keycloak-account-events)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/AdrianIAna/keycloak-account-events.html) | Let users read their own login history.<br>ユーザー自身がログイン履歴を参照できる | 0 | 2026-09-02 | Active | 26.7.2 | Apache-2.0 | Official |
 
 ### Storage / Datastore
 
@@ -155,14 +155,14 @@ Activity: **Active** ≤12 months · **Stale** 12–24 months · **Inactive** >2
 |--:|------|---------|--:|-------------|----------|----|---------|-----|
 | 1 | [Keycloak-GeoAware](https://github.com/B2-Code/Keycloak-GeoAware)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/B2-Code/Keycloak-GeoAware.html) | Geolocation-aware login checks and alerts.<br>位置情報に基づくログイン検査・通知 | 22 | 2026-07-22 | Active | 26.7.0 | Apache-2.0 | Official |
 | 2 | [keycloak-block-disposable-email](https://github.com/chintanbuch/keycloak-block-disposable-email)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/chintanbuch/keycloak-block-disposable-email.html) | Block registrations with disposable email addresses.<br>使い捨てメールアドレスでの登録をブロック | 12 | 2025-06-16 | Stale | 26.2.5 | Apache-2.0 | Official |
-| 3 | [keycloak-alias-guard](https://github.com/it-perspectives/keycloak-alias-guard) | Block duplicate accounts created via email aliases (+tags, Gmail dots).<br>メールエイリアスによる重複アカウントを防止 | 6 | 2026-06-19 | Active | 26.5.7 | MIT | Official |
-| 4 | [cap-captcha-keycloak](https://github.com/schwebke/cap-captcha-keycloak) | Cap (trycap.dev) captcha for the registration flow.<br>登録フローにCap CAPTCHAを追加 | 4 | 2026-10-08 | Active | 26.8.0 | Apache-2.0 | Official |
+| 3 | [keycloak-alias-guard](https://github.com/it-perspectives/keycloak-alias-guard)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/it-perspectives/keycloak-alias-guard.html) | Block duplicate accounts created via email aliases (+tags, Gmail dots).<br>メールエイリアスによる重複アカウントを防止 | 6 | 2026-06-19 | Active | 26.5.7 | MIT | Official |
+| 4 | [cap-captcha-keycloak](https://github.com/schwebke/cap-captcha-keycloak)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/schwebke/cap-captcha-keycloak.html) | Cap (trycap.dev) captcha for the registration flow.<br>登録フローにCap CAPTCHAを追加 | 4 | 2026-10-08 | Active | 26.8.0 | Apache-2.0 | Official |
 
 ### Config as code / DevOps
 
 | # | Name | Summary | ★ | Last commit | Activity | KC | License | Src |
 |--:|------|---------|--:|-------------|----------|----|---------|-----|
-| 1 | [keycloak-atomic-auth-flows](https://github.com/p2-inc/keycloak-atomic-auth-flows) | Admin REST endpoint to atomically import authentication flows as code.<br>認証フローをアトミックにインポートする管理API | 5 | 2026-10-01 | Active | 26.8.0 | Apache-2.0 | Official |
+| 1 | [keycloak-atomic-auth-flows](https://github.com/p2-inc/keycloak-atomic-auth-flows)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/p2-inc/keycloak-atomic-auth-flows.html) | Admin REST endpoint to atomically import authentication flows as code.<br>認証フローをアトミックにインポートする管理API | 5 | 2026-10-01 | Active | 26.8.0 | Apache-2.0 | Official |
 
 ### Testing / Examples
 

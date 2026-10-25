@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keycloak-WS-Federation — Awesome Keycloak Extensions</title>
+<meta name="description" content="WS-Federation 1.2 protocol and identity broker.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">SPI</span><span class="b">Protocol (CAS / WS-Fed)</span><span class="b Active">Active</span></p>
+    <h1 id="name">Keycloak-WS-Federation</h1>
+    <p class="repo"><a href="https://github.com/ChosoMeister/Keycloak-WS-Federation" rel="noopener">ChosoMeister/Keycloak-WS-Federation ↗</a></p>
+    <p class="lead"><span class="l-en">WS-Federation 1.2 protocol and identity broker.</span><span class="l-ja">WS-Federation 1.2プロトコル/ブローカー</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>3</dd></div><div><dt>Forks</dt><dd>0</dd></div><div><dt>Contributors</dt><dd>1</dd></div><div><dt>Updated</dt><dd>2026-10-17</dd></div><div><dt>KC</dt><dd>26.7.0</dd></div><div><dt>License</dt><dd>AGPL-3.0</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">5</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Run Keycloak as a WS-Federation 1.2 (passive) IdP/STS for relying parties, with sign-in, sign-out and metadata.</span><span class="l-ja">KeycloakをWS-Federation 1.2（パッシブ）のIdP/STSとして動かせる。サインイン・サインアウト・メタデータ生成に対応</span></li><li class="c"><span class="l-en">Broker to an external WS-Federation IdP, with attribute-to-user and attribute-to-role mappers.</span><span class="l-ja">外部のWS-Federation IdPとブローカー連携でき、属性をユーザーやロールにマッピングするマッパーもある</span></li><li class="c"><span class="l-en">Issue SAML 2.0 or legacy SAML 1.1 assertions, with user attribute/property, group and role mappers.</span><span class="l-ja">SAML 2.0と旧SAML 1.1のアサーションを発行でき、ユーザー属性・プロパティ・グループ・ロールのマッパーに対応</span></li><li class="c"><span class="l-en">Optionally enable WS-Trust 1.3 <code>usernamemixed</code> and <code>mex</code> endpoints per realm.</span><span class="l-ja">realmごとに、WS-Trust 1.3の <code>usernamemixed</code> と <code>mex</code> エンドポイントを有効にできる</span></li><li class="c"><span class="l-en">A maintained rework of the old WildFly-era extension for Quarkus-based Keycloak, with a demo stack and production runbook.</span><span class="l-ja">WildFly時代の旧拡張を、Quarkus版Keycloak向けに作り直してメンテナンスしているもの。デモ環境と本番導入の手順書付き</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">4</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">Supports Keycloak 26.7.x only — its minor version must match Keycloak&#x27;s, because it uses internal SPIs.</span><span class="l-ja">対応はKeycloak 26.7.xのみ。内部SPIを使うため、マイナーバージョンをKeycloakと一致させる必要がある</span></li><li class="x"><span class="l-en">Other WS-Trust profiles (Windows or certificate authentication), and attribute and pseudonym services, are out of scope.</span><span class="l-ja">他のWS-Trustプロファイル（Windows認証・証明書認証）や、属性サービス・仮名サービスは対象外</span></li><li class="x"><span class="l-en">Interoperability with every AD FS / third-party WS-Fed implementation is not guaranteed.</span><span class="l-ja">すべてのAD FSやサードパーティのWS-Fed実装との相互運用性は保証されていない</span></li><li class="x"><span class="l-en">Some security corrections (e.g. a mandatory audience check) can break deployments that relied on the old behaviour and cannot be turned off; licensed under AGPL-3.0.</span><span class="l-ja">一部のセキュリティ修正（audienceチェックの必須化など）は旧来の挙動に頼っていた環境を壊す可能性があり、無効化もできない。ライセンスはAGPL-3.0</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">JDK 21 and Maven 3.9+ to build; copy the JAR into <code>providers</code> and run <code>kc.sh build</code> (recreate containers to pick up a new version).</span><span class="l-ja">ビルドにJDK 21とMaven 3.9以上。JARを <code>providers</code> に置いて <code>kc.sh build</code>（新しいバージョンを反映するにはコンテナを作り直す）</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/ChosoMeister/Keycloak-WS-Federation#readme" rel="noopener">https://github.com/ChosoMeister/Keycloak-WS-Federation#readme</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

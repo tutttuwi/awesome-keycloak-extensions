@@ -1,0 +1,21 @@
+repo: Nordix/keycloak-client-cert-lookup-for-envoy
+researched_at: '2026-10-25'
+sources:
+- https://github.com/Nordix/keycloak-client-cert-lookup-for-envoy#readme
+can:
+- en: Let Keycloak read the client certificate from Envoy's `x-forwarded-client-cert` (XFCC) header, so X.509 / mTLS client authentication works behind Envoy.
+  ja: "Envoyが付ける `x-forwarded-client-cert`（XFCC）ヘッダーからKeycloakがクライアント証明書を読めるようにし、Envoy配下でもX.509/mTLSのクライアント認証を使えるようにする"
+- en: Optionally accept XFCC headers only from authorised proxies (by verifying the proxy's own TLS client certificate).
+  ja: プロキシ自身のTLSクライアント証明書を検証し、許可したプロキシからのXFCCヘッダーだけを受け付けることもできる
+- en: Ships as a JAR or an OCI image for Kubernetes image volumes, with docs for ingress controllers.
+  ja: JARのほか、Kubernetesのイメージボリューム用のOCIイメージでも提供。Ingressコントローラの設定ドキュメントもある
+cannot:
+- en: Uses Keycloak's internal `x509cert-lookup` SPI, which may change without notice — newer Keycloak versions may need updates (a warning is logged).
+  ja: "Keycloakの内部SPI `x509cert-lookup` を使っており、予告なく変わる可能性がある。新しいKeycloakでは更新が必要になることがある（起動時に警告が出る）"
+- en: Without the optional authorisation setup, clients bypassing the proxy could forge XFCC headers to impersonate others.
+  ja: 任意の認可設定をしないと、プロキシを経由しないクライアントがXFCCヘッダーを偽装して他人になりすませる
+- en: Not published to Maven Central — build it yourself or use the OCI image.
+  ja: Maven Centralには公開されていない。自分でビルドするか、OCIイメージを使う
+requires:
+- en: "Copy the JAR to `providers` and set `spi-x509cert-lookup-provider=envoy` (or `KC_SPI_X509CERT_LOOKUP_PROVIDER=envoy`)."
+  ja: "JARを `providers` に置き、`spi-x509cert-lookup-provider=envoy`（または `KC_SPI_X509CERT_LOOKUP_PROVIDER=envoy`）を設定"

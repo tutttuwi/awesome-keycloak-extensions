@@ -1,0 +1,24 @@
+repo: jowe112/keycloak-rest-claim-mapper
+researched_at: '2026-10-25'
+sources:
+- https://github.com/jowe112/keycloak-rest-claim-mapper#readme
+- https://github.com/jowe112/keycloak-rest-claim-mapper/blob/main/docs/ADMIN_GUIDE.md
+can:
+- en: Enrich OIDC tokens and SAML assertions with attributes fetched from external REST APIs at token issuance — works with any federation (LDAP, AD, User Storage SPI).
+  ja: トークン発行時に外部REST APIから属性を取得し、OIDCトークンやSAMLアサーションに追加できる。フェデレーションの種類（LDAP、AD、User Storage SPI）は問わない
+- en: Call up to 3 endpoints in parallel, authenticating with an API key, basic auth or OAuth2 client credentials.
+  ja: 最大3つのエンドポイントを並列で呼び出せる。認証はAPIキー・Basic認証・OAuth2クライアントクレデンシャルに対応
+- en: Cache attributes with a TTL for imported users and fetch live for non-imported ones.
+  ja: インポート済みユーザーは属性をTTL付きでキャッシュし、非インポートのユーザーは毎回取得する
+- en: "Map with JSONPath, build query strings with JavaScript (GraalVM), and put structured JSON arrays into one claim (`json:` prefix)."
+  ja: "JSONPathでのマッピング、JavaScript（GraalVM）でのクエリ文字列生成、構造化JSON配列の1クレームへの格納（`json:` 接頭辞）ができる"
+- en: Test endpoints from an admin panel without a real user login.
+  ja: 実際のユーザーでログインしなくても、管理画面からエンドポイントをテストできる
+cannot:
+- en: Limited to 3 REST endpoints per mapper.
+  ja: 1つのマッパーで扱えるRESTエンドポイントは3つまで
+- en: Targets Keycloak 26.x on the Quarkus distribution with a GraalVM JDK (for the JavaScript feature).
+  ja: 対象はQuarkus版のKeycloak 26.xで、GraalVM JDKが前提（JavaScript機能のため）
+requires:
+- en: "Java 21 and Maven 3.9+ to build; put the fat JAR in `/opt/keycloak/providers/`."
+  ja: "ビルドにJava 21とMaven 3.9以上。fat JARを `/opt/keycloak/providers/` に置く"
