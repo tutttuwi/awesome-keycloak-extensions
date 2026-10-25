@@ -1,0 +1,19 @@
+repo: softwarefactory-project/keycloak-github-ssh-key-attribute-mapper
+researched_at: '2026-10-25'
+sources:
+- https://github.com/softwarefactory-project/keycloak-github-ssh-key-attribute-mapper#readme
+can:
+- en: Fetch a user's public SSH keys from GitHub when they log in with GitHub and store them in a user attribute.
+  ja: GitHubでログインしたときに、ユーザーのSSH公開鍵をGitHubから取得してユーザー属性に保存
+- en: Includes a Dockerfile, compose file and demo script.
+  ja: Dockerfile・compose・デモスクリプト付き
+cannot:
+- en: You must alter the Keycloak database by hand (USER_ATTRIBUTE column size and index) to fit SSH keys.
+  ja: SSH鍵が入るように、KeycloakのDB（USER_ATTRIBUTEの列サイズとインデックス）を手作業で変更する必要がある
+- en: Only works with the GitHub identity provider.
+  ja: GitHubのIdPでしか動かない
+- en: Inactive — no commits since February 2024; versions before Keycloak 22 need a Java 11 rebuild.
+  ja: 2024年2月以降コミットがなく活動停止状態。Keycloak 22より前はJava 11向けの再ビルドが必要
+requires:
+- en: A SQL database backend (example given for MariaDB/MySQL) and a GitHub OAuth app.
+  ja: SQLデータベース（MariaDB/MySQLでの例あり）と、GitHubのOAuthアプリ

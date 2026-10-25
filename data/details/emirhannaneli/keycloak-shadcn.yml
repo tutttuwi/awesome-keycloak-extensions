@@ -1,0 +1,23 @@
+repo: emirhannaneli/keycloak-shadcn
+researched_at: '2026-10-25'
+sources:
+- https://github.com/emirhannaneli/keycloak-shadcn#readme
+can:
+- en: Start a custom login and account theme built with Keycloakify v11, React 18, TypeScript, Tailwind and shadcn/ui, with Storybook.
+  ja: Keycloakify v11・React 18・TypeScript・Tailwind・shadcn/uiで作るログイン/アカウントテーマのスターター。Storybook付き
+- en: 21 customised pages, including login, registration, password reset, OTP/TOTP setup, email verification, sessions, applications and the account activity log.
+  ja: ログイン、登録、パスワードリセット、OTP/TOTP設定、メール確認、セッション、アプリケーション、アカウントのアクティビティログなど21画面をカスタマイズ済み
+- en: Built-in translations (28 login and 21 account languages), with scripts to manage them.
+  ja: 翻訳を同梱（ログイン28言語、アカウント21言語）。翻訳管理用のスクリプトもある
+- en: Switch logo and favicon per realm at runtime (light/dark) through a bundled SPI and an admin "Theme Config" tab — no theme rebuild.
+  ja: 同梱のSPIと管理画面の「Theme Config」タブで、realmごとにロゴとファビコン（ライト/ダーク）を実行時に切り替えられる。テーマの再ビルドは不要
+- en: Build JARs for multiple Keycloak version ranges.
+  ja: Keycloakのバージョン範囲ごとにJARをビルドできる
+cannot:
+- en: A starter template — you build and maintain your own theme from it rather than installing a finished product.
+  ja: スターターテンプレートであり、完成品をインストールするのではなく、これを元に自分のテーマを作って保守する
+- en: The admin Theme Config tab relies on Keycloak's declarative UI SPI.
+  ja: 管理画面のTheme ConfigタブはKeycloakのDeclarative UI SPIに依存する
+requires:
+- en: Node.js 18+ with a package manager, and Maven to build the theme JAR.
+  ja: Node.js 18以上とパッケージマネージャー、テーマJARのビルドにMaven

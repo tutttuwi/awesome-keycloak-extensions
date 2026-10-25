@@ -1,0 +1,25 @@
+repo: ba-itsys/keycloak-cassandra-extension
+researched_at: '2026-10-25'
+sources:
+- https://github.com/ba-itsys/keycloak-cassandra-extension#readme
+can:
+- en: Store Keycloak entities in Apache Cassandra — every storage area except authorization and events — with no relational database needed.
+  ja: Keycloakのエンティティを、認可とイベント以外のすべての領域でApache Cassandraに保存できる。リレーショナルDBは不要
+- en: "Serve only sessions and other dynamic data from Cassandra (`cache` mode) and keep the rest in JPA, or choose the areas explicitly."
+  ja: "セッションなどの動的データだけをCassandraに置き、残りをJPAにする（`cache` モード）ことも、領域を明示的に選ぶこともできる"
+- en: Route areas per realm via realm attributes, and combine with the filestore extension.
+  ja: realm属性で、realmごとに保存先を振り分けられる。filestore拡張との併用も可能
+- en: Add extras such as optimistic locking, a refresh-token reuse grace period, username/email uniqueness checks and indexed user attributes.
+  ja: 楽観ロック、リフレッシュトークン再利用の猶予期間、ユーザー名とメールの重複チェック、インデックス付きユーザー属性などの追加機能もある
+cannot:
+- en: Keycloak Organizations are not supported and must be turned off.
+  ja: KeycloakのOrganizations機能には非対応で、無効にする必要がある
+- en: User search is limited to username (case-insensitive), email and service accounts; other attribute searches scan all users unless declared as `indexed.` attributes.
+  ja: "ユーザー検索は、ユーザー名（大文字小文字を区別しない）・メール・サービスアカウントに限られる。それ以外の属性検索は `indexed.` 属性にしない限り全件走査になる"
+- en: "Requires the preview `stateless` feature, and realm/authorization caches are disabled."
+  ja: "プレビュー機能 `stateless` が必要で、realmと認可のキャッシュは無効化される"
+- en: Changing per-realm routing does not migrate existing data; once 26.8 has saved an identity provider you cannot roll back.
+  ja: realmごとの振り分けを変えても既存データは移行されない。26.8でIdPを保存した後は、旧版に戻せない
+requires:
+- en: "Keycloak 26.8.0+ with `--spi-datastore--provider=cassandra` and `--features=stateless`, plus a Cassandra cluster."
+  ja: "Keycloak 26.8.0以上で `--spi-datastore--provider=cassandra` と `--features=stateless` を指定。Cassandraクラスタも必要"

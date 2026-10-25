@@ -1,0 +1,19 @@
+repo: mabartos/keycloak-quarkus-extensions
+researched_at: '2026-10-25'
+sources:
+- https://github.com/mabartos/keycloak-quarkus-extensions#readme
+can:
+- en: Build a custom Keycloak distribution that includes Quarkus/Quarkiverse extensions (or other dependencies), the same way Keycloak itself is built.
+  ja: Quarkus/Quarkiverseの拡張（や他の依存関係）を組み込んだKeycloakディストリビューションを、Keycloak本体と同じ方法でビルドできる
+- en: Output tar.gz/zip distributions or a container image.
+  ja: 成果物はtar.gz/zipのディストリビューションか、コンテナイメージ
+- en: Supports Keycloak 26.4.x, 26.6.x–26.8.x and nightly.
+  ja: Keycloak 26.4.x、26.6.x〜26.8.x、nightlyに対応
+cannot:
+- en: Not a runtime extension — it is a build tool, so you run your own extended Keycloak build.
+  ja: 実行時の拡張ではなくビルドツール。拡張したKeycloakを自前でビルドして運用する形になる
+- en: Only the listed Keycloak/Quarkus version pairs are supported.
+  ja: 対応しているのは、表に記載されたKeycloakとQuarkusの組み合わせのみ
+requires:
+- en: A build environment for the tool (see the examples and advanced configuration guides).
+  ja: ツール用のビルド環境（examplesと詳細設定ガイドを参照）

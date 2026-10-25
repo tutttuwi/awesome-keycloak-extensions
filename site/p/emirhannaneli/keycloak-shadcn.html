@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-shadcn — Awesome Keycloak Extensions</title>
+<meta name="description" content="Keycloakify + shadcn/ui login theme starter.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">SPI</span><span class="b">Theme / UI</span><span class="b Active">Active</span></p>
+    <h1 id="name">keycloak-shadcn</h1>
+    <p class="repo"><a href="https://github.com/emirhannaneli/keycloak-shadcn" rel="noopener">emirhannaneli/keycloak-shadcn ↗</a></p>
+    <p class="lead"><span class="l-en">Keycloakify + shadcn/ui login theme starter.</span><span class="l-ja">Keycloakify+shadcn/uiのログインテーマ</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>17</dd></div><div><dt>Forks</dt><dd>2</dd></div><div><dt>Contributors</dt><dd>2</dd></div><div><dt>Updated</dt><dd>2026-08-07</dd></div><div><dt>KC</dt><dd>—</dd></div><div><dt>License</dt><dd>MIT</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">5</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Start a custom login and account theme built with Keycloakify v11, React 18, TypeScript, Tailwind and shadcn/ui, with Storybook.</span><span class="l-ja">Keycloakify v11・React 18・TypeScript・Tailwind・shadcn/uiで作るログイン/アカウントテーマのスターター。Storybook付き</span></li><li class="c"><span class="l-en">21 customised pages, including login, registration, password reset, OTP/TOTP setup, email verification, sessions, applications and the account activity log.</span><span class="l-ja">ログイン、登録、パスワードリセット、OTP/TOTP設定、メール確認、セッション、アプリケーション、アカウントのアクティビティログなど21画面をカスタマイズ済み</span></li><li class="c"><span class="l-en">Built-in translations (28 login and 21 account languages), with scripts to manage them.</span><span class="l-ja">翻訳を同梱（ログイン28言語、アカウント21言語）。翻訳管理用のスクリプトもある</span></li><li class="c"><span class="l-en">Switch logo and favicon per realm at runtime (light/dark) through a bundled SPI and an admin &quot;Theme Config&quot; tab — no theme rebuild.</span><span class="l-ja">同梱のSPIと管理画面の「Theme Config」タブで、realmごとにロゴとファビコン（ライト/ダーク）を実行時に切り替えられる。テーマの再ビルドは不要</span></li><li class="c"><span class="l-en">Build JARs for multiple Keycloak version ranges.</span><span class="l-ja">Keycloakのバージョン範囲ごとにJARをビルドできる</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">2</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">A starter template — you build and maintain your own theme from it rather than installing a finished product.</span><span class="l-ja">スターターテンプレートであり、完成品をインストールするのではなく、これを元に自分のテーマを作って保守する</span></li><li class="x"><span class="l-en">The admin Theme Config tab relies on Keycloak&#x27;s declarative UI SPI.</span><span class="l-ja">管理画面のTheme ConfigタブはKeycloakのDeclarative UI SPIに依存する</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">Node.js 18+ with a package manager, and Maven to build the theme JAR.</span><span class="l-ja">Node.js 18以上とパッケージマネージャー、テーマJARのビルドにMaven</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/emirhannaneli/keycloak-shadcn#readme" rel="noopener">https://github.com/emirhannaneli/keycloak-shadcn#readme</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

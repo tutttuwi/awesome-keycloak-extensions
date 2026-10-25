@@ -1,0 +1,25 @@
+repo: cloudnative-pg/postgres-keycloak-oauth-validator
+researched_at: '2026-10-25'
+sources:
+- https://github.com/cloudnative-pg/postgres-keycloak-oauth-validator#readme
+can:
+- en: Let PostgreSQL 18 delegate database role decisions to Keycloak Authorization Services using OAuth tokens (UMA ticket, decision response).
+  ja: PostgreSQL 18が、データベースロールの判定をOAuthトークンでKeycloakのAuthorization Servicesに委ねられる（UMAチケット、decision応答）
+- en: "Map each DB role to a Keycloak permission (`<resource>#<scope>`) and control access with Keycloak policies; designed for CloudNativePG."
+  ja: "DBロールをKeycloakのパーミッション（`<resource>#<scope>`）に対応付け、Keycloakのポリシーでアクセスを制御。CloudNativePG向けに設計"
+- en: Log in from psql with the OAuth device flow.
+  ja: psqlからOAuthのデバイスフローでログインできる
+- en: Configure everything through PostgreSQL GUC parameters, with optional issuer (`iss`) verification.
+  ja: 設定はすべてPostgreSQLのGUCパラメータで行い、issuer（`iss`）の検証も任意で可能
+cannot:
+- en: Marked experimental.
+  ja: 実験的（EXPERIMENTAL）と明記されている
+- en: Requires PostgreSQL 18+ and relies on a Keycloak-specific extension (`response_mode=decision`), so it does not work with other OAuth servers.
+  ja: PostgreSQL 18以上が必要。Keycloak固有の拡張（`response_mode=decision`）に依存するため、他のOAuthサーバーでは動かない
+- en: Not a Keycloak extension — it runs inside PostgreSQL.
+  ja: Keycloak拡張ではなく、PostgreSQL側で動くモジュール
+requires:
+- en: A Keycloak realm with a resource-server client (Authorization Services on), a validator client, resources, scopes, permissions and policies; meson to build.
+  ja: リソースサーバー用クライアント（Authorization Servicesを有効化）、検証用クライアント、リソース・スコープ・パーミッション・ポリシーを設定したKeycloakのrealm。ビルドにはmesonが必要
+- en: Trusted CA certificates in production (no self-signed certs).
+  ja: 本番環境では信頼されたCAの証明書を使う（自己署名証明書は不可）

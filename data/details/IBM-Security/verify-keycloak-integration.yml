@@ -1,0 +1,19 @@
+repo: IBM-Security/verify-keycloak-integration
+researched_at: '2026-10-25'
+sources:
+- https://github.com/IBM-Security/verify-keycloak-integration#readme
+can:
+- en: Add authenticators that use IBM Security Verify for stronger authentication (including the IBM Verify mobile app) in Keycloak or Red Hat SSO.
+  ja: IBM Security Verify（IBM Verifyモバイルアプリを含む）を使った認証強化用のAuthenticatorを、KeycloakやRed Hat SSOに追加
+- en: Ships Docker-based scripts to build and run a Keycloak image with the extensions.
+  ja: 拡張入りのKeycloakイメージをビルド・実行するDocker用スクリプトが付属
+cannot:
+- en: Supports only Keycloak 10.0.1 and Red Hat SSO 7.4 (WildFly era) — not documented for current Keycloak.
+  ja: 対応はKeycloak 10.0.1とRed Hat SSO 7.4（WildFly時代）のみで、現行Keycloakでの手順はない
+- en: Detailed usage is only in the user guide attached to each release, not in the README.
+  ja: 詳しい使い方は各リリースに添付されたユーザーガイドにしかなく、READMEには載っていない
+- en: Inactive — no commits since 2020.
+  ja: 2020年以降コミットがなく、活動停止状態
+requires:
+- en: An IBM Security Verify tenant; IBM JRE 1.8, Maven and Docker to build.
+  ja: IBM Security Verifyのテナント。ビルドにはIBM JRE 1.8・Maven・Docker

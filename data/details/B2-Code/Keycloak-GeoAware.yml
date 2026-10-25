@@ -1,0 +1,26 @@
+repo: B2-Code/Keycloak-GeoAware
+researched_at: '2026-10-25'
+sources:
+- https://github.com/B2-Code/Keycloak-GeoAware#readme
+- https://b2-code.github.io/Keycloak-GeoAware
+can:
+- en: React at login to an IP change, an unknown IP or an unknown location (country and city) by emailing the user, denying access, logging or disabling the account.
+  ja: ログイン時に、IPの変化・未知のIP・未知の場所（国と都市）を検知して、通知メール・アクセス拒否・ログ記録・アカウント無効化のいずれかを実行
+- en: Do the same for device changes or unknown devices (browser and operating system).
+  ja: 端末（ブラウザとOS）の変化や未知の端末にも、同じように対応できる
+- en: Provide standalone conditions for Keycloak's conditional sub-flows, so any authenticator (e.g. OTP) can be the action.
+  ja: Keycloakの条件付きサブフロー用の条件だけを提供するモードもあり、アクションには任意のAuthenticator（OTPなど）を使える
+- en: Add GeoIP information (IP, city, postal code, country) to tokens via a mapper.
+  ja: マッパーで、GeoIP情報（IP・都市・郵便番号・国）をトークンに追加
+- en: Look up locations with IPinfo, MaxMind web service, or a local MaxMind database (optionally auto-downloaded and updated).
+  ja: 位置の判定には、IPinfo、MaxMindのWebサービス、ローカルのMaxMind DB（自動ダウンロード・更新も可）を使える
+cannot:
+- en: Accuracy depends on the GeoIP provider; private or localhost IPs carry no location, so "unknown location" always matches for them.
+  ja: 精度はGeoIPの提供元に依存する。プライベートIPやlocalhostには位置情報がなく、「未知の場所」の条件に常に該当してしまう
+- en: Device detection relies on the spoofable User-Agent header and does not identify a physical device — switching browsers looks like a new device.
+  ja: 端末の判定は偽装可能なUser-Agentに基づき、物理的な端末は識別できない。ブラウザを変えるだけで別の端末と見なされる
+- en: The JAR must be present at Keycloak build time; mounting it at container start is not enough.
+  ja: JARはKeycloakのビルド時に存在している必要があり、コンテナ起動時のマウントだけでは不十分
+requires:
+- en: "A GeoIP source: an IPinfo token, a MaxMind account/license key, or a local `.mmdb` file."
+  ja: "GeoIPの情報源：IPinfoのトークン、MaxMindのアカウント/ライセンスキー、またはローカルの `.mmdb` ファイル"

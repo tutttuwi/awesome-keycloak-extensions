@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-cassandra-extension — Awesome Keycloak Extensions</title>
+<meta name="description" content="Store Keycloak data in Apache Cassandra.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">SPI</span><span class="b">Storage / Datastore</span><span class="b Active">Active</span></p>
+    <h1 id="name">keycloak-cassandra-extension</h1>
+    <p class="repo"><a href="https://github.com/ba-itsys/keycloak-cassandra-extension" rel="noopener">ba-itsys/keycloak-cassandra-extension ↗</a></p>
+    <p class="lead"><span class="l-en">Store Keycloak data in Apache Cassandra.</span><span class="l-ja">KeycloakのデータをApache Cassandraに保存</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>28</dd></div><div><dt>Forks</dt><dd>11</dd></div><div><dt>Contributors</dt><dd>10</dd></div><div><dt>Updated</dt><dd>2026-10-19</dd></div><div><dt>KC</dt><dd>26.8.1</dd></div><div><dt>License</dt><dd>Apache-2.0</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">4</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Store Keycloak entities in Apache Cassandra — every storage area except authorization and events — with no relational database needed.</span><span class="l-ja">Keycloakのエンティティを、認可とイベント以外のすべての領域でApache Cassandraに保存できる。リレーショナルDBは不要</span></li><li class="c"><span class="l-en">Serve only sessions and other dynamic data from Cassandra (<code>cache</code> mode) and keep the rest in JPA, or choose the areas explicitly.</span><span class="l-ja">セッションなどの動的データだけをCassandraに置き、残りをJPAにする（<code>cache</code> モード）ことも、領域を明示的に選ぶこともできる</span></li><li class="c"><span class="l-en">Route areas per realm via realm attributes, and combine with the filestore extension.</span><span class="l-ja">realm属性で、realmごとに保存先を振り分けられる。filestore拡張との併用も可能</span></li><li class="c"><span class="l-en">Add extras such as optimistic locking, a refresh-token reuse grace period, username/email uniqueness checks and indexed user attributes.</span><span class="l-ja">楽観ロック、リフレッシュトークン再利用の猶予期間、ユーザー名とメールの重複チェック、インデックス付きユーザー属性などの追加機能もある</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">4</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">Keycloak Organizations are not supported and must be turned off.</span><span class="l-ja">KeycloakのOrganizations機能には非対応で、無効にする必要がある</span></li><li class="x"><span class="l-en">User search is limited to username (case-insensitive), email and service accounts; other attribute searches scan all users unless declared as <code>indexed.</code> attributes.</span><span class="l-ja">ユーザー検索は、ユーザー名（大文字小文字を区別しない）・メール・サービスアカウントに限られる。それ以外の属性検索は <code>indexed.</code> 属性にしない限り全件走査になる</span></li><li class="x"><span class="l-en">Requires the preview <code>stateless</code> feature, and realm/authorization caches are disabled.</span><span class="l-ja">プレビュー機能 <code>stateless</code> が必要で、realmと認可のキャッシュは無効化される</span></li><li class="x"><span class="l-en">Changing per-realm routing does not migrate existing data; once 26.8 has saved an identity provider you cannot roll back.</span><span class="l-ja">realmごとの振り分けを変えても既存データは移行されない。26.8でIdPを保存した後は、旧版に戻せない</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">Keycloak 26.8.0+ with <code>--spi-datastore--provider=cassandra</code> and <code>--features=stateless</code>, plus a Cassandra cluster.</span><span class="l-ja">Keycloak 26.8.0以上で <code>--spi-datastore--provider=cassandra</code> と <code>--features=stateless</code> を指定。Cassandraクラスタも必要</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/ba-itsys/keycloak-cassandra-extension#readme" rel="noopener">https://github.com/ba-itsys/keycloak-cassandra-extension#readme</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

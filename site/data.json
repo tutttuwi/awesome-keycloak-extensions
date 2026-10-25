@@ -1182,7 +1182,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/cloudtrust/keycloak-wsfed",
    "activity": "Inactive",
-   "detail": null
+   "detail": "p/cloudtrust/keycloak-wsfed.html"
   },
   {
    "name": "verify-keycloak-integration",
@@ -1210,7 +1210,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/IBM-Security/verify-keycloak-integration",
    "activity": "Inactive",
-   "detail": null
+   "detail": "p/IBM-Security/verify-keycloak-integration.html"
   },
   {
    "name": "postgres-keycloak-oauth-validator",
@@ -1238,7 +1238,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/cloudnative-pg/postgres-keycloak-oauth-validator",
    "activity": "Active",
-   "detail": null
+   "detail": "p/cloudnative-pg/postgres-keycloak-oauth-validator.html"
   },
   {
    "name": "keycloak-cassandra-extension",
@@ -1269,7 +1269,7 @@
     "opdt/keycloak-cassandra-extension"
    ],
    "activity": "Active",
-   "detail": null
+   "detail": "p/ba-itsys/keycloak-cassandra-extension.html"
   },
   {
    "name": "keycloak-app-passwords",
@@ -1297,7 +1297,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/radicallyopensecurity/keycloak-app-passwords",
    "activity": "Active",
-   "detail": null
+   "detail": "p/radicallyopensecurity/keycloak-app-passwords.html"
   },
   {
    "name": "Keycloak-GeoAware",
@@ -1325,7 +1325,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/B2-Code/Keycloak-GeoAware",
    "activity": "Active",
-   "detail": null
+   "detail": "p/B2-Code/Keycloak-GeoAware.html"
   },
   {
    "name": "keycloak-quarkus-extensions",
@@ -1353,7 +1353,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/mabartos/keycloak-quarkus-extensions",
    "activity": "Active",
-   "detail": null
+   "detail": "p/mabartos/keycloak-quarkus-extensions.html"
   },
   {
    "name": "keycloak-regex-mapper",
@@ -1381,7 +1381,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/LucaFilipozzi/keycloak-regex-mapper",
    "activity": "Inactive",
-   "detail": null
+   "detail": "p/LucaFilipozzi/keycloak-regex-mapper.html"
   },
   {
    "name": "keycloak-github-ssh-key-attribute-mapper",
@@ -1412,7 +1412,7 @@
     "mhuin/keycloak-github-ssh-key-attribute-mapper"
    ],
    "activity": "Inactive",
-   "detail": null
+   "detail": "p/softwarefactory-project/keycloak-github-ssh-key-attribute-mapper.html"
   },
   {
    "name": "keycloak-shadcn",
@@ -1440,7 +1440,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/emirhannaneli/keycloak-shadcn",
    "activity": "Active",
-   "detail": null
+   "detail": "p/emirhannaneli/keycloak-shadcn.html"
   },
   {
    "name": "keycloak-orcid",
