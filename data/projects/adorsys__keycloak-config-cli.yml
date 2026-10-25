@@ -1,0 +1,24 @@
+name: keycloak-config-cli
+repo: adorsys/keycloak-config-cli
+url: https://github.com/adorsys/keycloak-config-cli
+summary: CLI to manage Keycloak realm configuration as code (YAML/JSON).
+summary_ja: Keycloakのrealm設定をYAML/JSONでコード管理するCLI
+kind: peripheral
+genre: Config as code / DevOps
+spi_types: []
+language: null
+license: Apache-2.0
+stars: 1200
+stars_approx: true
+forks: 201
+contributors: null
+last_commit: null
+archived: null
+kc_versions: null
+official: true
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-22'
+source: https://github.com/adorsys/keycloak-config-cli (page display value)

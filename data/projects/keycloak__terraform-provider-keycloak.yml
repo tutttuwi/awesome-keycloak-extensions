@@ -1,0 +1,24 @@
+name: terraform-provider-keycloak
+repo: keycloak/terraform-provider-keycloak
+url: https://github.com/keycloak/terraform-provider-keycloak
+summary: Terraform provider for managing Keycloak resources.
+summary_ja: Keycloakリソースを管理するTerraform provider
+kind: peripheral
+genre: Config as code / DevOps
+spi_types: []
+language: null
+license: Apache-2.0
+stars: 951
+stars_approx: false
+forks: 450
+contributors: null
+last_commit: null
+archived: null
+kc_versions: null
+official: true
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-22'
+source: https://github.com/keycloak/terraform-provider-keycloak (page display value)

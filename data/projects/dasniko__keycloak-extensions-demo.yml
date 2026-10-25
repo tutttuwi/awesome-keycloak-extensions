@@ -1,0 +1,25 @@
+name: keycloak-extensions-demo
+repo: dasniko/keycloak-extensions-demo
+url: https://github.com/dasniko/keycloak-extensions-demo
+summary: 'Demo of many SPI types: action token, authenticators, event listener, token
+  mapper, required action, etc.'
+summary_ja: 多数のSPI実装例(actiontoken/authenticator/event-listener/tokenmapper/requiredaction等)
+kind: core
+genre: Testing / Examples
+spi_types: []
+language: null
+license: Apache-2.0
+stars: 429
+stars_approx: false
+forks: 133
+contributors: null
+last_commit: null
+archived: null
+kc_versions: null
+official: true
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-22'
+source: https://github.com/dasniko/keycloak-extensions-demo (page display value)

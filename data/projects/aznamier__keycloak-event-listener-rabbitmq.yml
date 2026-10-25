@@ -1,0 +1,26 @@
+name: keycloak-event-listener-rabbitmq
+repo: aznamier/keycloak-event-listener-rabbitmq
+url: https://github.com/aznamier/keycloak-event-listener-rabbitmq
+summary: Publish Keycloak events to RabbitMQ.
+summary_ja: KeycloakイベントをRabbitMQへ送信
+kind: core
+genre: Event / Webhook / Messaging
+spi_types:
+- EventListener
+language: null
+license: Apache-2.0
+stars: 170
+stars_approx: false
+forks: 62
+contributors: null
+last_commit: null
+archived: null
+kc_versions: null
+official: true
+less_active_in_official: true
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-22'
+source: https://github.com/aznamier/keycloak-event-listener-rabbitmq (page display
+  value)

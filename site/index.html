@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Awesome Keycloak SPI</title>
+<meta name="description" content="Ranked catalog of Keycloak extensions (SPI) and tools: official list + popular community projects.">
+<style>
+:root{
+  --bg:#f6f7f9; --card:#fff; --ink:#14181f; --muted:#5b6575; --line:#e3e7ee;
+  --accent:#2557d6; --accent-ink:#fff;
+  --ok:#157f4b; --ok-bg:#e3f5ec; --warn:#9a6700; --warn-bg:#fff3d1; --bad:#8a2b2b; --bad-bg:#fbe4e4; --unk:#4a5565; --unk-bg:#eaedf2;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0f1218; --card:#171c25; --ink:#e8ecf3; --muted:#9aa6b8; --line:#272e3b;
+  --accent:#7aa2ff; --accent-ink:#0b1020;
+  --ok:#5fd49a; --ok-bg:#12301f; --warn:#f0c14b; --warn-bg:#352a0c; --bad:#ff9a9a; --bad-bg:#3a1717; --unk:#a9b4c6; --unk-bg:#232a36;}
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 system-ui,-apple-system,"Segoe UI","Hiragino Sans","Noto Sans JP",sans-serif}
+a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+header,main,footer{max-width:1120px;margin:0 auto;padding:0 16px}
+header{padding-top:32px;padding-bottom:8px}
+h1{margin:0 0 4px;font-size:28px;letter-spacing:-.01em}
+.sub{margin:0;color:var(--muted)}
+.meta{margin-top:10px;font-size:13px;color:var(--muted)}
+.controls{position:sticky;top:0;z-index:5;background:var(--bg);padding:12px 0;border-bottom:1px solid var(--line);margin-top:16px}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+input[type=search],select{font:inherit;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:8px;padding:8px 10px;min-height:38px}
+input[type=search]{flex:1 1 240px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card)}
+.seg button{font:inherit;color:var(--ink);background:none;border:0;padding:8px 12px;min-height:38px;cursor:pointer}
+.seg button[aria-pressed=true]{background:var(--accent);color:var(--accent-ink)}
+label.chk{display:inline-flex;gap:6px;align-items:center;color:var(--muted);font-size:14px}
+.count{margin:14px 0 8px;color:var(--muted);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:12px;padding-bottom:40px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:8px}
+.card h2{margin:0;font-size:16px;line-height:1.3;word-break:break-word}
+.card .repo{font-size:12px;color:var(--muted);word-break:break-all}
+.desc{margin:0;flex:1}
+.badges{display:flex;flex-wrap:wrap;gap:6px}
+.b{font-size:12px;padding:2px 8px;border-radius:999px;background:var(--unk-bg);color:var(--unk);white-space:nowrap}
+.b.Active{background:var(--ok-bg);color:var(--ok)} .b.Stale{background:var(--warn-bg);color:var(--warn)}
+.b.Inactive{background:var(--bad-bg);color:var(--bad)} .b.off{background:var(--accent);color:var(--accent-ink)}
+.stats{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:8px}
+.stats b{color:var(--ink);font-weight:600}
+.note{font-size:12px;color:var(--warn)}
+.empty{padding:40px 0;text-align:center;color:var(--muted)}
+footer{padding-bottom:40px;color:var(--muted);font-size:13px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (max-width:480px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <h1>Awesome Keycloak SPI</h1>
+  <p class="sub" id="sub"></p>
+  <p class="meta" id="meta">Loading…</p>
+</header>
+
+<main>
+  <div class="controls">
+    <div class="row">
+      <input type="search" id="q" placeholder="Search name / summary / genre" aria-label="Search">
+      <div class="seg" id="src" role="group" aria-label="Source">
+        <button data-v="all" aria-pressed="true">All</button>
+        <button data-v="official" aria-pressed="false">Official</button>
+        <button data-v="community" aria-pressed="false">Community</button>
+      </div>
+      <div class="seg" id="lang" role="group" aria-label="Language">
+        <button data-v="en" aria-pressed="true">EN</button>
+        <button data-v="ja" aria-pressed="false">日本語</button>
+      </div>
+    </div>
+    <div class="row" style="margin-top:8px">
+      <select id="kind" aria-label="Kind">
+        <option value="all">SPI + tools</option>
+        <option value="core">SPI extensions</option>
+        <option value="peripheral">Companion tools</option>
+      </select>
+      <select id="genre" aria-label="Genre"><option value="all">All genres</option></select>
+      <select id="act" aria-label="Activity">
+        <option value="live">Active / Stale / Unknown</option>
+        <option value="Active">Active only</option>
+        <option value="all">Include inactive</option>
+        <option value="Inactive">Inactive only</option>
+      </select>
+      <select id="sort" aria-label="Sort">
+        <option value="stars">Sort: ★ stars</option>
+        <option value="contributors">Sort: contributors</option>
+        <option value="forks">Sort: forks</option>
+        <option value="last_commit">Sort: last commit</option>
+        <option value="name">Sort: name</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="count" id="count" aria-live="polite"></div>
+  <div class="grid" id="grid"></div>
+</main>
+
+<footer>
+  Official list: <a href="https://www.keycloak.org/extensions" rel="noopener">keycloak.org/extensions</a>.
+  Numbers come from the GitHub API on the date shown above; <b>—</b> means not fetched yet (never guessed).
+  Activity: Active ≤12 mo · Stale 12–24 mo · Inactive &gt;24 mo / archived / unmaintained.
+  <span id="repo"></span>
+</footer>
+
+<script>
+(() => {
+  const $ = id => document.getElementById(id);
+  const state = {src:"all", lang:(navigator.language||"en").startsWith("ja")?"ja":"en"};
+  let DATA = null;
+
+  const fmt = n => (n === null || n === undefined) ? "—" : n.toLocaleString("en-US");
+  const safeUrl = u => (typeof u === "string" && u.startsWith("https://github.com/")) ? u : "#";
+  const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+
+  function seg(id, key, cb){
+    $(id).addEventListener("click", ev => {
+      const b = ev.target.closest("button"); if (!b) return;
+      state[key] = b.dataset.v;
+      $(id).querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x === b));
+      cb();
+    });
+  }
+  function syncLang(){
+    $("lang").querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x.dataset.v === state.lang));
+    document.documentElement.lang = state.lang;
+    $("sub").textContent = state.lang === "ja"
+      ? "Keycloak拡張(SPI)と周辺ツールのランキング。公式掲載分+スター・コントリビューターの多いコミュニティ製。"
+      : "Ranked Keycloak extensions (SPI) and tools — the official list plus popular community projects.";
+  }
+
+  function filtered(){
+    const q = $("q").value.trim().toLowerCase();
+    const kind = $("kind").value, genre = $("genre").value, act = $("act").value, sort = $("sort").value;
+    let list = DATA.projects.filter(p => {
+      if (state.src === "official" && !p.official) return false;
+      if (state.src === "community" && p.official) return false;
+      if (kind !== "all" && p.kind !== kind) return false;
+      if (genre !== "all" && p.genre !== genre) return false;
+      if (act === "live" && p.activity === "Inactive") return false;
+      if (act === "Active" && p.activity !== "Active") return false;
+      if (act === "Inactive" && p.activity !== "Inactive") return false;
+      if (q){
+        const hay = [p.name, p.repo, p.summary, p.summary_ja, p.genre, (p.spi_types||[]).join(" ")].join(" ").toLowerCase();
+        if (!hay.includes(q)) return false;
+      }
+      return true;
+    });
+    const num = (p,k) => p[k] == null ? -1 : p[k];
+    list.sort((a,b) => {
+      if (sort === "name") return a.name.localeCompare(b.name);
+      if (sort === "last_commit") return String(b.last_commit||"").localeCompare(String(a.last_commit||""));
+      return num(b,sort) - num(a,sort) || num(b,"stars") - num(a,"stars");
+    });
+    return list;
+  }
+
+  function card(p, rank){
+    const c = el("article","card");
+    const h = el("h2"); const a = el("a",null,`${rank}. ${p.name}`);
+    a.href = safeUrl(p.url); a.rel = "noopener"; h.appendChild(a); c.appendChild(h);
+    c.appendChild(el("div","repo",p.repo));
+    const desc = (state.lang === "ja" && p.summary_ja) ? p.summary_ja : (p.summary || p.summary_ja || "");
+    c.appendChild(el("p","desc",desc));
+    const bs = el("div","badges");
+    bs.appendChild(el("span","b"+(p.official?" off":""), p.official ? "Official" : "Community"));
+    bs.appendChild(el("span","b", p.kind === "peripheral" ? "Tool" : "SPI"));
+    bs.appendChild(el("span","b", p.genre));
+    const act = el("span","b "+p.activity, p.activity); bs.appendChild(act);
+    if (p.less_active_in_official) bs.appendChild(el("span","b Stale","Less active (official)"));
+    if (!p.reviewed) bs.appendChild(el("span","b","Unreviewed"));
+    c.appendChild(bs);
+    const s = el("div","stats");
+    const stat = (label, val) => { const d = el("span"); d.append(label+" "); d.appendChild(el("b",null,val)); return d; };
+    s.appendChild(stat("★", (p.stars_approx && p.stars!=null ? "~" : "") + fmt(p.stars)));
+    s.appendChild(stat("Forks", fmt(p.forks)));
+    s.appendChild(stat("Contributors", fmt(p.contributors)));
+    s.appendChild(stat("Updated", p.last_commit || "—"));
+    s.appendChild(stat("KC", p.kc_versions || "—"));
+    s.appendChild(stat("License", p.license || "—"));
+    c.appendChild(s);
+    if (p.note) c.appendChild(el("div","note",p.note));
+    return c;
+  }
+
+  function render(){
+    const list = filtered(), g = $("grid");
+    g.replaceChildren();
+    $("count").textContent = `${list.length} / ${DATA.projects.length}`;
+    if (!list.length){ g.appendChild(el("div","empty","No matches.")); return; }
+    list.forEach((p,i) => g.appendChild(card(p, i+1)));
+  }
+
+  fetch("data.json", {cache:"no-cache"}).then(r => r.json()).then(d => {
+    DATA = d;
+    $("meta").textContent = `Data fetched: ${d.data_date} · Site built: ${d.generated_at}`;
+    const used = new Set(d.projects.map(p => p.genre));
+    d.genres.filter(x => used.has(x)).forEach(x => { const o = el("option",null,x); o.value = x; $("genre").appendChild(o); });
+    syncLang(); render();
+  }).catch(() => { $("meta").textContent = "Failed to load data.json"; });
+
+  seg("src","src",render);
+  seg("lang","lang",() => { syncLang(); render(); });
+  ["q","kind","genre","act","sort"].forEach(id => $(id).addEventListener(id==="q"?"input":"change", render));
+  syncLang();
+})();
+</script>
+</body>
+</html>

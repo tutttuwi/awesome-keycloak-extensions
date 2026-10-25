@@ -1,0 +1,24 @@
+name: keycloak-multi-tenancy
+repo: anarsultanov/keycloak-multi-tenancy
+url: https://github.com/anarsultanov/keycloak-multi-tenancy
+summary: Multi-tenancy support for Keycloak.
+summary_ja: Keycloakのマルチテナント対応
+kind: core
+genre: Multi-tenancy / Organization
+spi_types: []
+language: null
+license: Apache-2.0
+stars: 171
+stars_approx: false
+forks: 27
+contributors: null
+last_commit: null
+archived: null
+kc_versions: null
+official: true
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-22'
+source: https://github.com/anarsultanov/keycloak-multi-tenancy (page display value)

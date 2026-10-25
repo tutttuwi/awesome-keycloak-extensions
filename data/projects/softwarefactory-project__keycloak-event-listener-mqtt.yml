@@ -1,0 +1,26 @@
+name: keycloak-event-listener-mqtt
+repo: softwarefactory-project/keycloak-event-listener-mqtt
+url: https://github.com/softwarefactory-project/keycloak-event-listener-mqtt
+summary: Publish Keycloak events to an MQTT broker.
+summary_ja: KeycloakイベントをMQTTブローカーへ送信
+kind: core
+genre: Event / Webhook / Messaging
+spi_types:
+- EventListener
+language: null
+license: Apache-2.0
+stars: 46
+stars_approx: false
+forks: 11
+contributors: null
+last_commit: null
+archived: null
+kc_versions: null
+official: false
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: Official list links to the mhuin fork (Less active); this is the upstream.
+fetched_at: '2026-10-22'
+source: https://github.com/softwarefactory-project/keycloak-event-listener-mqtt (page
+  display value)

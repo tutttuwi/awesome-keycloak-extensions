@@ -1,0 +1,24 @@
+name: keycloak-mfa-plugins
+repo: netzbegruenung/keycloak-mfa-plugins
+url: https://github.com/netzbegruenung/keycloak-mfa-plugins
+summary: 'MFA plugins: SMS, enforced MFA, native-app MFA.'
+summary_ja: MFAプラグイン集(SMS/強制MFA/ネイティブアプリMFA)
+kind: core
+genre: MFA / Passwordless
+spi_types: []
+language: null
+license: Apache-2.0
+stars: 297
+stars_approx: false
+forks: 129
+contributors: null
+last_commit: null
+archived: null
+kc_versions: null
+official: true
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-22'
+source: https://github.com/netzbegruenung/keycloak-mfa-plugins (page display value)

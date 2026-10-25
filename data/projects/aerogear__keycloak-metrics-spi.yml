@@ -1,0 +1,24 @@
+name: keycloak-metrics-spi
+repo: aerogear/keycloak-metrics-spi
+url: https://github.com/aerogear/keycloak-metrics-spi
+summary: Exposes Keycloak metrics (Prometheus format) via an SPI.
+summary_ja: KeycloakのメトリクスをPrometheus形式で公開するSPI
+kind: core
+genre: Monitoring / Audit
+spi_types: []
+language: null
+license: Apache-2.0
+stars: 616
+stars_approx: false
+forks: 163
+contributors: null
+last_commit: null
+archived: null
+kc_versions: null
+official: true
+less_active_in_official: true
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-22'
+source: https://github.com/aerogear/keycloak-metrics-spi (page display value)

@@ -1,0 +1,24 @@
+name: keycloak-home-idp-discovery
+repo: sventorben/keycloak-home-idp-discovery
+url: https://github.com/sventorben/keycloak-home-idp-discovery
+summary: Discover the home IdP from the user's email domain.
+summary_ja: メールドメインからホームIdPを自動判定
+kind: core
+genre: Authentication
+spi_types: []
+language: null
+license: MIT
+stars: 341
+stars_approx: false
+forks: 63
+contributors: null
+last_commit: null
+archived: null
+kc_versions: null
+official: true
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-22'
+source: https://github.com/sventorben/keycloak-home-idp-discovery (page display value)

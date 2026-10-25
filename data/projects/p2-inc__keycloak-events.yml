@@ -1,0 +1,24 @@
+name: keycloak-events
+repo: p2-inc/keycloak-events
+url: https://github.com/p2-inc/keycloak-events
+summary: Event listeners and webhooks for Keycloak events.
+summary_ja: Keycloakイベント用のリスナー/Webhook
+kind: core
+genre: Event / Webhook / Messaging
+spi_types: []
+language: null
+license: null
+stars: 314
+stars_approx: false
+forks: 53
+contributors: null
+last_commit: null
+archived: null
+kc_versions: null
+official: true
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: A COPYING file exists; license type not confirmed.
+fetched_at: '2026-10-22'
+source: https://github.com/p2-inc/keycloak-events (page display value)

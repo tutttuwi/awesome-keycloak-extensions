@@ -1,0 +1,24 @@
+name: keycloak-orgs
+repo: p2-inc/keycloak-orgs
+url: https://github.com/p2-inc/keycloak-orgs
+summary: Organizations / multi-tenancy for Keycloak realms.
+summary_ja: Keycloakの組織・マルチテナント機能
+kind: core
+genre: Multi-tenancy / Organization
+spi_types: []
+language: null
+license: Elastic-2.0
+stars: 541
+stars_approx: false
+forks: 100
+contributors: null
+last_commit: null
+archived: null
+kc_versions: null
+official: true
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: License changed from AGPL-3.0 to Elastic License v2 (check before adopting).
+fetched_at: '2026-10-22'
+source: https://github.com/p2-inc/keycloak-orgs (page display value)
