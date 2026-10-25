@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-psso-extension — Awesome Keycloak Extensions</title>
+<meta name="description" content="macOS Platform Single Sign-On (PSSO) support.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">SPI</span><span class="b">Authentication</span><span class="b Active">Active</span></p>
+    <h1 id="name">keycloak-psso-extension</h1>
+    <p class="repo"><a href="https://github.com/unioslo/keycloak-psso-extension" rel="noopener">unioslo/keycloak-psso-extension ↗</a></p>
+    <p class="lead"><span class="l-en">macOS Platform Single Sign-On (PSSO) support.</span><span class="l-ja">macOS Platform SSO対応</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>50</dd></div><div><dt>Forks</dt><dd>8</dd></div><div><dt>Contributors</dt><dd>5</dd></div><div><dt>Updated</dt><dd>2026-10-16</dd></div><div><dt>KC</dt><dd>—</dd></div><div><dt>License</dt><dd>GPL-2.0</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">4</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Make Keycloak compatible with Apple Platform Single Sign-on for macOS.</span><span class="l-ja">KeycloakをApple Platform SSO（macOS）に対応させる</span></li><li class="c"><span class="l-en">Accept requests only from enrolled macOS devices (device attestation), with a registration token for MDM verification.</span><span class="l-ja">デバイス認証により、登録済みのmacOS端末からのリクエストだけを受け付ける。MDM確認用の登録トークンも使える</span></li><li class="c"><span class="l-en">Let users and admins revoke registrations from the UI; manage devices through an API for MDM integration.</span><span class="l-ja">ユーザーと管理者がUIから登録を取り消せる。端末はAPIで管理でき、MDMと連携可能</span></li><li class="c"><span class="l-en">Releases are signed (SHA-256 checksum plus SSH signature) for verification.</span><span class="l-ja">リリースには署名がある（SHA-256チェックサムとSSH署名）</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">5</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">The client must be called <code>psso</code> (public, with the <code>urn:apple:platformsso</code> scope) — not configurable yet.</span><span class="l-ja">クライアント名は <code>psso</code> 固定（public、<code>urn:apple:platformsso</code> スコープ付き）。まだ変更できない</span></li><li class="x"><span class="l-en">&quot;Revoke Refresh Token&quot; must stay off, because the refresh token is used to log in.</span><span class="l-ja">リフレッシュトークンをログインに使うため、「Revoke Refresh Token」はオフのままにする必要がある</span></li><li class="x"><span class="l-en">There is no UI for managing devices — API only.</span><span class="l-ja">端末を管理するUIはなく、APIのみ</span></li><li class="x"><span class="l-en">Only PostgreSQL and MariaDB are supported as the Keycloak database.</span><span class="l-ja">KeycloakのDBはPostgreSQLとMariaDBのみ対応</span></li><li class="x"><span class="l-en">Licensed under GPL-2.0-or-later.</span><span class="l-ja">ライセンスはGPL-2.0-or-later</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">Keycloak 26.5+ with the <code>declarative-ui</code> feature enabled, and a macOS SSO extension on clients (e.g. the companion Weblogin SSO).</span><span class="l-ja"><code>declarative-ui</code> 機能を有効にしたKeycloak 26.5以上と、クライアント側のmacOS SSO拡張（付属のWeblogin SSOなど）</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/unioslo/keycloak-psso-extension#readme" rel="noopener">https://github.com/unioslo/keycloak-psso-extension#readme</a></li><li><a href="https://github.com/unioslo/keycloak-psso-extension/wiki" rel="noopener">https://github.com/unioslo/keycloak-psso-extension/wiki</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

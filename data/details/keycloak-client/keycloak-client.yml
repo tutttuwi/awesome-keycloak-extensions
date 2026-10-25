@@ -1,0 +1,24 @@
+repo: keycloak-client/keycloak-client
+researched_at: '2026-10-25'
+sources:
+- https://github.com/keycloak-client/keycloak-client#readme
+- https://keycloak-client.readthedocs.io
+can:
+- en: "Add OpenID Connect login to Python apps (`login` / `callback`)."
+  ja: "PythonアプリにOpenID Connectのログインを組み込める（`login`/`callback`）"
+- en: Use UMA authorization — get a protection API token (PAT), create permission tickets and request RPTs.
+  ja: UMAの認可に対応。PAT（Protection API Token）の取得、パーミッションチケットの作成、RPTの要求ができる
+- en: Ships ready-made middlewares for Flask, Starlette and Django.
+  ja: Flask・Starlette・Django向けのミドルウェアが付属
+cannot:
+- en: Not a Keycloak extension — a Python client library for apps that use Keycloak.
+  ja: Keycloak拡張ではなく、Keycloakを使うアプリ向けのPythonクライアントライブラリ
+- en: The documentation covers authentication and UMA authorization; Admin REST API management is not documented as a feature.
+  ja: ドキュメントの対象は認証とUMA認可。Admin REST APIによる管理機能は記載がない
+- en: Low activity — last commit at the end of 2024.
+  ja: 活動は低調で、最終コミットは2024年末
+- en: Licensed under GPL-3.0, which has copyleft obligations when you distribute your app.
+  ja: ライセンスはGPL-3.0。アプリを配布する場合はコピーレフトの義務が生じる
+requires:
+- en: "Python with `pip install keycloak`, and a Keycloak client configured for your app."
+  ja: "Python環境で `pip install keycloak`。アプリ用のKeycloakクライアント設定も必要"

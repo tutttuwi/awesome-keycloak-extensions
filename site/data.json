@@ -894,7 +894,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/embesozzi/keycloak-openfga-event-publisher",
    "activity": "Inactive",
-   "detail": null
+   "detail": "p/embesozzi/keycloak-openfga-event-publisher.html"
   },
   {
    "name": "keycloak-client",
@@ -922,7 +922,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/keycloak-client/keycloak-client",
    "activity": "Stale",
-   "detail": null
+   "detail": "p/keycloak-client/keycloak-client.html"
   },
   {
    "name": "keycloak-json-remote-claim",
@@ -950,7 +950,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/groupe-sii/keycloak-json-remote-claim",
    "activity": "Inactive",
-   "detail": null
+   "detail": "p/groupe-sii/keycloak-json-remote-claim.html"
   },
   {
    "name": "keycloak-phone-number",
@@ -978,7 +978,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/vymalo/keycloak-phone-number",
    "activity": "Active",
-   "detail": null
+   "detail": "p/vymalo/keycloak-phone-number.html"
   },
   {
    "name": "keycloak-custom-event-listener",
@@ -1006,7 +1006,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/cevheri/keycloak-custom-event-listener",
    "activity": "Stale",
-   "detail": null
+   "detail": "p/cevheri/keycloak-custom-event-listener.html"
   },
   {
    "name": "Keycloak-Federation-ExistingDB",
@@ -1034,7 +1034,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/rsatrio/Keycloak-Federation-ExistingDB",
    "activity": "Inactive",
-   "detail": null
+   "detail": "p/rsatrio/Keycloak-Federation-ExistingDB.html"
   },
   {
    "name": "keycloak-psso-extension",
@@ -1062,7 +1062,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/unioslo/keycloak-psso-extension",
    "activity": "Active",
-   "detail": null
+   "detail": "p/unioslo/keycloak-psso-extension.html"
   },
   {
    "name": "keycloak-event-listener-mqtt",
@@ -1095,7 +1095,7 @@
     "mhuin/keycloak-event-listener-mqtt"
    ],
    "activity": "Inactive",
-   "detail": null
+   "detail": "p/softwarefactory-project/keycloak-event-listener-mqtt.html"
   },
   {
    "name": "keycloak-extension-bundid",
@@ -1126,7 +1126,7 @@
     "opdt/keycloak-extension-bundid"
    ],
    "activity": "Active",
-   "detail": null
+   "detail": "p/ba-itsys/keycloak-extension-bundid.html"
   },
   {
    "name": "Keycloak-PII-Data-Encryption-Provider",
@@ -1154,7 +1154,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/MLukman/Keycloak-PII-Data-Encryption-Provider",
    "activity": "Stale",
-   "detail": null
+   "detail": "p/MLukman/Keycloak-PII-Data-Encryption-Provider.html"
   },
   {
    "name": "keycloak-wsfed",

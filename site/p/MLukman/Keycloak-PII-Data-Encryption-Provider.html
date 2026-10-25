@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keycloak-PII-Data-Encryption-Provider — Awesome Keycloak Extensions</title>
+<meta name="description" content="Encrypt PII user attributes at rest.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">SPI</span><span class="b">User Storage / Federation</span><span class="b Stale">Stale</span></p>
+    <h1 id="name">Keycloak-PII-Data-Encryption-Provider</h1>
+    <p class="repo"><a href="https://github.com/MLukman/Keycloak-PII-Data-Encryption-Provider" rel="noopener">MLukman/Keycloak-PII-Data-Encryption-Provider ↗</a></p>
+    <p class="lead"><span class="l-en">Encrypt PII user attributes at rest.</span><span class="l-ja">ユーザー属性(個人情報)を暗号化して保存</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>39</dd></div><div><dt>Forks</dt><dd>9</dd></div><div><dt>Contributors</dt><dd>3</dd></div><div><dt>Updated</dt><dd>2025-09-02</dd></div><div><dt>KC</dt><dd>26.3.3</dd></div><div><dt>License</dt><dd>Apache-2.0</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">4</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Encrypt username, email, first and last name at rest in the database (e.g. for GDPR), decrypting transparently on load.</span><span class="l-ja">ユーザー名・メール・姓名をDB上で暗号化して保存し（GDPR対策など）、読み込み時に透過的に復号</span></li><li class="c"><span class="l-en">Extend encryption to custom attributes via a <code>pii-data-encryption</code> validator, or automatically for attributes starting with <code>pii-</code>.</span><span class="l-ja"><code>pii-data-encryption</code> バリデータを付けた独自属性や、<code>pii-</code> で始まる属性も自動で暗号化</span></li><li class="c"><span class="l-en">Enable it realm by realm from a custom &quot;User Entity Encryption&quot; tab.</span><span class="l-ja">独自の「User Entity Encryption」タブで、realmごとに有効化できる</span></li><li class="c"><span class="l-en">Keep exact-match search working through stored hashes.</span><span class="l-ja">ハッシュを保存しているので、完全一致の検索は引き続き使える</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">5</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">Fuzzy/partial search on encrypted fields is no longer possible.</span><span class="l-ja">暗号化したフィールドでは、あいまい検索や部分一致検索ができなくなる</span></li><li class="x"><span class="l-en">Unmanaged user-profile attributes are not supported.</span><span class="l-ja">ユーザープロファイルのunmanaged属性には対応していない</span></li><li class="x"><span class="l-en">If decryption fails, users and clients see the raw hash values.</span><span class="l-ja">復号に失敗すると、ユーザーやクライアントにはハッシュ値がそのまま表示される</span></li><li class="x"><span class="l-en">Adding the validator to an existing attribute only encrypts existing data when the user is updated or encryption is toggled off and on.</span><span class="l-ja">既存の属性にバリデータを追加しても、既存データが暗号化されるのはユーザー更新時か、暗号化を一度オフ→オンにしたときだけ</span></li><li class="x"><span class="l-en">Without <code>KC_PII_ENCKEY</code> the key falls back to an MD5 of the JDBC URL, which breaks if the database URL changes.</span><span class="l-ja"><code>KC_PII_ENCKEY</code> を設定しないと、鍵はJDBC URLのMD5になる。DBのURLが変わると復号できなくなる</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">Keycloak 24+ with the <code>declarative-ui</code> feature, <code>KC_PII_ENCKEY</code> (16+ characters), and the <code>pii-data-encryption</code> event listener enabled per realm.</span><span class="l-ja"><code>declarative-ui</code> 機能を有効にしたKeycloak 24以上、<code>KC_PII_ENCKEY</code>（16文字以上）、realmごとの <code>pii-data-encryption</code> イベントリスナーの有効化</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/MLukman/Keycloak-PII-Data-Encryption-Provider#readme" rel="noopener">https://github.com/MLukman/Keycloak-PII-Data-Encryption-Provider#readme</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

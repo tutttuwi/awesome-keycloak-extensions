@@ -1,0 +1,28 @@
+repo: unioslo/keycloak-psso-extension
+researched_at: '2026-10-25'
+sources:
+- https://github.com/unioslo/keycloak-psso-extension#readme
+- https://github.com/unioslo/keycloak-psso-extension/wiki
+can:
+- en: Make Keycloak compatible with Apple Platform Single Sign-on for macOS.
+  ja: KeycloakをApple Platform SSO（macOS）に対応させる
+- en: Accept requests only from enrolled macOS devices (device attestation), with a registration token for MDM verification.
+  ja: デバイス認証により、登録済みのmacOS端末からのリクエストだけを受け付ける。MDM確認用の登録トークンも使える
+- en: Let users and admins revoke registrations from the UI; manage devices through an API for MDM integration.
+  ja: ユーザーと管理者がUIから登録を取り消せる。端末はAPIで管理でき、MDMと連携可能
+- en: Releases are signed (SHA-256 checksum plus SSH signature) for verification.
+  ja: リリースには署名がある（SHA-256チェックサムとSSH署名）
+cannot:
+- en: "The client must be called `psso` (public, with the `urn:apple:platformsso` scope) — not configurable yet."
+  ja: "クライアント名は `psso` 固定（public、`urn:apple:platformsso` スコープ付き）。まだ変更できない"
+- en: "\"Revoke Refresh Token\" must stay off, because the refresh token is used to log in."
+  ja: リフレッシュトークンをログインに使うため、「Revoke Refresh Token」はオフのままにする必要がある
+- en: There is no UI for managing devices — API only.
+  ja: 端末を管理するUIはなく、APIのみ
+- en: Only PostgreSQL and MariaDB are supported as the Keycloak database.
+  ja: KeycloakのDBはPostgreSQLとMariaDBのみ対応
+- en: Licensed under GPL-2.0-or-later.
+  ja: ライセンスはGPL-2.0-or-later
+requires:
+- en: "Keycloak 26.5+ with the `declarative-ui` feature enabled, and a macOS SSO extension on clients (e.g. the companion Weblogin SSO)."
+  ja: "`declarative-ui` 機能を有効にしたKeycloak 26.5以上と、クライアント側のmacOS SSO拡張（付属のWeblogin SSOなど）"

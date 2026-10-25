@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-event-listener-mqtt — Awesome Keycloak Extensions</title>
+<meta name="description" content="Publish Keycloak events to an MQTT broker.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b">Community</span><span class="b">SPI</span><span class="b">Event / Webhook / Messaging</span><span class="b Inactive">Inactive</span></p>
+    <h1 id="name">keycloak-event-listener-mqtt</h1>
+    <p class="repo"><a href="https://github.com/softwarefactory-project/keycloak-event-listener-mqtt" rel="noopener">softwarefactory-project/keycloak-event-listener-mqtt ↗</a></p>
+    <p class="lead"><span class="l-en">Publish Keycloak events to an MQTT broker.</span><span class="l-ja">KeycloakイベントをMQTTブローカーへ送信</span></p>
+    <p class="note">Official list links to the mhuin fork (Less active); this is the upstream.</p>
+    <dl class="stats"><div><dt>★</dt><dd>45</dd></div><div><dt>Forks</dt><dd>11</dd></div><div><dt>Contributors</dt><dd>3</dd></div><div><dt>Updated</dt><dd>2024-05-22</dd></div><div><dt>KC</dt><dd>—</dd></div><div><dt>License</dt><dd>Apache-2.0</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">3</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Publish Keycloak events to an MQTT broker.</span><span class="l-ja">KeycloakのイベントをMQTTブローカーへ送信</span></li><li class="c"><span class="l-en">Configure broker, credentials (or anonymous), topic (default <code>keycloak/events</code>) and optional in-memory persistence.</span><span class="l-ja">ブローカー、認証情報（匿名も可）、トピック（既定は <code>keycloak/events</code>）、メモリ上の永続化を設定できる</span></li><li class="c"><span class="l-en">Ships a Dockerfile, compose file and demo script that set up Keycloak with an MQTT server.</span><span class="l-ja">KeycloakとMQTTサーバーを立ち上げるDockerfile・compose・デモスクリプト付き</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">3</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">MQTT only; the README does not describe filtering which events are published.</span><span class="l-ja">MQTT専用。どのイベントを送るかの絞り込みはREADMEに記載がない</span></li><li class="x"><span class="l-en">Tested on Keycloak 22; versions before 22 need a Java 11 rebuild.</span><span class="l-ja">検証はKeycloak 22。22より前のバージョンではJava 11向けに再ビルドが必要</span></li><li class="x"><span class="l-en">Inactive — no commits since May 2024.</span><span class="l-ja">2024年5月以降コミットがなく、活動停止状態</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">Copy the JAR to <code>/opt/keycloak/providers</code>, pass the MQTT settings as SPI options and enable the listener per realm.</span><span class="l-ja">JARを <code>/opt/keycloak/providers</code> に置き、MQTTの設定をSPIオプションで渡して、realmごとにリスナーを有効化</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/softwarefactory-project/keycloak-event-listener-mqtt#readme" rel="noopener">https://github.com/softwarefactory-project/keycloak-event-listener-mqtt#readme</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

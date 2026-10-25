@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-extension-bundid — Awesome Keycloak Extensions</title>
+<meta name="description" content="BundID (German federal ID) SAML identity provider.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">SPI</span><span class="b">Identity Provider</span><span class="b Active">Active</span></p>
+    <h1 id="name">keycloak-extension-bundid</h1>
+    <p class="repo"><a href="https://github.com/ba-itsys/keycloak-extension-bundid" rel="noopener">ba-itsys/keycloak-extension-bundid ↗</a></p>
+    <p class="lead"><span class="l-en">BundID (German federal ID) SAML identity provider.</span><span class="l-ja">ドイツBundID用SAML Identity Provider</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>40</dd></div><div><dt>Forks</dt><dd>7</dd></div><div><dt>Contributors</dt><dd>11</dd></div><div><dt>Updated</dt><dd>2026-10-23</dd></div><div><dt>KC</dt><dd>—</dd></div><div><dt>License</dt><dd>Apache-2.0</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">4</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Use BundID (the German federal citizen ID service) as a SAML identity provider — the extension enriches SAML requests with the required trust levels, requested attributes and display information.</span><span class="l-ja">ドイツ連邦の市民ID基盤BundIDをSAMLのIdPとして使える。SAMLリクエストに必要な信頼レベル・要求属性・表示情報を自動で付与</span></li><li class="c"><span class="l-en">Map BundID attributes (incl. email and authentication timestamp) into the session and on into OIDC tokens, with per-attribute exclusions.</span><span class="l-ja">BundIDの属性（メールや認証時刻を含む）をセッションへ、さらにOIDCトークンへマッピング。属性ごとに除外も可能</span></li><li class="c"><span class="l-en">Request a minimum Level of Authentication (1–4) via step-up authentication, or enforce an absolute minimum level.</span><span class="l-ja">ステップアップ認証で最低限の認証レベル（LoA 1〜4）を要求でき、絶対的な最低レベルの強制も可能</span></li><li class="c"><span class="l-en">Send the mandatory BundID fields (organization display name, online service ID).</span><span class="l-ja">BundIDが必須とする項目（組織表示名、オンラインサービスID）を送信</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">3</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">Only for German authorities / services admitted to BundID.</span><span class="l-ja">対象はBundIDに接続を認められたドイツの行政機関・サービスのみ</span></li><li class="x"><span class="l-en">Most documentation is in German.</span><span class="l-ja">ドキュメントの大部分はドイツ語</span></li><li class="x"><span class="l-en">Each release is tested only with the Keycloak version in its <code>pom.xml</code>.</span><span class="l-ja">各リリースの検証は <code>pom.xml</code> に記載のKeycloakバージョンのみ</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">A SAML IdP named <code>bundid</code> (or set <code>KC_SPI_SAML_AUTHENTICATION_PREPROCESSOR_BUNDID_PROTOCOL_ACTIVE_FOR_IDP</code>), plus the online service ID and organization display name settings.</span><span class="l-ja"><code>bundid</code> という名前のSAML IdP（または <code>KC_SPI_SAML_AUTHENTICATION_PREPROCESSOR_BUNDID_PROTOCOL_ACTIVE_FOR_IDP</code> で指定）と、オンラインサービスID・組織表示名の設定</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/ba-itsys/keycloak-extension-bundid#readme" rel="noopener">https://github.com/ba-itsys/keycloak-extension-bundid#readme</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

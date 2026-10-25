@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keycloak-Federation-ExistingDB — Awesome Keycloak Extensions</title>
+<meta name="description" content="User federation against an existing relational database.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b">Community</span><span class="b">SPI</span><span class="b">User Storage / Federation</span><span class="b Inactive">Inactive</span></p>
+    <h1 id="name">Keycloak-Federation-ExistingDB</h1>
+    <p class="repo"><a href="https://github.com/rsatrio/Keycloak-Federation-ExistingDB" rel="noopener">rsatrio/Keycloak-Federation-ExistingDB ↗</a></p>
+    <p class="lead"><span class="l-en">User federation against an existing relational database.</span><span class="l-ja">既存DBのユーザーをフェデレーション</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>53</dd></div><div><dt>Forks</dt><dd>7</dd></div><div><dt>Contributors</dt><dd>3</dd></div><div><dt>Updated</dt><dd>2023-11-21</dd></div><div><dt>KC</dt><dd>21.1.2</dd></div><div><dt>License</dt><dd>MIT</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">2</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Let users log in with credentials from an existing database through any JDBC datasource (user federation).</span><span class="l-ja">JDBCで接続できる既存DBの認証情報で、ユーザーがログインできる（ユーザーフェデレーション）</span></li><li class="c"><span class="l-en">Configure the password lookup and user-data queries (by email) from the admin console.</span><span class="l-ja">パスワード取得とユーザー情報取得のクエリ（メールで検索）を管理コンソールで設定できる</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">4</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">Email is the only login name.</span><span class="l-ja">ログイン名に使えるのはメールアドレスだけ</span></li><li class="x"><span class="l-en">The user-data query may return only two columns (email and firstName).</span><span class="l-ja">ユーザー情報のクエリが返せる列は2つ（emailとfirstName）だけ</span></li><li class="x"><span class="l-en">Built and tested on WildFly-based Keycloak 11 with Java 8 (JNDI datasource) — not documented for current Keycloak.</span><span class="l-ja">WildFly版Keycloak 11とJava 8（JNDIデータソース）でビルド・テストされたもので、現行Keycloak向けの手順はない</span></li><li class="x"><span class="l-en">A simple example; inactive since 2023.</span><span class="l-ja">シンプルな実装例で、2023年以降は更新がない</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">A JDBC driver and datasource registered in Keycloak&#x27;s WildFly server.</span><span class="l-ja">KeycloakのWildFlyにJDBCドライバとデータソースを登録しておく</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/rsatrio/Keycloak-Federation-ExistingDB#readme" rel="noopener">https://github.com/rsatrio/Keycloak-Federation-ExistingDB#readme</a></li><li><a href="https://mrizkysatrio.medium.com/keycloak-integration-with-existing-database-587c119db3ae" rel="noopener">https://mrizkysatrio.medium.com/keycloak-integration-with-existing-database-587c119db3ae</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>
