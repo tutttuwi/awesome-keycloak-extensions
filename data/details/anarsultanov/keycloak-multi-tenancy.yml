@@ -2,7 +2,7 @@ repo: anarsultanov/keycloak-multi-tenancy
 researched_at: '2026-10-25'
 sources:
 - https://github.com/anarsultanov/keycloak-multi-tenancy#readme
-- http://sultanov.dev/keycloak-multi-tenancy/
+- https://sultanov.dev/keycloak-multi-tenancy/
 can:
 - en: Build B2B multi-tenant IAM in one realm — users create a tenant at registration, review invitations and pick an active tenant at login (required actions).
   ja: 1つのrealmでB2B向けマルチテナントIAMを構築できる。登録時のテナント作成、招待の確認、ログイン時のアクティブテナント選択をRequired Actionで行う
