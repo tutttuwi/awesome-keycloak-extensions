@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-tiktok — Awesome Keycloak Extensions</title>
+<meta name="description" content="TikTok social login provider.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">SPI</span><span class="b">Identity Provider</span><span class="b Active">Active</span></p>
+    <h1 id="name">keycloak-tiktok</h1>
+    <p class="repo"><a href="https://github.com/mpowr-it/keycloak-tiktok" rel="noopener">mpowr-it/keycloak-tiktok ↗</a></p>
+    <p class="lead"><span class="l-en">TikTok social login provider.</span><span class="l-ja">TikTok用Identity Provider</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>6</dd></div><div><dt>Forks</dt><dd>0</dd></div><div><dt>Contributors</dt><dd>1</dd></div><div><dt>Updated</dt><dd>2026-07-24</dd></div><div><dt>KC</dt><dd>—</dd></div><div><dt>License</dt><dd>Apache-2.0</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">4</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Add &quot;Log in with TikTok&quot; as a social identity provider (TikTok&#x27;s OAuth2 API is not OIDC compatible).</span><span class="l-ja">「TikTokでログイン」をソーシャルIdPとして追加できる（TikTokのOAuth2 APIはOIDC非互換）</span></li><li class="c"><span class="l-en">Request basic, profile and stats scopes and map fields such as avatar, display name, bio and follower count with attribute mappers.</span><span class="l-ja">basic・profile・statsのスコープを要求し、アバター・表示名・自己紹介・フォロワー数などを属性マッパーでマッピングできる</span></li><li class="c"><span class="l-en">Manage TikTok access tokens, and revoke the app&#x27;s access in the user&#x27;s TikTok account on logout.</span><span class="l-ja">TikTokのアクセストークンを管理し、ログアウト時にはユーザーのTikTokアカウントからアプリのアクセス権を取り消す</span></li><li class="c"><span class="l-en">Auto-tested with Keycloak 26.5.2, 26.6.0 and 26.7.0.</span><span class="l-ja">Keycloak 26.5.2・26.6.0・26.7.0で自動テスト済み</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">2</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">TikTok does not provide email addresses — a placeholder <code>&lt;username&gt;@tiktok.com</code> email is generated instead.</span><span class="l-ja">TikTokはメールアドレスを提供しないため、代わりに <code>&lt;ユーザー名&gt;@tiktok.com</code> というダミーのメールが作られる</span></li><li class="x"><span class="l-en">You must enable &quot;Store tokens&quot; and &quot;Trust Email&quot; on the identity provider.</span><span class="l-ja">IdP側で「Store tokens」と「Trust Email」を有効にする必要がある</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">A TikTok developer app (client key and secret); put the JAR in <code>$KEYCLOAK_HOME/providers</code> and restart.</span><span class="l-ja">TikTokの開発者アプリ（Client Key/Secret）。JARを <code>$KEYCLOAK_HOME/providers</code> に置いて再起動</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/mpowr-it/keycloak-tiktok#readme" rel="noopener">https://github.com/mpowr-it/keycloak-tiktok#readme</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

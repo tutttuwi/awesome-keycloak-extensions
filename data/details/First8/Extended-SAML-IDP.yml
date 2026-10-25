@@ -1,0 +1,19 @@
+repo: First8/Extended-SAML-IDP
+researched_at: '2026-10-25'
+sources:
+- https://github.com/First8/Extended-SAML-IDP#readme
+can:
+- en: Add a SAML identity provider that can send direct (synchronous, artifact) SAML requests to external providers such as eHerkenning or DigiD, which stock Keycloak does not support.
+  ja: 標準のKeycloakが対応していない、直接（同期・Artifact）のSAMLリクエストを外部IdP（eHerkenning、DigiDなど）に送れるSAML IdPを追加
+- en: Support encrypted SAML attributes (used by eHerkenning).
+  ja: 暗号化されたSAML属性に対応（eHerkenningで使われる）
+- en: Ships a custom frontend and theme to manage the provider's specialised settings through the REST API.
+  ja: プロバイダーの特殊な設定をREST API経由で管理するための、独自フロントエンドとテーマが付属
+cannot:
+- en: On Keycloak 21+ some specialised settings are hidden in the Admin Console (legacy UI removed) — use the REST API or the bundled frontend.
+  ja: Keycloak 21以降は管理コンソールで一部の特殊な設定が表示されない（旧UIが廃止されたため）。REST APIか付属のフロントエンドを使う
+- en: Each Keycloak minor needs a manual upgrade by patching copied Keycloak classes, so new Keycloak versions lag behind.
+  ja: Keycloakのマイナーバージョンごとに、コピーしたKeycloakのクラスへ手作業でパッチを当てて追従する必要があり、新バージョンへの対応は遅れがち
+requires:
+- en: The JAR in `providers` (Quarkus), and a `saml-extended` client in the master realm for the frontend.
+  ja: JARを `providers` に配置（Quarkus版）。フロントエンド用にmaster realmの `saml-extended` クライアントも必要

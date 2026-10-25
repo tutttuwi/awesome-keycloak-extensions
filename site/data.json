@@ -1468,7 +1468,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/eosc-kc/keycloak-orcid",
    "activity": "Active",
-   "detail": null
+   "detail": "p/eosc-kc/keycloak-orcid.html"
   },
   {
    "name": "Extended-SAML-IDP",
@@ -1496,7 +1496,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/First8/Extended-SAML-IDP",
    "activity": "Active",
-   "detail": null
+   "detail": "p/First8/Extended-SAML-IDP.html"
   },
   {
    "name": "keycloak-external-claim-mapper",
@@ -1524,7 +1524,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/zloom/keycloak-external-claim-mapper",
    "activity": "Stale",
-   "detail": null
+   "detail": "p/zloom/keycloak-external-claim-mapper.html"
   },
   {
    "name": "keycloak-extension-qr-code-execution",
@@ -1552,7 +1552,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/HadleySo/keycloak-extension-qr-code-execution",
    "activity": "Active",
-   "detail": null
+   "detail": "p/HadleySo/keycloak-extension-qr-code-execution.html"
   },
   {
    "name": "keycloak-impersonation-policy-enforcer",
@@ -1580,7 +1580,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/LucaFilipozzi/keycloak-impersonation-policy-enforcer",
    "activity": "Inactive",
-   "detail": null
+   "detail": "p/LucaFilipozzi/keycloak-impersonation-policy-enforcer.html"
   },
   {
    "name": "keycloak-secrets-vault-provider",
@@ -1636,7 +1636,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/ba-itsys/keycloak-push-mfa-extension",
    "activity": "Active",
-   "detail": null
+   "detail": "p/ba-itsys/keycloak-push-mfa-extension.html"
   },
   {
    "name": "keycloak-block-disposable-email",
@@ -1664,7 +1664,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/chintanbuch/keycloak-block-disposable-email",
    "activity": "Stale",
-   "detail": null
+   "detail": "p/chintanbuch/keycloak-block-disposable-email.html"
   },
   {
    "name": "keycloak-client-cert-lookup-for-envoy",
@@ -1720,7 +1720,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/mpowr-it/keycloak-tiktok",
    "activity": "Active",
-   "detail": null
+   "detail": "p/mpowr-it/keycloak-tiktok.html"
   },
   {
    "name": "keycloak-alias-guard",

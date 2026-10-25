@@ -1,0 +1,19 @@
+repo: LucaFilipozzi/keycloak-impersonation-policy-enforcer
+researched_at: '2026-10-25'
+sources:
+- https://github.com/LucaFilipozzi/keycloak-impersonation-policy-enforcer#readme
+can:
+- en: Stop impersonating admins from accessing a client unless they hold a client role composed with the realm-management impersonation role.
+  ja: なりすまし中の管理者は、realm-managementのimpersonationロールを含むクライアントロールを持っていない限り、そのクライアントにアクセスできない
+- en: Behave like the normal Cookie authenticator when the user is not being impersonated.
+  ja: なりすましでない通常のログインでは、標準のCookie Authenticatorと同じ動きをする
+cannot:
+- en: Must replace the Cookie authenticator in a dedicated flow that you bind to each client.
+  ja: 専用のフローでCookie Authenticatorの代わりに置き、クライアントごとにバインドする必要がある
+- en: "Deployed as an EAR into `deployments` (WildFly-era packaging)."
+  ja: "EARとして `deployments` に配置する（WildFly時代のパッケージ形式）"
+- en: Inactive — no commits since 2022.
+  ja: 2022年以降コミットがなく、活動停止状態
+requires:
+- en: A client role composed with the impersonation role for each client that impersonators may access.
+  ja: なりすましを許可するクライアントごとに、impersonationロールを含むクライアントロールを作成

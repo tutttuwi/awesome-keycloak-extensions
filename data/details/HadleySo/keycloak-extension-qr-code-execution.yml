@@ -1,0 +1,27 @@
+repo: HadleySo/keycloak-extension-qr-code-execution
+researched_at: '2026-10-25'
+sources:
+- https://github.com/HadleySo/keycloak-extension-qr-code-execution#readme
+can:
+- en: Sign in on one device by scanning a QR code and authenticating on another (e.g. a phone) — no password typed on untrusted devices.
+  ja: QRコードを読み取り、別の端末（スマホなど）で認証して元の端末にサインインできる。信頼できない端末でパスワードを入力せずに済む
+- en: Use passkeys on devices without Bluetooth by completing authentication on a passkey-enabled device.
+  ja: Bluetoothのない端末でも、パスキー対応の端末で認証を完了させることでパスキーが使える
+- en: Show session, user-agent and origin device details on the confirmation page so the user can approve or reject.
+  ja: 確認画面にセッション・User-Agent・発信元端末の情報を表示し、ユーザーが承認か拒否を選べる
+- en: Transfer the required ACR (step-up level) and credential types between sessions.
+  ja: 要求されるACR（ステップアップのレベル）やクレデンシャル種別をセッション間で引き継げる
+- en: Offer a 6-digit short code when the other device cannot scan a QR code.
+  ja: QRコードを読めない端末向けに、6桁の短縮コードも使える
+cannot:
+- en: The QR code exposes the public FQDN, realm name, session ID and tab ID to anyone who sees it.
+  ja: QRコードには公開FQDN・realm名・セッションID・タブIDが含まれ、見た人なら誰でも読み取れる
+- en: "The \"Username Password Form with Optional QR Code\" execution needs a custom `qr-login.ftl` if your realm uses a custom theme."
+  ja: "「Username Password Form with Optional QR Code」を使う場合、realmで独自テーマを使っているなら `qr-login.ftl` を用意する必要がある"
+- en: Messages are provided only in English and German.
+  ja: メッセージは英語とドイツ語のみ
+- en: Licensed under AGPL-3.0.
+  ja: ライセンスはAGPL-3.0
+requires:
+- en: "Copy the JAR to `providers/`, run `kc.sh build`, and add an execution to a browser flow; short codes add a database table."
+  ja: "JARを `providers/` に置いて `kc.sh build` し、ブラウザフローにExecutionを追加。短縮コードを使う場合はDBにテーブルが追加される"

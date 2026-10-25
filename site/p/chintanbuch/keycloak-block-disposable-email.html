@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-block-disposable-email — Awesome Keycloak Extensions</title>
+<meta name="description" content="Block registrations with disposable email addresses.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">SPI</span><span class="b">Security / Bot protection</span><span class="b Stale">Stale</span></p>
+    <h1 id="name">keycloak-block-disposable-email</h1>
+    <p class="repo"><a href="https://github.com/chintanbuch/keycloak-block-disposable-email" rel="noopener">chintanbuch/keycloak-block-disposable-email ↗</a></p>
+    <p class="lead"><span class="l-en">Block registrations with disposable email addresses.</span><span class="l-ja">使い捨てメールアドレスでの登録をブロック</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>12</dd></div><div><dt>Forks</dt><dd>5</dd></div><div><dt>Contributors</dt><dd>1</dd></div><div><dt>Updated</dt><dd>2025-06-16</dd></div><div><dt>KC</dt><dd>26.2.5</dd></div><div><dt>License</dt><dd>Apache-2.0</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">2</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Block registration with disposable email domains (10MinuteMail, GuerrillaMail, …) using the zliio/disposable domain list.</span><span class="l-ja">使い捨てメール（10MinuteMail、GuerrillaMailなど）のドメインでの登録を、zliio/disposableのドメインリストで拒否</span></li><li class="c"><span class="l-en">Refresh the domain list through a REST endpoint protected by a service account with <code>realm-admin</code>.</span><span class="l-ja"><code>realm-admin</code> を持つサービスアカウントで保護されたREST APIから、ドメインリストを更新できる</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">3</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">Only checks the registration flow (you add an &quot;Email Domain Validation&quot; step to a copied flow) — not email changes elsewhere.</span><span class="l-ja">チェック対象は登録フローだけ（複製したフローに「Email Domain Validation」を追加する）。それ以外の場面でのメール変更は対象外</span></li><li class="x"><span class="l-en">The refresh endpoint cannot be called with regular user accounts, even admins.</span><span class="l-ja">リスト更新のエンドポイントは、管理者を含め通常のユーザーアカウントからは呼べない</span></li><li class="x"><span class="l-en">Tested only with Keycloak 26.2.5; last commit in June 2025.</span><span class="l-ja">検証はKeycloak 26.2.5のみ。最終コミットは2025年6月</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">Java 17+ to build; copy the JAR into <code>providers</code> and restart.</span><span class="l-ja">ビルドにJava 17以上。JARを <code>providers</code> に置いて再起動</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/chintanbuch/keycloak-block-disposable-email#readme" rel="noopener">https://github.com/chintanbuch/keycloak-block-disposable-email#readme</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

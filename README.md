@@ -57,8 +57,8 @@ Activity: **Active** ≤12 months · **Stale** 12–24 months · **Inactive** >2
 | 1 | [keycloak-mfa-plugins](https://github.com/netzbegruenung/keycloak-mfa-plugins)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/netzbegruenung/keycloak-mfa-plugins.html) | MFA plugins: SMS, enforced MFA, native-app MFA.<br>MFAプラグイン集(SMS/強制MFA/ネイティブアプリMFA) | 300 | 2026-10-13 | Active | 26.8.0 | Apache-2.0 | Official |
 | 2 | [keycloak-2fa-email-authenticator](https://github.com/mesutpiskin/keycloak-2fa-email-authenticator)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/mesutpiskin/keycloak-2fa-email-authenticator.html) | Email OTP second-factor authenticator.<br>メールOTPによる二要素認証 | 289 | 2026-10-23 | Active | 26.7.3 | Apache-2.0 | Community |
 | 3 | [keycloak-provider](https://github.com/privacyidea/keycloak-provider)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/privacyidea/keycloak-provider.html) | OTP / 2FA via a privacyIDEA server.<br>privacyIDEA連携のOTP二要素認証 | 131 | 2026-07-01 | Active | 26.5.6 | Apache-2.0 | Official |
-| 4 | [keycloak-extension-qr-code-execution](https://github.com/HadleySo/keycloak-extension-qr-code-execution) | Sign in from another device by scanning a QR code.<br>QRコードで別端末からサインイン | 14 | 2026-06-13 | Active | unknown | AGPL-3.0 | Official |
-| 5 | [keycloak-push-mfa-extension](https://github.com/ba-itsys/keycloak-push-mfa-extension) | Push-notification MFA.<br>プッシュ通知によるMFA | 12 | 2026-10-19 | Active | 26.8.1 | Apache-2.0 | Official |
+| 4 | [keycloak-extension-qr-code-execution](https://github.com/HadleySo/keycloak-extension-qr-code-execution)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/HadleySo/keycloak-extension-qr-code-execution.html) | Sign in from another device by scanning a QR code.<br>QRコードで別端末からサインイン | 14 | 2026-06-13 | Active | unknown | AGPL-3.0 | Official |
+| 5 | [keycloak-push-mfa-extension](https://github.com/ba-itsys/keycloak-push-mfa-extension)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/ba-itsys/keycloak-push-mfa-extension.html) | Push-notification MFA.<br>プッシュ通知によるMFA | 12 | 2026-10-19 | Active | 26.8.1 | Apache-2.0 | Official |
 
 ### Event / Webhook / Messaging
 
@@ -77,9 +77,9 @@ Activity: **Active** ≤12 months · **Stale** 12–24 months · **Inactive** >2
 | 2 | [keycloak-discord](https://github.com/wadahiro/keycloak-discord)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/wadahiro/keycloak-discord.html) | Discord identity provider.<br>Discord用Identity Provider | 158 | 2024-11-02 | Stale | 26.0.5 | Apache-2.0 | Official |
 | 3 | [Keycloak-FranceConnect](https://github.com/InseeFr/Keycloak-FranceConnect)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/InseeFr/Keycloak-FranceConnect.html) | FranceConnect / ProConnect identity providers.<br>FranceConnect/ProConnect用Identity Provider | 107 | 2026-09-10 | Active | 26.7.2 | MIT | Official |
 | 4 | [keycloak-extension-bundid](https://github.com/ba-itsys/keycloak-extension-bundid)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/ba-itsys/keycloak-extension-bundid.html) | BundID (German federal ID) SAML identity provider.<br>ドイツBundID用SAML Identity Provider | 40 | 2026-10-23 | Active | unknown | Apache-2.0 | Official |
-| 5 | [keycloak-orcid](https://github.com/eosc-kc/keycloak-orcid) | ORCID social identity provider.<br>ORCID用Identity Provider | 17 | 2026-07-01 | Active | 26.5.0 | Other (see repo) | Official |
-| 6 | [Extended-SAML-IDP](https://github.com/First8/Extended-SAML-IDP) | SAML identity provider supporting direct (synchronous) SAML responses.<br>同期SAMLレスポンス対応のSAML Identity Provider | 16 | 2026-10-13 | Active | 26.6.4 | Apache-2.0 | Official |
-| 7 | [keycloak-tiktok](https://github.com/mpowr-it/keycloak-tiktok) | TikTok social login provider.<br>TikTok用Identity Provider | 6 | 2026-07-24 | Active | unknown | Apache-2.0 | Official |
+| 5 | [keycloak-orcid](https://github.com/eosc-kc/keycloak-orcid)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/eosc-kc/keycloak-orcid.html) | ORCID social identity provider.<br>ORCID用Identity Provider | 17 | 2026-07-01 | Active | 26.5.0 | Other (see repo) | Official |
+| 6 | [Extended-SAML-IDP](https://github.com/First8/Extended-SAML-IDP)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/First8/Extended-SAML-IDP.html) | SAML identity provider supporting direct (synchronous) SAML responses.<br>同期SAMLレスポンス対応のSAML Identity Provider | 16 | 2026-10-13 | Active | 26.6.4 | Apache-2.0 | Official |
+| 7 | [keycloak-tiktok](https://github.com/mpowr-it/keycloak-tiktok)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/mpowr-it/keycloak-tiktok.html) | TikTok social login provider.<br>TikTok用Identity Provider | 6 | 2026-07-24 | Active | unknown | Apache-2.0 | Official |
 | 8 | [keycloak-minecraft-idp](https://github.com/groundsgg/keycloak-minecraft-idp) | Microsoft / Xbox identity provider that resolves Minecraft profiles.<br>Minecraftプロフィールを解決するMicrosoft/Xbox IdP | 3 | 2026-10-22 | Active | unknown | Other (see repo) | Official |
 
 ### Protocol (CAS / WS-Fed)
@@ -93,7 +93,7 @@ Activity: **Active** ≤12 months · **Stale** 12–24 months · **Inactive** >2
 
 | # | Name | Summary | ★ | Last commit | Activity | KC | License | Src |
 |--:|------|---------|--:|-------------|----------|----|---------|-----|
-| 1 | [keycloak-external-claim-mapper](https://github.com/zloom/keycloak-external-claim-mapper) | Protocol mapper that adds data from a remote service to the JWT.<br>外部サービスのデータをJWTに追加 | 15 | 2025-07-03 | Stale | 25.0.0 | Apache-2.0 | Official |
+| 1 | [keycloak-external-claim-mapper](https://github.com/zloom/keycloak-external-claim-mapper)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/zloom/keycloak-external-claim-mapper.html) | Protocol mapper that adds data from a remote service to the JWT.<br>外部サービスのデータをJWTに追加 | 15 | 2025-07-03 | Stale | 25.0.0 | Apache-2.0 | Official |
 | 2 | [keycloak-rest-claim-mapper](https://github.com/jowe112/keycloak-rest-claim-mapper) | OIDC/SAML mapper that enriches tokens from a REST API.<br>REST APIの値でトークンを拡充するマッパー | 2 | 2026-08-19 | Active | 26.7.1 | Apache-2.0 | Official |
 | 3 | [keycloak-filtered-group-membership-mapper](https://github.com/byteworks-ch/keycloak-filtered-group-membership-mapper) | Group membership mapper with filtering.<br>フィルタ付きグループメンバーシップマッパー | 2 | 2026-04-21 | Active | 26.6.0 | Other (see repo) | Official |
 
@@ -154,7 +154,7 @@ Activity: **Active** ≤12 months · **Stale** 12–24 months · **Inactive** >2
 | # | Name | Summary | ★ | Last commit | Activity | KC | License | Src |
 |--:|------|---------|--:|-------------|----------|----|---------|-----|
 | 1 | [Keycloak-GeoAware](https://github.com/B2-Code/Keycloak-GeoAware)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/B2-Code/Keycloak-GeoAware.html) | Geolocation-aware login checks and alerts.<br>位置情報に基づくログイン検査・通知 | 22 | 2026-07-22 | Active | 26.7.0 | Apache-2.0 | Official |
-| 2 | [keycloak-block-disposable-email](https://github.com/chintanbuch/keycloak-block-disposable-email) | Block registrations with disposable email addresses.<br>使い捨てメールアドレスでの登録をブロック | 12 | 2025-06-16 | Stale | 26.2.5 | Apache-2.0 | Official |
+| 2 | [keycloak-block-disposable-email](https://github.com/chintanbuch/keycloak-block-disposable-email)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/chintanbuch/keycloak-block-disposable-email.html) | Block registrations with disposable email addresses.<br>使い捨てメールアドレスでの登録をブロック | 12 | 2025-06-16 | Stale | 26.2.5 | Apache-2.0 | Official |
 | 3 | [keycloak-alias-guard](https://github.com/it-perspectives/keycloak-alias-guard) | Block duplicate accounts created via email aliases (+tags, Gmail dots).<br>メールエイリアスによる重複アカウントを防止 | 6 | 2026-06-19 | Active | 26.5.7 | MIT | Official |
 | 4 | [cap-captcha-keycloak](https://github.com/schwebke/cap-captcha-keycloak) | Cap (trycap.dev) captcha for the registration flow.<br>登録フローにCap CAPTCHAを追加 | 4 | 2026-10-08 | Active | 26.8.0 | Apache-2.0 | Official |
 
@@ -204,7 +204,7 @@ Kept for reference; not part of the rankings above.
 | 11 | [verify-keycloak-integration](https://github.com/IBM-Security/verify-keycloak-integration)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/IBM-Security/verify-keycloak-integration.html) | IBM Security Verify authenticators (push / MFA).<br>IBM Security Verify連携の認証器(MFA) | 31 | 2020-06-10 | Inactive | unknown | Apache-2.0 | Official |
 | 12 | [keycloak-regex-mapper](https://github.com/LucaFilipozzi/keycloak-regex-mapper)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/LucaFilipozzi/keycloak-regex-mapper.html) | Broker mapper that maps multi-valued claims/attributes by regex.<br>正規表現で多値クレーム/属性をマッピング | 21 | 2021-08-23 | Inactive | 15.0.2 | Apache-2.0 | Official |
 | 13 | [keycloak-github-ssh-key-attribute-mapper](https://github.com/softwarefactory-project/keycloak-github-ssh-key-attribute-mapper)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/softwarefactory-project/keycloak-github-ssh-key-attribute-mapper.html) | Mapper that fetches a user's SSH keys from GitHub into an attribute.<br>GitHubのSSH公開鍵をユーザー属性に取り込む | 20 | 2024-02-12 | Inactive | 22.0.0 | Apache-2.0 | Official |
-| 14 | [keycloak-impersonation-policy-enforcer](https://github.com/LucaFilipozzi/keycloak-impersonation-policy-enforcer) | Authenticator enforcing an impersonation policy.<br>なりすまし(impersonation)ポリシーを強制 | 13 | 2022-12-23 | Inactive | 18.0.2 | Apache-2.0 | Official |
+| 14 | [keycloak-impersonation-policy-enforcer](https://github.com/LucaFilipozzi/keycloak-impersonation-policy-enforcer)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/LucaFilipozzi/keycloak-impersonation-policy-enforcer.html) | Authenticator enforcing an impersonation policy.<br>なりすまし(impersonation)ポリシーを強制 | 13 | 2022-12-23 | Inactive | 18.0.2 | Apache-2.0 | Official |
 
 ## Contributing
 
