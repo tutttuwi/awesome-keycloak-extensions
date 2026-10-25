@@ -1,0 +1,24 @@
+name: verify-keycloak-integration
+repo: IBM-Security/verify-keycloak-integration
+url: https://github.com/IBM-Security/verify-keycloak-integration
+summary: IBM Security Verify authenticators (push / MFA).
+summary_ja: IBM Security Verify連携の認証器(MFA)
+kind: core
+genre: MFA / Passwordless
+spi_types: []
+language: Java
+license: Apache-2.0
+stars: 31
+stars_approx: false
+forks: 8
+contributors: 3
+last_commit: '2020-06-10'
+archived: false
+kc_versions: null
+official: true
+less_active_in_official: true
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/IBM-Security/verify-keycloak-integration

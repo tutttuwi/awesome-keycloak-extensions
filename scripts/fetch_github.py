@@ -20,6 +20,7 @@ import common
 
 API = "https://api.github.com"
 TOKEN = os.environ.get("GITHUB_TOKEN")
+NOT_FOUND_NOTE = "Repository not found on last fetch."
 
 
 def gh(path: str, want_headers: bool = False):
@@ -29,7 +30,7 @@ def gh(path: str, want_headers: bool = False):
             "Authorization": f"Bearer {TOKEN}",
             "Accept": "application/vnd.github+json",
             "X-GitHub-Api-Version": "2022-11-28",
-            "User-Agent": "awesome-keycloak-spi",
+            "User-Agent": "awesome-keycloak-extensions",
         },
     )
     with urllib.request.urlopen(req, timeout=30) as r:
@@ -56,8 +57,15 @@ def kc_version(repo: str, branch: str) -> str | None:
         xml = base64.b64decode(f["content"]).decode("utf-8", "replace")
     except Exception:
         return None
+    return parse_kc_version(xml)
+
+
+def parse_kc_version(xml: str) -> str | None:
     m = re.search(r"<(?:keycloak|keycloak\.version|version\.keycloak)>\s*([\d.]+)", xml)
-    return m.group(1) if m else None
+    if not m:
+        return None
+    # Keycloak nightly builds are published as 999.0.0-SNAPSHOT
+    return "nightly" if m.group(1).startswith("999.") else m.group(1)
 
 
 def refresh(p: dict) -> bool:
@@ -66,10 +74,12 @@ def refresh(p: dict) -> bool:
         info = gh(f"/repos/{repo}")
     except urllib.error.HTTPError as e:
         print(f"  ! {repo}: HTTP {e.code} (kept previous values)")
-        if e.code == 404:
-            p["note"] = (p.get("note") or "") + " Repository not found on last fetch."
+        if e.code == 404 and NOT_FOUND_NOTE not in (p.get("note") or ""):
+            p["note"] = f"{p['note']} {NOT_FOUND_NOTE}" if p.get("note") else NOT_FOUND_NOTE
         return False
 
+    if info["full_name"].lower() != repo.lower():
+        p["_moved_to"] = info["full_name"]  # renamed/transferred; merged in merge_moved()
     p["stars"] = info["stargazers_count"]
     p["stars_approx"] = False
     p["forks"] = info["forks_count"]
@@ -102,20 +112,46 @@ def refresh(p: dict) -> bool:
     return True
 
 
+def merge_moved(projects: list[dict]) -> None:
+    """Fold entries whose repo was renamed/transferred into the canonical name.
+
+    If a file for the new name already exists, the old file is a duplicate and is removed
+    (the old name is kept in `aliases` so discover.py does not re-add it). Otherwise the
+    file is renamed to the new name.
+    """
+    by_repo = {p["repo"].lower(): p for p in projects}
+    for p in projects:
+        new = p.get("_moved_to")
+        if not new:
+            continue
+        old_path = p["_path"]
+        target = by_repo.get(new.lower())
+        if target is None:
+            target = {**p, "repo": new, "url": f"https://github.com/{new}", "_path": common.file_for(new)}
+            by_repo[new.lower()] = target
+        target["aliases"] = sorted(set(target.get("aliases") or []) | set(p.get("aliases") or []) | {p["repo"]})
+        target.pop("_moved_to", None)
+        common.save(target)
+        if old_path != target["_path"]:
+            old_path.unlink()
+        print(f"  ~ {p['repo']} moved to {new} (merged)")
+
+
 def main() -> int:
     if not TOKEN:
         print("GITHUB_TOKEN not set: skipping fetch (committed data is used as-is).")
         return 0
     ok = fail = 0
-    for p in common.load_all():
+    projects = common.load_all()
+    for p in projects:
         print(f"- {p['repo']}")
         if refresh(p):
-            common.save(p)
             ok += 1
         else:
-            common.save(p)
             fail += 1
+        common.save(p)
         time.sleep(0.2)
+    merge_moved(projects)
     print(f"done: {ok} updated, {fail} failed")
     return 0
 

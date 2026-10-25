@@ -6,19 +6,19 @@ summary_ja: Keycloakの組織・マルチテナント機能
 kind: core
 genre: Multi-tenancy / Organization
 spi_types: []
-language: null
+language: Java
 license: Elastic-2.0
-stars: 541
+stars: 544
 stars_approx: false
 forks: 100
-contributors: null
-last_commit: null
-archived: null
-kc_versions: null
+contributors: 38
+last_commit: '2026-10-14'
+archived: false
+kc_versions: 26.8.0
 official: true
 less_active_in_official: false
 unmaintained: false
 reviewed: true
 note: License changed from AGPL-3.0 to Elastic License v2 (check before adopting).
-fetched_at: '2026-10-22'
-source: https://github.com/p2-inc/keycloak-orgs (page display value)
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/p2-inc/keycloak-orgs

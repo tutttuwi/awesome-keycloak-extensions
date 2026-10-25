@@ -1,0 +1,24 @@
+name: keycloak-passport
+repo: exlinc/keycloak-passport
+url: https://github.com/exlinc/keycloak-passport
+summary: Passport.js strategy for multi-realm Keycloak login (Node.js).
+summary_ja: Node.js(Passport.js)用のKeycloak認証ストラテジー
+kind: peripheral
+genre: Authentication
+spi_types: []
+language: JavaScript
+license: Apache-2.0
+stars: 104
+stars_approx: false
+forks: 21
+contributors: 1
+last_commit: '2018-09-07'
+archived: false
+kc_versions: null
+official: true
+less_active_in_official: true
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/exlinc/keycloak-passport

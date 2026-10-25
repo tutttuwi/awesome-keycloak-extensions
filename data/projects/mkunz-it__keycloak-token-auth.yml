@@ -1,0 +1,24 @@
+name: keycloak-token-auth
+repo: mkunz-it/keycloak-token-auth
+url: https://github.com/mkunz-it/keycloak-token-auth
+summary: Authenticator that logs in with an ID or access token.
+summary_ja: IDトークン/アクセストークンでログイン
+kind: core
+genre: Authentication
+spi_types: []
+language: Java
+license: MIT
+stars: 1
+stars_approx: false
+forks: 1
+contributors: 2
+last_commit: '2026-06-29'
+archived: false
+kc_versions: 26.6.1
+official: true
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/mkunz-it/keycloak-token-auth

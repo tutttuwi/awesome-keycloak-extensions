@@ -1,0 +1,24 @@
+name: keycloak-client
+repo: keycloak-client/keycloak-client
+url: https://github.com/keycloak-client/keycloak-client
+summary: Python client for the Keycloak Admin / OIDC APIs.
+summary_ja: Keycloak用Pythonクライアント
+kind: peripheral
+genre: Config as code / DevOps
+spi_types: []
+language: Python
+license: GPL-3.0
+stars: 58
+stars_approx: false
+forks: 14
+contributors: 5
+last_commit: '2024-12-29'
+archived: false
+kc_versions: null
+official: true
+less_active_in_official: true
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/keycloak-client/keycloak-client

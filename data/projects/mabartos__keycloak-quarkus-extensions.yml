@@ -1,0 +1,24 @@
+name: keycloak-quarkus-extensions
+repo: mabartos/keycloak-quarkus-extensions
+url: https://github.com/mabartos/keycloak-quarkus-extensions
+summary: Add Quarkus extensions or other dependencies to a Keycloak build.
+summary_ja: KeycloakビルドにQuarkus拡張や依存を追加
+kind: peripheral
+genre: Config as code / DevOps
+spi_types: []
+language: Shell
+license: Apache-2.0
+stars: 21
+stars_approx: false
+forks: 1
+contributors: 1
+last_commit: '2026-10-22'
+archived: false
+kc_versions: 26.7.1
+official: true
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/mabartos/keycloak-quarkus-extensions

@@ -1,0 +1,26 @@
+name: keycloak-extension-bundid
+repo: ba-itsys/keycloak-extension-bundid
+url: https://github.com/ba-itsys/keycloak-extension-bundid
+summary: BundID (German federal ID) SAML identity provider.
+summary_ja: ドイツBundID用SAML Identity Provider
+kind: core
+genre: Identity Provider
+spi_types: []
+language: Java
+license: Apache-2.0
+stars: 40
+stars_approx: false
+forks: 7
+contributors: 11
+last_commit: '2026-10-23'
+archived: false
+kc_versions: null
+official: true
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/opdt/keycloak-extension-bundid
+aliases:
+- opdt/keycloak-extension-bundid

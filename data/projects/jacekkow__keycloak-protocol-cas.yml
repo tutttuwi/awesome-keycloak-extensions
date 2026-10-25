@@ -1,0 +1,24 @@
+name: keycloak-protocol-cas
+repo: jacekkow/keycloak-protocol-cas
+url: https://github.com/jacekkow/keycloak-protocol-cas
+summary: CAS protocol support for Keycloak.
+summary_ja: KeycloakにCASプロトコルを追加
+kind: core
+genre: Protocol (CAS / WS-Fed)
+spi_types: []
+language: Java
+license: Apache-2.0
+stars: 131
+stars_approx: false
+forks: 39
+contributors: 41
+last_commit: '2026-10-13'
+archived: false
+kc_versions: null
+official: true
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/jacekkow/keycloak-protocol-cas

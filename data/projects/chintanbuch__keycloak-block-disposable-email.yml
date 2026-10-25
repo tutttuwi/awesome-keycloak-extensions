@@ -1,0 +1,24 @@
+name: keycloak-block-disposable-email
+repo: chintanbuch/keycloak-block-disposable-email
+url: https://github.com/chintanbuch/keycloak-block-disposable-email
+summary: Block registrations with disposable email addresses.
+summary_ja: 使い捨てメールアドレスでの登録をブロック
+kind: core
+genre: Security / Bot protection
+spi_types: []
+language: Java
+license: Apache-2.0
+stars: 12
+stars_approx: false
+forks: 5
+contributors: 1
+last_commit: '2025-06-16'
+archived: false
+kc_versions: 26.2.5
+official: true
+less_active_in_official: true
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/chintanbuch/keycloak-block-disposable-email

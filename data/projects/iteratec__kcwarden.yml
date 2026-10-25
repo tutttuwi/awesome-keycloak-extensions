@@ -6,19 +6,19 @@ summary_ja: Keycloak設定のセキュリティ監査ツール
 kind: peripheral
 genre: Monitoring / Audit
 spi_types: []
-language: null
+language: Python
 license: Apache-2.0
-stars: 132
+stars: 135
 stars_approx: false
 forks: 10
-contributors: null
-last_commit: null
-archived: null
+contributors: 10
+last_commit: '2026-10-16'
+archived: false
 kc_versions: null
 official: true
 less_active_in_official: false
 unmaintained: false
 reviewed: true
 note: null
-fetched_at: '2026-10-22'
-source: https://github.com/iteratec/kcwarden (page display value)
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/iteratec/kcwarden

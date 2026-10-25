@@ -1,0 +1,24 @@
+name: keycloak-atomic-auth-flows
+repo: p2-inc/keycloak-atomic-auth-flows
+url: https://github.com/p2-inc/keycloak-atomic-auth-flows
+summary: Admin REST endpoint to atomically import authentication flows as code.
+summary_ja: 認証フローをアトミックにインポートする管理API
+kind: core
+genre: Config as code / DevOps
+spi_types: []
+language: Java
+license: Apache-2.0
+stars: 5
+stars_approx: false
+forks: 0
+contributors: 5
+last_commit: '2026-10-01'
+archived: false
+kc_versions: 26.8.0
+official: true
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/p2-inc/keycloak-atomic-auth-flows

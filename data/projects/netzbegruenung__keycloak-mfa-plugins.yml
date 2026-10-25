@@ -6,19 +6,19 @@ summary_ja: MFAプラグイン集(SMS/強制MFA/ネイティブアプリMFA)
 kind: core
 genre: MFA / Passwordless
 spi_types: []
-language: null
+language: Java
 license: Apache-2.0
-stars: 297
+stars: 300
 stars_approx: false
 forks: 129
-contributors: null
-last_commit: null
-archived: null
-kc_versions: null
+contributors: 35
+last_commit: '2026-10-13'
+archived: false
+kc_versions: 26.8.0
 official: true
 less_active_in_official: false
 unmaintained: false
 reviewed: true
 note: null
-fetched_at: '2026-10-22'
-source: https://github.com/netzbegruenung/keycloak-mfa-plugins (page display value)
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/netzbegruenung/keycloak-mfa-plugins

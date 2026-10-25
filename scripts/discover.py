@@ -27,6 +27,8 @@ CHROME = {"keycloak/keycloak", "keycloak/keycloak-web", "keycloak/keycloak-commu
 
 # Very rough keyword guess; always marked reviewed:false so a human confirms.
 GUESS = [
+    (r"protocol.?cas|\bcas\b|ws.?fed", "Protocol (CAS / WS-Fed)"),
+    (r"cassandra|datastore|vault", "Storage / Datastore"),
     (r"event.?listener|webhook|rabbit|mqtt|kafka|sns|sqs", "Event / Webhook / Messaging"),
     (r"mapper|claim", "Protocol Mapper / Claim"),
     (r"scim", "Provisioning (SCIM)"),
@@ -52,7 +54,7 @@ def guess_genre(text: str) -> str:
 
 
 def http_get(url: str, headers: dict | None = None) -> bytes:
-    h = {"User-Agent": "awesome-keycloak-spi"}
+    h = {"User-Agent": "awesome-keycloak-extensions"}
     h.update(headers or {})
     with urllib.request.urlopen(urllib.request.Request(url, headers=h), timeout=30) as r:
         return r.read()
@@ -102,8 +104,17 @@ def stub(repo: str, **kw) -> dict:
     return d
 
 
+def known_repos(projects: list[dict]) -> dict[str, dict]:
+    """Lower-cased repo name (and former names in `aliases`) -> project."""
+    known = {}
+    for p in projects:
+        for name in [p["repo"]] + list(p.get("aliases") or []):
+            known[name.lower()] = p
+    return known
+
+
 def main() -> int:
-    existing = {p["repo"].lower(): p for p in common.load_all()}
+    existing = known_repos(common.load_all())
     added = 0
 
     try:

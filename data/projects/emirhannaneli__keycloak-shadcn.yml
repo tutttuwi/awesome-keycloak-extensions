@@ -1,0 +1,24 @@
+name: keycloak-shadcn
+repo: emirhannaneli/keycloak-shadcn
+url: https://github.com/emirhannaneli/keycloak-shadcn
+summary: Keycloakify + shadcn/ui login theme starter.
+summary_ja: Keycloakify+shadcn/uiのログインテーマ
+kind: core
+genre: Theme / UI
+spi_types: []
+language: TypeScript
+license: MIT
+stars: 17
+stars_approx: false
+forks: 2
+contributors: 2
+last_commit: '2026-08-07'
+archived: false
+kc_versions: null
+official: true
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/emirhannaneli/keycloak-shadcn

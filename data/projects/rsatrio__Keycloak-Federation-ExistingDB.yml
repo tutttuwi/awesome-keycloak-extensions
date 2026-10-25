@@ -1,0 +1,24 @@
+name: Keycloak-Federation-ExistingDB
+repo: rsatrio/Keycloak-Federation-ExistingDB
+url: https://github.com/rsatrio/Keycloak-Federation-ExistingDB
+summary: User federation against an existing relational database.
+summary_ja: 既存DBのユーザーをフェデレーション
+kind: core
+genre: User Storage / Federation
+spi_types: []
+language: Java
+license: MIT
+stars: 53
+stars_approx: false
+forks: 7
+contributors: 3
+last_commit: '2023-11-21'
+archived: false
+kc_versions: 21.1.2
+official: false
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/rsatrio/Keycloak-Federation-ExistingDB

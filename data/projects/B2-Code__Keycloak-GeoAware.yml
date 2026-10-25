@@ -1,0 +1,24 @@
+name: Keycloak-GeoAware
+repo: B2-Code/Keycloak-GeoAware
+url: https://github.com/B2-Code/Keycloak-GeoAware
+summary: Geolocation-aware login checks and alerts.
+summary_ja: 位置情報に基づくログイン検査・通知
+kind: core
+genre: Security / Bot protection
+spi_types: []
+language: Java
+license: Apache-2.0
+stars: 22
+stars_approx: false
+forks: 5
+contributors: 6
+last_commit: '2026-07-22'
+archived: false
+kc_versions: 26.7.0
+official: true
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/B2-Code/Keycloak-GeoAware

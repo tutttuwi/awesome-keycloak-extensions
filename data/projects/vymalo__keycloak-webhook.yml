@@ -1,0 +1,24 @@
+name: keycloak-webhook
+repo: vymalo/keycloak-webhook
+url: https://github.com/vymalo/keycloak-webhook
+summary: Send Keycloak events to webhooks (HTTP, AMQP, Syslog).
+summary_ja: KeycloakイベントをWebhook等へ送信
+kind: core
+genre: Event / Webhook / Messaging
+spi_types: []
+language: Kotlin
+license: MIT
+stars: 114
+stars_approx: false
+forks: 37
+contributors: 11
+last_commit: '2026-07-26'
+archived: false
+kc_versions: null
+official: false
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/vymalo/keycloak-webhook

@@ -7,20 +7,19 @@ kind: core
 genre: Event / Webhook / Messaging
 spi_types:
 - EventListener
-language: null
+language: Java
 license: Apache-2.0
 stars: 170
 stars_approx: false
-forks: 62
-contributors: null
-last_commit: null
-archived: null
-kc_versions: null
+forks: 63
+contributors: 11
+last_commit: '2024-03-20'
+archived: false
+kc_versions: 21.1.2
 official: true
 less_active_in_official: true
 unmaintained: false
 reviewed: true
 note: null
-fetched_at: '2026-10-22'
-source: https://github.com/aznamier/keycloak-event-listener-rabbitmq (page display
-  value)
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/aznamier/keycloak-event-listener-rabbitmq

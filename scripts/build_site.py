@@ -77,7 +77,7 @@ def main() -> None:
 
     # ---- README.md
     L = []
-    L.append("# awesome-keycloak-spi\n")
+    L.append("# awesome-keycloak-extensions\n")
     L.append("A curated, ranked catalog of Keycloak extensions (SPI implementations) and companion tools — "
              "official-list entries plus popular community projects.  \n"
              "Keycloakの拡張(SPI実装)と周辺ツールを、公式掲載分+人気のコミュニティ製も含めてランキング形式でまとめたカタログです。\n")

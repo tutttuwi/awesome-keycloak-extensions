@@ -1,0 +1,24 @@
+name: keycloak
+repo: ansible-middleware/keycloak
+url: https://github.com/ansible-middleware/keycloak
+summary: Ansible collection to install and configure Keycloak / Red Hat build of Keycloak.
+summary_ja: Keycloakを導入・設定するAnsibleコレクション
+kind: peripheral
+genre: Config as code / DevOps
+spi_types: []
+language: Python
+license: Apache-2.0
+stars: 139
+stars_approx: false
+forks: 75
+contributors: 47
+last_commit: '2026-10-16'
+archived: false
+kc_versions: null
+official: true
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/ansible-middleware/keycloak

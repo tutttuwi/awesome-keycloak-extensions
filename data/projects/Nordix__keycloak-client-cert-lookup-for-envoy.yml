@@ -1,0 +1,24 @@
+name: keycloak-client-cert-lookup-for-envoy
+repo: Nordix/keycloak-client-cert-lookup-for-envoy
+url: https://github.com/Nordix/keycloak-client-cert-lookup-for-envoy
+summary: X.509 client certificate lookup for Envoy proxies.
+summary_ja: Envoy経由のX.509クライアント証明書取得
+kind: core
+genre: Authentication
+spi_types: []
+language: Java
+license: Apache-2.0
+stars: 9
+stars_approx: false
+forks: 1
+contributors: 2
+last_commit: '2026-10-19'
+archived: false
+kc_versions: 26.8.1
+official: true
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/Nordix/keycloak-client-cert-lookup-for-envoy

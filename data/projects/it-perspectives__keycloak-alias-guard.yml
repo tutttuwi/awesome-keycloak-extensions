@@ -1,0 +1,24 @@
+name: keycloak-alias-guard
+repo: it-perspectives/keycloak-alias-guard
+url: https://github.com/it-perspectives/keycloak-alias-guard
+summary: Block duplicate accounts created via email aliases (+tags, Gmail dots).
+summary_ja: メールエイリアスによる重複アカウントを防止
+kind: core
+genre: Security / Bot protection
+spi_types: []
+language: Java
+license: MIT
+stars: 6
+stars_approx: false
+forks: 0
+contributors: 1
+last_commit: '2026-06-19'
+archived: false
+kc_versions: 26.5.7
+official: true
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/it-perspectives/keycloak-alias-guard

@@ -1,0 +1,24 @@
+name: keycloak-wsfed
+repo: cloudtrust/keycloak-wsfed
+url: https://github.com/cloudtrust/keycloak-wsfed
+summary: WS-Federation protocol support.
+summary_ja: WS-Federationプロトコル対応
+kind: core
+genre: Protocol (CAS / WS-Fed)
+spi_types: []
+language: Java
+license: AGPL-3.0
+stars: 38
+stars_approx: false
+forks: 31
+contributors: 14
+last_commit: '2020-11-02'
+archived: false
+kc_versions: null
+official: true
+less_active_in_official: true
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/cloudtrust/keycloak-wsfed

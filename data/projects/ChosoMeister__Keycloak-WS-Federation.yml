@@ -1,0 +1,24 @@
+name: Keycloak-WS-Federation
+repo: ChosoMeister/Keycloak-WS-Federation
+url: https://github.com/ChosoMeister/Keycloak-WS-Federation
+summary: WS-Federation 1.2 protocol and identity broker.
+summary_ja: WS-Federation 1.2プロトコル/ブローカー
+kind: core
+genre: Protocol (CAS / WS-Fed)
+spi_types: []
+language: Java
+license: AGPL-3.0
+stars: 3
+stars_approx: false
+forks: 0
+contributors: 1
+last_commit: '2026-10-17'
+archived: false
+kc_versions: 26.7.0
+official: true
+less_active_in_official: false
+unmaintained: false
+reviewed: true
+note: null
+fetched_at: '2026-10-25'
+source: https://api.github.com/repos/ChosoMeister/Keycloak-WS-Federation

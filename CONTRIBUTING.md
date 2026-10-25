@@ -16,6 +16,8 @@ official: false
 reviewed: true
 ```
 
+CI runs `python scripts/validate.py` on your PR (file name must be `<owner>__<repo>.yml`, `url` must match `repo`, `genre` must be a known genre).
+
 ## Inclusion criteria
 - An OSS license is declared in the repository
 - It implements a Keycloak SPI (`kind: core`) or is a Keycloak companion tool (`kind: peripheral`)
