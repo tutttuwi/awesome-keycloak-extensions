@@ -44,9 +44,13 @@ jobs:
       - name: Validate data
         run: python scripts/validate.py
 
+      # base_url honours a custom domain set on the owner's Pages site
+      - id: pages
+        uses: actions/configure-pages@v5
+
       - name: Build site/data.json and README.md
         env:
-          SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+          SITE_URL: ${{ steps.pages.outputs.base_url }}/
         run: python scripts/build_site.py
 
       - name: Commit refreshed data
@@ -56,8 +60,6 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           git diff --cached --quiet || (git commit -m "chore: refresh data $(date -u +%F)" && git push)
-
-      - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3
         with:

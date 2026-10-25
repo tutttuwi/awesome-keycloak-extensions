@@ -3,7 +3,7 @@
 A curated, ranked catalog of Keycloak extensions (SPI implementations) and companion tools — official-list entries plus popular community projects.  
 Keycloakの拡張(SPI実装)と周辺ツールを、公式掲載分+人気のコミュニティ製も含めてランキング形式でまとめたカタログです。
 
-**Browse / filter / search: https://tutttuwi.github.io/awesome-keycloak-extensions/**
+**Browse / filter / search: https://noccalabs.com/awesome-keycloak-extensions/**
 
 > Data fetched: **2026-10-25** (README generated 2026-10-25). Stars/forks/last commit come from the GitHub API; `unknown` = not fetched yet (never guessed). Official list: <https://www.keycloak.org/extensions>
 

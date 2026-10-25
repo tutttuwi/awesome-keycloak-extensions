@@ -3,7 +3,7 @@
 1. Create a GitHub repo (`tutttuwi/awesome-keycloak-extensions`) and push to `main`.
 2. Settings → Pages → Build and deployment → Source: **GitHub Actions**.
 3. Actions → "Update data & deploy Pages" → **Run workflow** (first run fills stars/forks/contributors/last commit and discovers the full official list).
-4. Site: `https://<owner>.github.io/<repo>/`. After that it refreshes every Monday.
+4. Site: https://noccalabs.com/awesome-keycloak-extensions/ (the owner's Pages custom domain; `https://<owner>.github.io/<repo>/` redirects there). After that it refreshes every Monday.
 
 Local:
 
