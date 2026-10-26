@@ -5,7 +5,7 @@ Keycloakの拡張(SPI実装)と周辺ツールを、公式掲載分+人気のコ
 
 **Browse / filter / search: https://noccalabs.com/awesome-keycloak-extensions/**
 
-> Data fetched: **2026-10-25** (README generated 2026-10-25). Stars/forks/last commit come from the GitHub API; `unknown` = not fetched yet (never guessed). Official list: <https://www.keycloak.org/extensions>
+> Data fetched: **2026-10-25** (README generated 2026-10-26). Stars/forks/last commit come from the GitHub API; `unknown` = not fetched yet (never guessed). Official list: <https://www.keycloak.org/extensions>
 
 Activity: **Active** ≤12 months · **Stale** 12–24 months · **Inactive** >24 months / archived / "no longer maintained" · **Unknown** = last commit not fetched yet.
 
@@ -147,7 +147,7 @@ Activity: **Active** ≤12 months · **Stale** 12–24 months · **Inactive** >2
 | # | Name | Summary | ★ | Last commit | Activity | KC | License | Src |
 |--:|------|---------|--:|-------------|----------|----|---------|-----|
 | 1 | [keycloak-cassandra-extension](https://github.com/ba-itsys/keycloak-cassandra-extension)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/ba-itsys/keycloak-cassandra-extension.html) | Store Keycloak data in Apache Cassandra.<br>KeycloakのデータをApache Cassandraに保存 | 28 | 2026-10-19 | Active | 26.8.1 | Apache-2.0 | Official |
-| 2 | [keycloak-secrets-vault-provider](https://github.com/Nordix/keycloak-secrets-vault-provider) | Vault SPI provider for OpenBao / HashiCorp Vault secrets.<br>OpenBao/HashiCorp Vault用Vault SPI | 12 | 2026-10-19 | Active | 26.8.1 | Apache-2.0 | Official |
+| 2 | [keycloak-secrets-vault-provider](https://github.com/Nordix/keycloak-secrets-vault-provider)<br>[can / cannot](https://noccalabs.com/awesome-keycloak-extensions/p/Nordix/keycloak-secrets-vault-provider.html) | Vault SPI provider for OpenBao / HashiCorp Vault secrets.<br>OpenBao/HashiCorp Vault用Vault SPI | 12 | 2026-10-19 | Active | 26.8.1 | Apache-2.0 | Official |
 
 ### Security / Bot protection
 

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-25",
+ "generated_at": "2026-10-26",
  "data_date": "2026-10-25",
  "genres": [
   "Authentication",
@@ -1608,7 +1608,7 @@
    "fetched_at": "2026-10-25",
    "source": "https://api.github.com/repos/Nordix/keycloak-secrets-vault-provider",
    "activity": "Active",
-   "detail": null
+   "detail": "p/Nordix/keycloak-secrets-vault-provider.html"
   },
   {
    "name": "keycloak-push-mfa-extension",
