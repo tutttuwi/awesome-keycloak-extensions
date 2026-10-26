@@ -8,7 +8,7 @@ genre: Config as code / DevOps
 spi_types: []
 language: Go
 license: Apache-2.0
-stars: 955
+stars: 956
 stars_approx: false
 forks: 452
 contributors: 238
@@ -20,5 +20,5 @@ less_active_in_official: false
 unmaintained: false
 reviewed: true
 note: null
-fetched_at: '2026-10-25'
+fetched_at: '2026-10-26'
 source: https://api.github.com/repos/keycloak/terraform-provider-keycloak

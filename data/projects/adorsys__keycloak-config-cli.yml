@@ -12,7 +12,7 @@ stars: 1213
 stars_approx: false
 forks: 206
 contributors: 85
-last_commit: '2026-10-23'
+last_commit: '2026-10-26'
 archived: false
 kc_versions: 26.6.2
 official: true
@@ -20,5 +20,5 @@ less_active_in_official: false
 unmaintained: false
 reviewed: true
 note: null
-fetched_at: '2026-10-25'
+fetched_at: '2026-10-26'
 source: https://api.github.com/repos/adorsys/keycloak-config-cli

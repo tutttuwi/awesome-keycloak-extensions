@@ -10,7 +10,7 @@ language: Java
 license: AGPL-3.0
 stars: 38
 stars_approx: false
-forks: 31
+forks: 30
 contributors: 14
 last_commit: '2020-11-02'
 archived: false
@@ -20,5 +20,5 @@ less_active_in_official: true
 unmaintained: false
 reviewed: true
 note: null
-fetched_at: '2026-10-25'
+fetched_at: '2026-10-26'
 source: https://api.github.com/repos/cloudtrust/keycloak-wsfed

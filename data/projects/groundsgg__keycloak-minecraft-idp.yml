@@ -12,7 +12,7 @@ stars: 3
 stars_approx: false
 forks: 0
 contributors: 4
-last_commit: '2026-10-22'
+last_commit: '2026-10-26'
 archived: false
 kc_versions: null
 official: true
@@ -20,5 +20,5 @@ less_active_in_official: false
 unmaintained: false
 reviewed: true
 note: null
-fetched_at: '2026-10-25'
+fetched_at: '2026-10-26'
 source: https://api.github.com/repos/groundsgg/keycloak-minecraft-idp

@@ -16,12 +16,12 @@ contributors: 3
 last_commit: '2024-05-22'
 archived: false
 kc_versions: null
-official: false
-less_active_in_official: false
+official: true
+less_active_in_official: true
 unmaintained: false
 reviewed: true
 note: Official list links to the mhuin fork (Less active); this is the upstream.
-fetched_at: '2026-10-25'
+fetched_at: '2026-10-26'
 source: https://api.github.com/repos/softwarefactory-project/keycloak-event-listener-mqtt
 aliases:
 - mhuin/keycloak-event-listener-mqtt

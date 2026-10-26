@@ -20,5 +20,5 @@ less_active_in_official: false
 unmaintained: true
 reviewed: true
 note: README says no longer maintained.
-fetched_at: '2026-10-25'
+fetched_at: '2026-10-26'
 source: https://api.github.com/repos/zonaut/keycloak-extensions
