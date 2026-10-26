@@ -1,0 +1,35 @@
+repo: adorsys/keycloak-config-cli
+researched_at: '2026-10-25'
+sources:
+- https://github.com/adorsys/keycloak-config-cli#readme
+- https://github.com/adorsys/keycloak-config-cli/blob/main/docs/FEATURES.md
+- https://github.com/adorsys/keycloak-config-cli/blob/main/docs/MANAGED.md
+can:
+- en: Apply realm configuration declaratively and idempotently from JSON/YAML files (realm-export format) through the Admin API, without restarting Keycloak.
+  ja: realmエクスポート形式のJSON/YAMLから、Admin API経由で宣言的・冪等に設定を反映（Keycloakの再起動は不要）
+- en: Create, update and delete clients (with protocol mappers and fine-grained authorization), roles and composites, groups and subgroups, users with roles and groups, client scopes and scope mappings.
+  ja: クライアント（プロトコルマッパー、細粒度認可を含む）、ロールとコンポジット、グループとサブグループ、ロール・グループ付きユーザー、クライアントスコープ、スコープマッピングを作成・更新・削除
+- en: Manage authentication flows (including built-in ones), executions, authenticator configs, required actions, identity providers and their mappers, and components.
+  ja: 認証フロー（組み込みフローを含む）、Execution、Authenticator設定、Required Action、IdPとそのマッパー、コンポーネントを管理
+- en: Remove resources that are no longer in the file ("full managed" types such as groups, clients and roles), or keep them via `import.managed.*=no-delete`.
+  ja: ファイルから消えたリソースを削除できる（groups・clients・rolesなど「完全管理」の型）。`import.managed.*=no-delete` で削除しない設定も可能
+- en: "Substitute variables from env vars, system properties and files (`$(env:...)`, `$(file:...)`), with opt-in sandboxed JavaScript evaluation."
+  ja: "環境変数・システムプロパティ・ファイルから変数を埋め込める（`$(env:...)`、`$(file:...)`）。サンドボックス化されたJavaScript評価も任意で有効化できる"
+- en: Run as a Docker image (Docker Hub / quay.io), a JAR or via Helm, with JSON logging.
+  ja: Dockerイメージ（Docker Hub / quay.io）、JAR、Helmで実行でき、JSONログにも対応
+cannot:
+- en: Not a Keycloak extension — it runs outside Keycloak as a separate CLI or container.
+  ja: Keycloak拡張ではなく、Keycloakの外で動くCLI・コンテナ
+- en: For full-managed types, defining some items deletes all others of that type, and an empty array deletes everything; Keycloak defaults (components, required actions, flows) must be copied into your file.
+  ja: 完全管理型は、一部を定義するとそれ以外が削除され、空配列なら全削除される。Keycloakのデフォルト（コンポーネント、Required Action、フロー）は自分のファイルにコピーが必要
+- en: Recreating a user federation (LDAP/AD) deletes all users it created, including their offline tokens.
+  ja: ユーザーフェデレーション（LDAP/AD）を再作成すると、それが作ったユーザーもオフライントークンごと削除される
+- en: Supports only the latest 4 Keycloak releases (from 4.0), and support is cut when Keycloak introduces breaking changes.
+  ja: サポートは最新4つのKeycloakリリースのみ（4.0以降）。Keycloak側に破壊的変更があるとサポートを打ち切る
+- en: Variable substitution is disabled by default, and with `${...}` syntax Keycloak's own placeholders must be escaped as `$${...}`.
+  ja: 変数置換はデフォルト無効。`${...}` 構文にした場合はKeycloak自身のプレースホルダを `$${...}` とエスケープする必要がある
+requires:
+- en: Network access to the Keycloak Admin API with an admin account.
+  ja: 管理者アカウントでKeycloak Admin APIにアクセスできること
+- en: "Pick the image tag for your Keycloak version (`a.b.c-x.y.z`), or the `maven` tag to build against an unsupported version."
+  ja: "Keycloakのバージョンに合うイメージタグ（`a.b.c-x.y.z`）を選ぶ。非対応バージョンには `maven` タグで実行時ビルド"

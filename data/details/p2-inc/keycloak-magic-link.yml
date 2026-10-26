@@ -1,0 +1,38 @@
+repo: p2-inc/keycloak-magic-link
+researched_at: '2026-10-25'
+sources:
+- https://github.com/p2-inc/keycloak-magic-link#readme
+- https://github.com/p2-inc/keycloak-magic-link/blob/main/COPYING
+can:
+- en: Passwordless login with a magic link sent by email, using an action token so the link also works when opened on another device (e.g. desktop login, phone click).
+  ja: メールのマジックリンクでパスワードレスログイン。Action Tokenを使うため、別端末で開いても有効（PCでログインしてスマホでクリック、など）
+- en: Optionally create the user on first use and force `UPDATE_PROFILE` / `UPDATE_PASSWORD`.
+  ja: 初回に自動でユーザーを作成し、`UPDATE_PROFILE`/`UPDATE_PASSWORD` を強制することもできる
+- en: '"Magic link continuation": confirm via email while the original login page polls and completes the login there (10 minute default expiry).'
+  ja: 「Magic link continuation」では、メールで承認すると元のログイン画面がポーリングしてそこでログインが完了する（有効期限は既定10分）
+- en: Generate magic links through a REST API (`manage-users` role), with expiry, reusability, PKCE/state/nonce and response mode, and either email them or return them to the caller.
+  ja: REST API（`manage-users` ロール）でリンクを発行できる。有効期限、再利用可否、PKCE/state/nonce、レスポンスモードを指定でき、メール送信か呼び出し元への返却かを選べる
+- en: '"Login Token": a variant that runs the normal browser flow, so `acr_values`, step-up and TOTP still apply.'
+  ja: 「Login Token」方式は通常のブラウザフローを通すため、`acr_values`・ステップアップ・TOTPも効く
+- en: Also includes an email OTP (6 digits) authenticator, account-activation authenticators and Cloudflare Turnstile CAPTCHA.
+  ja: メールOTP（6桁）、アカウント有効化用のAuthenticator、Cloudflare Turnstile CAPTCHAも同梱
+- en: Extend the behaviour through an SPI (`MagicLinkCustomizationProvider`) instead of forking.
+  ja: フォークせずにSPI（`MagicLinkCustomizationProvider`）で挙動を拡張できる
+cannot:
+- en: "Licensed under the Elastic License 2.0 — not an OSI open-source license; check the terms before commercial use."
+  ja: ライセンスはElastic License 2.0で、OSI準拠のOSSライセンスではない。商用利用前に条件を確認
+- en: Links from the REST API (action token) log the user in directly and skip the authentication flow, so step-up / `acr_values` are not evaluated (use Login Token for that).
+  ja: REST APIで発行したリンク（Action Token）はフローを通らず直接ログインするため、ステップアップや `acr_values` は評価されない（必要ならLogin Tokenを使う）
+- en: The continuation authenticator cannot be customised through the SPI — email sending and user validation are fixed.
+  ja: continuation方式はSPIでカスタマイズできない（メール送信とユーザー検証は固定）
+- en: Implementation classes are `final`; behaviour can only be changed through the SPI.
+  ja: 実装クラスは `final` で、挙動の変更はSPI経由でしかできない
+- en: "With SPAs such as keycloak-js on Keycloak ≥ 26.6.5, links without `state` + a matching `response_mode` fail with `Invalid parameter: redirect_uri`."
+  ja: "keycloak-jsなどのSPAでは、Keycloak 26.6.5以降だと `state` と合致する `response_mode` を付けないリンクは `Invalid parameter: redirect_uri` で失敗する"
+- en: "Login Token requires `prompt=login`, otherwise an existing session cookie causes an \"already authenticated as different user\" error."
+  ja: "Login Tokenは `prompt=login` が必須。付けないと既存セッションのCookieにより \"already authenticated as different user\" エラーになる"
+requires:
+- en: Copy the JAR into `providers` and rebuild/restart Keycloak (or use the Phase Two image).
+  ja: JARを `providers` に置いてKeycloakを再ビルド/再起動（またはPhase Twoのイメージを使う）
+- en: Configured SMTP for sending emails.
+  ja: メール送信用のSMTP設定

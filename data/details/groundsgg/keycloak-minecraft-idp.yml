@@ -1,0 +1,21 @@
+repo: groundsgg/keycloak-minecraft-idp
+researched_at: '2026-10-25'
+sources:
+- https://github.com/groundsgg/keycloak-minecraft-idp#readme
+can:
+- en: Log players in through Microsoft/Xbox OAuth2 and resolve them to their Minecraft Java player name, or their Xbox Gamertag for Bedrock players.
+  ja: Microsoft/XboxのOAuth2でログインし、Minecraft Java版のプレイヤー名（Bedrock版ならXboxのゲーマータグ）に紐づけられる
+- en: Link accounts stably via the Xbox partner `ptx` claim, and store the Minecraft UUID, edition and Gamertag as user attributes.
+  ja: "Xboxパートナーの `ptx` クレームでアカウントを安定的にリンクし、MinecraftのUUID・エディション・ゲーマータグをユーザー属性に保存"
+- en: Keep client credentials and the partner XSTS key at server level or in the Keycloak vault.
+  ja: クライアント認証情報やパートナーXSTS鍵を、サーバーレベルの設定やKeycloakのVaultに置ける
+cannot:
+- en: Login fails without an Xbox partner relying party that returns the `ptx` claim.
+  ja: "`ptx` クレームを返すXboxパートナーのRelying Partyがないとログインできない"
+- en: Minecraft API whitelisting may be required; without it, authentication or entitlement checks can fail.
+  ja: MinecraftのAPI利用にホワイトリスト登録が必要な場合があり、未登録だと認証や所有権の確認が失敗することがある
+- en: "Only the `client_secret_post` client authentication method is supported."
+  ja: "クライアント認証方式は `client_secret_post` のみ対応"
+requires:
+- en: "A Microsoft Azure app registration with `XboxLive.signin`, and JDK 21 to build; copy the JAR to `providers` and run `kc.sh build`."
+  ja: "`XboxLive.signin` 権限を付けたMicrosoft Azureのアプリ登録。ビルドにJDK 21。JARを `providers` に置いて `kc.sh build`"

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-magic-link — Awesome Keycloak Extensions</title>
+<meta name="description" content="Passwordless magic-link login.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">SPI</span><span class="b">Authentication</span><span class="b Active">Active</span></p>
+    <h1 id="name">keycloak-magic-link</h1>
+    <p class="repo"><a href="https://github.com/p2-inc/keycloak-magic-link" rel="noopener">p2-inc/keycloak-magic-link ↗</a></p>
+    <p class="lead"><span class="l-en">Passwordless magic-link login.</span><span class="l-ja">マジックリンク(パスワードレス)認証</span></p>
+    <p class="note">A COPYING file exists; license type not confirmed.</p>
+    <dl class="stats"><div><dt>★</dt><dd>430</dd></div><div><dt>Forks</dt><dd>121</dd></div><div><dt>Contributors</dt><dd>39</dd></div><div><dt>Updated</dt><dd>2026-10-20</dd></div><div><dt>KC</dt><dd>26.8.0</dd></div><div><dt>License</dt><dd>Other (see repo)</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">7</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Passwordless login with a magic link sent by email, using an action token so the link also works when opened on another device (e.g. desktop login, phone click).</span><span class="l-ja">メールのマジックリンクでパスワードレスログイン。Action Tokenを使うため、別端末で開いても有効（PCでログインしてスマホでクリック、など）</span></li><li class="c"><span class="l-en">Optionally create the user on first use and force <code>UPDATE_PROFILE</code> / <code>UPDATE_PASSWORD</code>.</span><span class="l-ja">初回に自動でユーザーを作成し、<code>UPDATE_PROFILE</code>/<code>UPDATE_PASSWORD</code> を強制することもできる</span></li><li class="c"><span class="l-en">&quot;Magic link continuation&quot;: confirm via email while the original login page polls and completes the login there (10 minute default expiry).</span><span class="l-ja">「Magic link continuation」では、メールで承認すると元のログイン画面がポーリングしてそこでログインが完了する（有効期限は既定10分）</span></li><li class="c"><span class="l-en">Generate magic links through a REST API (<code>manage-users</code> role), with expiry, reusability, PKCE/state/nonce and response mode, and either email them or return them to the caller.</span><span class="l-ja">REST API（<code>manage-users</code> ロール）でリンクを発行できる。有効期限、再利用可否、PKCE/state/nonce、レスポンスモードを指定でき、メール送信か呼び出し元への返却かを選べる</span></li><li class="c"><span class="l-en">&quot;Login Token&quot;: a variant that runs the normal browser flow, so <code>acr_values</code>, step-up and TOTP still apply.</span><span class="l-ja">「Login Token」方式は通常のブラウザフローを通すため、<code>acr_values</code>・ステップアップ・TOTPも効く</span></li><li class="c"><span class="l-en">Also includes an email OTP (6 digits) authenticator, account-activation authenticators and Cloudflare Turnstile CAPTCHA.</span><span class="l-ja">メールOTP（6桁）、アカウント有効化用のAuthenticator、Cloudflare Turnstile CAPTCHAも同梱</span></li><li class="c"><span class="l-en">Extend the behaviour through an SPI (<code>MagicLinkCustomizationProvider</code>) instead of forking.</span><span class="l-ja">フォークせずにSPI（<code>MagicLinkCustomizationProvider</code>）で挙動を拡張できる</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">6</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">Licensed under the Elastic License 2.0 — not an OSI open-source license; check the terms before commercial use.</span><span class="l-ja">ライセンスはElastic License 2.0で、OSI準拠のOSSライセンスではない。商用利用前に条件を確認</span></li><li class="x"><span class="l-en">Links from the REST API (action token) log the user in directly and skip the authentication flow, so step-up / <code>acr_values</code> are not evaluated (use Login Token for that).</span><span class="l-ja">REST APIで発行したリンク（Action Token）はフローを通らず直接ログインするため、ステップアップや <code>acr_values</code> は評価されない（必要ならLogin Tokenを使う）</span></li><li class="x"><span class="l-en">The continuation authenticator cannot be customised through the SPI — email sending and user validation are fixed.</span><span class="l-ja">continuation方式はSPIでカスタマイズできない（メール送信とユーザー検証は固定）</span></li><li class="x"><span class="l-en">Implementation classes are <code>final</code>; behaviour can only be changed through the SPI.</span><span class="l-ja">実装クラスは <code>final</code> で、挙動の変更はSPI経由でしかできない</span></li><li class="x"><span class="l-en">With SPAs such as keycloak-js on Keycloak ≥ 26.6.5, links without <code>state</code> + a matching <code>response_mode</code> fail with <code>Invalid parameter: redirect_uri</code>.</span><span class="l-ja">keycloak-jsなどのSPAでは、Keycloak 26.6.5以降だと <code>state</code> と合致する <code>response_mode</code> を付けないリンクは <code>Invalid parameter: redirect_uri</code> で失敗する</span></li><li class="x"><span class="l-en">Login Token requires <code>prompt=login</code>, otherwise an existing session cookie causes an &quot;already authenticated as different user&quot; error.</span><span class="l-ja">Login Tokenは <code>prompt=login</code> が必須。付けないと既存セッションのCookieにより &quot;already authenticated as different user&quot; エラーになる</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">Copy the JAR into <code>providers</code> and rebuild/restart Keycloak (or use the Phase Two image).</span><span class="l-ja">JARを <code>providers</code> に置いてKeycloakを再ビルド/再起動（またはPhase Twoのイメージを使う）</span></li><li class="r"><span class="l-en">Configured SMTP for sending emails.</span><span class="l-ja">メール送信用のSMTP設定</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/p2-inc/keycloak-magic-link#readme" rel="noopener">https://github.com/p2-inc/keycloak-magic-link#readme</a></li><li><a href="https://github.com/p2-inc/keycloak-magic-link/blob/main/COPYING" rel="noopener">https://github.com/p2-inc/keycloak-magic-link/blob/main/COPYING</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

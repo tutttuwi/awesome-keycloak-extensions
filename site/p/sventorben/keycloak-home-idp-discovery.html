@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-home-idp-discovery — Awesome Keycloak Extensions</title>
+<meta name="description" content="Discover the home IdP from the user&#x27;s email domain.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">SPI</span><span class="b">Authentication</span><span class="b Active">Active</span></p>
+    <h1 id="name">keycloak-home-idp-discovery</h1>
+    <p class="repo"><a href="https://github.com/sventorben/keycloak-home-idp-discovery" rel="noopener">sventorben/keycloak-home-idp-discovery ↗</a></p>
+    <p class="lead"><span class="l-en">Discover the home IdP from the user&#x27;s email domain.</span><span class="l-ja">メールドメインからホームIdPを自動判定</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>341</dd></div><div><dt>Forks</dt><dd>64</dd></div><div><dt>Contributors</dt><dd>5</dd></div><div><dt>Updated</dt><dd>2026-10-02</dd></div><div><dt>KC</dt><dd>26.8.0</dd></div><div><dt>License</dt><dd>MIT</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">5</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Show a username-only form and redirect the user to their home IdP based on the email domain, skipping the IdP selection list.</span><span class="l-ja">ユーザー名だけのフォームを表示し、メールドメインからホームIdPを判定して自動リダイレクト（IdP選択画面を省略）</span></li><li class="c"><span class="l-en">Match on a custom user attribute such as a UPN instead of the email.</span><span class="l-ja">メールの代わりにUPNなど任意のユーザー属性で判定できる</span></li><li class="c"><span class="l-en">Skip the login page entirely when the address comes as an OIDC <code>login_hint</code> or SAML NameID.</span><span class="l-ja">OIDCの <code>login_hint</code> やSAMLのNameIDで渡された場合はログイン画面ごと省略できる</span></li><li class="c"><span class="l-en">Forward already-federated users to a linked IdP even if no domain matches; they may log in with their local username.</span><span class="l-ja">ドメインが一致しなくても、リンク済みIdPへ転送できる（ローカルのユーザー名でも可）</span></li><li class="c"><span class="l-en">Bind it per realm or per client by using it in a custom browser flow.</span><span class="l-ja">カスタムのブラウザフローに組み込み、realm単位でもクライアント単位でも使える</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">3</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">Users with an unverified email are not forwarded unless you enable <code>Forward users with unverified email</code> (or trust the IdP&#x27;s email).</span><span class="l-ja">メール未検証のユーザーは転送されない（<code>Forward users with unverified email</code> を有効にするか、IdP側のメールを信頼する設定が必要）</span></li><li class="x"><span class="l-en">The login page is never bypassed when <code>prompt=login|consent|select_account</code>, <code>max_age</code> or SAML <code>ForceAuthn</code> is present.</span><span class="l-ja"><code>prompt=login|consent|select_account</code>、<code>max_age</code>、SAMLの <code>ForceAuthn</code> があるとログイン画面は省略されない</span></li><li class="x"><span class="l-en">The legacy WildFly-based distribution is no longer supported, and older versions get no backports.</span><span class="l-ja">旧WildFlyベースのディストリビューションはサポート外。旧バージョンへのバックポートもなし</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">Use the extension&#x27;s major version that matches your Keycloak major version.</span><span class="l-ja">Keycloakのメジャーバージョンに合わせた拡張バージョンを使う</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/sventorben/keycloak-home-idp-discovery#readme" rel="noopener">https://github.com/sventorben/keycloak-home-idp-discovery#readme</a></li><li><a href="https://sventorben.github.io/keycloak-home-idp-discovery/" rel="noopener">https://sventorben.github.io/keycloak-home-idp-discovery/</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

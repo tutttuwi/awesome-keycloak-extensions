@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-minecraft-idp — Awesome Keycloak Extensions</title>
+<meta name="description" content="Microsoft / Xbox identity provider that resolves Minecraft profiles.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">SPI</span><span class="b">Identity Provider</span><span class="b Active">Active</span></p>
+    <h1 id="name">keycloak-minecraft-idp</h1>
+    <p class="repo"><a href="https://github.com/groundsgg/keycloak-minecraft-idp" rel="noopener">groundsgg/keycloak-minecraft-idp ↗</a></p>
+    <p class="lead"><span class="l-en">Microsoft / Xbox identity provider that resolves Minecraft profiles.</span><span class="l-ja">Minecraftプロフィールを解決するMicrosoft/Xbox IdP</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>3</dd></div><div><dt>Forks</dt><dd>0</dd></div><div><dt>Contributors</dt><dd>4</dd></div><div><dt>Updated</dt><dd>2026-10-22</dd></div><div><dt>KC</dt><dd>—</dd></div><div><dt>License</dt><dd>Other (see repo)</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">3</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Log players in through Microsoft/Xbox OAuth2 and resolve them to their Minecraft Java player name, or their Xbox Gamertag for Bedrock players.</span><span class="l-ja">Microsoft/XboxのOAuth2でログインし、Minecraft Java版のプレイヤー名（Bedrock版ならXboxのゲーマータグ）に紐づけられる</span></li><li class="c"><span class="l-en">Link accounts stably via the Xbox partner <code>ptx</code> claim, and store the Minecraft UUID, edition and Gamertag as user attributes.</span><span class="l-ja">Xboxパートナーの <code>ptx</code> クレームでアカウントを安定的にリンクし、MinecraftのUUID・エディション・ゲーマータグをユーザー属性に保存</span></li><li class="c"><span class="l-en">Keep client credentials and the partner XSTS key at server level or in the Keycloak vault.</span><span class="l-ja">クライアント認証情報やパートナーXSTS鍵を、サーバーレベルの設定やKeycloakのVaultに置ける</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">3</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">Login fails without an Xbox partner relying party that returns the <code>ptx</code> claim.</span><span class="l-ja"><code>ptx</code> クレームを返すXboxパートナーのRelying Partyがないとログインできない</span></li><li class="x"><span class="l-en">Minecraft API whitelisting may be required; without it, authentication or entitlement checks can fail.</span><span class="l-ja">MinecraftのAPI利用にホワイトリスト登録が必要な場合があり、未登録だと認証や所有権の確認が失敗することがある</span></li><li class="x"><span class="l-en">Only the <code>client_secret_post</code> client authentication method is supported.</span><span class="l-ja">クライアント認証方式は <code>client_secret_post</code> のみ対応</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">A Microsoft Azure app registration with <code>XboxLive.signin</code>, and JDK 21 to build; copy the JAR to <code>providers</code> and run <code>kc.sh build</code>.</span><span class="l-ja"><code>XboxLive.signin</code> 権限を付けたMicrosoft Azureのアプリ登録。ビルドにJDK 21。JARを <code>providers</code> に置いて <code>kc.sh build</code></span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/groundsgg/keycloak-minecraft-idp#readme" rel="noopener">https://github.com/groundsgg/keycloak-minecraft-idp#readme</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

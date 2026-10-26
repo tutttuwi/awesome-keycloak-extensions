@@ -1,0 +1,25 @@
+repo: sea-watch/keycloak-login-notification
+researched_at: '2026-10-25'
+sources:
+- https://github.com/sea-watch/keycloak-login-notification#readme
+can:
+- en: Email users when a new Keycloak session is created, with login time, IP address, client ID and User-Agent.
+  ja: 新しいKeycloakセッションが作られたときに、ログイン時刻・IPアドレス・クライアントID・User-Agentを記載したセキュリティ通知メールを送る
+- en: Send at most one email per session (deduplicated across SSO clients and token refreshes).
+  ja: 1セッションにつき1通だけ送る（SSOでの別クライアントやトークン更新では重複しない）
+- en: Change subject and wording per realm and language in the Admin Console, and optionally add buttons to the sessions or password pages.
+  ja: 件名や本文は、realmと言語ごとに管理コンソールから変更できる。セッション画面やパスワード変更画面へのボタンも追加できる
+- en: Includes a guarded deployment for the Univention Keycloak App.
+  ja: Univention Keycloak App向けの安全なデプロイ手順が付属
+cannot:
+- en: No geographic location is included (no GeoIP).
+  ja: 位置情報は含まれない（GeoIPは使わない）
+- en: Users without an email address are skipped; IPs are only accurate with correct reverse-proxy settings.
+  ja: メールアドレスのないユーザーには送られない。IPアドレスはリバースプロキシの設定が正しい場合にのみ正確
+- en: Emails are sent synchronously during the login, so SMTP timeouts must be kept short (failures do not block login).
+  ja: メールはログイン処理中に同期で送られるため、SMTPのタイムアウトは短くしておく必要がある（失敗してもログインは止まらない）
+- en: Built against Keycloak 26.7.0; other versions need a rebuild because provider APIs are version-coupled.
+  ja: Keycloak 26.7.0向けにビルドされている。プロバイダーAPIはバージョンに依存するため、他のバージョンでは再ビルドが必要
+requires:
+- en: "Working realm SMTP, the `login-notification` email theme, and the `login-notification` event listener."
+  ja: "realmのSMTP設定、メールテーマ `login-notification`、イベントリスナー `login-notification` の有効化"

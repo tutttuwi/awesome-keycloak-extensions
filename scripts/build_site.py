@@ -6,6 +6,7 @@ import json
 import os
 
 import common
+from detail_page import page_path, render_detail, write_detail_pages  # noqa: F401 (re-exported for tests)
 
 SITE_URL = os.environ.get("SITE_URL", "")
 TOP_N = 20
@@ -29,8 +30,11 @@ def row(rank: int, p: dict) -> str:
     if ja:
         desc += f"<br>{ja}".replace("|", "\\|")
     src = "Official" if p.get("official") else "Community"
+    name = f"[{p['name']}]({p['url']})"
+    if p.get("_detail") and SITE_URL:
+        name += f"<br>[can / cannot]({SITE_URL}{p['_detail']})"
     return (
-        f"| {rank} | [{p['name']}]({p['url']}) | {desc} | {fmt_stars(p)} | {p.get('last_commit') or 'unknown'} "
+        f"| {rank} | {name} | {desc} | {fmt_stars(p)} | {p.get('last_commit') or 'unknown'} "
         f"| {p['_activity']} | {p.get('kc_versions') or 'unknown'} | {p.get('license') or 'unknown'} | {src} |"
     )
 
@@ -50,8 +54,11 @@ def table(items: list[dict]) -> str:
 def main() -> None:
     today = dt.date.today()
     projects = [p for p in common.load_all() if p.get("kind") in ("core", "peripheral")]
+    details = common.load_details()
     for p in projects:
         p["_activity"] = common.activity(p, today)
+        if p["repo"].lower() in details:
+            p["_detail"] = f"p/{page_path(p['repo'])}"
 
     fetched = [p["fetched_at"] for p in projects if p.get("fetched_at")]
     data_date = max(fetched) if fetched else "unknown"
@@ -66,6 +73,7 @@ def main() -> None:
     for p in sorted(projects, key=sort_key):
         d = {k: v for k, v in p.items() if not k.startswith("_")}
         d["activity"] = p["_activity"]
+        d["detail"] = p.get("_detail")
         out.append(d)
     (common.ROOT / "site").mkdir(exist_ok=True)
     (common.ROOT / "site" / "data.json").write_text(
@@ -74,6 +82,7 @@ def main() -> None:
                    ensure_ascii=False, indent=1, default=str),
         encoding="utf-8",
     )
+    pages = write_detail_pages(projects, details, common.ROOT / "site" / "p")
 
     # ---- README.md
     L = []
@@ -105,7 +114,7 @@ def main() -> None:
     L.append("## Contributing\n\nSee [CONTRIBUTING.md](CONTRIBUTING.md) — add a YAML file under `data/projects/` and open a PR. "
              "The README and site are regenerated automatically.\n")
     (common.ROOT / "README.md").write_text("\n".join(L), encoding="utf-8")
-    print(f"built: {len(projects)} projects ({len(core)} core / {len(periph)} peripheral / {len(archive)} archive)")
+    print(f"built: {len(projects)} projects, {pages} detail pages ({len(core)} core / {len(periph)} peripheral / {len(archive)} archive)")
 
 
 if __name__ == "__main__":

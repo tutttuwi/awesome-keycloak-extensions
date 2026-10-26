@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-extensions-demo — Awesome Keycloak Extensions</title>
+<meta name="description" content="Demo of many SPI types: action token, authenticators, event listener, token mapper, required action, etc.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">SPI</span><span class="b">Testing / Examples</span><span class="b Active">Active</span></p>
+    <h1 id="name">keycloak-extensions-demo</h1>
+    <p class="repo"><a href="https://github.com/dasniko/keycloak-extensions-demo" rel="noopener">dasniko/keycloak-extensions-demo ↗</a></p>
+    <p class="lead"><span class="l-en">Demo of many SPI types: action token, authenticators, event listener, token mapper, required action, etc.</span><span class="l-ja">多数のSPI実装例(actiontoken/authenticator/event-listener/tokenmapper/requiredaction等)</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>434</dd></div><div><dt>Forks</dt><dd>133</dd></div><div><dt>Contributors</dt><dd>4</dd></div><div><dt>Updated</dt><dd>2026-10-14</dd></div><div><dt>KC</dt><dd>nightly</dd></div><div><dt>License</dt><dd>Apache-2.0</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">4</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Provide working examples of many SPI types: authenticators (magic link, CAPTCHA, email-domain restriction, MFA), conditional authenticators, user storage, required actions and validators.</span><span class="l-ja">多数のSPIの動く実装例がある。Authenticator（マジックリンク、CAPTCHA、メールドメイン制限、MFA）、条件付きAuthenticator、ユーザーストレージ、Required Action、バリデータなど</span></li><li class="c"><span class="l-en">Include examples of event listeners, OIDC token mappers, action tokens, custom REST endpoints, an SMS SPI, Admin Console UI extensions and scheduled tasks.</span><span class="l-ja">イベントリスナー、OIDCトークンマッパー、Action Token、独自RESTエンドポイント、SMS SPI、管理コンソールUI拡張、スケジュールタスクの例もある</span></li><li class="c"><span class="l-en">Include custom email senders (JSON templates, AWS SES instead of SMTP) and password policy extensions.</span><span class="l-ja">カスタムメール送信（JSONテンプレート、SMTPの代わりにAWS SES）やパスワードポリシー拡張の例もある</span></li><li class="c"><span class="l-en">Ship a docker-compose setup that loads all 18 modules, with remote debugging on port 8787.</span><span class="l-ja">全18モジュールを読み込むdocker-compose環境付き（ポート8787でリモートデバッグ可）</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">2</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">Not a production-ready product — demonstration purposes only, provided as-is with no warranty or support.</span><span class="l-ja">本番用の製品ではない。デモ用途のみで、保証もサポートもない</span></li><li class="x"><span class="l-en">The &quot;Highlander&quot; single-session listener is deprecated (Keycloak has this built in since v23).</span><span class="l-ja">単一セッション化の &quot;Highlander&quot; リスナーは非推奨（Keycloak v23以降は標準機能）</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">Built against the Keycloak nightly (<code>999.0.0-SNAPSHOT</code>); adapt it to your Keycloak version.</span><span class="l-ja">Keycloakのnightly（<code>999.0.0-SNAPSHOT</code>）向けにビルドされているため、自分のバージョンに合わせて調整が必要</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/dasniko/keycloak-extensions-demo#readme" rel="noopener">https://github.com/dasniko/keycloak-extensions-demo#readme</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

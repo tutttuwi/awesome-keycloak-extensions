@@ -1,0 +1,31 @@
+repo: dasniko/testcontainers-keycloak
+researched_at: '2026-10-25'
+sources:
+- https://github.com/dasniko/testcontainers-keycloak#readme
+can:
+- en: Start a real Keycloak in Docker from Java integration tests (JUnit 5), with any Keycloak image or version.
+  ja: Javaの統合テスト（JUnit 5）から本物のKeycloakをDockerで起動でき、イメージ・バージョンも指定できる
+- en: Import realm JSON files, set admin credentials, enable feature flags, set the context path or management port, and pass custom CLI arguments.
+  ja: realm JSONのインポート、管理者認証情報の指定、フィーチャーフラグ、コンテキストパス、管理ポート、任意のCLI引数を設定できる
+- en: Hand you a ready-made Admin Client, OIDC endpoint URL helpers and token helpers (password and client-credentials grants).
+  ja: 設定済みのAdminクライアント、OIDCエンドポイントURLのヘルパー、トークン取得ヘルパー（パスワード/クライアントクレデンシャル）を提供
+- en: Run with TLS (built-in keystore, or your own cert/key or keystore), in production mode, or from a pre-built `--optimized` image.
+  ja: TLS（同梱キーストア、独自の証明書/鍵やキーストア）、本番モード、ビルド済みの `--optimized` イメージでも起動できる
+- en: Test your own extensions straight from `target/classes` (packaged on the fly) with third-party libraries and a remote debugger.
+  ja: 自作拡張を `target/classes` から直接テストできる（その場でJAR化）。サードパーティライブラリの追加やリモートデバッグも可能
+- en: Has integration guides for Spring Boot (`@DynamicPropertySource`) and Quarkus.
+  ja: Spring Boot（`@DynamicPropertySource`）とQuarkus向けの統合ガイドがある
+cannot:
+- en: Not a Keycloak extension — a Java test library that needs Docker.
+  ja: Keycloak拡張ではなく、Dockerが必要なJava向けテストライブラリ
+- en: Forward-only development — no LTS and no backports.
+  ja: 前方開発のみで、LTSやバックポートはない
+- en: The default constructor is deprecated (since 4.2) — always pass an image name.
+  ja: デフォルトコンストラクタは4.2から非推奨。必ずイメージ名を指定する
+- en: An `--optimized` image without the health endpoint never becomes healthy unless you supply your own wait strategy.
+  ja: "`--optimized` イメージでhealthエンドポイントを有効にしていないと、待機戦略を自分で用意しない限りhealthyにならない"
+- en: Custom CLI arguments are your own responsibility (the library logs a warning).
+  ja: 独自のCLI引数を使った場合の動作は自己責任（ライブラリが警告を出す）
+requires:
+- en: A Docker environment and Java with JUnit 5 / Testcontainers; pick the library version that matches your Keycloak (see the version overview).
+  ja: Docker環境と、JUnit 5/Testcontainersが使えるJava環境。Keycloakに合うライブラリバージョンを選ぶ（バージョン対応表を参照）

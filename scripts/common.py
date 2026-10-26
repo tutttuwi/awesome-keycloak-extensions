@@ -8,6 +8,8 @@ import yaml
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "projects"
+# Hand-researched "can / cannot" notes per project, kept apart from the auto-refreshed data.
+DETAILS = ROOT / "data" / "details"
 
 # Fixed genre list (see docs/decisions/002-genres.md). Add new genres only via a decision record.
 GENRES = [
@@ -44,6 +46,21 @@ def load_all() -> list[dict]:
         d["_path"] = path
         items.append(d)
     return items
+
+
+def details_path(repo: str) -> pathlib.Path:
+    """data/details/<owner>/<repo>.yml (one directory per owner)."""
+    return DETAILS / f"{repo}.yml"
+
+
+def load_details() -> dict[str, dict]:
+    """Lower-cased repo -> details dict (data/details/<owner>/<repo>.yml)."""
+    out = {}
+    for path in sorted(DETAILS.glob("*/*.yml")):
+        d = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        d["_path"] = path
+        out[str(d.get("repo", "")).lower()] = d
+    return out
 
 
 def save(d: dict) -> None:

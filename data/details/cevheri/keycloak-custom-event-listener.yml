@@ -1,0 +1,19 @@
+repo: cevheri/keycloak-custom-event-listener
+researched_at: '2026-10-25'
+sources:
+- https://github.com/cevheri/keycloak-custom-event-listener#readme
+can:
+- en: Forward user registration and user creation events to a webhook URL.
+  ja: ユーザー登録・ユーザー作成のイベントをWebhook URLへ転送
+- en: Configure the target with a single `WEBHOOK_URL` environment variable; a docker-compose example is included.
+  ja: "送信先は環境変数 `WEBHOOK_URL` ひとつで設定。docker-composeの例も付属"
+cannot:
+- en: Only handles user create/register events — other events are not forwarded.
+  ja: 扱うのはユーザーの作成・登録イベントだけで、他のイベントは転送しない
+- en: The README documents no retries, signing or authentication for the webhook.
+  ja: Webhookの再送・署名・認証についてはREADMEに記載がない
+- en: More of a starting point/example than a full-featured product; last commit in November 2024.
+  ja: 多機能な製品というより、出発点となる実装例。最終コミットは2024年11月
+requires:
+- en: "Build with Maven and copy the JAR to Keycloak's `providers` directory."
+  ja: "Mavenでビルドし、JARをKeycloakの `providers` に配置"

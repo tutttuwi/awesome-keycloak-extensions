@@ -1,0 +1,23 @@
+repo: aznamier/keycloak-event-listener-rabbitmq
+researched_at: '2026-10-25'
+sources:
+- https://github.com/aznamier/keycloak-event-listener-rabbitmq#readme
+can:
+- en: "Publish Keycloak user (client) and admin events as JSON to RabbitMQ (default exchange `amq.topic`)."
+  ja: "KeycloakのユーザーイベントとAdminイベントをJSONでRabbitMQへ送信（既定のexchangeは `amq.topic`）"
+- en: "Use structured routing keys (`KK.EVENT.<type>.<realm>.<result>...`) so consumers can subscribe by realm, client, result or event type with topic wildcards."
+  ja: "構造化されたルーティングキー（`KK.EVENT.<種別>.<realm>.<結果>...`）で、realm・クライアント・成否・イベント種別ごとにトピックのワイルドカードで購読できる"
+- en: Configure host, port, vhost, exchange, credentials and TLS (key/trust stores) through environment variables.
+  ja: ホスト・ポート・vhost・exchange・認証情報・TLS（キーストア/トラストストア）を環境変数で設定
+cannot:
+- en: RabbitMQ only — no other brokers.
+  ja: RabbitMQ専用で、他のブローカーには送れない
+- en: "Default credentials are `admin`/`admin` and TLS is off by default — set them explicitly."
+  ja: "認証情報の既定は `admin`/`admin`、TLSは既定でオフ。明示的に設定が必要"
+- en: The WildFly configuration options are deprecated (Keycloak 16 and older).
+  ja: WildFly向けの設定方法は非推奨（Keycloak 16以前）
+- en: No commits since March 2024 — inactive.
+  ja: 2024年3月以降コミットがなく、活動停止状態
+requires:
+- en: "Plugin 3.x needs Keycloak 16+; copy the JAR to `/opt/keycloak/providers` and enable the `keycloak-to-rabbitmq` event listener."
+  ja: "プラグイン3.xはKeycloak 16以上が必要。JARを `/opt/keycloak/providers` に置き、イベントリスナー `keycloak-to-rabbitmq` を有効化"

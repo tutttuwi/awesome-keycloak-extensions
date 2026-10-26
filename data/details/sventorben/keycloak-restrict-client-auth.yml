@@ -1,0 +1,34 @@
+repo: sventorben/keycloak-restrict-client-auth
+researched_at: '2026-10-25'
+sources:
+- https://github.com/sventorben/keycloak-restrict-client-auth#readme
+- https://sventorben.github.io/keycloak-restrict-client-auth/
+can:
+- en: Allow only selected users to log in to a specific client (out-of-the-box Keycloak cannot do this per client).
+  ja: 特定クライアントへのログインを、許可したユーザーだけに限定できる（標準のKeycloakではクライアント単位で不可）
+- en: "Restrict via a client role named `restricted-access` (direct, group or composite assignment) or via authorization policies on a `Keycloak Client Resource`."
+  ja: "クライアントロール `restricted-access`（直接・グループ・コンポジット付与）か、認可リソース `Keycloak Client Resource` のポリシーで制限"
+- en: Check access on every login path via a required action — SSO, IdP redirects and password reset included, regardless of the flow.
+  ja: Required Actionにより、SSO・IdPリダイレクト・パスワードリセットを含むすべてのログイン経路でフローに関係なくチェック
+- en: Check access whenever tokens are issued, including refresh and token exchange, via a client policy executor.
+  ja: クライアントポリシーExecutorで、リフレッシュやトークン交換を含むトークン発行時にもチェック
+- en: Optionally deny access to all clients by default and grant it explicitly.
+  ja: 全クライアントをデフォルト拒否にし、明示的に許可する運用も可能
+- en: "Optionally reject tokens that would list a restricted client in the audience (`Check audience`)."
+  ja: "制限対象クライアントをaudienceに含むトークンの発行も拒否できる（`Check audience`）"
+cannot:
+- en: "It is not a policy enforcement point — your clients must still validate `aud` / `azp`."
+  ja: "ポリシー強制点（PEP）ではない。`aud`/`azp` の検証はクライアント側で必須"
+- en: "The `policy` provider only works for confidential OIDC clients with authorization enabled."
+  ja: ポリシー方式は、認可を有効にしたconfidentialなOIDCクライアントでのみ使える
+- en: Errors cannot be shown to users in the direct grant (password) flow — it fails with "Account is not fully set up" unless you add the authenticator there.
+  ja: ダイレクトグラント（パスワード）フローではユーザーにエラーを表示できず、"Account is not fully set up" で失敗する（Authenticatorを追加すれば回避可）
+- en: Client-credentials logins are not checked.
+  ja: クライアントクレデンシャルグラントのログインはチェックしない
+- en: No backports or maintenance for older versions.
+  ja: 旧バージョンへのバックポートや保守はしない
+requires:
+- en: Extension version X.b.c is built against Keycloak X.y.z; use the matching major version.
+  ja: 拡張のバージョンX.b.cはKeycloak X.y.z向けにビルド。メジャーバージョンを合わせる
+- en: Installing it enables the required action in all realms — read the upgrade notes first.
+  ja: 導入すると全realmでRequired Actionが有効になる。事前にアップグレードノートを確認

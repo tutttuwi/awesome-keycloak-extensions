@@ -1,0 +1,24 @@
+repo: dasniko/keycloak-2fa-sms-authenticator
+researched_at: '2026-10-25'
+sources:
+- https://github.com/dasniko/keycloak-2fa-sms-authenticator#readme
+- https://www.n-k.de/2020/12/keycloak-2fa-sms-authentication.html
+can:
+- en: Send a one-time code by SMS (through AWS SNS) as a second login factor.
+  ja: AWS SNS経由でSMSのワンタイムコードを送り、二要素目として使える
+- en: Serve as a reference implementation of a custom authenticator (explained in a blog post and videos).
+  ja: カスタムAuthenticator実装の参考になる（ブログと動画で解説あり）
+cannot:
+- en: Not meant for production — the author says demo purposes only.
+  ja: 本番利用は想定外（作者いわく「デモ用途のみ」）
+- en: No longer maintained, and the repository is archived.
+  ja: 保守終了済みで、リポジトリはアーカイブされている
+- en: The author advises against SMS as a security factor ("convenience, no security").
+  ja: 作者自身がSMSはセキュリティ要素として使うべきでないとしている（「利便性であってセキュリティではない」）
+- en: AWS SNS is the only SMS gateway.
+  ja: SMS送信手段はAWS SNSのみ
+- en: There is no real README; documentation is limited to the blog post and videos.
+  ja: まともなREADMEはなく、ドキュメントはブログと動画だけ
+requires:
+- en: An AWS account with SNS.
+  ja: AWS SNSを利用できるAWSアカウント

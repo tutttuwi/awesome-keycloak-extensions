@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-event-enrichment — Awesome Keycloak Extensions</title>
+<meta name="description" content="Enrich authentication events with GeoIP and User-Agent data.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">SPI</span><span class="b">Event / Webhook / Messaging</span><span class="b Active">Active</span></p>
+    <h1 id="name">keycloak-event-enrichment</h1>
+    <p class="repo"><a href="https://github.com/AdrianIAna/keycloak-event-enrichment" rel="noopener">AdrianIAna/keycloak-event-enrichment ↗</a></p>
+    <p class="lead"><span class="l-en">Enrich authentication events with GeoIP and User-Agent data.</span><span class="l-ja">認証イベントにGeoIP/User-Agent情報を付与</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>1</dd></div><div><dt>Forks</dt><dd>0</dd></div><div><dt>Contributors</dt><dd>2</dd></div><div><dt>Updated</dt><dd>2026-09-02</dd></div><div><dt>KC</dt><dd>26.7.2</dd></div><div><dt>License</dt><dd>Apache-2.0</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">4</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Add GeoIP location (including VPN detection) and parsed User-Agent data (browser, OS, device type) to login/logout/error events before they are stored (<code>geo_*</code>, <code>ua_*</code> details).</span><span class="l-ja">ログイン・ログアウト・エラーのイベントに、GeoIPの位置情報（VPN判定を含む）と、User-Agentの解析結果（ブラウザ・OS・端末種別）を保存前に付与（<code>geo_*</code>、<code>ua_*</code>）</span></li><li class="c"><span class="l-en">Every consumer (Account Console, Admin API, your apps) gets the enriched events automatically.</span><span class="l-ja">アカウントコンソール・Admin API・自作アプリなど、どこから読んでも付与済みのイベントが得られる</span></li><li class="c"><span class="l-en">Enrichment failures never block event persistence.</span><span class="l-ja">付与に失敗しても、イベントの保存は妨げない</span></li><li class="c"><span class="l-en">Pairs with keycloak-account-events to show users their own enriched login history.</span><span class="l-ja">keycloak-account-eventsと組み合わせると、ユーザー自身に付与済みのログイン履歴を見せられる</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">3</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">Admin events are not enriched.</span><span class="l-ja">Adminイベントには付与しない</span></li><li class="x"><span class="l-en">Wraps the built-in JPA event store only.</span><span class="l-ja">ラップするのは標準のJPAイベントストアのみ</span></li><li class="x"><span class="l-en">You must download the MaxMind GeoLite2 databases yourself (free account) and keep them updated.</span><span class="l-ja">MaxMindのGeoLite2データベースは自分でダウンロード（無料のアカウント登録が必要）し、更新し続ける必要がある</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">Copy the shaded JAR to <code>/opt/keycloak/providers/</code>, place the MMDB files on a persistent path, and run <code>kc.sh build</code> with the SPI options.</span><span class="l-ja">shaded JARを <code>/opt/keycloak/providers/</code> に置き、MMDBファイルを永続的なパスに配置して、SPIオプション付きで <code>kc.sh build</code></span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/AdrianIAna/keycloak-event-enrichment#readme" rel="noopener">https://github.com/AdrianIAna/keycloak-event-enrichment#readme</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

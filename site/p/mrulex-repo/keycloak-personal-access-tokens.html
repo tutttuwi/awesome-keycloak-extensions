@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-personal-access-tokens — Awesome Keycloak Extensions</title>
+<meta name="description" content="Scoped personal access tokens usable as Basic Auth passwords.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">SPI</span><span class="b">Authentication</span><span class="b Active">Active</span></p>
+    <h1 id="name">keycloak-personal-access-tokens</h1>
+    <p class="repo"><a href="https://github.com/mrulex-repo/keycloak-personal-access-tokens" rel="noopener">mrulex-repo/keycloak-personal-access-tokens ↗</a></p>
+    <p class="lead"><span class="l-en">Scoped personal access tokens usable as Basic Auth passwords.</span><span class="l-ja">Basic認証で使えるスコープ付き個人アクセストークン</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>4</dd></div><div><dt>Forks</dt><dd>0</dd></div><div><dt>Contributors</dt><dd>1</dd></div><div><dt>Updated</dt><dd>2026-05-20</dd></div><div><dt>KC</dt><dd>—</dd></div><div><dt>License</dt><dd>GPL-3.0</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">5</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Let users create named personal access tokens (PATs) from the Account UI — scoped to chosen realm roles, revocable, with optional expiry.</span><span class="l-ja">ユーザーがアカウント画面から、名前付きの個人アクセストークン（PAT）を作成できる。選んだrealmロールに限定でき、失効も可能で、有効期限も任意で設定できる</span></li><li class="c"><span class="l-en">Use PATs as passwords wherever HTTP Basic Auth is used (Maven/Docker/npm registries, IMAP) — services validate them against an <code>/auth</code> endpoint that returns the roles in <code>X-Roles</code>.</span><span class="l-ja">HTTP Basic認証しか使えないサービス（Maven/Docker/npmレジストリ、IMAPなど）で、PATをパスワードとして使える。サービスは <code>/auth</code> エンドポイントで検証し、ロールは <code>X-Roles</code> ヘッダーで返る</span></li><li class="c"><span class="l-en">Let Keycloak enforce a required role (<code>X-Required-Role</code> → 403); examples for nginx, Traefik forwardAuth and Spring Boot.</span><span class="l-ja">必要なロールのチェックをKeycloak側に任せられる（<code>X-Required-Role</code> → 403）。nginx・Traefik forwardAuth・Spring Bootでの利用例あり</span></li><li class="c"><span class="l-en">Use PATs in the direct-grant (password) flow via a dedicated authenticator and roles token mapper.</span><span class="l-ja">専用のAuthenticatorとロールのトークンマッパーで、ダイレクトグラント（パスワード）フローでもPATを使える</span></li><li class="c"><span class="l-en">Tokens are shown once and stored only as Argon2id hashes.</span><span class="l-ja">トークンは作成時に1度だけ表示され、保存されるのはArgon2idのハッシュのみ</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">3</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">Tokens carry realm roles only.</span><span class="l-ja">トークンに含められるのはrealmロールだけ</span></li><li class="x"><span class="l-en">Direct-grant use requires a custom flow bound per client; other clients still need the real password.</span><span class="l-ja">ダイレクトグラントで使うには、カスタムフローをクライアントごとにバインドする必要がある。それ以外のクライアントでは本来のパスワードが必要</span></li><li class="x"><span class="l-en">Built for Keycloak 26 only, and licensed under GPL-3.0.</span><span class="l-ja">対象はKeycloak 26のみ。ライセンスはGPL-3.0</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">Both JARs (extension and Account UI theme) in <code>providers</code>, then restart Keycloak.</span><span class="l-ja">拡張とアカウント画面テーマの2つのJARを <code>providers</code> に置いて、Keycloakを再起動</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/mrulex-repo/keycloak-personal-access-tokens#readme" rel="noopener">https://github.com/mrulex-repo/keycloak-personal-access-tokens#readme</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-orgs — Awesome Keycloak Extensions</title>
+<meta name="description" content="Organizations / multi-tenancy for Keycloak realms.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">SPI</span><span class="b">Multi-tenancy / Organization</span><span class="b Active">Active</span></p>
+    <h1 id="name">keycloak-orgs</h1>
+    <p class="repo"><a href="https://github.com/p2-inc/keycloak-orgs" rel="noopener">p2-inc/keycloak-orgs ↗</a></p>
+    <p class="lead"><span class="l-en">Organizations / multi-tenancy for Keycloak realms.</span><span class="l-ja">Keycloakの組織・マルチテナント機能</span></p>
+    <p class="note">License changed from AGPL-3.0 to Elastic License v2 (check before adopting).</p>
+    <dl class="stats"><div><dt>★</dt><dd>544</dd></div><div><dt>Forks</dt><dd>100</dd></div><div><dt>Contributors</dt><dd>38</dd></div><div><dt>Updated</dt><dd>2026-10-14</dd></div><div><dt>KC</dt><dd>26.8.0</dd></div><div><dt>License</dt><dd>Elastic-2.0</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">5</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Model tenants as first-class Organizations inside a single realm, with memberships (a user can join several), organization-specific roles, invitations and email domains.</span><span class="l-ja">1つのrealm内でテナントをOrganizationとして扱える。メンバーシップ（複数所属可）、組織固有ロール、招待、メールドメインを持つ</span></li><li class="c"><span class="l-en">Manage organizations, memberships, roles (including bulk) and organization IdPs through custom REST APIs (OpenAPI documented) and an Admin UI theme.</span><span class="l-ja">組織・メンバーシップ・ロール（一括操作含む）・組織IdPを独自REST API（OpenAPIあり）と管理UIテーマで管理</span></li><li class="c"><span class="l-en">Let organization admins manage their own IdP; users are routed to it by email domain (Home IdP Discovery), and domain ownership can be verified via DNS.</span><span class="l-ja">組織管理者が自組織のIdPを管理でき、メールドメインでそのIdPへ振り分け（Home IdP Discovery）。ドメイン所有はDNSで検証可能</span></li><li class="c"><span class="l-en">Invite users (existing or not) with an emailed link; a required action / authenticator lets them accept or reject at login.</span><span class="l-ja">既存・未登録のユーザーをメールで招待でき、ログイン時にRequired Action/Authenticatorで承諾・拒否させる</span></li><li class="c"><span class="l-en">Add organization attributes or memberships and roles to tokens via OIDC mappers; emit organization events; import/export organizations; experimental SCIM.</span><span class="l-ja">OIDCマッパーで組織属性や所属・ロールをトークンに追加。組織イベントの発行、組織のインポート/エクスポート、実験的なSCIMにも対応</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">6</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">Licensed under the Elastic License v2 (changed from AGPL v3) — not an OSI open-source license; check the terms before commercial use.</span><span class="l-ja">ライセンスはElastic License v2（AGPL v3から変更）で、OSI準拠のOSSライセンスではない。商用利用前に条件を確認</span></li><li class="x"><span class="l-en">Does not work with the stock Keycloak image as-is — it needs extra libraries and <code>keycloak-admin-client</code> at Keycloak build time, so the Phase Two image is recommended.</span><span class="l-ja">標準のKeycloakイメージにそのまま入れても動かない。追加ライブラリと、Keycloakビルド時の <code>keycloak-admin-client</code> が必要（Phase Two版イメージ推奨）</span></li><li class="x"><span class="l-en">Only guaranteed with the Keycloak version packaged in the Phase Two image.</span><span class="l-ja">動作保証はPhase Twoイメージに同梱のKeycloakバージョンのみ</span></li><li class="x"><span class="l-en">Officially supports CockroachDB, PostgreSQL and MySQL; other databases may fail.</span><span class="l-ja">公式サポートDBはCockroachDB、PostgreSQL、MySQL。それ以外は失敗する可能性がある</span></li><li class="x"><span class="l-en">Separate from Keycloak&#x27;s built-in Organizations feature (the Phase Two image turns the native one off).</span><span class="l-ja">Keycloak標準のOrganizations機能とは別物（Phase Twoのイメージでは標準機能を無効化）</span></li><li class="x"><span class="l-en">Creating an invitation sends no email unless <code>send=true</code>; the <code>Set user in context</code> default of IdP discovery leaks account existence when followed by a Username Password Form.</span><span class="l-ja">招待は <code>send=true</code> を付けないとメールが送られない。IdP Discoveryの <code>Set user in context</code> はデフォルトのままUsername Password Formと組み合わせると、アカウントの存在が漏れる</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">Run the DB migrations on first start (new tables plus <code>view-organizations</code> / <code>manage-organizations</code> roles in every realm).</span><span class="l-ja">初回起動時にDBマイグレーションが走る（新規テーブルと、全realmへの <code>view-organizations</code>/<code>manage-organizations</code> ロールの追加）</span></li><li class="r"><span class="l-en">Select the <code>phasetwo.v2</code> admin theme to show the Organizations UI (set it on the realm you log in to, e.g. master).</span><span class="l-ja">組織UIを出すには管理テーマ <code>phasetwo.v2</code> を選択（ログインするrealm、たとえばmaster側に設定）</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/p2-inc/keycloak-orgs#readme" rel="noopener">https://github.com/p2-inc/keycloak-orgs#readme</a></li><li><a href="https://github.com/p2-inc/keycloak-orgs/blob/main/docs/note-keycloak-organizations-feature.md" rel="noopener">https://github.com/p2-inc/keycloak-orgs/blob/main/docs/note-keycloak-organizations-feature.md</a></li><li><a href="https://phasetwo.io/docs/introduction" rel="noopener">https://phasetwo.io/docs/introduction</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

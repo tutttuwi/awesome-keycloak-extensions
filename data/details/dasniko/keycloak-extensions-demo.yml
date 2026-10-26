@@ -1,0 +1,21 @@
+repo: dasniko/keycloak-extensions-demo
+researched_at: '2026-10-25'
+sources:
+- https://github.com/dasniko/keycloak-extensions-demo#readme
+can:
+- en: "Provide working examples of many SPI types: authenticators (magic link, CAPTCHA, email-domain restriction, MFA), conditional authenticators, user storage, required actions and validators."
+  ja: 多数のSPIの動く実装例がある。Authenticator（マジックリンク、CAPTCHA、メールドメイン制限、MFA）、条件付きAuthenticator、ユーザーストレージ、Required Action、バリデータなど
+- en: Include examples of event listeners, OIDC token mappers, action tokens, custom REST endpoints, an SMS SPI, Admin Console UI extensions and scheduled tasks.
+  ja: イベントリスナー、OIDCトークンマッパー、Action Token、独自RESTエンドポイント、SMS SPI、管理コンソールUI拡張、スケジュールタスクの例もある
+- en: Include custom email senders (JSON templates, AWS SES instead of SMTP) and password policy extensions.
+  ja: カスタムメール送信（JSONテンプレート、SMTPの代わりにAWS SES）やパスワードポリシー拡張の例もある
+- en: Ship a docker-compose setup that loads all 18 modules, with remote debugging on port 8787.
+  ja: 全18モジュールを読み込むdocker-compose環境付き（ポート8787でリモートデバッグ可）
+cannot:
+- en: Not a production-ready product — demonstration purposes only, provided as-is with no warranty or support.
+  ja: 本番用の製品ではない。デモ用途のみで、保証もサポートもない
+- en: The "Highlander" single-session listener is deprecated (Keycloak has this built in since v23).
+  ja: 単一セッション化の "Highlander" リスナーは非推奨（Keycloak v23以降は標準機能）
+requires:
+- en: "Built against the Keycloak nightly (`999.0.0-SNAPSHOT`); adapt it to your Keycloak version."
+  ja: "Keycloakのnightly（`999.0.0-SNAPSHOT`）向けにビルドされているため、自分のバージョンに合わせて調整が必要"

@@ -1,0 +1,29 @@
+repo: aerogear/keycloak-metrics-spi
+researched_at: '2026-10-25'
+sources:
+- https://github.com/aerogear/keycloak-metrics-spi#readme
+can:
+- en: "Expose a Prometheus-format metrics endpoint at `/realms/<realm>/metrics`."
+  ja: "Prometheus形式のメトリクスエンドポイントを `/realms/<realm>/metrics` に公開"
+- en: Count logins, failed logins, client logins, refresh tokens, code-to-token exchanges and registrations (and their errors), labelled by realm, IdP and client.
+  ja: ログイン・失敗・クライアントログイン・リフレッシュ・コード交換・登録とそのエラーを、realm・IdP・クライアント別のラベル付きで集計
+- en: Record a request-duration histogram per HTTP method, response-error counts and JVM metrics, plus every generic user/admin event.
+  ja: HTTPメソッド別のレスポンス時間ヒストグラム、エラー応答数、JVMメトリクス、全ユーザー/管理イベントも記録
+- en: Push metrics to a Prometheus PushGateway (with basic auth and instance/cluster grouping) for clustered setups.
+  ja: クラスタ構成向けに、Prometheus PushGatewayへのプッシュに対応（Basic認証、インスタンス/クラスタ単位のグルーピング可）
+- en: Optionally add consolidated URI labels and filter them by keyword; a ready-made Grafana dashboard is available.
+  ja: URIラベルの付与とキーワードでの絞り込みも可能。Grafanaダッシュボードも公開されている
+cannot:
+- en: The endpoint returns data for all realms whichever realm is in the URL — there is no per-realm isolation.
+  ja: URLのrealmに関係なく全realmのデータを返す（realm単位の分離はない）
+- en: The endpoint is externally reachable unless you set `DISABLE_EXTERNAL_ACCESS` and forward `X-Forwarded-Host` from your proxy.
+  ja: "`DISABLE_EXTERNAL_ACCESS` を設定してプロキシで `X-Forwarded-Host` を付けない限り、外部からアクセスできてしまう"
+- en: Scraping each node behind a load balancer is problematic — you need the PushGateway.
+  ja: ロードバランサ配下では各ノードのスクレイプが難しく、PushGatewayが必要
+- en: Login counters only cover non-admin users.
+  ja: ログイン系カウンタは管理者以外のユーザーのみが対象
+- en: Low activity — listed as "less active" on the official extensions page, with the last commit in 2024.
+  ja: 活動は低調。公式拡張ページでは "less active" 扱いで、最終コミットは2024年
+requires:
+- en: Copy the JAR into both the build and run stages of the Quarkus image, and enable the `metrics-listener` event listener per realm.
+  ja: QuarkusイメージのビルドとランタイムのJARを両方のステージにコピーし、realmごとに `metrics-listener` を有効化

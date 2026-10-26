@@ -1,0 +1,23 @@
+repo: vymalo/keycloak-phone-number
+researched_at: '2026-10-25'
+sources:
+- https://github.com/vymalo/keycloak-phone-number#readme
+can:
+- en: Log in with a phone number and an SMS one-time code (TAN), instead of or in addition to a password.
+  ja: 電話番号とSMSのワンタイムコード（TAN）でログインできる。パスワードの代わりにも、追加要素としても使える
+- en: Create the user after phone verification if none exists, then let them update their profile.
+  ja: 該当ユーザーがいなければ電話番号の確認後に作成し、続けてプロフィールを更新させられる
+- en: Send SMS through a REST API (basic auth or OAuth2 client credentials) or by publishing events to AMQP, RabbitMQ, Kafka or SNS/SQS.
+  ja: SMSの送信は、REST API（Basic認証またはOAuth2クライアントクレデンシャル）か、AMQP・RabbitMQ・Kafka・SNS/SQSへのイベント送信で行える
+- en: Restrict accepted country codes with a regex.
+  ja: 受け付ける国番号を正規表現で制限できる
+cannot:
+- en: Does not send SMS itself — you need an SMS API or a consumer that delivers the queued messages.
+  ja: SMSを自分では送らない。SMS APIか、キューに積まれたメッセージを配信する仕組みが別途必要
+- en: For queue-based providers, the TAN is validated locally with a fixed 5-minute, one-time TTL.
+  ja: キュー経由の方式では、TANはKeycloak側で検証され、有効期限は5分固定・1回限り
+- en: Configured only through environment variables.
+  ja: 設定は環境変数のみ
+requires:
+- en: The login JAR plus the gateway JAR for your chosen SMS provider in Keycloak's providers directory.
+  ja: ログイン用JARと、選んだSMS送信方式のゲートウェイJARをprovidersに置く

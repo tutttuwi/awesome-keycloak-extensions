@@ -1,0 +1,23 @@
+repo: zloom/keycloak-external-claim-mapper
+researched_at: '2026-10-25'
+sources:
+- https://github.com/zloom/keycloak-external-claim-mapper#readme
+can:
+- en: Fetch JSON from a remote HTTP endpoint and include it in the user's JWT as a claim.
+  ja: 外部HTTPエンドポイントからJSONを取得し、ユーザーのJWTにクレームとして含める
+- en: "Insert the user ID, username or email into the URL and headers via placeholders (`**uid**`, `**uname**`, `**email**`)."
+  ja: "URLやヘッダーに、プレースホルダ（`**uid**`、`**uname**`、`**email**`）でユーザーID・ユーザー名・メールを埋め込める"
+- en: Reshape the response with a JSONPath expression, and add custom headers.
+  ja: JSONPath式でレスポンスを整形でき、任意のヘッダーも追加できる
+- en: Optionally send the user's session token as a bearer token to the remote service.
+  ja: ユーザーのセッショントークンをBearerとして外部サービスに送ることもできる
+cannot:
+- en: Built and tested only with Keycloak 25.0.0 (other versions need your own build and testing).
+  ja: ビルド・テストはKeycloak 25.0.0のみ（他のバージョンは自分でビルド・検証が必要）
+- en: With error propagation on, a failed fetch or transform breaks token issuance (HTTP 500).
+  ja: エラー伝播を有効にすると、取得や変換の失敗でトークン発行自体が失敗する（HTTP 500）
+- en: Uses Keycloak's internal protocol-mapper SPI; last commit in July 2025.
+  ja: Keycloakの内部扱いのProtocol Mapper SPIを使っている。最終コミットは2025年7月
+requires:
+- en: A remote JSON endpoint reachable from Keycloak; add the JAR to a Keycloak 25 image.
+  ja: Keycloakから到達できるJSONのエンドポイント。JARをKeycloak 25のイメージに追加する

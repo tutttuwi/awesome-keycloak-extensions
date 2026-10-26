@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>postgres-keycloak-oauth-validator — Awesome Keycloak Extensions</title>
+<meta name="description" content="PostgreSQL module that validates Keycloak-issued OAuth2 tokens.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">Tool</span><span class="b">Authentication</span><span class="b Active">Active</span></p>
+    <h1 id="name">postgres-keycloak-oauth-validator</h1>
+    <p class="repo"><a href="https://github.com/cloudnative-pg/postgres-keycloak-oauth-validator" rel="noopener">cloudnative-pg/postgres-keycloak-oauth-validator ↗</a></p>
+    <p class="lead"><span class="l-en">PostgreSQL module that validates Keycloak-issued OAuth2 tokens.</span><span class="l-ja">Keycloak発行のOAuth2トークンを検証するPostgreSQLモジュール</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>30</dd></div><div><dt>Forks</dt><dd>5</dd></div><div><dt>Contributors</dt><dd>3</dd></div><div><dt>Updated</dt><dd>2026-09-15</dd></div><div><dt>KC</dt><dd>—</dd></div><div><dt>License</dt><dd>Apache-2.0</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">4</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Let PostgreSQL 18 delegate database role decisions to Keycloak Authorization Services using OAuth tokens (UMA ticket, decision response).</span><span class="l-ja">PostgreSQL 18が、データベースロールの判定をOAuthトークンでKeycloakのAuthorization Servicesに委ねられる（UMAチケット、decision応答）</span></li><li class="c"><span class="l-en">Map each DB role to a Keycloak permission (<code>&lt;resource&gt;#&lt;scope&gt;</code>) and control access with Keycloak policies; designed for CloudNativePG.</span><span class="l-ja">DBロールをKeycloakのパーミッション（<code>&lt;resource&gt;#&lt;scope&gt;</code>）に対応付け、Keycloakのポリシーでアクセスを制御。CloudNativePG向けに設計</span></li><li class="c"><span class="l-en">Log in from psql with the OAuth device flow.</span><span class="l-ja">psqlからOAuthのデバイスフローでログインできる</span></li><li class="c"><span class="l-en">Configure everything through PostgreSQL GUC parameters, with optional issuer (<code>iss</code>) verification.</span><span class="l-ja">設定はすべてPostgreSQLのGUCパラメータで行い、issuer（<code>iss</code>）の検証も任意で可能</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">3</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">Marked experimental.</span><span class="l-ja">実験的（EXPERIMENTAL）と明記されている</span></li><li class="x"><span class="l-en">Requires PostgreSQL 18+ and relies on a Keycloak-specific extension (<code>response_mode=decision</code>), so it does not work with other OAuth servers.</span><span class="l-ja">PostgreSQL 18以上が必要。Keycloak固有の拡張（<code>response_mode=decision</code>）に依存するため、他のOAuthサーバーでは動かない</span></li><li class="x"><span class="l-en">Not a Keycloak extension — it runs inside PostgreSQL.</span><span class="l-ja">Keycloak拡張ではなく、PostgreSQL側で動くモジュール</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">A Keycloak realm with a resource-server client (Authorization Services on), a validator client, resources, scopes, permissions and policies; meson to build.</span><span class="l-ja">リソースサーバー用クライアント（Authorization Servicesを有効化）、検証用クライアント、リソース・スコープ・パーミッション・ポリシーを設定したKeycloakのrealm。ビルドにはmesonが必要</span></li><li class="r"><span class="l-en">Trusted CA certificates in production (no self-signed certs).</span><span class="l-ja">本番環境では信頼されたCAの証明書を使う（自己署名証明書は不可）</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/cloudnative-pg/postgres-keycloak-oauth-validator#readme" rel="noopener">https://github.com/cloudnative-pg/postgres-keycloak-oauth-validator#readme</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

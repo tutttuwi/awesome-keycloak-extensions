@@ -1,0 +1,34 @@
+repo: keycloak/terraform-provider-keycloak
+researched_at: '2026-10-25'
+sources:
+- https://github.com/keycloak/terraform-provider-keycloak#readme
+- https://registry.terraform.io/providers/keycloak/keycloak/latest/docs
+can:
+- en: Manage Keycloak as Terraform resources — realms (keystores, events, localization, user profile, client policies), OIDC and SAML clients, client scopes and protocol mappers.
+  ja: KeycloakをTerraformリソースとして管理。realm（キーストア、イベント、ローカライズ、ユーザープロファイル、クライアントポリシー）、OIDC/SAMLクライアント、クライアントスコープ、プロトコルマッパー
+- en: Manage users, groups, roles and memberships, organizations, required actions and default roles/groups.
+  ja: ユーザー、グループ、ロールと所属、Organization、Required Action、デフォルトロール/グループを管理
+- en: Manage authentication flows, subflows, executions and their configs, plus flow bindings.
+  ja: 認証フロー、サブフロー、Executionと設定、フローのバインドを管理
+- en: Manage identity providers (generic OIDC/SAML, Google, GitHub, Microsoft, Facebook, OpenShift, Kubernetes, SPIFFE) and their mappers.
+  ja: IdP（汎用OIDC/SAML、Google、GitHub、Microsoft、Facebook、OpenShift、Kubernetes、SPIFFE）とマッパーを管理
+- en: Manage LDAP user federation and its mappers, custom user federation, client authorization resources/policies/permissions and fine-grained admin permissions.
+  ja: LDAPユーザーフェデレーションとマッパー、カスタムフェデレーション、クライアント認可（リソース/ポリシー/パーミッション）、細粒度の管理者権限を管理
+- en: Authenticate with client credentials (secret or signed JWT), password grant, a provided access token, and optionally an mTLS client certificate.
+  ja: クライアントクレデンシャル（シークレット/署名JWT）、パスワードグラント、事前発行のアクセストークンで認証でき、mTLSクライアント証明書も使える
+cannot:
+- en: Not a Keycloak extension — it runs from Terraform against the Admin API.
+  ja: Keycloak拡張ではなく、TerraformからAdmin APIを操作するツール
+- en: Officially supports only the latest three minor Keycloak versions (older ones may still work).
+  ja: 公式サポートは最新3つのマイナーバージョンのみ（それ以前も動く可能性はある）
+- en: "The legacy WildFly distribution needs `base_path = \"/auth\"`."
+  ja: "旧WildFlyディストリビューションでは `base_path = \"/auth\"` の設定が必要"
+- en: No statically linked Alpine build since v2.0.0 (use the linux_amd64 build with `libc6-compat`).
+  ja: v2.0.0以降、Alpine向けの静的リンクビルドは提供されない（`libc6-compat` を入れてlinux_amd64版を使う）
+requires:
+- en: Terraform 0.13+ for automatic installation from the registry.
+  ja: Registryから自動インストールするにはTerraform 0.13以上
+- en: A Keycloak client or user with suitable admin roles (e.g. `realm-admin`, or `admin` in the master realm).
+  ja: 適切な管理ロール（`realm-admin`、またはmaster realmの `admin` など）を持つクライアントかユーザー
+- en: "Migrating from `mrparkers/keycloak` needs `terraform state replace-provider`."
+  ja: "`mrparkers/keycloak` からの移行は `terraform state replace-provider` で行う"

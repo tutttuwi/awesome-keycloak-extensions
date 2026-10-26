@@ -1,0 +1,36 @@
+repo: p2-inc/keycloak-events
+researched_at: '2026-10-25'
+sources:
+- https://github.com/p2-inc/keycloak-events#readme
+- https://github.com/p2-inc/keycloak-events/blob/main/COPYING
+can:
+- en: Subscribe to events with webhooks managed through a REST API — select event types, retry with exponential backoff, and send after the transaction commits.
+  ja: REST APIで管理するWebhookでイベントを購読できる。イベント種別の指定、指数バックオフでの再送、トランザクションのコミット後の送信に対応
+- en: Authenticate webhook payloads with an HMAC signature or a bearer JWT signed by the realm key (no shared secret needed).
+  ja: Webhookのペイロードを、HMAC署名か、realmの鍵で署名したBearer JWT（共有シークレット不要）で認証できる
+- en: Send events to an HTTP endpoint with optional HMAC signing and retries.
+  ja: イベントをHTTPエンドポイントへ送信できる（HMAC署名と再送は任意）
+- en: Run JavaScript event listeners (like the script authenticator) configured per realm.
+  ja: realmごとに設定したJavaScriptのイベントリスナーを実行できる（スクリプトAuthenticatorと同じ方式）
+- en: Run several instances of the same listener type with different configs, configured at runtime through realm attributes (REST endpoint included).
+  ja: 同じ種類のリスナーを設定違いで複数動かせる。設定はrealm属性で実行時に変更でき、REST APIもある
+- en: Emit every event as a structured log with MDC fields for Loki/Elasticsearch/CloudWatch; base classes for "user added / removed" listeners are included.
+  ja: 全イベントをMDC付きの構造化ログとして出力（Loki/Elasticsearch/CloudWatch向け）。「ユーザー追加/削除」リスナーの基底クラスもある
+cannot:
+- en: "Licensed under the Elastic License 2.0 — not an OSI open-source license; check the terms before commercial use."
+  ja: ライセンスはElastic License 2.0で、OSI準拠のOSSライセンスではない。商用利用前に条件を確認
+- en: Only the most recent Keycloak version in `pom.xml` is supported.
+  ja: サポートは `pom.xml` に記載の最新Keycloakバージョンのみ
+- en: The stock Admin UI cannot edit the realm attributes used for configuration — use the API, the database or the Phase Two admin theme.
+  ja: 設定に使うrealm属性は標準の管理UIでは編集できない（API、DB直接、またはPhase Twoの管理テーマを使う）
+- en: Configuration values support only single-depth JSON objects.
+  ja: 設定値のJSONは1階層のオブジェクトのみ対応
+- en: The user-change listener is untested with users added via identity providers or federation.
+  ja: ユーザー変更リスナーは、IdPやフェデレーション経由で追加されたユーザーでは未検証
+- en: "For bearer-JWT webhooks, set the realm frontend URL or `KC_HOSTNAME`, otherwise the issuer may not match production tokens."
+  ja: "Bearer JWTのWebhookでは、realmのフロントエンドURLか `KC_HOSTNAME` を設定しないと、issuerが本番のトークンと一致しない場合がある"
+requires:
+- en: "Put the fat JAR in `providers` and rebuild, then enable listeners such as `ext-event-webhook` in Realm Settings > Events."
+  ja: "fat JARを `providers` に置いて再ビルドし、Realm設定 > Eventsで `ext-event-webhook` などのリスナーを有効化"
+- en: "Managing webhooks needs the `view-events` and `manage-events` permissions."
+  ja: "Webhookの管理には `view-events` と `manage-events` の権限が必要"

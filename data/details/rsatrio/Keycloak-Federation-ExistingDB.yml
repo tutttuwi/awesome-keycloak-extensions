@@ -1,0 +1,22 @@
+repo: rsatrio/Keycloak-Federation-ExistingDB
+researched_at: '2026-10-25'
+sources:
+- https://github.com/rsatrio/Keycloak-Federation-ExistingDB#readme
+- https://mrizkysatrio.medium.com/keycloak-integration-with-existing-database-587c119db3ae
+can:
+- en: Let users log in with credentials from an existing database through any JDBC datasource (user federation).
+  ja: JDBCで接続できる既存DBの認証情報で、ユーザーがログインできる（ユーザーフェデレーション）
+- en: Configure the password lookup and user-data queries (by email) from the admin console.
+  ja: パスワード取得とユーザー情報取得のクエリ（メールで検索）を管理コンソールで設定できる
+cannot:
+- en: Email is the only login name.
+  ja: ログイン名に使えるのはメールアドレスだけ
+- en: The user-data query may return only two columns (email and firstName).
+  ja: ユーザー情報のクエリが返せる列は2つ（emailとfirstName）だけ
+- en: Built and tested on WildFly-based Keycloak 11 with Java 8 (JNDI datasource) — not documented for current Keycloak.
+  ja: WildFly版Keycloak 11とJava 8（JNDIデータソース）でビルド・テストされたもので、現行Keycloak向けの手順はない
+- en: A simple example; inactive since 2023.
+  ja: シンプルな実装例で、2023年以降は更新がない
+requires:
+- en: A JDBC driver and datasource registered in Keycloak's WildFly server.
+  ja: KeycloakのWildFlyにJDBCドライバとデータソースを登録しておく

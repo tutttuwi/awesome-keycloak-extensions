@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-account-events — Awesome Keycloak Extensions</title>
+<meta name="description" content="Let users read their own login history.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">SPI</span><span class="b">Monitoring / Audit</span><span class="b Active">Active</span></p>
+    <h1 id="name">keycloak-account-events</h1>
+    <p class="repo"><a href="https://github.com/AdrianIAna/keycloak-account-events" rel="noopener">AdrianIAna/keycloak-account-events ↗</a></p>
+    <p class="lead"><span class="l-en">Let users read their own login history.</span><span class="l-ja">ユーザー自身がログイン履歴を参照できる</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>0</dd></div><div><dt>Forks</dt><dd>0</dd></div><div><dt>Contributors</dt><dd>2</dd></div><div><dt>Updated</dt><dd>2026-09-02</dd></div><div><dt>KC</dt><dd>26.7.2</dd></div><div><dt>License</dt><dd>Apache-2.0</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">4</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Let users fetch their own login history (login, logout, login errors, …) with their own access token at <code>/realms/{realm}/account-events/me</code> — no admin credentials.</span><span class="l-ja">ユーザーが自分のアクセストークンで、自分のログイン履歴（ログイン・ログアウト・ログインエラーなど）を <code>/realms/{realm}/account-events/me</code> から取得できる。管理者の認証情報は不要</span></li><li class="c"><span class="l-en">Scope results strictly to the token&#x27;s subject, with the same checks as Keycloak&#x27;s account API (audience, roles, CORS, no service accounts).</span><span class="l-ja">結果はトークンの本人分だけに限定され、Keycloakのアカウント APIと同じチェック（audience、ロール、CORS、サービスアカウントの拒否）を通る</span></li><li class="c"><span class="l-en">Pass through custom event details — combined with keycloak-event-enrichment, each event carries location and device info.</span><span class="l-ja">イベントの独自詳細もそのまま返す。keycloak-event-enrichmentと組み合わせれば、各イベントに位置と端末の情報が付く</span></li><li class="c"><span class="l-en">Works even when the account console feature is disabled.</span><span class="l-ja">アカウントコンソール機能を無効にしていても動く</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">3</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">Returns an empty list unless user events are saved for the realm (off by default).</span><span class="l-ja">realmでユーザーイベントの保存を有効にしないと、常に空のリストが返る（既定ではオフ）</span></li><li class="x"><span class="l-en">No UI is included — it is an API for your own screens.</span><span class="l-ja">UIは付属しない。自作画面のためのAPI</span></li><li class="x"><span class="l-en">Requires Keycloak 26.6+ and uses an internal SPI (<code>realm-restapi-extension</code>), so a warning is logged and future versions may break it.</span><span class="l-ja">Keycloak 26.6以上が必要。内部SPI（<code>realm-restapi-extension</code>）を使うため警告が出て、将来のバージョンで壊れる可能性もある</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">Copy the JAR to <code>/opt/keycloak/providers/</code>, run <code>kc.sh build</code>, and enable &quot;Save events&quot; for LOGIN, LOGOUT and LOGIN_ERROR.</span><span class="l-ja">JARを <code>/opt/keycloak/providers/</code> に置いて <code>kc.sh build</code> し、LOGIN・LOGOUT・LOGIN_ERRORのイベント保存を有効化</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/AdrianIAna/keycloak-account-events#readme" rel="noopener">https://github.com/AdrianIAna/keycloak-account-events#readme</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

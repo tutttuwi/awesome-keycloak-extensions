@@ -1,0 +1,23 @@
+repo: embesozzi/keycloak-openfga-event-publisher
+researched_at: '2026-10-25'
+sources:
+- https://github.com/embesozzi/keycloak-openfga-event-publisher#readme
+can:
+- en: Listen to admin events about users, roles and groups (role assignments, composite roles, group membership) and publish them to OpenFGA as relationship tuples.
+  ja: ユーザー・ロール・グループに関するAdminイベント（ロールの付与、ロール同士の関係、グループ所属）を受け取り、OpenFGAに関係タプルとして送信
+- en: Lets apps and APIs use OpenFGA (ReBAC, Zanzibar-style) as the policy decision point while Keycloak stays the source of roles.
+  ja: ロールの管理はKeycloakのまま、アプリやAPIはOpenFGA（ReBAC、Zanzibar方式）をポリシー判定点として使える
+- en: Ships an editable authorization model, and discovers the store and model IDs automatically when they are not set.
+  ja: 編集可能な認可モデルが付属。ストアIDとモデルIDは未設定なら自動で検出
+cannot:
+- en: Only syncs the identity/role/group model events it handles — the README does not describe initial bulk sync of existing data.
+  ja: 同期されるのは対応しているIdentity/ロール/グループのイベントだけ。既存データの初回一括同期についてはREADMEに記載がない
+- en: "If the API URL is unset it falls back to `http://openfga:8080`, meant for demos only."
+  ja: "API URLを設定しないと、デモ用の `http://openfga:8080` が使われる"
+- en: Not tested on the WildFly-based distribution.
+  ja: WildFly版ディストリビューションでは未検証
+- en: Inactive — no commits since July 2024.
+  ja: 2024年7月以降コミットがなく、活動停止状態
+requires:
+- en: A running OpenFGA server; copy the JAR to `providers`, set the `KC_SPI_EVENTS_LISTENER_OPENFGA_EVENTS_PUBLISHER_*` variables and enable `openfga-events-publisher` per realm.
+  ja: "稼働中のOpenFGAサーバー。JARを `providers` に置き、`KC_SPI_EVENTS_LISTENER_OPENFGA_EVENTS_PUBLISHER_*` を設定して、realmごとに `openfga-events-publisher` を有効化"

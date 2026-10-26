@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-quarkus-extensions — Awesome Keycloak Extensions</title>
+<meta name="description" content="Add Quarkus extensions or other dependencies to a Keycloak build.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">Tool</span><span class="b">Config as code / DevOps</span><span class="b Active">Active</span></p>
+    <h1 id="name">keycloak-quarkus-extensions</h1>
+    <p class="repo"><a href="https://github.com/mabartos/keycloak-quarkus-extensions" rel="noopener">mabartos/keycloak-quarkus-extensions ↗</a></p>
+    <p class="lead"><span class="l-en">Add Quarkus extensions or other dependencies to a Keycloak build.</span><span class="l-ja">KeycloakビルドにQuarkus拡張や依存を追加</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>21</dd></div><div><dt>Forks</dt><dd>1</dd></div><div><dt>Contributors</dt><dd>1</dd></div><div><dt>Updated</dt><dd>2026-10-22</dd></div><div><dt>KC</dt><dd>26.7.1</dd></div><div><dt>License</dt><dd>Apache-2.0</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">3</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Build a custom Keycloak distribution that includes Quarkus/Quarkiverse extensions (or other dependencies), the same way Keycloak itself is built.</span><span class="l-ja">Quarkus/Quarkiverseの拡張（や他の依存関係）を組み込んだKeycloakディストリビューションを、Keycloak本体と同じ方法でビルドできる</span></li><li class="c"><span class="l-en">Output tar.gz/zip distributions or a container image.</span><span class="l-ja">成果物はtar.gz/zipのディストリビューションか、コンテナイメージ</span></li><li class="c"><span class="l-en">Supports Keycloak 26.4.x, 26.6.x–26.8.x and nightly.</span><span class="l-ja">Keycloak 26.4.x、26.6.x〜26.8.x、nightlyに対応</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">2</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">Not a runtime extension — it is a build tool, so you run your own extended Keycloak build.</span><span class="l-ja">実行時の拡張ではなくビルドツール。拡張したKeycloakを自前でビルドして運用する形になる</span></li><li class="x"><span class="l-en">Only the listed Keycloak/Quarkus version pairs are supported.</span><span class="l-ja">対応しているのは、表に記載されたKeycloakとQuarkusの組み合わせのみ</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">A build environment for the tool (see the examples and advanced configuration guides).</span><span class="l-ja">ツール用のビルド環境（examplesと詳細設定ガイドを参照）</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/mabartos/keycloak-quarkus-extensions#readme" rel="noopener">https://github.com/mabartos/keycloak-quarkus-extensions#readme</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

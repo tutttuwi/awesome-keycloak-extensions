@@ -45,6 +45,8 @@ label.chk{display:inline-flex;gap:6px;align-items:center;color:var(--muted);font
 .stats{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:8px}
 .stats b{color:var(--ink);font-weight:600}
 .note{font-size:12px;color:var(--warn)}
+.more{align-self:flex-start;font-size:14px;font-weight:600;padding:6px 12px;margin-top:2px;border:1px solid var(--line);border-radius:8px}
+.more:hover{text-decoration:none;border-color:var(--accent);background:var(--bg)}
 .empty{padding:40px 0;text-align:center;color:var(--muted)}
 footer{padding-bottom:40px;color:var(--muted);font-size:13px}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
@@ -109,10 +111,14 @@ footer{padding-bottom:40px;color:var(--muted);font-size:13px}
 <script>
 (() => {
   const $ = id => document.getElementById(id);
-  const state = {src:"all", lang:(navigator.language||"en").startsWith("ja")?"ja":"en"};
+  const LANG_KEY = "akx-lang";
+  let saved = null;
+  try { saved = localStorage.getItem(LANG_KEY); } catch (e) {}
+  const state = {src:"all", lang:(saved === "en" || saved === "ja") ? saved : ((navigator.language||"en").startsWith("ja")?"ja":"en")};
   let DATA = null;
 
   const fmt = n => (n === null || n === undefined) ? "—" : n.toLocaleString("en-US");
+  const safeDetail = u => (typeof u === "string" && /^p\/[\w.-]+\/[\w.-]+\.html$/.test(u)) ? u : null;
   const safeUrl = u => (typeof u === "string" && u.startsWith("https://github.com/")) ? u : "#";
   const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
 
@@ -183,6 +189,11 @@ footer{padding-bottom:40px;color:var(--muted);font-size:13px}
     s.appendChild(stat("License", p.license || "—"));
     c.appendChild(s);
     if (p.note) c.appendChild(el("div","note",p.note));
+    const det = safeDetail(p.detail);
+    if (det){
+      const l = el("a","more", state.lang === "ja" ? "できること・できないこと →" : "What it can / cannot do →");
+      l.href = det; c.appendChild(l);
+    }
     return c;
   }
 
@@ -203,7 +214,7 @@ footer{padding-bottom:40px;color:var(--muted);font-size:13px}
   }).catch(() => { $("meta").textContent = "Failed to load data.json"; });
 
   seg("src","src",render);
-  seg("lang","lang",() => { syncLang(); render(); });
+  seg("lang","lang",() => { try { localStorage.setItem(LANG_KEY, state.lang); } catch (e) {} syncLang(); render(); });
   ["q","kind","genre","act","sort"].forEach(id => $(id).addEventListener(id==="q"?"input":"change", render));
   syncLang();
 })();

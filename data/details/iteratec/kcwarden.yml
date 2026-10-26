@@ -1,0 +1,28 @@
+repo: iteratec/kcwarden
+researched_at: '2026-10-25'
+sources:
+- https://github.com/iteratec/kcwarden#readme
+- https://iteratec.github.io/kcwarden/
+can:
+- en: Audit a realm export for security and correctness misconfigurations, based on the OAuth 2.0 Security BCP (RFC 9700) plus Keycloak-specific checks.
+  ja: realmエクスポートを解析し、OAuth 2.0 Security BCP（RFC 9700）とKeycloak固有のルールでセキュリティ・設定ミスを検出
+- en: Check OIDC clients in depth (PKCE, implicit/direct grants, wildcard or plain-HTTP redirect URIs, web origins, full scope, offline access, token lifespans) and service accounts.
+  ja: OIDCクライアント（PKCE、Implicit/Direct Grant、ワイルドカードやHTTPのリダイレクトURI、Web Origins、Full Scope、オフラインアクセス、トークン有効期間）とサービスアカウントを詳しくチェック
+- en: '"Monitors" flag config drift specific to your setup, e.g. which groups hold a sensitive role, against an allowlist.'
+  ja: 「Monitor」で、機密ロールを持つグループなど環境固有の設定のずれを、許可リストと照合して検出
+- en: Download the config itself (password or service-account auth) and output findings as txt, CSV or JSON, with severity filters.
+  ja: 設定の取得（パスワード認証またはサービスアカウント）も自分ででき、結果はtxt/CSV/JSONで出力、重大度で絞り込み可能
+- en: Fail CI pipelines on findings (exit code 42), silence findings via a config file, and add custom auditors as plugins.
+  ja: 検出時にCIを失敗させられる（終了コード42）。設定ファイルで検出の抑制、プラグインで独自Auditorの追加も可能
+cannot:
+- en: Not a Keycloak extension — a Python CLI / container that analyses exported configuration.
+  ja: Keycloak拡張ではなく、エクスポートした設定を解析するPythonのCLI/コンテナ
+- en: Still in beta and does not cover all of Keycloak — IdPs are only lightly checked.
+  ja: まだベータ版で、Keycloakのすべては網羅していない。IdPは軽くチェックする程度
+- en: Per its coverage page, LDAP/SAML IdPs, user federation, IdP mappers, authentication flows and required actions are not audited at all (some SAML client checks exist).
+  ja: カバー範囲のページによると、LDAP/SAMLのIdP、ユーザーフェデレーション、IdPマッパー、認証フロー、Required Actionは監査対象外（SAMLクライアントのチェックは一部あり）
+- en: It cannot know your context — environment-specific problems need hand-written monitors, and it tends to over-report.
+  ja: 利用環境の事情はわからないため、固有の問題はMonitorを自分で書く必要がある。また検出は多めに出る傾向
+requires:
+- en: Python (pip) or the container image, plus a realm export or an account with `manage-realm`, `manage-clients` and `manage-users`.
+  ja: Python（pip）かコンテナイメージ。加えてrealmエクスポート、または `manage-realm`/`manage-clients`/`manage-users` を持つアカウント

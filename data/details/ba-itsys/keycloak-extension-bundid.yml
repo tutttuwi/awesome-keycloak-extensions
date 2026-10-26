@@ -1,0 +1,23 @@
+repo: ba-itsys/keycloak-extension-bundid
+researched_at: '2026-10-25'
+sources:
+- https://github.com/ba-itsys/keycloak-extension-bundid#readme
+can:
+- en: Use BundID (the German federal citizen ID service) as a SAML identity provider — the extension enriches SAML requests with the required trust levels, requested attributes and display information.
+  ja: ドイツ連邦の市民ID基盤BundIDをSAMLのIdPとして使える。SAMLリクエストに必要な信頼レベル・要求属性・表示情報を自動で付与
+- en: Map BundID attributes (incl. email and authentication timestamp) into the session and on into OIDC tokens, with per-attribute exclusions.
+  ja: BundIDの属性（メールや認証時刻を含む）をセッションへ、さらにOIDCトークンへマッピング。属性ごとに除外も可能
+- en: Request a minimum Level of Authentication (1–4) via step-up authentication, or enforce an absolute minimum level.
+  ja: ステップアップ認証で最低限の認証レベル（LoA 1〜4）を要求でき、絶対的な最低レベルの強制も可能
+- en: Send the mandatory BundID fields (organization display name, online service ID).
+  ja: BundIDが必須とする項目（組織表示名、オンラインサービスID）を送信
+cannot:
+- en: Only for German authorities / services admitted to BundID.
+  ja: 対象はBundIDに接続を認められたドイツの行政機関・サービスのみ
+- en: Most documentation is in German.
+  ja: ドキュメントの大部分はドイツ語
+- en: Each release is tested only with the Keycloak version in its `pom.xml`.
+  ja: 各リリースの検証は `pom.xml` に記載のKeycloakバージョンのみ
+requires:
+- en: "A SAML IdP named `bundid` (or set `KC_SPI_SAML_AUTHENTICATION_PREPROCESSOR_BUNDID_PROTOCOL_ACTIVE_FOR_IDP`), plus the online service ID and organization display name settings."
+  ja: "`bundid` という名前のSAML IdP（または `KC_SPI_SAML_AUTHENTICATION_PREPROCESSOR_BUNDID_PROTOCOL_ACTIVE_FOR_IDP` で指定）と、オンラインサービスID・組織表示名の設定"

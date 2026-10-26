@@ -1,0 +1,30 @@
+repo: InseeFr/Keycloak-FranceConnect
+researched_at: '2026-10-25'
+sources:
+- https://github.com/InseeFr/Keycloak-FranceConnect#readme
+- https://github.com/InseeFr/Keycloak-FranceConnect/blob/main/README.en.md
+can:
+- en: Add FranceConnect (French citizen login) as an identity provider, including FranceConnect+ (eIDAS substantial/high) and integration or production environments.
+  ja: フランスの公的個人認証FranceConnectをIdPとして追加できる。FranceConnect+（eIDAS 2/3レベル）、統合環境・本番環境の切り替えにも対応
+- en: Add ProConnect (formerly AgentConnect) for public-sector and professional accounts, with an optional 2FA mode.
+  ja: 公務員・事業者向けのProConnect（旧AgentConnect）も追加でき、2FAモードも選べる
+- en: Request an eIDAS level, verify signatures, and handle logout better than the stock broker.
+  ja: eIDASレベルの指定、署名検証、標準ブローカーより改善されたログアウトに対応
+- en: Create the main attribute mappers automatically and reconcile with existing accounts using the "pivot identity".
+  ja: 主要な属性マッパーを自動作成し、「ピボットID」で既存アカウントと自動照合できる
+- en: Show FranceConnect / ProConnect buttons via the bundled login theme (`fc-ac-theme`).
+  ja: 同梱のログインテーマ（`fc-ac-theme`）でFranceConnect/ProConnectのボタンを表示
+cannot:
+- en: Only useful for French government identity services — you need a partner account and client credentials from FranceConnect/ProConnect.
+  ja: フランス政府の認証サービス専用。FranceConnect/ProConnectのパートナー登録とクライアント情報が必要
+- en: The legacy FranceConnect standard V1 offer was scheduled to end in 2025 and is not carried into the new environment names.
+  ja: 旧FranceConnect標準V1は2025年に終了予定で、新しい環境名には引き継がれていない
+- en: ProConnect 2FA is not compatible with every ProConnect identity provider.
+  ja: ProConnectの2FAは、すべてのProConnect IdPで使えるわけではない
+- en: Older versions (4.x–6.1) cannot be configured from the admin UI on some Keycloak versions; upgrading from old versions is best done by deleting the IdP config.
+  ja: 旧バージョン（4.x〜6.1）は、Keycloakのバージョンによって管理UIから設定できない。旧版からの移行はIdP設定をいったん削除するのが推奨
+- en: The main README is in French (an English version exists).
+  ja: メインのREADMEはフランス語（英語版もある）
+requires:
+- en: Version 7.x for Keycloak 25+; copy the JAR into `providers` (hot deploy should work).
+  ja: Keycloak 25以上はバージョン7.x。JARを `providers` に置く（ホットデプロイも可能）

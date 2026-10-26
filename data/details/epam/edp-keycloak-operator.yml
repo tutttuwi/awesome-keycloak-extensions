@@ -1,0 +1,28 @@
+repo: epam/edp-keycloak-operator
+researched_at: '2026-10-25'
+sources:
+- https://github.com/epam/edp-keycloak-operator#readme
+- https://docs.kuberocketci.io/
+can:
+- en: Configure existing Keycloak instances from Kubernetes or OpenShift with custom resources (Keycloak connection, realms, groups, clients, realm users and more).
+  ja: KubernetesやOpenShiftから、カスタムリソース（Keycloak接続、realm、グループ、クライアント、realmユーザーなど）で既存のKeycloakを設定できる
+- en: Reconcile resources continuously, with cluster-scoped variants (`ClusterKeycloak`, `ClusterKeycloakRealm`).
+  ja: 状態を継続的にリコンサイルし、クラスタスコープのリソース（`ClusterKeycloak`、`ClusterKeycloakRealm`）も使える
+- en: "Keep resources in Keycloak when the CR is deleted (`edp.epam.com/preserve-resources-on-deletion` annotation)."
+  ja: "CRを削除してもKeycloak側のリソースを残せる（`edp.epam.com/preserve-resources-on-deletion` アノテーション）"
+- en: Install via Helm; its Go Admin REST API client can also be used as a standalone library.
+  ja: Helmでインストールできる。内蔵のGo製Admin REST APIクライアントは単体のライブラリとしても使える
+cannot:
+- en: Does not install or run Keycloak itself — it only configures an existing instance.
+  ja: Keycloak自体のインストールや運用はしない。既存インスタンスを設定するだけ
+- en: Supports Keycloak 26.4 to 26.8 only.
+  ja: 対応はKeycloak 26.4〜26.8のみ
+- en: Resources must be deleted in order (realm resources, then realms, then the Keycloak CR) or they can get stuck.
+  ja: リソースは順番に削除しないと（realm内リソース → realm → Keycloak CR）削除処理が止まることがある
+- en: The operator user only has realm-management roles on realms it created; other realms need extra roles.
+  ja: オペレーター用ユーザーが管理ロールを持つのは自分で作成したrealmだけ。それ以外のrealmには追加のロールが必要
+requires:
+- en: Kubernetes 1.32+ or OpenShift 4.19+, Helm 3, cluster-admin access, and cert-manager (unless webhooks are disabled).
+  ja: Kubernetes 1.32以上かOpenShift 4.19以上、Helm 3、クラスタ管理者権限、cert-manager（Webhookを無効にする場合は不要）
+- en: "A Keycloak master-realm user with `create-realm`, stored in a Kubernetes secret."
+  ja: "`create-realm` ロールを持つmaster realmのユーザーを、KubernetesのSecretに登録"

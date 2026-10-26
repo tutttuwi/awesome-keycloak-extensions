@@ -1,0 +1,26 @@
+repo: sventorben/keycloak-home-idp-discovery
+researched_at: '2026-10-25'
+sources:
+- https://github.com/sventorben/keycloak-home-idp-discovery#readme
+- https://sventorben.github.io/keycloak-home-idp-discovery/
+can:
+- en: Show a username-only form and redirect the user to their home IdP based on the email domain, skipping the IdP selection list.
+  ja: ユーザー名だけのフォームを表示し、メールドメインからホームIdPを判定して自動リダイレクト（IdP選択画面を省略）
+- en: Match on a custom user attribute such as a UPN instead of the email.
+  ja: メールの代わりにUPNなど任意のユーザー属性で判定できる
+- en: "Skip the login page entirely when the address comes as an OIDC `login_hint` or SAML NameID."
+  ja: "OIDCの `login_hint` やSAMLのNameIDで渡された場合はログイン画面ごと省略できる"
+- en: Forward already-federated users to a linked IdP even if no domain matches; they may log in with their local username.
+  ja: ドメインが一致しなくても、リンク済みIdPへ転送できる（ローカルのユーザー名でも可）
+- en: Bind it per realm or per client by using it in a custom browser flow.
+  ja: カスタムのブラウザフローに組み込み、realm単位でもクライアント単位でも使える
+cannot:
+- en: "Users with an unverified email are not forwarded unless you enable `Forward users with unverified email` (or trust the IdP's email)."
+  ja: "メール未検証のユーザーは転送されない（`Forward users with unverified email` を有効にするか、IdP側のメールを信頼する設定が必要）"
+- en: "The login page is never bypassed when `prompt=login|consent|select_account`, `max_age` or SAML `ForceAuthn` is present."
+  ja: "`prompt=login|consent|select_account`、`max_age`、SAMLの `ForceAuthn` があるとログイン画面は省略されない"
+- en: The legacy WildFly-based distribution is no longer supported, and older versions get no backports.
+  ja: 旧WildFlyベースのディストリビューションはサポート外。旧バージョンへのバックポートもなし
+requires:
+- en: Use the extension's major version that matches your Keycloak major version.
+  ja: Keycloakのメジャーバージョンに合わせた拡張バージョンを使う

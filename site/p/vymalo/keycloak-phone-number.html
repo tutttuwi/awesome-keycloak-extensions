@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-phone-number — Awesome Keycloak Extensions</title>
+<meta name="description" content="Log in with a phone number and SMS OTP.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b">Community</span><span class="b">SPI</span><span class="b">Authentication</span><span class="b Active">Active</span></p>
+    <h1 id="name">keycloak-phone-number</h1>
+    <p class="repo"><a href="https://github.com/vymalo/keycloak-phone-number" rel="noopener">vymalo/keycloak-phone-number ↗</a></p>
+    <p class="lead"><span class="l-en">Log in with a phone number and SMS OTP.</span><span class="l-ja">電話番号+SMS OTPでログイン</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>55</dd></div><div><dt>Forks</dt><dd>19</dd></div><div><dt>Contributors</dt><dd>7</dd></div><div><dt>Updated</dt><dd>2026-07-24</dd></div><div><dt>KC</dt><dd>26.5.2</dd></div><div><dt>License</dt><dd>MIT</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">4</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Log in with a phone number and an SMS one-time code (TAN), instead of or in addition to a password.</span><span class="l-ja">電話番号とSMSのワンタイムコード（TAN）でログインできる。パスワードの代わりにも、追加要素としても使える</span></li><li class="c"><span class="l-en">Create the user after phone verification if none exists, then let them update their profile.</span><span class="l-ja">該当ユーザーがいなければ電話番号の確認後に作成し、続けてプロフィールを更新させられる</span></li><li class="c"><span class="l-en">Send SMS through a REST API (basic auth or OAuth2 client credentials) or by publishing events to AMQP, RabbitMQ, Kafka or SNS/SQS.</span><span class="l-ja">SMSの送信は、REST API（Basic認証またはOAuth2クライアントクレデンシャル）か、AMQP・RabbitMQ・Kafka・SNS/SQSへのイベント送信で行える</span></li><li class="c"><span class="l-en">Restrict accepted country codes with a regex.</span><span class="l-ja">受け付ける国番号を正規表現で制限できる</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">3</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">Does not send SMS itself — you need an SMS API or a consumer that delivers the queued messages.</span><span class="l-ja">SMSを自分では送らない。SMS APIか、キューに積まれたメッセージを配信する仕組みが別途必要</span></li><li class="x"><span class="l-en">For queue-based providers, the TAN is validated locally with a fixed 5-minute, one-time TTL.</span><span class="l-ja">キュー経由の方式では、TANはKeycloak側で検証され、有効期限は5分固定・1回限り</span></li><li class="x"><span class="l-en">Configured only through environment variables.</span><span class="l-ja">設定は環境変数のみ</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">The login JAR plus the gateway JAR for your chosen SMS provider in Keycloak&#x27;s providers directory.</span><span class="l-ja">ログイン用JARと、選んだSMS送信方式のゲートウェイJARをprovidersに置く</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/vymalo/keycloak-phone-number#readme" rel="noopener">https://github.com/vymalo/keycloak-phone-number#readme</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

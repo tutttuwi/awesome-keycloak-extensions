@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-wsfed — Awesome Keycloak Extensions</title>
+<meta name="description" content="WS-Federation protocol support.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">SPI</span><span class="b">Protocol (CAS / WS-Fed)</span><span class="b Inactive">Inactive</span></p>
+    <h1 id="name">keycloak-wsfed</h1>
+    <p class="repo"><a href="https://github.com/cloudtrust/keycloak-wsfed" rel="noopener">cloudtrust/keycloak-wsfed ↗</a></p>
+    <p class="lead"><span class="l-en">WS-Federation protocol support.</span><span class="l-ja">WS-Federationプロトコル対応</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>38</dd></div><div><dt>Forks</dt><dd>31</dd></div><div><dt>Contributors</dt><dd>14</dd></div><div><dt>Updated</dt><dd>2020-11-02</dd></div><div><dt>KC</dt><dd>—</dd></div><div><dt>License</dt><dd>AGPL-3.0</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">4</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Add WS-Federation (passive requestor profile) as a client protocol, with Keycloak acting as IdP/STS — e.g. for SharePoint.</span><span class="l-ja">WS-Federation（パッシブリクエスタ）をクライアントプロトコルとして追加し、KeycloakをIdP/STSとして使える（SharePointなど）</span></li><li class="c"><span class="l-en">Broker to other WS-Fed IdPs, with Keycloak acting as an identity broker.</span><span class="l-ja">Keycloakをブローカーとして、他のWS-Fed IdPと連携できる</span></li><li class="c"><span class="l-en">Issue SAML 2.0 or SAML 1.1 tokens, optionally encrypted, with front- or back-channel logout.</span><span class="l-ja">SAML 2.0/1.1のトークンを発行し（暗号化も可）、フロントチャネル/バックチャネルのログアウトに対応</span></li><li class="c"><span class="l-en">Use SAML mappers plus a JavaScript mapper, and publish WS-Fed metadata.</span><span class="l-ja">SAMLのマッパーに加え、JavaScriptマッパーも使える。WS-Fedのメタデータも公開</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">3</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">Only passive (web) requestors — active requestors and the optional attribute and pseudonym services are not supported.</span><span class="l-ja">対応はパッシブ（Web）リクエスタのみ。アクティブリクエスタや、任意機能の属性サービス・仮名サービスには非対応</span></li><li class="x"><span class="l-en">Built for Keycloak 8.0.1 on WildFly (<code>standalone.xml</code>, admin theme <code>wsfed</code>) — not usable on current Keycloak without porting.</span><span class="l-ja">WildFly上のKeycloak 8.0.1向け（<code>standalone.xml</code>、管理テーマ <code>wsfed</code>）。現行Keycloakでは移植しないと使えない</span></li><li class="x"><span class="l-en">Inactive since 2020, and licensed under AGPL-3.0.</span><span class="l-ja">2020年以降は活動停止。ライセンスはAGPL-3.0</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">Build cloudtrust-common first, then install the module and set the <code>wsfed</code> admin theme.</span><span class="l-ja">先にcloudtrust-commonをビルドしてからモジュールを導入し、管理テーマを <code>wsfed</code> にする</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/cloudtrust/keycloak-wsfed#readme" rel="noopener">https://github.com/cloudtrust/keycloak-wsfed#readme</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

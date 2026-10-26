@@ -1,0 +1,24 @@
+repo: ba-itsys/keycloak-push-mfa-extension
+researched_at: '2026-10-25'
+sources:
+- https://github.com/ba-itsys/keycloak-push-mfa-extension#readme
+- https://github.com/ba-itsys/keycloak-push-mfa-extension/blob/main/docs/security.md
+can:
+- en: Add push-based MFA — the user approves or denies a login in a mobile app enrolled to their account.
+  ja: プッシュ通知によるMFAを追加できる。ユーザーは登録済みのモバイルアプリでログインを承認・拒否する
+- en: Keep the app pseudonymous (it only sees a credential ID) and bind approvals to the enrolled device key, with DPoP-bound access tokens for the app's API calls.
+  ja: アプリ側は資格情報のIDしか知らない仮名的な設計で、承認は登録した端末の鍵に紐づく。アプリのAPI呼び出しにはDPoPで束縛したアクセストークンを使う
+- en: Update the browser over SSE across cluster nodes via shared storage, with heartbeats and stream rotation.
+  ja: 共有ストレージ経由で、クラスタの複数ノードにまたがってSSEでブラウザに状態を通知（ハートビートとストリームのローテーション付き）
+- en: Send real notifications via the bundled Firebase Cloud Messaging provider, or plug in your own push, event and rate-limit SPIs; test with a simulator.
+  ja: 同梱のFirebase Cloud Messagingプロバイダーで実際に通知を送れる。プッシュ・イベント・レート制限は独自SPIに差し替え可能。シミュレータでのテストにも対応
+- en: Only explicit denials count toward Keycloak's brute-force protection — timeouts and rate limits do not lock users out.
+  ja: Keycloakのブルートフォース対策にカウントされるのは明示的な拒否だけ。タイムアウトやレート制限ではユーザーはロックされない
+cannot:
+- en: No mobile app is included — you implement the app yourself (an implementation guide and API reference are provided).
+  ja: モバイルアプリは含まれていない。アプリは自分で実装する必要がある（実装ガイドとAPIリファレンスあり）
+- en: Not WebAuthn/passkeys — it borrows some passkey ideas but is a separate protocol.
+  ja: WebAuthnやパスキーではない。考え方の一部を借りているが、別のプロトコル
+requires:
+- en: "Copy the JAR to `providers/` and restart; FCM needs a Google service account (`GOOGLE_APPLICATION_CREDENTIALS`) and project URL."
+  ja: "JARを `providers/` に置いて再起動。FCMを使う場合はGoogleのサービスアカウント（`GOOGLE_APPLICATION_CREDENTIALS`）とプロジェクトURLが必要"

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-json-remote-claim — Awesome Keycloak Extensions</title>
+<meta name="description" content="Protocol mapper that adds claims fetched from a remote JSON endpoint.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">SPI</span><span class="b">Protocol Mapper / Claim</span><span class="b Inactive">Inactive</span></p>
+    <h1 id="name">keycloak-json-remote-claim</h1>
+    <p class="repo"><a href="https://github.com/groupe-sii/keycloak-json-remote-claim" rel="noopener">groupe-sii/keycloak-json-remote-claim ↗</a></p>
+    <p class="lead"><span class="l-en">Protocol mapper that adds claims fetched from a remote JSON endpoint.</span><span class="l-ja">外部JSON APIから取得した値をクレームに追加</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>56</dd></div><div><dt>Forks</dt><dd>30</dd></div><div><dt>Contributors</dt><dd>3</dd></div><div><dt>Updated</dt><dd>2020-01-08</dd></div><div><dt>KC</dt><dd>8.0.1</dd></div><div><dt>License</dt><dd>Apache-2.0</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">3</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Add a protocol mapper that fetches a JSON value from a remote HTTP/REST endpoint and puts it into a token claim (any JSON type).</span><span class="l-ja">外部のHTTP/REST APIからJSONを取得してトークンのクレームに入れるプロトコルマッパーを追加（JSONの型は問わない）</span></li><li class="c"><span class="l-en">Optionally send the username and client ID, plus custom query parameters and HTTP headers.</span><span class="l-ja">ユーザー名やクライアントIDの送信、任意のクエリパラメータやHTTPヘッダーの付与もできる</span></li><li class="c"><span class="l-en">Make a single request when several tokens are issued in one response.</span><span class="l-ja">1つのレスポンスで複数のトークンを発行する場合も、リクエストは1回で済む</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">4</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">If the remote claim cannot be fetched, no token is issued (HTTP 500).</span><span class="l-ja">外部からクレームを取得できないとトークンが発行されない（HTTP 500になる）</span></li><li class="x"><span class="l-en">Built for Keycloak 8 on WildFly (<code>standalone.xml</code> modules) — not documented for Quarkus-based Keycloak.</span><span class="l-ja">WildFly上のKeycloak 8向け（<code>standalone.xml</code> のモジュール登録）。Quarkus版Keycloakでの手順は記載がない</span></li><li class="x"><span class="l-en">Uses the unofficial Protocol Mapper SPI.</span><span class="l-ja">非公式扱いのProtocol Mapper SPIを使っている</span></li><li class="x"><span class="l-en">The repository is archived, with no commits since 2020.</span><span class="l-ja">リポジトリはアーカイブ済みで、2020年以降コミットがない</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">Keycloak 4.6.0 or newer (WildFly distribution), with the module registered in standalone.xml.</span><span class="l-ja">Keycloak 4.6.0以上（WildFly版）。standalone.xmlにモジュールを登録する</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/groupe-sii/keycloak-json-remote-claim#readme" rel="noopener">https://github.com/groupe-sii/keycloak-json-remote-claim#readme</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

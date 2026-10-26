@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-external-claim-mapper — Awesome Keycloak Extensions</title>
+<meta name="description" content="Protocol mapper that adds data from a remote service to the JWT.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">SPI</span><span class="b">Protocol Mapper / Claim</span><span class="b Stale">Stale</span></p>
+    <h1 id="name">keycloak-external-claim-mapper</h1>
+    <p class="repo"><a href="https://github.com/zloom/keycloak-external-claim-mapper" rel="noopener">zloom/keycloak-external-claim-mapper ↗</a></p>
+    <p class="lead"><span class="l-en">Protocol mapper that adds data from a remote service to the JWT.</span><span class="l-ja">外部サービスのデータをJWTに追加</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>15</dd></div><div><dt>Forks</dt><dd>4</dd></div><div><dt>Contributors</dt><dd>3</dd></div><div><dt>Updated</dt><dd>2025-07-03</dd></div><div><dt>KC</dt><dd>25.0.0</dd></div><div><dt>License</dt><dd>Apache-2.0</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">4</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Fetch JSON from a remote HTTP endpoint and include it in the user&#x27;s JWT as a claim.</span><span class="l-ja">外部HTTPエンドポイントからJSONを取得し、ユーザーのJWTにクレームとして含める</span></li><li class="c"><span class="l-en">Insert the user ID, username or email into the URL and headers via placeholders (<code>**uid**</code>, <code>**uname**</code>, <code>**email**</code>).</span><span class="l-ja">URLやヘッダーに、プレースホルダ（<code>**uid**</code>、<code>**uname**</code>、<code>**email**</code>）でユーザーID・ユーザー名・メールを埋め込める</span></li><li class="c"><span class="l-en">Reshape the response with a JSONPath expression, and add custom headers.</span><span class="l-ja">JSONPath式でレスポンスを整形でき、任意のヘッダーも追加できる</span></li><li class="c"><span class="l-en">Optionally send the user&#x27;s session token as a bearer token to the remote service.</span><span class="l-ja">ユーザーのセッショントークンをBearerとして外部サービスに送ることもできる</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">3</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">Built and tested only with Keycloak 25.0.0 (other versions need your own build and testing).</span><span class="l-ja">ビルド・テストはKeycloak 25.0.0のみ（他のバージョンは自分でビルド・検証が必要）</span></li><li class="x"><span class="l-en">With error propagation on, a failed fetch or transform breaks token issuance (HTTP 500).</span><span class="l-ja">エラー伝播を有効にすると、取得や変換の失敗でトークン発行自体が失敗する（HTTP 500）</span></li><li class="x"><span class="l-en">Uses Keycloak&#x27;s internal protocol-mapper SPI; last commit in July 2025.</span><span class="l-ja">Keycloakの内部扱いのProtocol Mapper SPIを使っている。最終コミットは2025年7月</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">A remote JSON endpoint reachable from Keycloak; add the JAR to a Keycloak 25 image.</span><span class="l-ja">Keycloakから到達できるJSONのエンドポイント。JARをKeycloak 25のイメージに追加する</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/zloom/keycloak-external-claim-mapper#readme" rel="noopener">https://github.com/zloom/keycloak-external-claim-mapper#readme</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

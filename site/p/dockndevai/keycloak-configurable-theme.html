@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-configurable-theme — Awesome Keycloak Extensions</title>
+<meta name="description" content="One configurable login theme for all realms.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">SPI</span><span class="b">Theme / UI</span><span class="b Active">Active</span></p>
+    <h1 id="name">keycloak-configurable-theme</h1>
+    <p class="repo"><a href="https://github.com/dockndevai/keycloak-configurable-theme" rel="noopener">dockndevai/keycloak-configurable-theme ↗</a></p>
+    <p class="lead"><span class="l-en">One configurable login theme for all realms.</span><span class="l-ja">全realm共通の設定可能なログインテーマ</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>1</dd></div><div><dt>Forks</dt><dd>0</dd></div><div><dt>Contributors</dt><dd>2</dd></div><div><dt>Updated</dt><dd>2026-10-08</dd></div><div><dt>KC</dt><dd>26.8.0</dd></div><div><dt>License</dt><dd>Apache-2.0</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">4</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Use one theme for every realm and drive layout, colours, logo, favicon, fonts, texts, banner and footer from configuration instead of separate theme folders.</span><span class="l-ja">1つのテーマを全realmで使い、レイアウト・色・ロゴ・ファビコン・フォント・文言・バナー・フッターを、テーマフォルダを分けずに設定だけで切り替えられる</span></li><li class="c"><span class="l-en">Brand the login page, account and admin consoles and emails, in light and dark mode.</span><span class="l-ja">ログイン画面・アカウント/管理コンソール・メールをブランディングでき、ライト/ダークの両モードに対応</span></li><li class="c"><span class="l-en">Layer settings: built-in defaults → <code>branding.json</code> (global and per realm) → realm overrides through a REST API or an admin &quot;Branding&quot; tab; file changes reload without restart.</span><span class="l-ja">設定は、組み込みの既定値 → <code>branding.json</code>（全体とrealm別）→ REST APIや管理画面の「Branding」タブでのrealm別上書き、の順に重なる。ファイルの変更は再起動なしで反映</span></li><li class="c"><span class="l-en">Built-in layouts (centered, split-left/right, minimal) plus custom CSS layouts added without a rebuild.</span><span class="l-ja">組み込みのレイアウト（中央、左右分割、ミニマル）に加え、独自CSSのレイアウトも再ビルドなしで追加できる</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">4</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">Uses internal Keycloak SPIs for login, email and REST — re-test on every Keycloak upgrade (a warning is logged).</span><span class="l-ja">ログイン・メール・RESTにKeycloakの内部SPIを使うため、Keycloakを更新するたびに再テストが必要（起動時に警告が出る）</span></li><li class="x"><span class="l-en">The admin-console Branding tab needs the experimental <code>declarative-ui</code> feature; without it, use the REST API.</span><span class="l-ja">管理コンソールのBrandingタブには実験的な <code>declarative-ui</code> 機能が必要。なければREST APIを使う</span></li><li class="x"><span class="l-en">Built and tested against Keycloak 26.8.0 only.</span><span class="l-ja">ビルド・テストはKeycloak 26.8.0のみ</span></li><li class="x"><span class="l-en">Customisation is limited to configuration and layout CSS — not a full template rewrite.</span><span class="l-ja">カスタマイズは設定とレイアウトCSSの範囲内で、テンプレートを丸ごと書き換えるものではない</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">Java 21; put the JAR in <code>/opt/keycloak/providers/</code> (or use the Docker image), then <code>kc.sh build</code>.</span><span class="l-ja">Java 21。JARを <code>/opt/keycloak/providers/</code> に置き（またはDockerイメージを使い）、<code>kc.sh build</code></span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/dockndevai/keycloak-configurable-theme#readme" rel="noopener">https://github.com/dockndevai/keycloak-configurable-theme#readme</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

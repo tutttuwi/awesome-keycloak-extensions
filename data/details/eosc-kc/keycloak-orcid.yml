@@ -1,0 +1,23 @@
+repo: eosc-kc/keycloak-orcid
+researched_at: '2026-10-25'
+sources:
+- https://github.com/eosc-kc/keycloak-orcid#readme
+can:
+- en: Add ORCID (researcher ID, used in research and education such as EOSC) as a social identity provider.
+  ja: 研究・教育分野（EOSCなど）で使われる研究者ID、ORCIDをソーシャルIdPとして追加できる
+- en: Retrieve email and other profile data that ORCID's plain OIDC implementation does not release.
+  ja: ORCIDの素のOIDC実装では得られないメールなどのプロフィール情報を取得できる
+- en: Includes a user-attribute mapper and an ORCID login button theme (`orcid-theme`).
+  ja: ユーザー属性マッパーと、ORCIDのログインボタン付きテーマ（`orcid-theme`）が付属
+- en: Hot deployment should work without restarting Keycloak.
+  ja: Keycloakを再起動しなくてもホットデプロイで動くはず
+cannot:
+- en: Only https redirect URIs are accepted by the production ORCID registry, so Keycloak needs TLS.
+  ja: 本番のORCIDレジストリはhttpsのリダイレクトURIしか受け付けないため、KeycloakにTLSが必要
+- en: The ORCID button only appears with the bundled theme (or after copying its changes into your own theme).
+  ja: ORCIDボタンが表示されるのは同梱テーマを使う場合だけ（独自テーマへ変更を移植すれば可）
+- en: The README has no compatibility table, so supported Keycloak versions are not documented there.
+  ja: READMEに互換表がなく、対応するKeycloakバージョンの記載がない
+requires:
+- en: An ORCID account and an application registered in ORCID Developer Tools (client ID/secret).
+  ja: ORCIDのアカウントと、ORCID Developer Toolsで登録したアプリ（Client ID/Secret）

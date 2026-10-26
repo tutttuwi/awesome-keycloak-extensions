@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-metrics-spi — Awesome Keycloak Extensions</title>
+<meta name="description" content="Exposes Keycloak metrics (Prometheus format) via an SPI.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">SPI</span><span class="b">Monitoring / Audit</span><span class="b Stale">Stale</span></p>
+    <h1 id="name">keycloak-metrics-spi</h1>
+    <p class="repo"><a href="https://github.com/aerogear/keycloak-metrics-spi" rel="noopener">aerogear/keycloak-metrics-spi ↗</a></p>
+    <p class="lead"><span class="l-en">Exposes Keycloak metrics (Prometheus format) via an SPI.</span><span class="l-ja">KeycloakのメトリクスをPrometheus形式で公開するSPI</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>614</dd></div><div><dt>Forks</dt><dd>163</dd></div><div><dt>Contributors</dt><dd>56</dd></div><div><dt>Updated</dt><dd>2024-11-08</dd></div><div><dt>KC</dt><dd>26.0.0</dd></div><div><dt>License</dt><dd>Apache-2.0</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">5</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Expose a Prometheus-format metrics endpoint at <code>/realms/&lt;realm&gt;/metrics</code>.</span><span class="l-ja">Prometheus形式のメトリクスエンドポイントを <code>/realms/&lt;realm&gt;/metrics</code> に公開</span></li><li class="c"><span class="l-en">Count logins, failed logins, client logins, refresh tokens, code-to-token exchanges and registrations (and their errors), labelled by realm, IdP and client.</span><span class="l-ja">ログイン・失敗・クライアントログイン・リフレッシュ・コード交換・登録とそのエラーを、realm・IdP・クライアント別のラベル付きで集計</span></li><li class="c"><span class="l-en">Record a request-duration histogram per HTTP method, response-error counts and JVM metrics, plus every generic user/admin event.</span><span class="l-ja">HTTPメソッド別のレスポンス時間ヒストグラム、エラー応答数、JVMメトリクス、全ユーザー/管理イベントも記録</span></li><li class="c"><span class="l-en">Push metrics to a Prometheus PushGateway (with basic auth and instance/cluster grouping) for clustered setups.</span><span class="l-ja">クラスタ構成向けに、Prometheus PushGatewayへのプッシュに対応（Basic認証、インスタンス/クラスタ単位のグルーピング可）</span></li><li class="c"><span class="l-en">Optionally add consolidated URI labels and filter them by keyword; a ready-made Grafana dashboard is available.</span><span class="l-ja">URIラベルの付与とキーワードでの絞り込みも可能。Grafanaダッシュボードも公開されている</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">5</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">The endpoint returns data for all realms whichever realm is in the URL — there is no per-realm isolation.</span><span class="l-ja">URLのrealmに関係なく全realmのデータを返す（realm単位の分離はない）</span></li><li class="x"><span class="l-en">The endpoint is externally reachable unless you set <code>DISABLE_EXTERNAL_ACCESS</code> and forward <code>X-Forwarded-Host</code> from your proxy.</span><span class="l-ja"><code>DISABLE_EXTERNAL_ACCESS</code> を設定してプロキシで <code>X-Forwarded-Host</code> を付けない限り、外部からアクセスできてしまう</span></li><li class="x"><span class="l-en">Scraping each node behind a load balancer is problematic — you need the PushGateway.</span><span class="l-ja">ロードバランサ配下では各ノードのスクレイプが難しく、PushGatewayが必要</span></li><li class="x"><span class="l-en">Login counters only cover non-admin users.</span><span class="l-ja">ログイン系カウンタは管理者以外のユーザーのみが対象</span></li><li class="x"><span class="l-en">Low activity — listed as &quot;less active&quot; on the official extensions page, with the last commit in 2024.</span><span class="l-ja">活動は低調。公式拡張ページでは &quot;less active&quot; 扱いで、最終コミットは2024年</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">Copy the JAR into both the build and run stages of the Quarkus image, and enable the <code>metrics-listener</code> event listener per realm.</span><span class="l-ja">QuarkusイメージのビルドとランタイムのJARを両方のステージにコピーし、realmごとに <code>metrics-listener</code> を有効化</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/aerogear/keycloak-metrics-spi#readme" rel="noopener">https://github.com/aerogear/keycloak-metrics-spi#readme</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

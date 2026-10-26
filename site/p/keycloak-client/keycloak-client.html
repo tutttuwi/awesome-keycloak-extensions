@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-client — Awesome Keycloak Extensions</title>
+<meta name="description" content="Python client for the Keycloak Admin / OIDC APIs.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">Tool</span><span class="b">Config as code / DevOps</span><span class="b Stale">Stale</span></p>
+    <h1 id="name">keycloak-client</h1>
+    <p class="repo"><a href="https://github.com/keycloak-client/keycloak-client" rel="noopener">keycloak-client/keycloak-client ↗</a></p>
+    <p class="lead"><span class="l-en">Python client for the Keycloak Admin / OIDC APIs.</span><span class="l-ja">Keycloak用Pythonクライアント</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>58</dd></div><div><dt>Forks</dt><dd>14</dd></div><div><dt>Contributors</dt><dd>5</dd></div><div><dt>Updated</dt><dd>2024-12-29</dd></div><div><dt>KC</dt><dd>—</dd></div><div><dt>License</dt><dd>GPL-3.0</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">3</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Add OpenID Connect login to Python apps (<code>login</code> / <code>callback</code>).</span><span class="l-ja">PythonアプリにOpenID Connectのログインを組み込める（<code>login</code>/<code>callback</code>）</span></li><li class="c"><span class="l-en">Use UMA authorization — get a protection API token (PAT), create permission tickets and request RPTs.</span><span class="l-ja">UMAの認可に対応。PAT（Protection API Token）の取得、パーミッションチケットの作成、RPTの要求ができる</span></li><li class="c"><span class="l-en">Ships ready-made middlewares for Flask, Starlette and Django.</span><span class="l-ja">Flask・Starlette・Django向けのミドルウェアが付属</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">4</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">Not a Keycloak extension — a Python client library for apps that use Keycloak.</span><span class="l-ja">Keycloak拡張ではなく、Keycloakを使うアプリ向けのPythonクライアントライブラリ</span></li><li class="x"><span class="l-en">The documentation covers authentication and UMA authorization; Admin REST API management is not documented as a feature.</span><span class="l-ja">ドキュメントの対象は認証とUMA認可。Admin REST APIによる管理機能は記載がない</span></li><li class="x"><span class="l-en">Low activity — last commit at the end of 2024.</span><span class="l-ja">活動は低調で、最終コミットは2024年末</span></li><li class="x"><span class="l-en">Licensed under GPL-3.0, which has copyleft obligations when you distribute your app.</span><span class="l-ja">ライセンスはGPL-3.0。アプリを配布する場合はコピーレフトの義務が生じる</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">Python with <code>pip install keycloak</code>, and a Keycloak client configured for your app.</span><span class="l-ja">Python環境で <code>pip install keycloak</code>。アプリ用のKeycloakクライアント設定も必要</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/keycloak-client/keycloak-client#readme" rel="noopener">https://github.com/keycloak-client/keycloak-client#readme</a></li><li><a href="https://keycloak-client.readthedocs.io" rel="noopener">https://keycloak-client.readthedocs.io</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

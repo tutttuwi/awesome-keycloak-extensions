@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-openfga-event-publisher — Awesome Keycloak Extensions</title>
+<meta name="description" content="Publish Keycloak role/group changes to OpenFGA for fine-grained authorization.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">SPI</span><span class="b">Policy / Authorization</span><span class="b Inactive">Inactive</span></p>
+    <h1 id="name">keycloak-openfga-event-publisher</h1>
+    <p class="repo"><a href="https://github.com/embesozzi/keycloak-openfga-event-publisher" rel="noopener">embesozzi/keycloak-openfga-event-publisher ↗</a></p>
+    <p class="lead"><span class="l-en">Publish Keycloak role/group changes to OpenFGA for fine-grained authorization.</span><span class="l-ja">ロール/グループ変更をOpenFGAへ連携</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>61</dd></div><div><dt>Forks</dt><dd>14</dd></div><div><dt>Contributors</dt><dd>1</dd></div><div><dt>Updated</dt><dd>2024-07-02</dd></div><div><dt>KC</dt><dd>25.0.1</dd></div><div><dt>License</dt><dd>Apache-2.0</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">3</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Listen to admin events about users, roles and groups (role assignments, composite roles, group membership) and publish them to OpenFGA as relationship tuples.</span><span class="l-ja">ユーザー・ロール・グループに関するAdminイベント（ロールの付与、ロール同士の関係、グループ所属）を受け取り、OpenFGAに関係タプルとして送信</span></li><li class="c"><span class="l-en">Lets apps and APIs use OpenFGA (ReBAC, Zanzibar-style) as the policy decision point while Keycloak stays the source of roles.</span><span class="l-ja">ロールの管理はKeycloakのまま、アプリやAPIはOpenFGA（ReBAC、Zanzibar方式）をポリシー判定点として使える</span></li><li class="c"><span class="l-en">Ships an editable authorization model, and discovers the store and model IDs automatically when they are not set.</span><span class="l-ja">編集可能な認可モデルが付属。ストアIDとモデルIDは未設定なら自動で検出</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">4</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">Only syncs the identity/role/group model events it handles — the README does not describe initial bulk sync of existing data.</span><span class="l-ja">同期されるのは対応しているIdentity/ロール/グループのイベントだけ。既存データの初回一括同期についてはREADMEに記載がない</span></li><li class="x"><span class="l-en">If the API URL is unset it falls back to <code>http://openfga:8080</code>, meant for demos only.</span><span class="l-ja">API URLを設定しないと、デモ用の <code>http://openfga:8080</code> が使われる</span></li><li class="x"><span class="l-en">Not tested on the WildFly-based distribution.</span><span class="l-ja">WildFly版ディストリビューションでは未検証</span></li><li class="x"><span class="l-en">Inactive — no commits since July 2024.</span><span class="l-ja">2024年7月以降コミットがなく、活動停止状態</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">A running OpenFGA server; copy the JAR to <code>providers</code>, set the <code>KC_SPI_EVENTS_LISTENER_OPENFGA_EVENTS_PUBLISHER_*</code> variables and enable <code>openfga-events-publisher</code> per realm.</span><span class="l-ja">稼働中のOpenFGAサーバー。JARを <code>providers</code> に置き、<code>KC_SPI_EVENTS_LISTENER_OPENFGA_EVENTS_PUBLISHER_*</code> を設定して、realmごとに <code>openfga-events-publisher</code> を有効化</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/embesozzi/keycloak-openfga-event-publisher#readme" rel="noopener">https://github.com/embesozzi/keycloak-openfga-event-publisher#readme</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

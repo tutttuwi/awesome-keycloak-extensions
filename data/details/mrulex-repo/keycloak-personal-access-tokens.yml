@@ -1,0 +1,25 @@
+repo: mrulex-repo/keycloak-personal-access-tokens
+researched_at: '2026-10-25'
+sources:
+- https://github.com/mrulex-repo/keycloak-personal-access-tokens#readme
+can:
+- en: Let users create named personal access tokens (PATs) from the Account UI — scoped to chosen realm roles, revocable, with optional expiry.
+  ja: ユーザーがアカウント画面から、名前付きの個人アクセストークン（PAT）を作成できる。選んだrealmロールに限定でき、失効も可能で、有効期限も任意で設定できる
+- en: Use PATs as passwords wherever HTTP Basic Auth is used (Maven/Docker/npm registries, IMAP) — services validate them against an `/auth` endpoint that returns the roles in `X-Roles`.
+  ja: "HTTP Basic認証しか使えないサービス（Maven/Docker/npmレジストリ、IMAPなど）で、PATをパスワードとして使える。サービスは `/auth` エンドポイントで検証し、ロールは `X-Roles` ヘッダーで返る"
+- en: "Let Keycloak enforce a required role (`X-Required-Role` → 403); examples for nginx, Traefik forwardAuth and Spring Boot."
+  ja: "必要なロールのチェックをKeycloak側に任せられる（`X-Required-Role` → 403）。nginx・Traefik forwardAuth・Spring Bootでの利用例あり"
+- en: Use PATs in the direct-grant (password) flow via a dedicated authenticator and roles token mapper.
+  ja: 専用のAuthenticatorとロールのトークンマッパーで、ダイレクトグラント（パスワード）フローでもPATを使える
+- en: Tokens are shown once and stored only as Argon2id hashes.
+  ja: トークンは作成時に1度だけ表示され、保存されるのはArgon2idのハッシュのみ
+cannot:
+- en: Tokens carry realm roles only.
+  ja: トークンに含められるのはrealmロールだけ
+- en: Direct-grant use requires a custom flow bound per client; other clients still need the real password.
+  ja: ダイレクトグラントで使うには、カスタムフローをクライアントごとにバインドする必要がある。それ以外のクライアントでは本来のパスワードが必要
+- en: Built for Keycloak 26 only, and licensed under GPL-3.0.
+  ja: 対象はKeycloak 26のみ。ライセンスはGPL-3.0
+requires:
+- en: "Both JARs (extension and Account UI theme) in `providers`, then restart Keycloak."
+  ja: "拡張とアカウント画面テーマの2つのJARを `providers` に置いて、Keycloakを再起動"

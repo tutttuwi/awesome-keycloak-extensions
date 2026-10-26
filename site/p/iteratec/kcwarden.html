@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>kcwarden — Awesome Keycloak Extensions</title>
+<meta name="description" content="Security audit tool for Keycloak configuration.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">Tool</span><span class="b">Monitoring / Audit</span><span class="b Active">Active</span></p>
+    <h1 id="name">kcwarden</h1>
+    <p class="repo"><a href="https://github.com/iteratec/kcwarden" rel="noopener">iteratec/kcwarden ↗</a></p>
+    <p class="lead"><span class="l-en">Security audit tool for Keycloak configuration.</span><span class="l-ja">Keycloak設定のセキュリティ監査ツール</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>135</dd></div><div><dt>Forks</dt><dd>10</dd></div><div><dt>Contributors</dt><dd>10</dd></div><div><dt>Updated</dt><dd>2026-10-16</dd></div><div><dt>KC</dt><dd>—</dd></div><div><dt>License</dt><dd>Apache-2.0</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">5</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Audit a realm export for security and correctness misconfigurations, based on the OAuth 2.0 Security BCP (RFC 9700) plus Keycloak-specific checks.</span><span class="l-ja">realmエクスポートを解析し、OAuth 2.0 Security BCP（RFC 9700）とKeycloak固有のルールでセキュリティ・設定ミスを検出</span></li><li class="c"><span class="l-en">Check OIDC clients in depth (PKCE, implicit/direct grants, wildcard or plain-HTTP redirect URIs, web origins, full scope, offline access, token lifespans) and service accounts.</span><span class="l-ja">OIDCクライアント（PKCE、Implicit/Direct Grant、ワイルドカードやHTTPのリダイレクトURI、Web Origins、Full Scope、オフラインアクセス、トークン有効期間）とサービスアカウントを詳しくチェック</span></li><li class="c"><span class="l-en">&quot;Monitors&quot; flag config drift specific to your setup, e.g. which groups hold a sensitive role, against an allowlist.</span><span class="l-ja">「Monitor」で、機密ロールを持つグループなど環境固有の設定のずれを、許可リストと照合して検出</span></li><li class="c"><span class="l-en">Download the config itself (password or service-account auth) and output findings as txt, CSV or JSON, with severity filters.</span><span class="l-ja">設定の取得（パスワード認証またはサービスアカウント）も自分ででき、結果はtxt/CSV/JSONで出力、重大度で絞り込み可能</span></li><li class="c"><span class="l-en">Fail CI pipelines on findings (exit code 42), silence findings via a config file, and add custom auditors as plugins.</span><span class="l-ja">検出時にCIを失敗させられる（終了コード42）。設定ファイルで検出の抑制、プラグインで独自Auditorの追加も可能</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">4</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">Not a Keycloak extension — a Python CLI / container that analyses exported configuration.</span><span class="l-ja">Keycloak拡張ではなく、エクスポートした設定を解析するPythonのCLI/コンテナ</span></li><li class="x"><span class="l-en">Still in beta and does not cover all of Keycloak — IdPs are only lightly checked.</span><span class="l-ja">まだベータ版で、Keycloakのすべては網羅していない。IdPは軽くチェックする程度</span></li><li class="x"><span class="l-en">Per its coverage page, LDAP/SAML IdPs, user federation, IdP mappers, authentication flows and required actions are not audited at all (some SAML client checks exist).</span><span class="l-ja">カバー範囲のページによると、LDAP/SAMLのIdP、ユーザーフェデレーション、IdPマッパー、認証フロー、Required Actionは監査対象外（SAMLクライアントのチェックは一部あり）</span></li><li class="x"><span class="l-en">It cannot know your context — environment-specific problems need hand-written monitors, and it tends to over-report.</span><span class="l-ja">利用環境の事情はわからないため、固有の問題はMonitorを自分で書く必要がある。また検出は多めに出る傾向</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">Python (pip) or the container image, plus a realm export or an account with <code>manage-realm</code>, <code>manage-clients</code> and <code>manage-users</code>.</span><span class="l-ja">Python（pip）かコンテナイメージ。加えてrealmエクスポート、または <code>manage-realm</code>/<code>manage-clients</code>/<code>manage-users</code> を持つアカウント</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/iteratec/kcwarden#readme" rel="noopener">https://github.com/iteratec/kcwarden#readme</a></li><li><a href="https://iteratec.github.io/kcwarden/" rel="noopener">https://iteratec.github.io/kcwarden/</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

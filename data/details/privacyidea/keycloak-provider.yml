@@ -1,0 +1,30 @@
+repo: privacyidea/keycloak-provider
+researched_at: '2026-10-25'
+sources:
+- https://github.com/privacyidea/keycloak-provider#readme
+- https://community.privacyidea.org/t/how-to-use-keycloak-with-privacyidea/1132
+can:
+- en: Use privacyIDEA's MFA (OTP, push and other tokens) as an authentication step in Keycloak.
+  ja: privacyIDEAのMFA（OTP、プッシュなどのトークン）をKeycloakの認証ステップとして使える
+- en: Handle username and password itself (since 1.5.0), run passwordless, or check the second factor before Keycloak's password form.
+  ja: 1.5.0以降はユーザー名とパスワードも自前で処理できる。パスワードレスにしたり、Keycloakのパスワード入力の前に二要素をチェックしたりも可能
+- en: Log in with passkeys, or run in passkey-only mode.
+  ja: パスキーでのログインや、パスキーのみのモードにも対応
+- en: Trigger challenges with a service account, or by sending the user's or a static password.
+  ja: サービスアカウント、ユーザーのパスワード、固定パスワードの送信でチャレンジを発行できる
+- en: Include or exclude Keycloak groups from 2FA (optionally with inherited groups), forward client IP and headers, and auto-submit OTPs.
+  ja: Keycloakのグループ単位で2FAの対象・除外を指定（親グループも考慮可能）。クライアントIPやヘッダーの転送、OTP入力後の自動送信も可能
+- en: Act as an external-authentication method for Microsoft Entra ID, verifying the `id_token_hint`.
+  ja: Microsoft Entra IDの外部認証方式として動作し、`id_token_hint` を検証
+cannot:
+- en: Needs a privacyIDEA server — it is a connector, not a standalone MFA.
+  ja: privacyIDEAサーバーが必要。単体で動くMFAではなく連携用のプロバイダー
+- en: Group include/exclude rules have no effect with usernameless (passkey) authentication.
+  ja: ユーザー名なし（パスキー）認証では、グループの対象・除外設定は効かない
+- en: If both included and excluded groups are set, the excluded setting is ignored.
+  ja: 対象グループと除外グループを両方設定すると、除外の設定は無視される
+- en: Turning off SSL verification is possible but discouraged for production.
+  ja: SSL検証を無効にもできるが、本番環境では非推奨
+requires:
+- en: "A reachable privacyIDEA server; pick the JAR that matches your Keycloak version, copy it into `providers` and run `kc.sh build`."
+  ja: "到達可能なprivacyIDEAサーバー。Keycloakのバージョンに合うJARを `providers` に置いて `kc.sh build`"

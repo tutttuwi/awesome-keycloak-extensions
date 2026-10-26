@@ -1,0 +1,33 @@
+repo: Metatavu/keycloak-scim-server
+researched_at: '2026-10-25'
+sources:
+- https://github.com/Metatavu/keycloak-scim-server#readme
+can:
+- en: "Turn Keycloak into a SCIM 2.0 server so IdPs can provision users and groups into it (`/realms/{realm}/scim/v2`)."
+  ja: "KeycloakをSCIM 2.0サーバーにして、外部IdPからユーザーとグループをプロビジョニングできる（`/realms/{realm}/scim/v2`）"
+- en: Provide per-organization SCIM endpoints on Keycloak 26+ with Organizations enabled.
+  ja: Organizationsを有効にしたKeycloak 26以上では、組織単位のSCIMエンドポイントも使える
+- en: Authenticate SCIM clients with Keycloak tokens, external JWTs (JWKS), a shared bearer secret or basic auth; configure per instance, realm or organization.
+  ja: SCIMクライアントの認証は、Keycloakのトークン、外部JWT（JWKS）、共有シークレットのBearer、Basic認証から選べる。設定はインスタンス・realm・組織の単位で可能
+- en: Includes setup guides for Microsoft Entra ID and Okta, and can link provisioned users to an IdP (e.g. Entra `oid`).
+  ja: Microsoft Entra IDとOktaの設定ガイドがあり、プロビジョニングしたユーザーをIdP（Entraの `oid` など）にリンクできる
+- en: "Handle large groups efficiently (`204` on group PATCH, `excludedAttributes=members` on reads)."
+  ja: "大規模グループも効率よく扱える（グループのPATCHは `204` を返し、読み取りは `excludedAttributes=members` に対応）"
+- en: Provision custom attributes through user-profile unmanaged attributes and IdP mappers.
+  ja: ユーザープロファイルのunmanaged属性とIdPマッパーで、独自属性もプロビジョニングできる
+cannot:
+- en: It receives provisioning (Keycloak as SCIM server); it does not push users from Keycloak to other systems.
+  ja: プロビジョニングを受ける側（KeycloakがSCIMサーバー）であり、Keycloakから他システムへユーザーを送り出すことはしない
+- en: "Only users with the `scim-managed` role are visible or modifiable through SCIM."
+  ja: "SCIMから見える・変更できるのは `scim-managed` ロールを持つユーザーだけ"
+- en: "Without `SCIM_AUTHENTICATION_MODE` every request is rejected; organization-level endpoints only support `EXTERNAL` authentication."
+  ja: "`SCIM_AUTHENTICATION_MODE` を設定しないと全リクエストが拒否される。組織単位のエンドポイントは `EXTERNAL` 認証のみ"
+- en: Only built-in attributes are exposed by default (userName, email, given/family name, active).
+  ja: 標準で公開されるのは組み込み属性（userName、email、姓名、active）のみ
+- en: Each plugin version targets a specific Keycloak minor (e.g. 1.7.0 → 26.6.x); 1.8.0 changes group PATCH responses (breaking).
+  ja: プラグインのバージョンごとに対応Keycloakが決まっている（例：1.7.0 → 26.6.x）。1.8.0ではグループPATCHの応答が変わる（破壊的変更）
+requires:
+- en: Copy the JAR to the providers directory and restart; Java 21 to build from source.
+  ja: JARをprovidersディレクトリに置いて再起動。ソースからビルドするならJava 21
+- en: "For Entra ID linking: an `externalId` user-profile attribute and an IdP mapper that uses the `oid` claim as broker ID."
+  ja: "Entra IDとのリンクには、ユーザープロファイルの `externalId` 属性と、`oid` をブローカーIDに使うIdPマッパーが必要"

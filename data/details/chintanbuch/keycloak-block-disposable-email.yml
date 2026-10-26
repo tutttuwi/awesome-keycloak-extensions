@@ -1,0 +1,19 @@
+repo: chintanbuch/keycloak-block-disposable-email
+researched_at: '2026-10-25'
+sources:
+- https://github.com/chintanbuch/keycloak-block-disposable-email#readme
+can:
+- en: Block registration with disposable email domains (10MinuteMail, GuerrillaMail, …) using the zliio/disposable domain list.
+  ja: 使い捨てメール（10MinuteMail、GuerrillaMailなど）のドメインでの登録を、zliio/disposableのドメインリストで拒否
+- en: Refresh the domain list through a REST endpoint protected by a service account with `realm-admin`.
+  ja: "`realm-admin` を持つサービスアカウントで保護されたREST APIから、ドメインリストを更新できる"
+cannot:
+- en: Only checks the registration flow (you add an "Email Domain Validation" step to a copied flow) — not email changes elsewhere.
+  ja: チェック対象は登録フローだけ（複製したフローに「Email Domain Validation」を追加する）。それ以外の場面でのメール変更は対象外
+- en: The refresh endpoint cannot be called with regular user accounts, even admins.
+  ja: リスト更新のエンドポイントは、管理者を含め通常のユーザーアカウントからは呼べない
+- en: Tested only with Keycloak 26.2.5; last commit in June 2025.
+  ja: 検証はKeycloak 26.2.5のみ。最終コミットは2025年6月
+requires:
+- en: Java 17+ to build; copy the JAR into `providers` and restart.
+  ja: ビルドにJava 17以上。JARを `providers` に置いて再起動

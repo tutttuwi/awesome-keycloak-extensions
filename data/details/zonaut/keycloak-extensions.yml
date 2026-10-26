@@ -1,0 +1,21 @@
+repo: zonaut/keycloak-extensions
+researched_at: '2026-10-25'
+sources:
+- https://github.com/zonaut/keycloak-extensions#readme
+can:
+- en: Show examples of adding custom domain entities, a custom event listener, a custom REST resource and a minimal custom theme.
+  ja: 独自ドメインエンティティの追加、カスタムイベントリスナー、カスタムRESTリソース、最小限のカスタムテーマの実装例がある
+- en: Show how to override mail templates (with extra variables) and how to drop first/last-name validation on registration.
+  ja: メールテンプレートの上書き（変数追加）や、登録画面の姓名バリデーションを外す例もある
+- en: Ship a docker-compose demo with a sample realm, users and Mailhog.
+  ja: サンプルrealm・ユーザー・Mailhog付きのdocker-composeデモ環境がある
+cannot:
+- en: No longer maintained (stated in the README; last commit 2022).
+  ja: 保守終了（READMEに明記、最終コミットは2022年）
+- en: "Built for the old WildFly-based Keycloak (`/auth` context path, `keycloak.migration` export) — not ready for current Quarkus versions without changes."
+  ja: "旧WildFly版Keycloak向け（`/auth` パス、`keycloak.migration` によるエクスポート）。現行のQuarkus版では修正なしには動かない"
+- en: Examples only, not production extensions.
+  ja: あくまで実装例で、本番用の拡張ではない
+requires:
+- en: Maven and Docker Compose to build and run the examples.
+  ja: ビルドと実行にはMavenとDocker Composeが必要

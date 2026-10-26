@@ -1,0 +1,22 @@
+repo: schwebke/cap-captcha-keycloak
+researched_at: '2026-10-25'
+sources:
+- https://github.com/schwebke/cap-captcha-keycloak#readme
+- https://github.com/schwebke/cap-captcha-keycloak/blob/main/doc/design-rationale.md
+can:
+- en: Protect the registration form with Cap (trycap.dev), a self-hostable proof-of-work CAPTCHA, verified server-side.
+  ja: セルフホスト可能なプルーフ・オブ・ワーク型CAPTCHA「Cap（trycap.dev）」で登録フォームを保護。検証はサーバー側で行う
+- en: Configure the Cap instance URL, site key and secret per execution; ships an optional sample login theme.
+  ja: CapインスタンスのURL・サイトキー・シークレットはExecutionごとに設定。サンプルのログインテーマも任意で使える
+cannot:
+- en: Registration only — no CAPTCHA on the login form (matching Keycloak's built-in reCAPTCHA scope).
+  ja: 登録フォーム専用で、ログインフォームには使えない（Keycloak標準のreCAPTCHAと同じ範囲）
+- en: Always fail-closed — there is no bypass when Cap is unreachable.
+  ja: 常にフェイルクローズ。Capに到達できない場合に通すオプションはない
+- en: Does not inject the widget script; your theme must render the Cap widget (or use the sample theme).
+  ja: ウィジェットのスクリプトは挿入しない。テーマ側でCapのウィジェットを描画する必要がある（またはサンプルテーマを使う）
+requires:
+- en: A Cap Standalone instance reachable from users' browsers and from Keycloak, plus its site key and secret.
+  ja: ユーザーのブラウザとKeycloakの両方から到達できるCap Standaloneのインスタンスと、そのサイトキー・シークレット
+- en: A copy of the registration flow with the Cap Captcha execution set to Required and bound as the registration flow.
+  ja: 登録フローを複製してCap CaptchaのExecutionをRequiredで追加し、登録フローとしてバインド

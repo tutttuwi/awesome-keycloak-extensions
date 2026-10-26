@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-regex-mapper — Awesome Keycloak Extensions</title>
+<meta name="description" content="Broker mapper that maps multi-valued claims/attributes by regex.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">SPI</span><span class="b">Protocol Mapper / Claim</span><span class="b Inactive">Inactive</span></p>
+    <h1 id="name">keycloak-regex-mapper</h1>
+    <p class="repo"><a href="https://github.com/LucaFilipozzi/keycloak-regex-mapper" rel="noopener">LucaFilipozzi/keycloak-regex-mapper ↗</a></p>
+    <p class="lead"><span class="l-en">Broker mapper that maps multi-valued claims/attributes by regex.</span><span class="l-ja">正規表現で多値クレーム/属性をマッピング</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>21</dd></div><div><dt>Forks</dt><dd>5</dd></div><div><dt>Contributors</dt><dd>1</dd></div><div><dt>Updated</dt><dd>2021-08-23</dd></div><div><dt>KC</dt><dd>15.0.2</dd></div><div><dt>License</dt><dd>Apache-2.0</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">2</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Map a multi-valued OIDC claim (e.g. <code>groups</code>) or SAML attribute (e.g. <code>groupMembership</code>) to many realm and client roles with one regex-based broker mapper.</span><span class="l-ja">複数値のOIDCクレーム（<code>groups</code> など）やSAML属性（<code>groupMembership</code> など）を、正規表現ベースのブローカーマッパー1つで多数のrealm/クライアントロールにマッピング</span></li><li class="c"><span class="l-en">Only manage roles flagged with a marker attribute, so locally assigned roles are left alone.</span><span class="l-ja">マーカー属性を付けたロールだけを管理するので、管理者がローカルで付与したロールは影響を受けない</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">3</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">Requires the upstream IdP to name groups after client IDs and role names, so the mapping is defined upstream.</span><span class="l-ja">上流IdP側で、グループ名にクライアントIDやロール名を含める必要がある（マッピングは上流側で定義する形）</span></li><li class="x"><span class="l-en">Deployed as an EAR into <code>deployments</code> (WildFly-era packaging).</span><span class="l-ja">EARとして <code>deployments</code> に配置する（WildFly時代のパッケージ形式）</span></li><li class="x"><span class="l-en">Inactive — no commits since 2021.</span><span class="l-ja">2021年以降コミットがなく、活動停止状態</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">Realm/client roles tagged with the configured attribute, and named regex groups (<code>client</code>, <code>role</code>) in the mapper configuration.</span><span class="l-ja">設定した属性でタグ付けしたrealm/クライアントロールと、マッパー設定での名前付きグループ（<code>client</code>、<code>role</code>）</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/LucaFilipozzi/keycloak-regex-mapper#readme" rel="noopener">https://github.com/LucaFilipozzi/keycloak-regex-mapper#readme</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

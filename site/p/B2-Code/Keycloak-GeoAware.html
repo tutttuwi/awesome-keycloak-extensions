@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keycloak-GeoAware — Awesome Keycloak Extensions</title>
+<meta name="description" content="Geolocation-aware login checks and alerts.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">SPI</span><span class="b">Security / Bot protection</span><span class="b Active">Active</span></p>
+    <h1 id="name">Keycloak-GeoAware</h1>
+    <p class="repo"><a href="https://github.com/B2-Code/Keycloak-GeoAware" rel="noopener">B2-Code/Keycloak-GeoAware ↗</a></p>
+    <p class="lead"><span class="l-en">Geolocation-aware login checks and alerts.</span><span class="l-ja">位置情報に基づくログイン検査・通知</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>22</dd></div><div><dt>Forks</dt><dd>5</dd></div><div><dt>Contributors</dt><dd>6</dd></div><div><dt>Updated</dt><dd>2026-07-22</dd></div><div><dt>KC</dt><dd>26.7.0</dd></div><div><dt>License</dt><dd>Apache-2.0</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">5</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">React at login to an IP change, an unknown IP or an unknown location (country and city) by emailing the user, denying access, logging or disabling the account.</span><span class="l-ja">ログイン時に、IPの変化・未知のIP・未知の場所（国と都市）を検知して、通知メール・アクセス拒否・ログ記録・アカウント無効化のいずれかを実行</span></li><li class="c"><span class="l-en">Do the same for device changes or unknown devices (browser and operating system).</span><span class="l-ja">端末（ブラウザとOS）の変化や未知の端末にも、同じように対応できる</span></li><li class="c"><span class="l-en">Provide standalone conditions for Keycloak&#x27;s conditional sub-flows, so any authenticator (e.g. OTP) can be the action.</span><span class="l-ja">Keycloakの条件付きサブフロー用の条件だけを提供するモードもあり、アクションには任意のAuthenticator（OTPなど）を使える</span></li><li class="c"><span class="l-en">Add GeoIP information (IP, city, postal code, country) to tokens via a mapper.</span><span class="l-ja">マッパーで、GeoIP情報（IP・都市・郵便番号・国）をトークンに追加</span></li><li class="c"><span class="l-en">Look up locations with IPinfo, MaxMind web service, or a local MaxMind database (optionally auto-downloaded and updated).</span><span class="l-ja">位置の判定には、IPinfo、MaxMindのWebサービス、ローカルのMaxMind DB（自動ダウンロード・更新も可）を使える</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">3</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">Accuracy depends on the GeoIP provider; private or localhost IPs carry no location, so &quot;unknown location&quot; always matches for them.</span><span class="l-ja">精度はGeoIPの提供元に依存する。プライベートIPやlocalhostには位置情報がなく、「未知の場所」の条件に常に該当してしまう</span></li><li class="x"><span class="l-en">Device detection relies on the spoofable User-Agent header and does not identify a physical device — switching browsers looks like a new device.</span><span class="l-ja">端末の判定は偽装可能なUser-Agentに基づき、物理的な端末は識別できない。ブラウザを変えるだけで別の端末と見なされる</span></li><li class="x"><span class="l-en">The JAR must be present at Keycloak build time; mounting it at container start is not enough.</span><span class="l-ja">JARはKeycloakのビルド時に存在している必要があり、コンテナ起動時のマウントだけでは不十分</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">A GeoIP source: an IPinfo token, a MaxMind account/license key, or a local <code>.mmdb</code> file.</span><span class="l-ja">GeoIPの情報源：IPinfoのトークン、MaxMindのアカウント/ライセンスキー、またはローカルの <code>.mmdb</code> ファイル</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/B2-Code/Keycloak-GeoAware#readme" rel="noopener">https://github.com/B2-Code/Keycloak-GeoAware#readme</a></li><li><a href="https://b2-code.github.io/Keycloak-GeoAware" rel="noopener">https://b2-code.github.io/Keycloak-GeoAware</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

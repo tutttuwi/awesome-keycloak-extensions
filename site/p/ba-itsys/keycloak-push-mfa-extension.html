@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-push-mfa-extension — Awesome Keycloak Extensions</title>
+<meta name="description" content="Push-notification MFA.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">SPI</span><span class="b">MFA / Passwordless</span><span class="b Active">Active</span></p>
+    <h1 id="name">keycloak-push-mfa-extension</h1>
+    <p class="repo"><a href="https://github.com/ba-itsys/keycloak-push-mfa-extension" rel="noopener">ba-itsys/keycloak-push-mfa-extension ↗</a></p>
+    <p class="lead"><span class="l-en">Push-notification MFA.</span><span class="l-ja">プッシュ通知によるMFA</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>12</dd></div><div><dt>Forks</dt><dd>8</dd></div><div><dt>Contributors</dt><dd>12</dd></div><div><dt>Updated</dt><dd>2026-10-19</dd></div><div><dt>KC</dt><dd>26.8.1</dd></div><div><dt>License</dt><dd>Apache-2.0</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">5</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Add push-based MFA — the user approves or denies a login in a mobile app enrolled to their account.</span><span class="l-ja">プッシュ通知によるMFAを追加できる。ユーザーは登録済みのモバイルアプリでログインを承認・拒否する</span></li><li class="c"><span class="l-en">Keep the app pseudonymous (it only sees a credential ID) and bind approvals to the enrolled device key, with DPoP-bound access tokens for the app&#x27;s API calls.</span><span class="l-ja">アプリ側は資格情報のIDしか知らない仮名的な設計で、承認は登録した端末の鍵に紐づく。アプリのAPI呼び出しにはDPoPで束縛したアクセストークンを使う</span></li><li class="c"><span class="l-en">Update the browser over SSE across cluster nodes via shared storage, with heartbeats and stream rotation.</span><span class="l-ja">共有ストレージ経由で、クラスタの複数ノードにまたがってSSEでブラウザに状態を通知（ハートビートとストリームのローテーション付き）</span></li><li class="c"><span class="l-en">Send real notifications via the bundled Firebase Cloud Messaging provider, or plug in your own push, event and rate-limit SPIs; test with a simulator.</span><span class="l-ja">同梱のFirebase Cloud Messagingプロバイダーで実際に通知を送れる。プッシュ・イベント・レート制限は独自SPIに差し替え可能。シミュレータでのテストにも対応</span></li><li class="c"><span class="l-en">Only explicit denials count toward Keycloak&#x27;s brute-force protection — timeouts and rate limits do not lock users out.</span><span class="l-ja">Keycloakのブルートフォース対策にカウントされるのは明示的な拒否だけ。タイムアウトやレート制限ではユーザーはロックされない</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">2</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">No mobile app is included — you implement the app yourself (an implementation guide and API reference are provided).</span><span class="l-ja">モバイルアプリは含まれていない。アプリは自分で実装する必要がある（実装ガイドとAPIリファレンスあり）</span></li><li class="x"><span class="l-en">Not WebAuthn/passkeys — it borrows some passkey ideas but is a separate protocol.</span><span class="l-ja">WebAuthnやパスキーではない。考え方の一部を借りているが、別のプロトコル</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">Copy the JAR to <code>providers/</code> and restart; FCM needs a Google service account (<code>GOOGLE_APPLICATION_CREDENTIALS</code>) and project URL.</span><span class="l-ja">JARを <code>providers/</code> に置いて再起動。FCMを使う場合はGoogleのサービスアカウント（<code>GOOGLE_APPLICATION_CREDENTIALS</code>）とプロジェクトURLが必要</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/ba-itsys/keycloak-push-mfa-extension#readme" rel="noopener">https://github.com/ba-itsys/keycloak-push-mfa-extension#readme</a></li><li><a href="https://github.com/ba-itsys/keycloak-push-mfa-extension/blob/main/docs/security.md" rel="noopener">https://github.com/ba-itsys/keycloak-push-mfa-extension/blob/main/docs/security.md</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

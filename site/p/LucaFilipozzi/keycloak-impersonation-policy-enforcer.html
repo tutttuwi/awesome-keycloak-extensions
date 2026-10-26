@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-impersonation-policy-enforcer — Awesome Keycloak Extensions</title>
+<meta name="description" content="Authenticator enforcing an impersonation policy.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">SPI</span><span class="b">Policy / Authorization</span><span class="b Inactive">Inactive</span></p>
+    <h1 id="name">keycloak-impersonation-policy-enforcer</h1>
+    <p class="repo"><a href="https://github.com/LucaFilipozzi/keycloak-impersonation-policy-enforcer" rel="noopener">LucaFilipozzi/keycloak-impersonation-policy-enforcer ↗</a></p>
+    <p class="lead"><span class="l-en">Authenticator enforcing an impersonation policy.</span><span class="l-ja">なりすまし(impersonation)ポリシーを強制</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>13</dd></div><div><dt>Forks</dt><dd>2</dd></div><div><dt>Contributors</dt><dd>2</dd></div><div><dt>Updated</dt><dd>2022-12-23</dd></div><div><dt>KC</dt><dd>18.0.2</dd></div><div><dt>License</dt><dd>Apache-2.0</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">2</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Stop impersonating admins from accessing a client unless they hold a client role composed with the realm-management impersonation role.</span><span class="l-ja">なりすまし中の管理者は、realm-managementのimpersonationロールを含むクライアントロールを持っていない限り、そのクライアントにアクセスできない</span></li><li class="c"><span class="l-en">Behave like the normal Cookie authenticator when the user is not being impersonated.</span><span class="l-ja">なりすましでない通常のログインでは、標準のCookie Authenticatorと同じ動きをする</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">3</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">Must replace the Cookie authenticator in a dedicated flow that you bind to each client.</span><span class="l-ja">専用のフローでCookie Authenticatorの代わりに置き、クライアントごとにバインドする必要がある</span></li><li class="x"><span class="l-en">Deployed as an EAR into <code>deployments</code> (WildFly-era packaging).</span><span class="l-ja">EARとして <code>deployments</code> に配置する（WildFly時代のパッケージ形式）</span></li><li class="x"><span class="l-en">Inactive — no commits since 2022.</span><span class="l-ja">2022年以降コミットがなく、活動停止状態</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">A client role composed with the impersonation role for each client that impersonators may access.</span><span class="l-ja">なりすましを許可するクライアントごとに、impersonationロールを含むクライアントロールを作成</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/LucaFilipozzi/keycloak-impersonation-policy-enforcer#readme" rel="noopener">https://github.com/LucaFilipozzi/keycloak-impersonation-policy-enforcer#readme</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

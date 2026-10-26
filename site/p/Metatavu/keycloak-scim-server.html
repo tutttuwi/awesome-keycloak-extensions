@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-scim-server — Awesome Keycloak Extensions</title>
+<meta name="description" content="SCIM server implemented as a Keycloak extension.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">SPI</span><span class="b">Provisioning (SCIM)</span><span class="b Active">Active</span></p>
+    <h1 id="name">keycloak-scim-server</h1>
+    <p class="repo"><a href="https://github.com/Metatavu/keycloak-scim-server" rel="noopener">Metatavu/keycloak-scim-server ↗</a></p>
+    <p class="lead"><span class="l-en">SCIM server implemented as a Keycloak extension.</span><span class="l-ja">KeycloakにSCIMサーバーを追加する拡張</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>95</dd></div><div><dt>Forks</dt><dd>37</dd></div><div><dt>Contributors</dt><dd>13</dd></div><div><dt>Updated</dt><dd>2026-10-07</dd></div><div><dt>KC</dt><dd>—</dd></div><div><dt>License</dt><dd>Apache-2.0</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">6</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Turn Keycloak into a SCIM 2.0 server so IdPs can provision users and groups into it (<code>/realms/{realm}/scim/v2</code>).</span><span class="l-ja">KeycloakをSCIM 2.0サーバーにして、外部IdPからユーザーとグループをプロビジョニングできる（<code>/realms/{realm}/scim/v2</code>）</span></li><li class="c"><span class="l-en">Provide per-organization SCIM endpoints on Keycloak 26+ with Organizations enabled.</span><span class="l-ja">Organizationsを有効にしたKeycloak 26以上では、組織単位のSCIMエンドポイントも使える</span></li><li class="c"><span class="l-en">Authenticate SCIM clients with Keycloak tokens, external JWTs (JWKS), a shared bearer secret or basic auth; configure per instance, realm or organization.</span><span class="l-ja">SCIMクライアントの認証は、Keycloakのトークン、外部JWT（JWKS）、共有シークレットのBearer、Basic認証から選べる。設定はインスタンス・realm・組織の単位で可能</span></li><li class="c"><span class="l-en">Includes setup guides for Microsoft Entra ID and Okta, and can link provisioned users to an IdP (e.g. Entra <code>oid</code>).</span><span class="l-ja">Microsoft Entra IDとOktaの設定ガイドがあり、プロビジョニングしたユーザーをIdP（Entraの <code>oid</code> など）にリンクできる</span></li><li class="c"><span class="l-en">Handle large groups efficiently (<code>204</code> on group PATCH, <code>excludedAttributes=members</code> on reads).</span><span class="l-ja">大規模グループも効率よく扱える（グループのPATCHは <code>204</code> を返し、読み取りは <code>excludedAttributes=members</code> に対応）</span></li><li class="c"><span class="l-en">Provision custom attributes through user-profile unmanaged attributes and IdP mappers.</span><span class="l-ja">ユーザープロファイルのunmanaged属性とIdPマッパーで、独自属性もプロビジョニングできる</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">5</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">It receives provisioning (Keycloak as SCIM server); it does not push users from Keycloak to other systems.</span><span class="l-ja">プロビジョニングを受ける側（KeycloakがSCIMサーバー）であり、Keycloakから他システムへユーザーを送り出すことはしない</span></li><li class="x"><span class="l-en">Only users with the <code>scim-managed</code> role are visible or modifiable through SCIM.</span><span class="l-ja">SCIMから見える・変更できるのは <code>scim-managed</code> ロールを持つユーザーだけ</span></li><li class="x"><span class="l-en">Without <code>SCIM_AUTHENTICATION_MODE</code> every request is rejected; organization-level endpoints only support <code>EXTERNAL</code> authentication.</span><span class="l-ja"><code>SCIM_AUTHENTICATION_MODE</code> を設定しないと全リクエストが拒否される。組織単位のエンドポイントは <code>EXTERNAL</code> 認証のみ</span></li><li class="x"><span class="l-en">Only built-in attributes are exposed by default (userName, email, given/family name, active).</span><span class="l-ja">標準で公開されるのは組み込み属性（userName、email、姓名、active）のみ</span></li><li class="x"><span class="l-en">Each plugin version targets a specific Keycloak minor (e.g. 1.7.0 → 26.6.x); 1.8.0 changes group PATCH responses (breaking).</span><span class="l-ja">プラグインのバージョンごとに対応Keycloakが決まっている（例：1.7.0 → 26.6.x）。1.8.0ではグループPATCHの応答が変わる（破壊的変更）</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">Copy the JAR to the providers directory and restart; Java 21 to build from source.</span><span class="l-ja">JARをprovidersディレクトリに置いて再起動。ソースからビルドするならJava 21</span></li><li class="r"><span class="l-en">For Entra ID linking: an <code>externalId</code> user-profile attribute and an IdP mapper that uses the <code>oid</code> claim as broker ID.</span><span class="l-ja">Entra IDとのリンクには、ユーザープロファイルの <code>externalId</code> 属性と、<code>oid</code> をブローカーIDに使うIdPマッパーが必要</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/Metatavu/keycloak-scim-server#readme" rel="noopener">https://github.com/Metatavu/keycloak-scim-server#readme</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

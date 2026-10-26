@@ -1,0 +1,19 @@
+repo: byteworks-ch/keycloak-filtered-group-membership-mapper
+researched_at: '2026-10-25'
+sources:
+- https://github.com/byteworks-ch/keycloak-filtered-group-membership-mapper#readme
+can:
+- en: Work like the built-in Group Membership mapper, but drop groups whose path matches a regex before they go into tokens.
+  ja: 標準のGroup Membershipマッパーと同じ動作で、正規表現に一致するグループをトークンから除外できる
+- en: Configure it per client scope to hide internal groups from some clients and keep tokens small.
+  ja: クライアントスコープ単位で設定でき、内部用のグループを特定のクライアントから隠したり、トークンを小さくしたりできる
+cannot:
+- en: Filters group names (paths) only — not roles or attributes.
+  ja: 絞り込めるのはグループ名（パス）だけで、ロールや属性は対象外
+- en: Exclusion only (no allow-list); a wrong regex can expose or hide groups unexpectedly.
+  ja: 除外指定のみ（許可リストは不可）。正規表現を誤ると、意図せずグループが露出したり隠れたりする
+- en: Only affects token output — group assignments in Keycloak are unchanged.
+  ja: 影響するのはトークンの出力だけで、Keycloak上のグループ所属は変わらない
+requires:
+- en: Build the JAR, copy it to `providers` and restart Keycloak.
+  ja: JARをビルドして `providers` に置き、Keycloakを再起動

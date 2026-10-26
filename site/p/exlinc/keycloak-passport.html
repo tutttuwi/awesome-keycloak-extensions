@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-passport — Awesome Keycloak Extensions</title>
+<meta name="description" content="Passport.js strategy for multi-realm Keycloak login (Node.js).">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">Tool</span><span class="b">Authentication</span><span class="b Inactive">Inactive</span></p>
+    <h1 id="name">keycloak-passport</h1>
+    <p class="repo"><a href="https://github.com/exlinc/keycloak-passport" rel="noopener">exlinc/keycloak-passport ↗</a></p>
+    <p class="lead"><span class="l-en">Passport.js strategy for multi-realm Keycloak login (Node.js).</span><span class="l-ja">Node.js(Passport.js)用のKeycloak認証ストラテジー</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>104</dd></div><div><dt>Forks</dt><dd>21</dd></div><div><dt>Contributors</dt><dd>1</dd></div><div><dt>Updated</dt><dd>2018-09-07</dd></div><div><dt>KC</dt><dd>—</dd></div><div><dt>License</dt><dd>Apache-2.0</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">3</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Use Keycloak as a Passport.js strategy (OAuth2/OIDC) in Node.js apps.</span><span class="l-ja">Node.jsアプリで、KeycloakをPassport.jsのストラテジー（OAuth2/OIDC）として使える</span></li><li class="c"><span class="l-en">Use several realms in the same application (multi-tenancy).</span><span class="l-ja">1つのアプリで複数realmを扱える（マルチテナント）</span></li><li class="c"><span class="l-en">Fetch the user&#x27;s profile from Keycloak automatically.</span><span class="l-ja">ユーザー情報をKeycloakから自動取得</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">3</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">Not a Keycloak extension — a Node.js client library.</span><span class="l-ja">Keycloak拡張ではなく、Node.js向けクライアントライブラリ</span></li><li class="x"><span class="l-en">Known issues with recent next-auth versions.</span><span class="l-ja">最近のnext-authとの組み合わせには既知の問題がある</span></li><li class="x"><span class="l-en">Inactive — no commits since 2018, despite the README calling it maintained.</span><span class="l-ja">READMEでは保守中とあるが、2018年以降コミットがなく活動停止状態</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">Node.js with Passport.js, and an OIDC client in Keycloak.</span><span class="l-ja">Passport.jsを使うNode.js環境と、Keycloak側のOIDCクライアント</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/exlinc/keycloak-passport#readme" rel="noopener">https://github.com/exlinc/keycloak-passport#readme</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

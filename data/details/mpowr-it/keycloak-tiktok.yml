@@ -1,0 +1,21 @@
+repo: mpowr-it/keycloak-tiktok
+researched_at: '2026-10-25'
+sources:
+- https://github.com/mpowr-it/keycloak-tiktok#readme
+can:
+- en: Add "Log in with TikTok" as a social identity provider (TikTok's OAuth2 API is not OIDC compatible).
+  ja: 「TikTokでログイン」をソーシャルIdPとして追加できる（TikTokのOAuth2 APIはOIDC非互換）
+- en: Request basic, profile and stats scopes and map fields such as avatar, display name, bio and follower count with attribute mappers.
+  ja: basic・profile・statsのスコープを要求し、アバター・表示名・自己紹介・フォロワー数などを属性マッパーでマッピングできる
+- en: Manage TikTok access tokens, and revoke the app's access in the user's TikTok account on logout.
+  ja: TikTokのアクセストークンを管理し、ログアウト時にはユーザーのTikTokアカウントからアプリのアクセス権を取り消す
+- en: Auto-tested with Keycloak 26.5.2, 26.6.0 and 26.7.0.
+  ja: Keycloak 26.5.2・26.6.0・26.7.0で自動テスト済み
+cannot:
+- en: "TikTok does not provide email addresses — a placeholder `<username>@tiktok.com` email is generated instead."
+  ja: "TikTokはメールアドレスを提供しないため、代わりに `<ユーザー名>@tiktok.com` というダミーのメールが作られる"
+- en: You must enable "Store tokens" and "Trust Email" on the identity provider.
+  ja: IdP側で「Store tokens」と「Trust Email」を有効にする必要がある
+requires:
+- en: A TikTok developer app (client key and secret); put the JAR in `$KEYCLOAK_HOME/providers` and restart.
+  ja: TikTokの開発者アプリ（Client Key/Secret）。JARを `$KEYCLOAK_HOME/providers` に置いて再起動

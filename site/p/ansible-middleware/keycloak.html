@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak — Awesome Keycloak Extensions</title>
+<meta name="description" content="Ansible collection to install and configure Keycloak / Red Hat build of Keycloak.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">Tool</span><span class="b">Config as code / DevOps</span><span class="b Active">Active</span></p>
+    <h1 id="name">keycloak</h1>
+    <p class="repo"><a href="https://github.com/ansible-middleware/keycloak" rel="noopener">ansible-middleware/keycloak ↗</a></p>
+    <p class="lead"><span class="l-en">Ansible collection to install and configure Keycloak / Red Hat build of Keycloak.</span><span class="l-ja">Keycloakを導入・設定するAnsibleコレクション</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>139</dd></div><div><dt>Forks</dt><dd>75</dd></div><div><dt>Contributors</dt><dd>47</dd></div><div><dt>Updated</dt><dd>2026-10-16</dd></div><div><dt>KC</dt><dd>—</dd></div><div><dt>License</dt><dd>Apache-2.0</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">4</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Install Keycloak (Quarkus-based, 19+) on hosts with an Ansible role, including clustered setups; the legacy role covers older WildFly-based versions and RH-SSO.</span><span class="l-ja">Ansibleのロールで、Keycloak（Quarkus版、19以降）をホストにインストールできる（クラスタ構成にも対応）。旧ロールでWildFly版やRH-SSOにも対応</span></li><li class="c"><span class="l-en">Install offline from the controller node or from alternate sources (Nexus, Artifactory, proxy).</span><span class="l-ja">コントローラノードからのオフラインインストールや、社内リポジトリ（Nexus、Artifactory、プロキシ）からの取得が可能</span></li><li class="c"><span class="l-en">Configure realms, user federation, clients, client roles and users through a role.</span><span class="l-ja">ロールで、realm・ユーザーフェデレーション・クライアント・クライアントロール・ユーザーを設定</span></li><li class="c"><span class="l-en">Manage a running Keycloak with modules (e.g. client scopes with protocol mappers, authentication flows); migrate from <code>community.general</code> modules by renaming the prefix.</span><span class="l-ja">稼働中のKeycloakをモジュールで管理（プロトコルマッパー付きクライアントスコープ、認証フローなど）。<code>community.general</code> からはプレフィックス変更で移行可能</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">3</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">Not a Keycloak extension — an Ansible collection run from a controller.</span><span class="l-ja">Keycloak拡張ではなく、コントローラから実行するAnsibleコレクション</span></li><li class="x"><span class="l-en">Red Hat customers should use the certified <code>redhat.rhbk</code> / <code>redhat.sso</code> collections instead.</span><span class="l-ja">Red Hatの顧客は、認定版の <code>redhat.rhbk</code>/<code>redhat.sso</code> コレクションを使うべきとされている</span></li><li class="x"><span class="l-en">For clusters, all hosts must be targeted by the same playbook run.</span><span class="l-ja">クラスタ構成では、全ホストを同じplaybook実行の対象にする必要がある</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">Ansible 2.16+ and the Python packages <code>netaddr</code> and <code>lxml</code> on the controller.</span><span class="l-ja">Ansible 2.16以上と、コントローラ上のPythonパッケージ <code>netaddr</code>・<code>lxml</code></span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/ansible-middleware/keycloak#readme" rel="noopener">https://github.com/ansible-middleware/keycloak#readme</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

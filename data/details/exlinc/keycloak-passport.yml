@@ -1,0 +1,21 @@
+repo: exlinc/keycloak-passport
+researched_at: '2026-10-25'
+sources:
+- https://github.com/exlinc/keycloak-passport#readme
+can:
+- en: Use Keycloak as a Passport.js strategy (OAuth2/OIDC) in Node.js apps.
+  ja: Node.jsアプリで、KeycloakをPassport.jsのストラテジー（OAuth2/OIDC）として使える
+- en: Use several realms in the same application (multi-tenancy).
+  ja: 1つのアプリで複数realmを扱える（マルチテナント）
+- en: Fetch the user's profile from Keycloak automatically.
+  ja: ユーザー情報をKeycloakから自動取得
+cannot:
+- en: Not a Keycloak extension — a Node.js client library.
+  ja: Keycloak拡張ではなく、Node.js向けクライアントライブラリ
+- en: Known issues with recent next-auth versions.
+  ja: 最近のnext-authとの組み合わせには既知の問題がある
+- en: Inactive — no commits since 2018, despite the README calling it maintained.
+  ja: READMEでは保守中とあるが、2018年以降コミットがなく活動停止状態
+requires:
+- en: Node.js with Passport.js, and an OIDC client in Keycloak.
+  ja: Passport.jsを使うNode.js環境と、Keycloak側のOIDCクライアント

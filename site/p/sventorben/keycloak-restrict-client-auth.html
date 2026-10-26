@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keycloak-restrict-client-auth — Awesome Keycloak Extensions</title>
+<meta name="description" content="Restrict which users may access which clients (role/policy based).">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">SPI</span><span class="b">Policy / Authorization</span><span class="b Active">Active</span></p>
+    <h1 id="name">keycloak-restrict-client-auth</h1>
+    <p class="repo"><a href="https://github.com/sventorben/keycloak-restrict-client-auth" rel="noopener">sventorben/keycloak-restrict-client-auth ↗</a></p>
+    <p class="lead"><span class="l-en">Restrict which users may access which clients (role/policy based).</span><span class="l-ja">クライアント単位でユーザーのアクセスを制限</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>440</dd></div><div><dt>Forks</dt><dd>35</dd></div><div><dt>Contributors</dt><dd>7</dd></div><div><dt>Updated</dt><dd>2026-10-14</dd></div><div><dt>KC</dt><dd>26.8.0</dd></div><div><dt>License</dt><dd>MIT</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">6</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Allow only selected users to log in to a specific client (out-of-the-box Keycloak cannot do this per client).</span><span class="l-ja">特定クライアントへのログインを、許可したユーザーだけに限定できる（標準のKeycloakではクライアント単位で不可）</span></li><li class="c"><span class="l-en">Restrict via a client role named <code>restricted-access</code> (direct, group or composite assignment) or via authorization policies on a <code>Keycloak Client Resource</code>.</span><span class="l-ja">クライアントロール <code>restricted-access</code>（直接・グループ・コンポジット付与）か、認可リソース <code>Keycloak Client Resource</code> のポリシーで制限</span></li><li class="c"><span class="l-en">Check access on every login path via a required action — SSO, IdP redirects and password reset included, regardless of the flow.</span><span class="l-ja">Required Actionにより、SSO・IdPリダイレクト・パスワードリセットを含むすべてのログイン経路でフローに関係なくチェック</span></li><li class="c"><span class="l-en">Check access whenever tokens are issued, including refresh and token exchange, via a client policy executor.</span><span class="l-ja">クライアントポリシーExecutorで、リフレッシュやトークン交換を含むトークン発行時にもチェック</span></li><li class="c"><span class="l-en">Optionally deny access to all clients by default and grant it explicitly.</span><span class="l-ja">全クライアントをデフォルト拒否にし、明示的に許可する運用も可能</span></li><li class="c"><span class="l-en">Optionally reject tokens that would list a restricted client in the audience (<code>Check audience</code>).</span><span class="l-ja">制限対象クライアントをaudienceに含むトークンの発行も拒否できる（<code>Check audience</code>）</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">5</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">It is not a policy enforcement point — your clients must still validate <code>aud</code> / <code>azp</code>.</span><span class="l-ja">ポリシー強制点（PEP）ではない。<code>aud</code>/<code>azp</code> の検証はクライアント側で必須</span></li><li class="x"><span class="l-en">The <code>policy</code> provider only works for confidential OIDC clients with authorization enabled.</span><span class="l-ja">ポリシー方式は、認可を有効にしたconfidentialなOIDCクライアントでのみ使える</span></li><li class="x"><span class="l-en">Errors cannot be shown to users in the direct grant (password) flow — it fails with &quot;Account is not fully set up&quot; unless you add the authenticator there.</span><span class="l-ja">ダイレクトグラント（パスワード）フローではユーザーにエラーを表示できず、&quot;Account is not fully set up&quot; で失敗する（Authenticatorを追加すれば回避可）</span></li><li class="x"><span class="l-en">Client-credentials logins are not checked.</span><span class="l-ja">クライアントクレデンシャルグラントのログインはチェックしない</span></li><li class="x"><span class="l-en">No backports or maintenance for older versions.</span><span class="l-ja">旧バージョンへのバックポートや保守はしない</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">Extension version X.b.c is built against Keycloak X.y.z; use the matching major version.</span><span class="l-ja">拡張のバージョンX.b.cはKeycloak X.y.z向けにビルド。メジャーバージョンを合わせる</span></li><li class="r"><span class="l-en">Installing it enables the required action in all realms — read the upgrade notes first.</span><span class="l-ja">導入すると全realmでRequired Actionが有効になる。事前にアップグレードノートを確認</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/sventorben/keycloak-restrict-client-auth#readme" rel="noopener">https://github.com/sventorben/keycloak-restrict-client-auth#readme</a></li><li><a href="https://sventorben.github.io/keycloak-restrict-client-auth/" rel="noopener">https://sventorben.github.io/keycloak-restrict-client-auth/</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

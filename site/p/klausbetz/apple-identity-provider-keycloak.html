@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>apple-identity-provider-keycloak — Awesome Keycloak Extensions</title>
+<meta name="description" content="Sign in with Apple identity provider.">
+<link rel="stylesheet" href="../../assets/detail.css">
+</head>
+<body>
+<header class="top">
+  <nav aria-label="Breadcrumb"><a href="../../">← <span class="l-en">All extensions</span><span class="l-ja">一覧へ戻る</span></a></nav>
+  <div class="seg" id="lang" role="group" aria-label="Language">
+    <button data-v="en" aria-pressed="true">EN</button><button data-v="ja" aria-pressed="false">日本語</button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="name">
+    <p class="badges"><span class="b off">Official</span><span class="b">SPI</span><span class="b">Identity Provider</span><span class="b Active">Active</span></p>
+    <h1 id="name">apple-identity-provider-keycloak</h1>
+    <p class="repo"><a href="https://github.com/klausbetz/apple-identity-provider-keycloak" rel="noopener">klausbetz/apple-identity-provider-keycloak ↗</a></p>
+    <p class="lead"><span class="l-en">Sign in with Apple identity provider.</span><span class="l-ja">Sign in with Apple用Identity Provider</span></p>
+    
+    <dl class="stats"><div><dt>★</dt><dd>297</dd></div><div><dt>Forks</dt><dd>59</dd></div><div><dt>Contributors</dt><dd>11</dd></div><div><dt>Updated</dt><dd>2026-01-18</dd></div><div><dt>KC</dt><dd>—</dd></div><div><dt>License</dt><dd>Apache-2.0</dd></div></dl>
+  </section>
+
+  <div class="verdict">
+    <section class="panel can" aria-labelledby="can-h">
+      <h2 id="can-h"><span class="mark" aria-hidden="true">✓</span><span class="l-en">What it can do</span><span class="l-ja">できること</span><span class="n">4</span></h2>
+      <ul class="items"><li class="c"><span class="l-en">Add &quot;Sign in with Apple&quot; as an identity provider, handling Apple&#x27;s non-standard OIDC behaviour (POSTed token response, no userinfo endpoint, JWT client secret signed with a .p8 key).</span><span class="l-ja">「Sign in with Apple」をIdPとして追加。AppleのOIDC非準拠な挙動（トークン応答のPOST、userinfoなし、.p8鍵で署名したJWTのクライアントシークレット）に対応</span></li><li class="c"><span class="l-en">Support native apps (e.g. iOS) via token exchange — swap an Apple ID token or authorization code for Keycloak tokens.</span><span class="l-ja">トークン交換でネイティブアプリ（iOSなど）に対応。AppleのIDトークンや認可コードをKeycloakのトークンに交換できる</span></li><li class="c"><span class="l-en">Optionally link token-exchange logins to existing Keycloak accounts automatically.</span><span class="l-ja">トークン交換でのログインを、既存のKeycloakアカウントに自動でリンクできる</span></li><li class="c"><span class="l-en">Pass the user&#x27;s name on first login during token exchange (<code>user_profile</code>).</span><span class="l-ja">トークン交換の初回ログイン時に、ユーザー名を <code>user_profile</code> で渡して保存できる</span></li></ul>
+    </section>
+    <section class="panel cannot" aria-labelledby="cannot-h">
+      <h2 id="cannot-h"><span class="mark" aria-hidden="true">✕</span><span class="l-en">What it cannot do / limits</span><span class="l-ja">できないこと・制約</span><span class="n">4</span></h2>
+      <ul class="items"><li class="x"><span class="l-en">Apple sends email and name only on the very first sign-in, and has no userinfo endpoint to fetch them later.</span><span class="l-ja">Appleはメールと氏名を初回サインイン時しか送らず、後から取得するuserinfoエンドポイントもない</span></li><li class="x"><span class="l-en">Users with a private-relay address receive no Keycloak emails unless the realm&#x27;s sender address is whitelisted in your Apple Developer account.</span><span class="l-ja">プライベートリレーのアドレスを使うユーザーには、realmの送信元アドレスをApple Developer側で許可しない限りKeycloakのメールが届かない</span></li><li class="x"><span class="l-en">Uses internal Keycloak SPIs, so it may break on a new Keycloak major — use the extension version from the compatibility table.</span><span class="l-ja">Keycloakの内部SPIを使っているため、メジャーアップデートで壊れる可能性がある。互換表にあるバージョンを使う</span></li><li class="x"><span class="l-en">Not usable from the Admin UI on Keycloak 21 (config fields hidden), and v19/v20 need the old Admin UI.</span><span class="l-ja">Keycloak 21では管理UIで設定項目が表示されず使えない（Terraform等なら可）。v19/v20は旧管理UIが必要</span></li></ul>
+    </section>
+  </div>
+
+  <section class="req" aria-labelledby="req-h"><h2 id="req-h"><span class="l-en">Requirements</span><span class="l-ja">前提条件</span></h2><ul class="items"><li class="r"><span class="l-en">An Apple Developer account (Service ID, Team ID, Key ID, .p8 key) with the Keycloak broker URL registered as a redirect URL.</span><span class="l-ja">Apple Developerアカウント（Service ID、Team ID、Key ID、.p8鍵）。KeycloakのブローカーURLをリダイレクトURLとして登録</span></li><li class="r"><span class="l-en">Token exchange must be enabled and configured in Keycloak for native-app logins.</span><span class="l-ja">ネイティブアプリでのログインには、Keycloak側でトークン交換の有効化と設定が必要</span></li></ul></section>
+
+  <footer class="src">
+    <p><span class="l-en">Researched 2026-10-25 from the project&#x27;s own documentation. Summaries may lag behind the project — check the source before adopting.</span><span class="l-ja">2026-10-25 時点のプロジェクト公式ドキュメントを基に要約。最新情報は採用前に原典で確認してください。</span></p>
+    <ul><li><a href="https://github.com/klausbetz/apple-identity-provider-keycloak#readme" rel="noopener">https://github.com/klausbetz/apple-identity-provider-keycloak#readme</a></li><li><a href="https://github.com/klausbetz/apple-identity-provider-keycloak/wiki" rel="noopener">https://github.com/klausbetz/apple-identity-provider-keycloak/wiki</a></li></ul>
+  </footer>
+</main>
+<script>
+(() => {
+  const root = document.documentElement, KEY = "akx-lang";
+  let lang = null;
+  try { lang = localStorage.getItem(KEY); } catch (e) {}
+  if (lang !== "en" && lang !== "ja") lang = (navigator.language || "en").startsWith("ja") ? "ja" : "en";
+  const set = v => {
+    root.dataset.lang = v; root.lang = v;
+    document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  };
+  document.getElementById("lang").addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (b) set(b.dataset.v);
+  });
+  set(lang);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+repo: LucaFilipozzi/keycloak-regex-mapper
+researched_at: '2026-10-25'
+sources:
+- https://github.com/LucaFilipozzi/keycloak-regex-mapper#readme
+can:
+- en: "Map a multi-valued OIDC claim (e.g. `groups`) or SAML attribute (e.g. `groupMembership`) to many realm and client roles with one regex-based broker mapper."
+  ja: "複数値のOIDCクレーム（`groups` など）やSAML属性（`groupMembership` など）を、正規表現ベースのブローカーマッパー1つで多数のrealm/クライアントロールにマッピング"
+- en: Only manage roles flagged with a marker attribute, so locally assigned roles are left alone.
+  ja: マーカー属性を付けたロールだけを管理するので、管理者がローカルで付与したロールは影響を受けない
+cannot:
+- en: Requires the upstream IdP to name groups after client IDs and role names, so the mapping is defined upstream.
+  ja: 上流IdP側で、グループ名にクライアントIDやロール名を含める必要がある（マッピングは上流側で定義する形）
+- en: "Deployed as an EAR into `deployments` (WildFly-era packaging)."
+  ja: "EARとして `deployments` に配置する（WildFly時代のパッケージ形式）"
+- en: Inactive — no commits since 2021.
+  ja: 2021年以降コミットがなく、活動停止状態
+requires:
+- en: "Realm/client roles tagged with the configured attribute, and named regex groups (`client`, `role`) in the mapper configuration."
+  ja: "設定した属性でタグ付けしたrealm/クライアントロールと、マッパー設定での名前付きグループ（`client`、`role`）"

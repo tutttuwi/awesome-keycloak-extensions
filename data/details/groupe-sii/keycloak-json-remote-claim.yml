@@ -1,0 +1,23 @@
+repo: groupe-sii/keycloak-json-remote-claim
+researched_at: '2026-10-25'
+sources:
+- https://github.com/groupe-sii/keycloak-json-remote-claim#readme
+can:
+- en: Add a protocol mapper that fetches a JSON value from a remote HTTP/REST endpoint and puts it into a token claim (any JSON type).
+  ja: 外部のHTTP/REST APIからJSONを取得してトークンのクレームに入れるプロトコルマッパーを追加（JSONの型は問わない）
+- en: Optionally send the username and client ID, plus custom query parameters and HTTP headers.
+  ja: ユーザー名やクライアントIDの送信、任意のクエリパラメータやHTTPヘッダーの付与もできる
+- en: Make a single request when several tokens are issued in one response.
+  ja: 1つのレスポンスで複数のトークンを発行する場合も、リクエストは1回で済む
+cannot:
+- en: If the remote claim cannot be fetched, no token is issued (HTTP 500).
+  ja: 外部からクレームを取得できないとトークンが発行されない（HTTP 500になる）
+- en: "Built for Keycloak 8 on WildFly (`standalone.xml` modules) — not documented for Quarkus-based Keycloak."
+  ja: "WildFly上のKeycloak 8向け（`standalone.xml` のモジュール登録）。Quarkus版Keycloakでの手順は記載がない"
+- en: Uses the unofficial Protocol Mapper SPI.
+  ja: 非公式扱いのProtocol Mapper SPIを使っている
+- en: The repository is archived, with no commits since 2020.
+  ja: リポジトリはアーカイブ済みで、2020年以降コミットがない
+requires:
+- en: Keycloak 4.6.0 or newer (WildFly distribution), with the module registered in standalone.xml.
+  ja: Keycloak 4.6.0以上（WildFly版）。standalone.xmlにモジュールを登録する
